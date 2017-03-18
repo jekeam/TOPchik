@@ -30,7 +30,11 @@ add_action( 'save_post','tch_store_save_meta_box' );
 register_deactivation_hook(__FILE__, 'tch_deactivate' );
 //Создаем таблицы
 register_activation_hook(__FILE__,'tch_install');
-
+//Регистрируем стили
+/*function tch_stylesheet(){
+wp_enqueue_style("tch-style-admin", dirname( __FILE__ ) . '/css/style-admin.css');
+}
+add_action('admin_head', 'tch_stylesheet');*/
 
 //Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
 //версии таблиц
@@ -137,6 +141,7 @@ function tch_meta_box( $post )
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
     //Морда плагина
+    //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style.css" rel="stylesheet">';
     echo '<table>';
         echo '<thead>';
             echo '<tr>';
@@ -170,7 +175,9 @@ function tch_meta_box( $post )
                     echo '<input type="text" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'" size="10">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<botton id="tch_action" name="tch_action" class="preview button">Получить</botton>';
+                    echo '<botton id="tch_action" name="tch_action" class="preview button">';
+                        echo '<img src="'.plugin_dir_url( __FILE__ ).'/img/search-color.gif"/>';
+                    echo '</botton>';
                 echo '</td>';
             echo '</tr>';
         echo '</tbody>';
@@ -213,36 +220,24 @@ function tch_action_javascript() {
 	<script type="text/javascript" >
 	jQuery(document).ready(function($) 
 	{
-	     $('#tch_action').click(function () 
-	     {
-    		/*var data = 
-    		{
-    			action: 'tch_action',
-    			whatever: 1234
-            };
-    		// с версии 2.8 'ajaxurl' всегда определен в админке
-    		jQuery.post( ajaxurl, data, function(response) 
-    		{
-    			alert('Получено с сервера: ' + response);
-    		});*/
-    		var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
-    		$.ajax
-    		({
-                type: "POST",
+	     $('#tch_action').click(function () {
+	         var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
+    		$.ajax({
+    		    type: "POST",
                 url: "/wp-content/plugins/top-checker/yandex-xml.php",
                 data: ({user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
                         key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
                         domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
                         keyword: keyword_val
-                    
                 }),
-            success: function (data) 
-                {
-                    //$('#tch_place_text').val(data);
-                    $('#get_answer').html(data);
+                beforeSend: function(){
+                    
+                },                        
+                success: function (data) {
+                    $('#tch_place_text').val(data);
                 }
-            });
-        });
+    		});
+	     });
     });
 	</script>
 	<?php

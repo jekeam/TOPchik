@@ -92,6 +92,7 @@ function tch_settings_page()
                     <td>
                         <input class="regular-text" type="text" name="tch_options[server_addr]" 
                          value="<?php echo esc_attr( $prowp_options['server_addr'] ); ?>" />
+                         
                         <input class="regular-text" type="text" name="SERVER[SERVER_ADDR]" 
                          value="<?php echo esc_attr( $_SERVER['SERVER_ADDR'] ); ?>" disabled />
                     </td>
@@ -101,6 +102,7 @@ function tch_settings_page()
                     <td>
                         <input class="regular-text" type="text" name="tch_options[server_name]" 
                          value="<?php echo esc_attr( $prowp_options['server_name'] ); ?>"/>
+                         
                         <input class="regular-text" type="text" name="SERVER[SERVER_NAME]" 
                          value="<?php echo esc_attr( $_SERVER['SERVER_NAME'] ); ?>" disabled />
                     </td>
@@ -174,7 +176,6 @@ function tch_meta_box( $post )
         echo '</tbody>';
     echo '</table>';
     echo '<div id="get_answer"></div>';
-    echo '<textarea id="get_answer_orign">'. file_get_contents('https://yandex.ru/search/xml?user=jekeam&key=03.342975233:d814aa1537550b5bacec1fd65ce41fe0&query=%D0%B1%D0%BB%D0%BE%D0%B3+%D0%B0%D1%81%D1%82%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0&lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3D%22%22.mode%3Dflat.groups-on-page%3D10.docs-in-group%3D1&page=1') .'</textarea>';
 }
 
 // сохраняем данные метаполя
@@ -207,6 +208,7 @@ function tch_store_save_meta_box( $post_id )
 //add_action('admin_print_scripts', 'my_action_javascript'); // такое подключение будет работать не всегда
 add_action('admin_print_footer_scripts', 'tch_action_javascript', 99);
 function tch_action_javascript() {
+     $prowp_options = get_option( 'tch_options' );
 	?>
 	<script type="text/javascript" >
 	jQuery(document).ready(function($) 
@@ -228,7 +230,12 @@ function tch_action_javascript() {
     		({
                 type: "POST",
                 url: "/wp-content/plugins/top-checker/yandex-xml.php",
-                data: ({keyword: keyword_val}),
+                data: ({user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
+                        key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
+                        domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
+                        keyword: keyword_val
+                    
+                }),
             success: function (data) 
                 {
                     //$('#tch_place_text').val(data);

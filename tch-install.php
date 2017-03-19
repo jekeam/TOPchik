@@ -35,7 +35,7 @@ function tch_install ()
             key_id bigint(20) NOT NULL,
             data DATE DEFAULT '00-00-0000' NOT NULL,
             place bigint(20) NOT NULL,
-            UNIQUE KEY (key_id)
+            UNIQUE KEY (key_id, data)
         );";
         
         dbDelta($sql2);

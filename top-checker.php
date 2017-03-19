@@ -10,6 +10,9 @@ Author URI: https://suineg.ru/
 
 //define('TOP_CHECKER_VERSION', '0.1');
 
+ini_set('log_errors', 'On');
+ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
+
 include_once( dirname( __FILE__ ) . '/tch-install.php');
 include_once( dirname( __FILE__ ) . '/tch-uninstall.php');
 include_once( dirname( __FILE__ ) . '/tch-db.php');
@@ -30,11 +33,15 @@ add_action( 'save_post','tch_store_save_meta_box' );
 register_deactivation_hook(__FILE__, 'tch_deactivate' );
 //Создаем таблицы
 register_activation_hook(__FILE__,'tch_install');
-//Регистрируем стили
-/*function tch_stylesheet(){
-wp_enqueue_style("tch-style-admin", dirname( __FILE__ ) . '/css/style-admin.css');
-}
-add_action('admin_head', 'tch_stylesheet');*/
+//Подключаем скрипт
+function my_scripts_method() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+	wp_enqueue_script( 'jquery' );
+}    
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_method', 11 );
+
 
 //Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
 //версии таблиц
@@ -141,7 +148,7 @@ function tch_meta_box( $post )
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
     //Морда плагина
-    //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style.css" rel="stylesheet">';
+    //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style-admin.css" rel="stylesheet">';
     echo '<table>';
         echo '<thead>';
             echo '<tr>';
@@ -172,11 +179,11 @@ function tch_meta_box( $post )
                     echo '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="' .esc_attr( $keysword ).'" size="75">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<input type="text" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'" size="10">';
+                    echo '<input type="number" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'" size="10">';
                 echo '</td>';
                 echo '<td>';
                     echo '<botton id="tch_action" name="tch_action" class="preview button">';
-                        echo '<img src="'.plugin_dir_url( __FILE__ ).'/img/search-color.gif"/>';
+                        echo 'Проверить';
                     echo '</botton>';
                 echo '</td>';
             echo '</tr>';
@@ -203,7 +210,10 @@ function tch_store_save_meta_box( $post_id )
         {
             //update_post_meta( $post_id, '_tch_keyword_text', sanitize_text_field( $_POST['tch_keyword_text'] ));
             set_db_tch_keywords( $post_id . 1, sanitize_text_field($_POST['tch_keyword_text']), $post_id);
-            set_db_tch_serp( $post_id . 1, sanitize_text_field($_POST['tch_place_text']));
+            if (!empty ($_POST['tch_place_text']))
+            {
+                set_db_tch_serp( $post_id . 1, sanitize_text_field($_POST['tch_place_text']));
+            }
         }
         else 
         {
@@ -212,43 +222,80 @@ function tch_store_save_meta_box( $post_id )
     }
 }
 
-//add_action('admin_print_scripts', 'my_action_javascript'); // такое подключение будет работать не всегда
 add_action('admin_print_footer_scripts', 'tch_action_javascript', 99);
-function tch_action_javascript() {
+function tch_action_javascript($post_id) 
+{
      $prowp_options = get_option( 'tch_options' );
+     var_dump($post_id);
 	?>
 	<script type="text/javascript" >
 	jQuery(document).ready(function($) 
-	{
+	{    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
 	     $('#tch_action').click(function () {
 	         var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
-    		$.ajax({
-    		    type: "POST",
-                url: "/wp-content/plugins/top-checker/yandex-xml.php",
-                data: ({user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
-                        key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
-                        domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
-                        keyword: keyword_val
-                }),
+	         $.ajax({
+	             type: "POST",
+                 url: "/wp-content/plugins/top-checker/yandex-xml.php",
+                 data: ({
+                     user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
+                     key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
+                     domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
+                     keyword: keyword_val
+                     }),
                 beforeSend: function(){
-                    
+                    $('#tch_action').text('Проверка...');
                 },                        
                 success: function (data) {
-                    $('#tch_place_text').val(data);
+                    $('#tch_place_text').val(data).change();
+                    $('#tch_action').text('Проверить');
                 }
     		});
+	     });
+	     
+	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
+	     $('#tch_place_text').change(function()
+	     {
+	         var v_post_id = $('#post_ID').val();
+	         var v_place = $('#tch_place_text').val();
+	         $.ajax({
+	             type: "POST",
+                 url: "/wp-content/plugins/top-checker/tch-update.php",
+                 data: ({
+                     post_id: v_post_id,
+                     place: v_place,
+                     update: 'place'
+                 }),
+                beforeSend: function(){
+                    //ожидание
+                },                        
+                success: function (data) {
+                    //результат
+                }
+	        });
+	     });
+	     
+	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
+	     $('#tch_keyword_text').change(function()
+	     {
+	         var v_post_id = $('#post_ID').val();
+	         var v_keyword = $('#tch_keyword_text').val();
+	         $.ajax({
+	             type: "POST",
+                 url: "/wp-content/plugins/top-checker/tch-update.php",
+                 data: ({
+                     post_id: v_post_id,
+                     keyword: v_keyword,
+                     update: 'keyword'
+                 }),
+                beforeSend: function(){
+                    //ожидание
+                },                        
+                success: function (data) {
+                    //результат
+                }
+	        });
 	     });
     });
 	</script>
 	<?php
-}
-
-add_action('wp_ajax_tch_action', 'my_action_callback');
-function my_action_callback() {
-	$whatever = intval( $_POST['whatever'] );
-
-	$whatever += 10;
-	echo $whatever;
-
-	wp_die(); // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 }

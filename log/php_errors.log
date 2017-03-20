@@ -1,4 +1,0 @@
-[19-Mar-2017 18:41:24 UTC] PHP Fatal error:  Call to a member function replace() on a non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php on line 19
-[19-Mar-2017 18:41:24 UTC] PHP Stack trace:
-[19-Mar-2017 18:41:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:0
-[19-Mar-2017 18:41:24 UTC] PHP   2. set_db_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:22

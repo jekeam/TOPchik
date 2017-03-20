@@ -158,38 +158,42 @@ function tch_meta_box( $post )
                 echo '<th>';
                     echo 'Позиция';
                 echo '</th>';
-                echo '<th>';
-                    //для кнопки
+                echo '<th colspan="4">';
+                    echo 'Действия';
                 echo '</th>';
             echo '</tr>';
         echo '</thead>';
         echo '<tfoot>';
-            echo '<td height="60">';
-                echo '<input name="save" type="submit" class="button button-primary button-large" id="publish" value="Обновить">';
-                echo '</td>';
-                echo '<td>';
-                echo '</td>';
-                echo '<td>';
+            echo '<tr>';
+                echo '<td height="60" colspan="3">';
+                    echo '<botton name="tch_add_keyword" class="tch_add_keyword button">';
+                        echo 'Добавить';
+                    echo '</botton>';
                 echo '</td>';
             echo '</tr>';
+            /*echo '<tr>';
+                echo '<td height="60">';
+                    echo '<input name="save" type="submit" class="button button-primary button-large" id="publish" value="Обновить">';
+                echo '</td>';
+            echo '</tr>';*/
         echo '</tfoot>';
         echo '<tbody>';
-            echo '<tr>';
+            echo '<tr class="var_tch_keyword">';
                 echo '<td>';
-                    echo '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="' .esc_attr( $keysword ).'" size="75">';
+                    echo '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="' .esc_attr( $keysword ).'" size="50">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<input type="number" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'" size="10">';
+                    echo '<input type="number" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<botton id="tch_action" name="tch_action" class="preview button">';
+                    echo '<botton name="tch_action" id="tch_action" class="tch_action preview button">';
                         echo 'Проверить';
                     echo '</botton>';
                 echo '</td>';
             echo '</tr>';
         echo '</tbody>';
     echo '</table>';
-    echo '<div id="get_answer"></div>';
+    echo '<div id="error_log"></div>';
 }
 
 // сохраняем данные метаполя
@@ -294,6 +298,30 @@ function tch_action_javascript($post_id)
                     //результат
                 }
 	        });
+	     });
+	     
+	     $('.tch_add_keyword').live('click', function(event)
+	     {
+	        $('.var_tch_keyword').parent().append(
+                    '<tr>'+
+                        '<td>'+
+                            '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="" size="50">'+
+                        '</td>'+
+                        '<td>'+
+                            '<input type="number" name="tch_place_text" id="tch_place_text" value="">'+
+                        '</td>'+
+                        '<td>'+
+                            '<botton name="tch_action" id="tch_action" class="tch_action preview button">Проверить</botton>'+
+                        '</td>'+
+                    '</tr>'
+	        );
+	        //alert('ok');
+	     });
+	     
+	     $('.tch_del_keyword').on('click', function()
+	     {
+	            $(this).parent().parent().parent().remove();
+	        //alert('ok');
 	     });
     });
 	</script>

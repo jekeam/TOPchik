@@ -118,3 +118,32 @@ function get_tch_place ($id)
                             ); 
     return $place;
 }
+
+//Получить все ключевые слова поста
+function get_tch_list($post_id)
+{
+    global $wpdb;
+    global $tch_tbl_keywords;
+    global $tch_tbl_serp;
+    
+    $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
+    $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
+    
+    $arr_key = $wpdb->get_results
+                            (
+                                $wpdb->prepare
+                                            ( 
+                                               "SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                                FROM $table_keywords t_key,
+                                                     $table_position t_pos
+                                                WHERE t_key.post_id = %d
+                                                  AND t_key.key_id = t_pos.key_id
+                                                  AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                    FROM $table_position i
+                                                                    WHERE i.key_id = t_pos.key_id)
+                                                ", 
+                                                $post_id
+                                            )
+                            ); 
+    return $arr_key;
+}

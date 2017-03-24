@@ -1,0 +1,166 @@
+[24-Mar-2017 10:03:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:03:36 UTC] PHP Stack trace:
+[24-Mar-2017 10:03:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:03:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:03:36 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:03:36 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:03:36 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:03:36 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:03:36 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:138
+[24-Mar-2017 10:03:36 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:03:36 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:03:36 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:03:36 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:03:38 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:03:38 UTC] PHP Stack trace:
+[24-Mar-2017 10:03:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:03:38 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:03:38 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:03:38 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:03:38 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:03:38 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:03:38 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:138
+[24-Mar-2017 10:03:38 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:03:38 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:03:38 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:03:38 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:08:53 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:08:53 UTC] PHP Stack trace:
+[24-Mar-2017 10:08:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:08:53 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:08:53 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:08:53 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:08:53 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:08:53 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:08:53 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:08:53 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:08:53 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:08:53 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:08:53 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:08:57 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:08:57 UTC] PHP Stack trace:
+[24-Mar-2017 10:08:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:08:57 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:08:57 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:08:57 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:08:57 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:08:57 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:08:57 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:08:57 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:08:57 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:08:57 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:08:57 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:10:08 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:10:08 UTC] PHP Stack trace:
+[24-Mar-2017 10:10:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:10:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:10:08 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:10:08 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:08 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:08 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:10:08 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:10:08 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:08 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:08 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:10:08 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:10:11 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:10:11 UTC] PHP Stack trace:
+[24-Mar-2017 10:10:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:10:11 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:10:11 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:10:11 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:11 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:11 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:10:11 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:10:11 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:11 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:11 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:10:11 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:10:15 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:10:15 UTC] PHP Stack trace:
+[24-Mar-2017 10:10:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:10:15 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:10:15 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:10:15 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:15 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:15 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:10:15 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:10:15 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:15 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:15 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:10:15 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:10:17 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:10:17 UTC] PHP Stack trace:
+[24-Mar-2017 10:10:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:10:17 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:10:17 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:10:17 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:17 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:10:17 UTC] PHP   6. get_tch_keywords() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:10:17 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:139
+[24-Mar-2017 10:10:17 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:17 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:10:17 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:10:17 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:18:41 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:18:41 UTC] PHP Stack trace:
+[24-Mar-2017 10:18:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:18:41 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:18:41 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:18:41 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:18:41 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:18:41 UTC] PHP   6. get_tch_list() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:18:41 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:146
+[24-Mar-2017 10:18:41 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:18:41 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:18:41 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:18:41 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:18:41 UTC] База данных WordPress возвратила ошибку Unknown column 'i.DATA' in 'field list' в ответ на запрос SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                                FROM wp_tch_keywords t_key,
+                                                     wp_tch_serp t_pos
+                                                WHERE t_key.post_id = 0
+                                                  AND t_key.key_id = t_pos.key_id
+                                                  AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                    FROM wp_tch_serp
+                                                                    WHERE i.key_id = t_pos.key_id)
+                                                , выполненный include('wp-admin/edit-form-advanced.php'), do_meta_boxes, call_user_func, tch_meta_box, get_tch_list
+[24-Mar-2017 10:18:43 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in /home/ubuntu/workspace/wp-includes/wp-db.php on line 1171
+[24-Mar-2017 10:18:43 UTC] PHP Stack trace:
+[24-Mar-2017 10:18:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[24-Mar-2017 10:18:43 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
+[24-Mar-2017 10:18:43 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
+[24-Mar-2017 10:18:43 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:18:43 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
+[24-Mar-2017 10:18:43 UTC] PHP   6. get_tch_list() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:148
+[24-Mar-2017 10:18:43 UTC] PHP   7. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:146
+[24-Mar-2017 10:18:43 UTC] PHP   8. array_walk() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:18:43 UTC] PHP   9. wpdb->escape_by_ref() /home/ubuntu/workspace/wp-includes/wp-db.php:1309
+[24-Mar-2017 10:18:43 UTC] PHP  10. wpdb->_real_escape() /home/ubuntu/workspace/wp-includes/wp-db.php:1254
+[24-Mar-2017 10:18:43 UTC] PHP  11. mysqli_real_escape_string() /home/ubuntu/workspace/wp-includes/wp-db.php:1171
+[24-Mar-2017 10:18:43 UTC] База данных WordPress возвратила ошибку Unknown column 'i.DATA' in 'field list' в ответ на запрос SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                                FROM wp_tch_keywords t_key,
+                                                     wp_tch_serp t_pos
+                                                WHERE t_key.post_id = 0
+                                                  AND t_key.key_id = t_pos.key_id
+                                                  AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                    FROM wp_tch_serp
+                                                                    WHERE i.key_id = t_pos.key_id)
+                                                , выполненный include('wp-admin/edit-form-advanced.php'), do_meta_boxes, call_user_func, tch_meta_box, get_tch_list
+[24-Mar-2017 10:19:25 UTC] База данных WordPress возвратила ошибку Unknown column 'i.DATA' in 'field list' в ответ на запрос SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                                FROM wp_tch_keywords t_key,
+                                                     wp_tch_serp t_pos
+                                                WHERE t_key.post_id = 1
+                                                  AND t_key.key_id = t_pos.key_id
+                                                  AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                    FROM wp_tch_serp
+                                                                    WHERE i.key_id = t_pos.key_id)
+                                                , выполненный include('wp-admin/edit-form-advanced.php'), do_meta_boxes, call_user_func, tch_meta_box, get_tch_list
+[24-Mar-2017 10:19:28 UTC] База данных WordPress возвратила ошибку Unknown column 'i.DATA' in 'field list' в ответ на запрос SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                                FROM wp_tch_keywords t_key,
+                                                     wp_tch_serp t_pos
+                                                WHERE t_key.post_id = 1
+                                                  AND t_key.key_id = t_pos.key_id
+                                                  AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                    FROM wp_tch_serp
+                                                                    WHERE i.key_id = t_pos.key_id)
+                                                , выполненный include('wp-admin/edit-form-advanced.php'), do_meta_boxes, call_user_func, tch_meta_box, get_tch_list

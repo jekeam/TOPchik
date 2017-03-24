@@ -145,54 +145,72 @@ function tch_meta_box( $post )
     $id = $post->ID . 1;
     $keysword = get_tch_keyword($id);
     $place = get_tch_place($id);
+    var_dump(get_tch_list($post->ID));
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
     //Морда плагина
     //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style-admin.css" rel="stylesheet">';
+    echo '<div class="wrap">';
+        echo '<input type="button" id="tch_add_keyword" value="Добавить">';
+    echo '</div>';    
+    /*echo '<div class="alignleft actions bulkactions">';
+        echo '<select name="action" id="bulk-action-selector-top">';
+            echo '<option value="-1">Действия</option>';
+    	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
+            echo '<option value="trash">Удалить</option>';
+        echo '</select>';
+        echo '<input type="submit" id="doaction" class="button action" value="Применить">';
+    echo '</div>';*/
+    echo '<div>';
     echo '<table>';
         echo '<thead>';
             echo '<tr>';
-                echo '<th>';
+                echo '<td id="cb">';
+                    echo '<input type="checkbox">';
+                echo '</td>';
+                echo '<th id="keyword">';
                     echo 'Ключевая фраза';
                 echo '</th>';
-                echo '<th>';
+                echo '<th id="place">';
                     echo 'Позиция';
-                echo '</th>';
-                echo '<th colspan="4">';
-                    echo 'Действия';
                 echo '</th>';
             echo '</tr>';
         echo '</thead>';
         echo '<tfoot>';
-            echo '<tr>';
-                echo '<td height="60" colspan="3">';
-                    echo '<botton name="tch_add_keyword" class="tch_add_keyword button">';
-                        echo 'Добавить';
-                    echo '</botton>';
-                echo '</td>';
-            echo '</tr>';
-            /*echo '<tr>';
-                echo '<td height="60">';
-                    echo '<input name="save" type="submit" class="button button-primary button-large" id="publish" value="Обновить">';
-                echo '</td>';
-            echo '</tr>';*/
+        echo '<tr>';
+            echo '<td>';
+                echo '<input type="checkbox">';
+            echo '</td>';
+            echo '<th>';
+                echo 'Ключевая фраза';
+            echo '</th>';
+            echo '<th>';
+                echo 'Позиция';
+            echo '</th>';
         echo '</tfoot>';
         echo '<tbody>';
-            echo '<tr class="var_tch_keyword">';
-                echo '<td>';
-                    echo '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="' .esc_attr( $keysword ).'" size="50">';
+            echo '<tr>';
+                 echo '<td>';
+                    echo '<input type="checkbox">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<input type="number" name="tch_place_text" id="tch_place_text" value="' .esc_attr( $place ).'">';
+                    echo '<input type="text" value="' .esc_attr( $keysword ).'" size="50">';
                 echo '</td>';
                 echo '<td>';
-                    echo '<botton name="tch_action" id="tch_action" class="tch_action preview button">';
-                        echo 'Проверить';
-                    echo '</botton>';
+                    echo '<input type="number" value="' .esc_attr( $place ).'">';
                 echo '</td>';
             echo '</tr>';
         echo '</tbody>';
     echo '</table>';
+    echo '</div>';
+    echo '<div>';
+        echo '<select>';
+            echo '<option value="-1">Действия</option>';
+    	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
+            echo '<option value="trash">Удалить</option>';
+        echo '</select>';
+        echo '<input type="button" id="doaction" value="Применить">';
+    echo '</div>';
     echo '<div id="error_log"></div>';
 }
 
@@ -305,7 +323,7 @@ function tch_action_javascript($post_id)
 	        $('.var_tch_keyword').parent().append(
                     '<tr>'+
                         '<td>'+
-                            '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="" size="50">'+
+                            '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="">'+
                         '</td>'+
                         '<td>'+
                             '<input type="number" name="tch_place_text" id="tch_place_text" value="">'+

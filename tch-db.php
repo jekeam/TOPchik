@@ -133,7 +133,11 @@ function get_tch_list($post_id)
                             (
                                 $wpdb->prepare
                                             ( 
-                                               "SELECT t_key.key_id, t_key.keyword, t_pos.data, t_pos.place
+                                               "SELECT 
+                                                    t_key.key_id key_id, 
+                                                    t_key.keyword keyword, 
+                                                    t_pos.data data, 
+                                                    t_pos.place place
                                                 FROM $table_keywords t_key,
                                                      $table_position t_pos
                                                 WHERE t_key.post_id = %d

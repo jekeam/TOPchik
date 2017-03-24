@@ -142,75 +142,95 @@ function tch_store_register_meta_box() {
 
 function tch_meta_box( $post )
 {
-    $id = $post->ID . 1;
-    $keysword = get_tch_keyword($id);
-    $place = get_tch_place($id);
-    var_dump(get_tch_list($post->ID));
+    $post_id = $post->ID;
+    $arr_list = get_tch_list($post_id);
+    
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
+    
     //Морда плагина
+    
+    //Кнопка добавления нового КС
     //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style-admin.css" rel="stylesheet">';
     echo '<div class="wrap">';
         echo '<input type="button" id="tch_add_keyword" value="Добавить">';
-    echo '</div>';    
-    /*echo '<div class="alignleft actions bulkactions">';
-        echo '<select name="action" id="bulk-action-selector-top">';
-            echo '<option value="-1">Действия</option>';
-    	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
-            echo '<option value="trash">Удалить</option>';
-        echo '</select>';
-        echo '<input type="submit" id="doaction" class="button action" value="Применить">';
-    echo '</div>';*/
-    echo '<div>';
-    echo '<table>';
-        echo '<thead>';
+    echo '</div>';
+        
+    if (!empty($arr_list))
+    {
+        /*echo '<div class="alignleft actions bulkactions">';
+            echo '<select name="action" id="bulk-action-selector-top">';
+                echo '<option value="-1">Действия</option>';
+        	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
+                echo '<option value="trash">Удалить</option>';
+            echo '</select>';
+            echo '<input type="submit" id="doaction" class="button action" value="Применить">';
+        echo '</div>';*/
+        echo '<div>';
+        echo '<table>';
+            echo '<thead>';
+                echo '<tr>';
+                    echo '<td>';
+                        echo '<input type="checkbox" class="tch-cb-all">';
+                    echo '</td>';
+                    echo '<th>';
+                        echo 'Ключевая фраза';
+                    echo '</th>';
+                    echo '<th>';
+                        echo 'Позиция';
+                    echo '</th>';
+                    /*echo '<th>';
+                        echo 'Дата';
+                    echo '</th>';*/
+                echo '</tr>';
+            echo '</thead>';
+            echo '<tfoot>';
             echo '<tr>';
-                echo '<td id="cb">';
-                    echo '<input type="checkbox">';
+                echo '<td>';
+                    echo '<input type="checkbox" class="tch-cb-all">';
                 echo '</td>';
-                echo '<th id="keyword">';
+                echo '<th>';
                     echo 'Ключевая фраза';
                 echo '</th>';
-                echo '<th id="place">';
+                echo '<th>';
                     echo 'Позиция';
                 echo '</th>';
-            echo '</tr>';
-        echo '</thead>';
-        echo '<tfoot>';
-        echo '<tr>';
-            echo '<td>';
-                echo '<input type="checkbox">';
-            echo '</td>';
-            echo '<th>';
-                echo 'Ключевая фраза';
-            echo '</th>';
-            echo '<th>';
-                echo 'Позиция';
-            echo '</th>';
-        echo '</tfoot>';
-        echo '<tbody>';
-            echo '<tr>';
-                 echo '<td>';
-                    echo '<input type="checkbox">';
-                echo '</td>';
-                echo '<td>';
-                    echo '<input type="text" value="' .esc_attr( $keysword ).'" size="50">';
-                echo '</td>';
-                echo '<td>';
-                    echo '<input type="number" value="' .esc_attr( $place ).'">';
-                echo '</td>';
-            echo '</tr>';
-        echo '</tbody>';
-    echo '</table>';
-    echo '</div>';
-    echo '<div>';
-        echo '<select>';
-            echo '<option value="-1">Действия</option>';
-    	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
-            echo '<option value="trash">Удалить</option>';
-        echo '</select>';
-        echo '<input type="button" id="doaction" value="Применить">';
-    echo '</div>';
+            echo '</tfoot>';
+            echo '<tbody>';
+                //Получаем данные из массива
+                foreach ($arr_list as $key => $value) {
+                    $id = $value->key_id;
+                    echo '<tr>';
+                        echo '<td>';
+                            echo '<input type="checkbox" id="tch-cb-id-'.$id.'" class="tch-cb">';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<input type="text" value="'.esc_attr( $value->keyword ).'">';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<input type="number" value="'.esc_attr( $value->place ).'">';
+                        echo '</td>';
+                        /*echo '<td>';
+                            echo '<input type="text" value="' .substr(esc_attr( $value->data ), 5, 5).'" disabled>';
+                        echo '</td>';*/
+                    echo '</tr>';
+                }
+            echo '</tbody>';
+        echo '</table>';
+        echo '</div>';
+        echo '<div>';
+            echo '<select id="tch-action">';
+                //echo '<option value="-1">Действия</option>';
+        	    echo '<option value="serp">Проверить</option>';
+                echo '<option value="trash">Удалить</option>';
+            echo '</select>';
+            echo '<input type="button" id="doaction" value="Применить">';
+        echo '</div>';
+    }
+    else 
+    {
+        echo '<div>Ключевые слова не заданы.</div>';
+    }
     echo '<div id="error_log"></div>';
 }
 
@@ -253,25 +273,37 @@ function tch_action_javascript($post_id)
 	<script type="text/javascript" >
 	jQuery(document).ready(function($) 
 	{    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
-	     $('#tch_action').click(function () {
-	         var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
-	         $.ajax({
-	             type: "POST",
-                 url: "/wp-content/plugins/top-checker/yandex-xml.php",
-                 data: ({
-                     user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
-                     key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
-                     domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
-                     keyword: keyword_val
-                     }),
-                beforeSend: function(){
-                    $('#tch_action').text('Проверка...');
-                },                        
-                success: function (data) {
-                    $('#tch_place_text').val(data).change();
-                    $('#tch_action').text('Проверить');
-                }
-    		});
+	     $('#doaction').click(function () {
+	         //Если выбрана проверка
+	         if ($('#tch-action').val() === 'serp')
+	         {
+    	         //var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
+    	         $('.tch-cb:input:checkbox:checked').each(function()
+    	         {
+                    alert(1);
+                 });/*
+    	         $.ajax({
+    	             type: "POST",
+                     url: "/wp-content/plugins/top-checker/yandex-xml.php",
+                     data: ({
+                         user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
+                         key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
+                         domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
+                         keyword: keyword_val
+                         }),
+                    beforeSend: function(){
+                        $('#tch_action').text('Проверка...');
+                    },                        
+                    success: function (data) {
+                        $('#tch_place_text').val(data).change();
+                        $('#tch_action').text('Проверить');
+                    }
+        		});*/
+	         } 
+	         else if ($('#tch-action').val() == 'trash')
+	         {
+	             
+	         }
 	     });
 	     
 	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций

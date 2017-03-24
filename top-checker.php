@@ -148,26 +148,15 @@ function tch_meta_box( $post )
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
     
-    //Морда плагина
-    
     //Кнопка добавления нового КС
-    //echo '<link href="'.plugin_dir_url( __FILE__ ).'/css/style-admin.css" rel="stylesheet">';
     echo '<div class="wrap">';
         echo '<input type="button" id="tch_add_keyword" value="Добавить">';
     echo '</div>';
         
     if (!empty($arr_list))
     {
-        /*echo '<div class="alignleft actions bulkactions">';
-            echo '<select name="action" id="bulk-action-selector-top">';
-                echo '<option value="-1">Действия</option>';
-        	    echo '<option value="edit" class="hide-if-no-js">Изменить</option>';
-                echo '<option value="trash">Удалить</option>';
-            echo '</select>';
-            echo '<input type="submit" id="doaction" class="button action" value="Применить">';
-        echo '</div>';*/
-        echo '<div>';
-        echo '<table>';
+        echo '<table id="tch-tabl">';
+            //заголовки
             echo '<thead>';
                 echo '<tr>';
                     echo '<td>';
@@ -179,11 +168,10 @@ function tch_meta_box( $post )
                     echo '<th>';
                         echo 'Позиция';
                     echo '</th>';
-                    /*echo '<th>';
-                        echo 'Дата';
-                    echo '</th>';*/
+                    //TODO Дату и последние три апа
                 echo '</tr>';
             echo '</thead>';
+            //подвал
             echo '<tfoot>';
             echo '<tr>';
                 echo '<td>';
@@ -196,28 +184,27 @@ function tch_meta_box( $post )
                     echo 'Позиция';
                 echo '</th>';
             echo '</tfoot>';
-            echo '<tbody>';
+            //тело
+            echo '<tbody id="tch-table-body">';
                 //Получаем данные из массива
                 foreach ($arr_list as $key => $value) {
                     $id = $value->key_id;
                     echo '<tr>';
                         echo '<td>';
-                            echo '<input type="checkbox" id="tch-cb-id-'.$id.'" class="tch-cb">';
+                            echo '<input type="checkbox" class="tch-cb" value="'.esc_attr( $value->keyword ).'">';
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="text" value="'.esc_attr( $value->keyword ).'">';
+                            echo '<input type="text" key_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'">';
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="number" value="'.esc_attr( $value->place ).'">';
+                            echo '<input type="number" key_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'">';
                         echo '</td>';
-                        /*echo '<td>';
-                            echo '<input type="text" value="' .substr(esc_attr( $value->data ), 5, 5).'" disabled>';
-                        echo '</td>';*/
                     echo '</tr>';
                 }
             echo '</tbody>';
+            
         echo '</table>';
-        echo '</div>';
+        
         echo '<div>';
             echo '<select id="tch-action">';
                 //echo '<option value="-1">Действия</option>';
@@ -259,10 +246,15 @@ function tch_store_save_meta_box( $post_id )
         }
         else 
         {
-            null;//тут ключевую фразу
+            //TODO
         }
     }
 }
+
+//подключаем JS
+//TODO
+ 
+add_action( 'wp_enqueue_scripts', 'true_include_myscript' );
 
 add_action('admin_print_footer_scripts', 'tch_action_javascript', 99);
 function tch_action_javascript($post_id) 
@@ -275,30 +267,34 @@ function tch_action_javascript($post_id)
 	{    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
 	     $('#doaction').click(function () {
 	         //Если выбрана проверка
+	         alert($('#tch-action').val());
 	         if ($('#tch-action').val() === 'serp')
-	         {
+	         { alert(':');
     	         //var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
     	         $('.tch-cb:input:checkbox:checked').each(function()
     	         {
-                    alert(1);
-                 });/*
-    	         $.ajax({
-    	             type: "POST",
-                     url: "/wp-content/plugins/top-checker/yandex-xml.php",
-                     data: ({
-                         user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
-                         key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
-                         domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
-                         keyword: keyword_val
-                         }),
-                    beforeSend: function(){
-                        $('#tch_action').text('Проверка...');
-                    },                        
-                    success: function (data) {
-                        $('#tch_place_text').val(data).change();
-                        $('#tch_action').text('Проверить');
-                    }
-        		});*/
+                     var keyword_val = $(this).val();
+        	         $.ajax({
+                	             type: "POST",
+                                 url: "/wp-content/plugins/top-checker/yandex-xml.php",
+                                 data: ({
+                                         user: "<?php echo esc_attr( $prowp_options['option_user'] ); ?>",
+                                         key: "<?php echo esc_attr( $prowp_options['option_key'] ); ?>",
+                                         domain: "<?php echo esc_attr( $prowp_options['server_name'] ); ?>",
+                                         keyword: keyword_val
+                                        }),
+                                beforeSend: function()
+                                {
+                                    alert('Проверка:'+keyword_val);
+                                },                        
+                                success: function (data) 
+                                {
+                                    $(this).val(data).change();
+                                    //$('#tch_action').text('Проверить');
+                                    alert('успешно');
+                                }
+            		        });
+    	         });
 	         } 
 	         else if ($('#tch-action').val() == 'trash')
 	         {
@@ -307,16 +303,16 @@ function tch_action_javascript($post_id)
 	     });
 	     
 	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
-	     $('#tch_place_text').change(function()
+	     $('.tch-position').change(function()
 	     {
-	         var v_post_id = $('#post_ID').val();
-	         var v_place = $('#tch_place_text').val();
+	         var v_key_id = $(this).attr('key_id');
+	         var v_position = $(this).val();
 	         $.ajax({
 	             type: "POST",
                  url: "/wp-content/plugins/top-checker/tch-update.php",
                  data: ({
-                     post_id: v_post_id,
-                     place: v_place,
+                     key_id: v_key_id,
+                     place: v_position,
                      update: 'place'
                  }),
                 beforeSend: function(){
@@ -329,49 +325,67 @@ function tch_action_javascript($post_id)
 	     });
 	     
 	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
-	     $('#tch_keyword_text').change(function()
+	     $('.tch-keyword').change(function()
 	     {
 	         var v_post_id = $('#post_ID').val();
-	         var v_keyword = $('#tch_keyword_text').val();
+	         var v_key_id = $(this).attr('key_id');
+	         var v_keyword = $(this).val();
+	         
 	         $.ajax({
-	             type: "POST",
-                 url: "/wp-content/plugins/top-checker/tch-update.php",
-                 data: ({
-                     post_id: v_post_id,
-                     keyword: v_keyword,
-                     update: 'keyword'
-                 }),
-                beforeSend: function(){
-                    //ожидание
-                },                        
-                success: function (data) {
-                    //результат
-                }
-	        });
+        	             type: "POST",
+                         url: "/wp-content/plugins/top-checker/tch-update.php",
+                         data: ({
+                                     post_id: v_post_id,
+                                     key_id: v_key_id,
+                                     keyword: v_keyword,
+                                     update: 'keyword'
+                                }),
+                        beforeSend: function()
+                        {
+                            //ожидание
+                        },                        
+                        success: function (data) 
+                        {
+                            //результат
+                        }
+	             });
 	     });
 	     
-	     $('.tch_add_keyword').live('click', function(event)
+	     //Добавление новых КС
+	     $('#tch_add_keyword').live('click', function(event)
 	     {
-	        $('.var_tch_keyword').parent().append(
-                    '<tr>'+
-                        '<td>'+
-                            '<input type="text" id="tch_keyword_text" name="tch_keyword_text" value="">'+
-                        '</td>'+
-                        '<td>'+
-                            '<input type="number" name="tch_place_text" id="tch_place_text" value="">'+
-                        '</td>'+
-                        '<td>'+
-                            '<botton name="tch_action" id="tch_action" class="tch_action preview button">Проверить</botton>'+
-                        '</td>'+
-                    '</tr>'
-	        );
-	        //alert('ok');
+	         var d = document;
+	        // элемент-таблица КС
+            var tableBody = d.getElementById('tch-table-body');
+            
+            // новые элементы
+            var tr = d.createElement('tr');
+            
+            var td_cb = d.createElement('td'),
+                checkBox = d.createElement('input');
+                checkBox.type = 'checkbox';
+                checkBox.id = '???';
+            
+            var td_keywords = d.createElement('td');
+            
+            var td_place = d.createElement('td');
+            
+            
+            // добавление в конец таблицы новой строки
+            tableBody.appendChild(tr);
+            tr.appendChild(td_cb);
+            td_cb.appendChild(checkBox);
+            
+            tr.appendChild(td_keywords);
+            
+            tr.appendChild(td_place);
+
+	        alert('ok');
 	     });
 	     
 	     $('.tch_del_keyword').on('click', function()
 	     {
-	            $(this).parent().parent().parent().remove();
-	        //alert('ok');
+	            //TODO
 	     });
     });
 	</script>

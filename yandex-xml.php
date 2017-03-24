@@ -12,7 +12,6 @@ $doc = phpQuery::newDocument($html);
 $domains = pq($doc->find('domain'));
 
 echo get_my_place($domains);
-//get_list_domains($domains);
 
 //Получаем наше текущее место домена из xml
 function get_my_place($domains_xml)

@@ -4,10 +4,10 @@ ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
 include_once( dirname( __FILE__ ) . '/tch-db.php');
 
+$key_id      = $_POST['key_id'];
 $post_id     = $_POST['post_id'];
-$key_id      = $_POST['post_id'] . 1;
-$new_place   = $_POST['place'];
 $new_keyword = $_POST['keyword'];
+$new_place   = $_POST['place'];
 $update      = $_POST['update'];
 
 

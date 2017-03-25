@@ -149,18 +149,18 @@ function tch_meta_box( $post )
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
     
     //Кнопка добавления нового КС
-    echo '<div class="wrap">';
+    echo '<div id="tch-add-button">';
         echo '<input type="button" id="tch_add_keyword" value="Добавить">';
     echo '</div>';
         
     if (!empty($arr_list))
     {
-        echo '<table id="tch-tabl">';
+        echo '<table id="tch-table">';
             //заголовки
-            echo '<thead>';
+            echo '<thead id="tch-table-thead">';
                 echo '<tr>';
                     echo '<td>';
-                        echo '<input type="checkbox" class="tch-cb-all">';
+                        echo '<input type="checkbox" id="checkAll" class="tch-cb-all">';
                     echo '</td>';
                     echo '<th>';
                         echo 'Ключевая фраза';
@@ -171,19 +171,6 @@ function tch_meta_box( $post )
                     //TODO Дату и последние три апа
                 echo '</tr>';
             echo '</thead>';
-            //подвал
-            echo '<tfoot>';
-            echo '<tr>';
-                echo '<td>';
-                    echo '<input type="checkbox" class="tch-cb-all">';
-                echo '</td>';
-                echo '<th>';
-                    echo 'Ключевая фраза';
-                echo '</th>';
-                echo '<th>';
-                    echo 'Позиция';
-                echo '</th>';
-            echo '</tfoot>';
             //тело
             echo '<tbody id="tch-table-body">';
                 //Получаем данные из массива
@@ -191,13 +178,13 @@ function tch_meta_box( $post )
                     $id = $value->key_id;
                     echo '<tr>';
                         echo '<td>';
-                            echo '<input type="checkbox" class="tch-cb" value="'.esc_attr( $value->keyword ).'">';
+                            echo '<input type="checkbox" class="tch-cb"/>';//value="'.esc_attr( $value->keyword ).'"
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="text" key_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'">';
+                            echo '<input type="text" key_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'"/>';
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="number" key_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'">';
+                            echo '<input type="number" key_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'"/>';
                         echo '</td>';
                     echo '</tr>';
                 }
@@ -216,7 +203,7 @@ function tch_meta_box( $post )
     }
     else 
     {
-        echo '<div>Ключевые слова не заданы.</div>';
+        echo '<div id="not_found_keywords">Ключевые слова не заданы.</div>';
     }
     echo '<div id="error_log"></div>';
 }
@@ -267,10 +254,8 @@ function tch_action_javascript($post_id)
 	{    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
 	     $('#doaction').click(function () {
 	         //Если выбрана проверка
-	         alert($('#tch-action').val());
 	         if ($('#tch-action').val() === 'serp')
-	         { alert(':');
-    	         //var keyword_val = $('#tch_keyword_text').val();//'PHP библиотека Яндекс.xml';
+	         {
     	         $('.tch-cb:input:checkbox:checked').each(function()
     	         {
                      var keyword_val = $(this).val();
@@ -296,9 +281,18 @@ function tch_action_javascript($post_id)
             		        });
     	         });
 	         } 
+	         //Удаление
 	         else if ($('#tch-action').val() == 'trash')
-	         {
-	             
+	         {  //Ищем отмеченные жлементы
+	              $('.tch-cb:input:checkbox:checked').each(function(index, element){
+	                  $(this).parents('tr').remove();
+	                  //Проверим, если это последний чекбокс, то выведем инфу что мол друг извини, надо нажать кнопку "Добавить"
+	                  if ($('.tch-cb').length == 0 )
+	                  {
+                        $('.tch-cb-all').parents('tr').remove();
+                        $('#tch-add-button').append('<div id="not_found_keywords">Ключевые слова не заданы.</>');
+	                  }
+    	         });
 	         }
 	     });
 	     
@@ -354,7 +348,8 @@ function tch_action_javascript($post_id)
 	     //Добавление новых КС
 	     $('#tch_add_keyword').live('click', function(event)
 	     {
-	         var d = document;
+	        var d = document;
+	        
 	        // элемент-таблица КС
             var tableBody = d.getElementById('tch-table-body');
             
@@ -364,29 +359,50 @@ function tch_action_javascript($post_id)
             var td_cb = d.createElement('td'),
                 checkBox = d.createElement('input');
                 checkBox.type = 'checkbox';
+                checkBox.classList.add('tch-cb');
                 checkBox.id = '???';
             
-            var td_keywords = d.createElement('td');
+            var td_keywords = d.createElement('td'),
+                inputText = d.createElement('input');
+                inputText.type = 'text';
             
-            var td_place = d.createElement('td');
+            var td_place = d.createElement('td'),
+                inputNumber = d.createElement('input');
+                inputNumber.type = 'number';
             
             
             // добавление в конец таблицы новой строки
             tableBody.appendChild(tr);
+            //1 колонка
             tr.appendChild(td_cb);
             td_cb.appendChild(checkBox);
-            
+            //2 колонка
             tr.appendChild(td_keywords);
-            
+            td_keywords.appendChild(inputNumber);
+            //3 колонка
             tr.appendChild(td_place);
+            td_place.appendChild(inputText);
+            
+            //Удаление уведомления если есть not_found_keywords
+            if(!$.isEmptyObject($('#not_found_keywords')))
+            {
+                $('#not_found_keywords').remove();
+            }
 
-	        alert('ok');
 	     });
 	     
-	     $('.tch_del_keyword').on('click', function()
+	     // Отметить|снять отметку со ВСЕХ
+	     $("#checkAll").click(function()
 	     {
-	            //TODO
-	     });
+	        if ($("#checkAll").is(":checked"))
+	        {
+	             $(".tch-cb").attr("checked",true);
+	        } 
+	        else
+	        {
+	            $(".tch-cb").attr("checked",false);
+	        }
+	    });
     });
 	</script>
 	<?php

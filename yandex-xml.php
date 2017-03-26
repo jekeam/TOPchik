@@ -13,6 +13,8 @@ $domains = pq($doc->find('domain'));
 
 echo get_my_place($domains);
 
+//TODO Обработку ошибок
+
 //Получаем наше текущее место домена из xml
 function get_my_place($domains_xml)
 {

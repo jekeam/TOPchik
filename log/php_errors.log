@@ -1,0 +1,96 @@
+[25-Mar-2017 16:52:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php(315) : eval()'d code on line 1
+[25-Mar-2017 16:52:00 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:00 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP Notice:  Undefined variable: id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 316
+[25-Mar-2017 16:52:00 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:00 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Аргумент запроса метода wpdb::prepare() должен содержать описатель преобразований. Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 3.9.0.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4137
+[25-Mar-2017 16:52:00 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:00 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:00 UTC] PHP   8. delete_tch_keyword() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:316
+[25-Mar-2017 16:52:00 UTC] PHP   9. wpdb->delete() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:198
+[25-Mar-2017 16:52:00 UTC] PHP  10. wpdb->prepare() /home/ubuntu/workspace/wp-includes/wp-db.php:2113
+[25-Mar-2017 16:52:00 UTC] PHP  11. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1297
+[25-Mar-2017 16:52:00 UTC] PHP  12. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4137
+[25-Mar-2017 16:52:01 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php(315) : eval()'d code on line 1
+[25-Mar-2017 16:52:01 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:01 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:01 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:01 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:01 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:01 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP Notice:  Undefined variable: id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 316
+[25-Mar-2017 16:52:01 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:01 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:01 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:01 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:01 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:01 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Аргумент запроса метода wpdb::prepare() должен содержать описатель преобразований. Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 3.9.0.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4137
+[25-Mar-2017 16:52:01 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:01 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:01 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:01 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:01 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:01 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:01 UTC] PHP   8. delete_tch_keyword() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:316
+[25-Mar-2017 16:52:01 UTC] PHP   9. wpdb->delete() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:198
+[25-Mar-2017 16:52:01 UTC] PHP  10. wpdb->prepare() /home/ubuntu/workspace/wp-includes/wp-db.php:2113
+[25-Mar-2017 16:52:01 UTC] PHP  11. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1297
+[25-Mar-2017 16:52:01 UTC] PHP  12. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4137
+[25-Mar-2017 16:52:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php(315) : eval()'d code on line 1
+[25-Mar-2017 16:52:12 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:12 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:12 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:12 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP Notice:  Undefined variable: id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 316
+[25-Mar-2017 16:52:12 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:12 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:12 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:12 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Аргумент запроса метода wpdb::prepare() должен содержать описатель преобразований. Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 3.9.0.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4137
+[25-Mar-2017 16:52:12 UTC] PHP Stack trace:
+[25-Mar-2017 16:52:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[25-Mar-2017 16:52:12 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:292
+[25-Mar-2017 16:52:12 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin-footer.php:93
+[25-Mar-2017 16:52:12 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[25-Mar-2017 16:52:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[25-Mar-2017 16:52:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP   7. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[25-Mar-2017 16:52:12 UTC] PHP   8. delete_tch_keyword() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:316
+[25-Mar-2017 16:52:12 UTC] PHP   9. wpdb->delete() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php:198
+[25-Mar-2017 16:52:12 UTC] PHP  10. wpdb->prepare() /home/ubuntu/workspace/wp-includes/wp-db.php:2113
+[25-Mar-2017 16:52:12 UTC] PHP  11. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1297
+[25-Mar-2017 16:52:12 UTC] PHP  12. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4137

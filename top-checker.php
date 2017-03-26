@@ -178,13 +178,13 @@ function tch_meta_box( $post )
                     $id = $value->key_id;
                     echo '<tr>';
                         echo '<td>';
-                            echo '<input type="checkbox" class="tch-cb"/>';//value="'.esc_attr( $value->keyword ).'"
+                            echo '<input type="checkbox" key_id="'.$id.'" class="tch-cb" value="'.esc_attr( $value->keyword ).'">';
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="text" key_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'"/>';
+                            echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
                         echo '</td>';
                         echo '<td>';
-                            echo '<input type="number" key_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'"/>';
+                            echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" name="tch_place_text_'.$id.'">';
                         echo '</td>';
                     echo '</tr>';
                 }
@@ -194,7 +194,7 @@ function tch_meta_box( $post )
         
         echo '<div>';
             echo '<select id="tch-action">';
-                //echo '<option value="-1">Действия</option>';
+                echo '<option value="-1">Действия</option>';
         	    echo '<option value="serp">Проверить</option>';
                 echo '<option value="trash">Удалить</option>';
             echo '</select>';
@@ -222,19 +222,23 @@ function tch_store_save_meta_box( $post_id )
         check_admin_referer( 'meta-box-save', 'tch-plugin' );
         
         // сохраняем данные метаполя в произвольных полях записи
-        if (!empty ($_POST['tch_keyword_text']))
+        $attr_keyword = 'tch_keyword_text_';
+        $id = ($post_id*10)+1;
+        while (!empty($_POST['tch_keyword_text_'.$id]))
         {
-            //update_post_meta( $post_id, '_tch_keyword_text', sanitize_text_field( $_POST['tch_keyword_text'] ));
-            set_db_tch_keywords( $post_id . 1, sanitize_text_field($_POST['tch_keyword_text']), $post_id);
-            if (!empty ($_POST['tch_place_text']))
+            //Запись КС
+            set_db_tch_keywords( $id, sanitize_text_field($_POST['tch_keyword_text_'.$id]), $post_id);
+            
+            //Запись позиции
+            if (!empty ($_POST['tch_place_text_'.$id]))
             {
-                set_db_tch_serp( $post_id . 1, sanitize_text_field($_POST['tch_place_text']));
+                set_db_tch_serp( $id, sanitize_text_field($_POST['tch_place_text_'.$id]));
             }
+            
+            $id = ++$id;
+            
         }
-        else 
-        {
-            //TODO
-        }
+        // сохраняем данные метаполя в произвольных полях записи
     }
 }
 
@@ -247,18 +251,45 @@ add_action('admin_print_footer_scripts', 'tch_action_javascript', 99);
 function tch_action_javascript($post_id) 
 {
      $prowp_options = get_option( 'tch_options' );
-     var_dump($post_id);
 	?>
 	<script type="text/javascript" >
 	jQuery(document).ready(function($) 
-	{    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
+	{    
+	    function CheckAll()
+	    {
+	        if ($("#checkAll").is(":checked"))
+	        {
+	             //$(".tch-cb").attr("checked",true).change();
+	             //$(".tch-cb").prop('checked', true).change();
+	            // $("#checkAll").prop('checked', true).change();
+	             $(".tch-cb").prop('checked', true).change();
+	        } 
+	        else
+	        {
+	            //$(".tch-cb").attr("checked",false).change();
+	            //$(".tch-cb").removeAttr('checked').change();
+	            //$("#checkAll").removeAttr('checked').change();
+	            $(".tch-cb").removeAttr('checked').change();
+	        }
+	    }
+	    
+	    function CheckdRemove()
+	    {
+	        $(".tch-cb").removeAttr('checked').change();
+	        $("#checkAll").removeAttr('checked').change();
+	    }
+	    
+	    //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
 	     $('#doaction').click(function () {
 	         //Если выбрана проверка
+	         CheckdRemove();
 	         if ($('#tch-action').val() === 'serp')
 	         {
     	         $('.tch-cb:input:checkbox:checked').each(function()
     	         {
                      var keyword_val = $(this).val();
+                     var key_place_id = $(this).attr( 'key_id');
+                     
         	         $.ajax({
                 	             type: "POST",
                                  url: "/wp-content/plugins/top-checker/yandex-xml.php",
@@ -270,28 +301,31 @@ function tch_action_javascript($post_id)
                                         }),
                                 beforeSend: function()
                                 {
-                                    alert('Проверка:'+keyword_val);
+                                    //TODO ожидание
                                 },                        
                                 success: function (data) 
                                 {
-                                    $(this).val(data).change();
-                                    //$('#tch_action').text('Проверить');
-                                    alert('успешно');
+                                    $('[key_place_id = "'+key_place_id+'"]').val(data).change();
                                 }
-            		        });
+            		  });
     	         });
 	         } 
-	         //Удаление
+	         //Удаление КС
 	         else if ($('#tch-action').val() == 'trash')
 	         {  //Ищем отмеченные жлементы
-	              $('.tch-cb:input:checkbox:checked').each(function(index, element){
+	              $('.tch-cb:input:checkbox:checked').each(function(){
 	                  $(this).parents('tr').remove();
+	                  
 	                  //Проверим, если это последний чекбокс, то выведем инфу что мол друг извини, надо нажать кнопку "Добавить"
 	                  if ($('.tch-cb').length == 0 )
 	                  {
                         $('.tch-cb-all').parents('tr').remove();
                         $('#tch-add-button').append('<div id="not_found_keywords">Ключевые слова не заданы.</>');
 	                  }
+	                  
+	                  //Удаляем из БД
+	                  //(this).getAttribute('key_id'));
+	                  //"< ?php delete_tch_keyword(14); ?>";
     	         });
 	         }
 	     });
@@ -299,7 +333,7 @@ function tch_action_javascript($post_id)
 	     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
 	     $('.tch-position').change(function()
 	     {
-	         var v_key_id = $(this).attr('key_id');
+	         var v_key_id = $(this).attr('key_place_id');
 	         var v_position = $(this).val();
 	         $.ajax({
 	             type: "POST",
@@ -322,7 +356,7 @@ function tch_action_javascript($post_id)
 	     $('.tch-keyword').change(function()
 	     {
 	         var v_post_id = $('#post_ID').val();
-	         var v_key_id = $(this).attr('key_id');
+	         var v_key_id = $(this).attr('key_keyword_id');
 	         var v_keyword = $(this).val();
 	         
 	         $.ajax({
@@ -341,6 +375,7 @@ function tch_action_javascript($post_id)
                         success: function (data) 
                         {
                             //результат
+                            $('[key_id = "'+v_key_id+'"').val(v_keyword);
                         }
 	             });
 	     });
@@ -348,27 +383,64 @@ function tch_action_javascript($post_id)
 	     //Добавление новых КС
 	     $('#tch_add_keyword').live('click', function(event)
 	     {
-	        var d = document;
+	        var d         = document;
+	        var count_cb  = 0;
+	        var post_id   = $('#post_ID').val();
+	        
+	        //Получаем уникальный ид- на основе максимального ид элемнтов КС
+	         if (!$.isEmptyObject($('.tch-cb')))
+	         {
+    	         $('.tch-cb').each(function() {
+    	             count_cb = ++count_cb;
+    	         });
+    	         //получаем следующее значени
+    	         count_cb++;
+	         }
 	        
 	        // элемент-таблица КС
             var tableBody = d.getElementById('tch-table-body');
-            
             // новые элементы
             var tr = d.createElement('tr');
             
-            var td_cb = d.createElement('td'),
-                checkBox = d.createElement('input');
-                checkBox.type = 'checkbox';
-                checkBox.classList.add('tch-cb');
-                checkBox.id = '???';
+            var td_cb = d.createElement('td');
+            var checkBox = d.createElement('input');
+            checkBox.type = 'checkbox';
+            checkBox.classList.add('tch-cb');
+            
+            //Узнаем колчиесво строк, и получаем новый ид
+            if (count_cb > 0)
+            {
+                checkBox.setAttribute('key_id', post_id+count_cb);
+            } else
+            {
+                checkBox.setAttribute('key_id', post_id+1);
+            }
             
             var td_keywords = d.createElement('td'),
                 inputText = d.createElement('input');
                 inputText.type = 'text';
+            if (count_cb > 0)
+            {
+                inputText.setAttribute('key_keyword_id', post_id+count_cb);
+                inputText.setAttribute('name', 'tch_keyword_text_'+post_id+count_cb);
+            } else
+            {
+                inputText.setAttribute('key_keyword_id', post_id+1);
+                inputText.setAttribute('name', 'tch_keyword_text_'+post_id+1);
+            }
             
             var td_place = d.createElement('td'),
                 inputNumber = d.createElement('input');
                 inputNumber.type = 'number';
+            if (count_cb > 0)
+            {
+                inputNumber.setAttribute('key_place_id', post_id+count_cb);
+                inputNumber.setAttribute('name', 'tch_place_text_'+post_id+count_cb);
+            } else
+            {
+                inputNumber.setAttribute('key_place_id', post_id+1);
+                inputNumber.setAttribute('name', 'tch_place_text_'+post_id+1);
+            }
             
             
             // добавление в конец таблицы новой строки
@@ -378,10 +450,10 @@ function tch_action_javascript($post_id)
             td_cb.appendChild(checkBox);
             //2 колонка
             tr.appendChild(td_keywords);
-            td_keywords.appendChild(inputNumber);
+            td_keywords.appendChild(inputText);
             //3 колонка
             tr.appendChild(td_place);
-            td_place.appendChild(inputText);
+            td_place.appendChild(inputNumber);
             
             //Удаление уведомления если есть not_found_keywords
             if(!$.isEmptyObject($('#not_found_keywords')))
@@ -394,16 +466,11 @@ function tch_action_javascript($post_id)
 	     // Отметить|снять отметку со ВСЕХ
 	     $("#checkAll").click(function()
 	     {
-	        if ($("#checkAll").is(":checked"))
-	        {
-	             $(".tch-cb").attr("checked",true);
-	        } 
-	        else
-	        {
-	            $(".tch-cb").attr("checked",false);
-	        }
+	        CheckAll();
 	    });
+	    
     });
 	</script>
 	<?php
 }
+//TODO сделать статусы для КС - ВКЛ/ВЫКЛ

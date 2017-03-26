@@ -1,5 +1,26 @@
 <?php
 
+//Получения значения ид-кс для поста
+function get_next_key_id($post_id)
+{
+    global $wpdb;
+    global $tch_tbl_keywords;
+    
+    $table_name = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
+    
+    $next_key_id = $wpdb->get_var
+                            (
+                                $wpdb->prepare
+                                            ( 
+                                               "SELECT max(key_id)+1
+                                                FROM $table_name
+                                                WHERE post_id = %d",
+                                                $post_id
+                                            )
+                            ); 
+    return $next_key_id;
+}
+
 //Запись данных в таблицу $wpdb->prefix . $tch_tbl_keywords 
 function set_db_tch_keywords($id, $keyword, $post_id) 
 {
@@ -150,4 +171,29 @@ function get_tch_list($post_id)
                                             )
                             ); 
     return $arr_key;
+}
+
+function delete_tch_keyword ($key_id)
+{
+    global $wpdb;
+    global $tch_tbl_keywords;
+    
+    //дописываем префик вне цикла, под другому пока не понял как это сделать
+    if(!isset($wpdb))
+    {
+        require_once '../../../wp-load.php';
+        $wpdb = new wpdb('jekeam','','c9','localhost');
+    }
+    
+    if(!isset($wpdb->get_blog_prefix))
+    {
+        $tbl_prefix = 'wp_';
+    } else 
+    {
+        $tbl_prefix = $wpdb->get_blog_prefix();   
+    }
+    
+    $table_name = $tbl_prefix . $tch_tbl_keywords;
+    
+    $wpdb->delete( $table_name, array( 'key_id' => $key_id ) );
 }

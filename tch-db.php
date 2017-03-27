@@ -118,7 +118,7 @@ function get_tch_keyword($id)
 }
 
 //Получить последнюю позицию ключевогой фразы поста по ид-ячейки
-function get_tch_place ($id)
+function get_tch_place ($id, $date = '0000-00-00')
 {
     global $wpdb;
     global $tch_tbl_serp;
@@ -129,12 +129,16 @@ function get_tch_place ($id)
                             (
                                 $wpdb->prepare
                                             ( 
-                                               "SELECT place
-                                                FROM $table_name
-                                                WHERE key_id = %d
-                                                ORDER BY data DESC
+                                               "SELECT i.place
+                                                FROM $table_name i
+                                                WHERE i.key_id = %d
+                                                  AND i.data = (SELECT o.data
+                                                                FROM $table_name o
+                                                                WHERE i.key_id = o.key_id
+                                                                ORDER BY o.data DESC
+                                                                LIMIT 1, 1)
                                                 LIMIT 1",
-                                                $id
+                                                $id, $date
                                             )
                             ); 
     return $place;
@@ -159,13 +163,14 @@ function get_tch_list($post_id)
                                                     t_key.keyword keyword, 
                                                     t_pos.data data, 
                                                     t_pos.place place
-                                                FROM $table_keywords t_key,
-                                                     $table_position t_pos
-                                                WHERE t_key.post_id = %d
-                                                  AND t_key.key_id = t_pos.key_id
-                                                  AND t_pos.data = (SELECT MAX(i.DATA)
-                                                                    FROM $table_position i
-                                                                    WHERE i.key_id = t_pos.key_id)
+                                                FROM $table_keywords t_key
+                                                     JOIN
+                                                     $table_position t_pos 
+                                                     ON (t_key.key_id = t_pos.key_id 
+                                                     AND t_key.post_id = %d
+                                                     AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                       FROM $table_position i
+                                                                       WHERE i.key_id = t_pos.key_id))
                                                 ", 
                                                 $post_id
                                             )
@@ -177,6 +182,7 @@ function delete_tch_keyword ($key_id)
 {
     global $wpdb;
     global $tch_tbl_keywords;
+    global $tch_tbl_serp;
     
     //дописываем префик вне цикла, под другому пока не понял как это сделать
     if(!isset($wpdb))
@@ -193,7 +199,9 @@ function delete_tch_keyword ($key_id)
         $tbl_prefix = $wpdb->get_blog_prefix();   
     }
     
-    $table_name = $tbl_prefix . $tch_tbl_keywords;
+    $table_keywords = $tbl_prefix . $tch_tbl_keywords;
+    $table_position = $tbl_prefix . $tch_tbl_serp;
     
-    $wpdb->delete( $table_name, array( 'key_id' => $key_id ) );
+    $wpdb->delete( $table_keywords, array( 'key_id' => $key_id ) );
+    $wpdb->delete( $table_position, array( 'key_id' => $key_id ) );
 }

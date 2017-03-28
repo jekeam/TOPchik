@@ -216,8 +216,39 @@ jQuery(document).ready(function($)
 	         }
          }
         
+        var tableBody;
         // элемент-таблица КС
-        var tableBody = d.getElementById('tch-table-body');
+        if ($.isEmptyObject(d.getElementById('tch-table-body')))
+        {
+            //tableBody = d.createElement('tbody');
+            $('<table id="tch-table" class="tch-table bordered">'+
+            '<thead id="tch-table-thead">'+
+                '<tr>'+
+                    '<td>'+
+                        '<input type="checkbox" id="checkAll" class="tch-cb-all">'+
+                    '</td>'+
+                   '<th>Ключевая фраза</th>'+
+                 '<th colspan="2">Позиция</th>'+
+                 '</tr>'+
+            '</thead>'+
+            //тело
+            '<tbody id="tch-table-body">'+
+            '</tbody>'+
+        '</table>'+
+        '<div id="tch-div-action">'+
+            '<select id="tch-action">'+
+                '<option value="-1">Сохранить</option>'+
+        	    '<option value="serp">Проверить</option>'+
+                '<option value="trash">Удалить</option>'+
+            '</select>'+
+            '<input type="submit" id="doaction" class="button" value="Применить">'+
+        '</div>').insertBefore($('#not_found_keywords'));
+        tableBody = d.getElementById('tch-table-body');
+        }
+        else
+        {
+            tableBody = d.getElementById('tch-table-body');
+        }
         // новые элементы
         var tr = d.createElement('tr');
         

@@ -13,8 +13,6 @@ Author URI: https://suineg.ru/
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
-
-        
 include_once( dirname( __FILE__ ) . '/tch-install.php');
 include_once( dirname( __FILE__ ) . '/tch-uninstall.php');
 include_once( dirname( __FILE__ ) . '/tch-db.php');
@@ -24,8 +22,8 @@ function console_log( $data ){
   echo 'console.log('. json_encode( $data ) .')';
   echo '</script>';
 }
-
-
+    
+    
 //Объявляем подменю для плагина
 add_action( 'admin_menu', 'tch_create_settings_submenu' );
 
@@ -42,8 +40,9 @@ register_deactivation_hook(__FILE__, 'tch_deactivate' );
 register_activation_hook(__FILE__,'tch_install');
 
 //Подключаем js скрипт
-function tch_action_javascript($post_id) 
+function tch_action_javascript() 
 {
+    if( get_current_screen()->parent_base != 'edit' ) return;
 	 wp_enqueue_script('tch-script', plugins_url('/js/core.js',__FILE__));
 }
 add_action('admin_enqueue_scripts', 'tch_action_javascript', 999);
@@ -248,7 +247,7 @@ function tch_meta_box( $post )
         
         echo '<div id="tch-div-action">';
             echo '<select id="tch-action">';
-                echo '<option value="-1">Действия</option>';
+                echo '<option value="-1">Сохранить</option>';
         	    echo '<option value="serp">Проверить</option>';
                 echo '<option value="trash">Удалить</option>';
             echo '</select>';

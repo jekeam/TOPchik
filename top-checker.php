@@ -202,31 +202,43 @@ function tch_meta_box( $post )
                         /*echo '<td>';
                             echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
                         echo '</td>';*/
-                        echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'">';
+                        echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'" style="width: 100%;">';
                             echo esc_attr( $cur_keyword );
                         echo '</td>';
                         /*echo '<td>';
                             echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" >';
                         echo '</td>';*/
-                        echo '<td key_place_id="'.$id.'" class="tch-position" name="tch_place_text_'.$id.'">';
-                            echo esc_attr( $cur_place );
+                        echo '<td>';
+                            echo '<div key_place_id="'.$id.'" class="tch-position" name="tch_place_text_'.$id.'" style="width: 100%;">';
+                                echo esc_attr( $cur_place );
+                            echo '</div>';
+                            echo '<div img_place_id="'.$id.'" style="display: none;">';
+                                echo '<img src="'. plugins_url('/img/load-1.gif',__FILE__). '" style="width: 100%;">';
+                            echo '</div>';
                         echo '</td>';
-                        echo '<td id="td-change">';
+                        echo '<td>';
+                            echo '<div change_place_id="'.$id.'">';
                             if (!empty($old_place))
                             {
                                 $position = $old_place-$cur_place;
                                 if ( $position > 0)
                                 {
                                     echo '<font color="green">'.'+'.$position.'</font>';
+                                } 
+                                elseif ( $position == 0)
+                                {
+                                    echo '<font color="gray">0</font>';
                                 } else 
                                 {
                                     echo '<font color="red">'.$position.'</font>';
                                 }
                                 
-                            } else
+                            } 
+                            else
                             {
                                 echo '<font color="gray">0</font>';
                             }
+                            echo '</div>';
                         echo '</td>';
                     echo '</tr>';
                 }

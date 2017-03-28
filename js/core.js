@@ -41,10 +41,39 @@ jQuery(document).ready(function($)
                                 beforeSend: function()
                                 {
                                     //TODO ожидание
+                                    $('[key_place_id="'+key_place_id+'"]').hide();
+                                    $('[img_place_id="'+key_place_id+'"]').show();
                                 },                        
                                 success: function (data) 
                                 {
+                                    $('[img_place_id="'+key_place_id+'"]').hide();
+                                    $('[key_place_id="'+key_place_id+'"]').show();
+                                    var cur_old_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
                                     $('[key_place_id="'+key_place_id+'"]').text(data).change();
+                                    var cur_new_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
+                                    if (cur_new_place > 0)
+                                    {
+                                        var difference = cur_old_place-cur_new_place;
+                                        if ( difference > 0)
+                                        {
+                                            $('[change_place_id="'+key_place_id+'"]').text('+'+difference);
+                                            $('[change_place_id="'+key_place_id+'"]').css('color','green');
+                                        } 
+                                        else if ( difference < 0)
+                                        {
+                                            $('[change_place_id="'+key_place_id+'"]').text(difference);
+                                            $('[change_place_id="'+key_place_id+'"]').css('color','red');
+                                        } else 
+                                        {
+                                            $('[change_place_id="'+key_place_id+'"]').text('0');
+                                            $('[change_place_id="'+key_place_id+'"]').css('color','gray');
+                                        }
+                                    }
+                                    else
+                                    {
+                                        $('[change_place_id="'+key_place_id+'"]').text('0');
+                                        $('[change_place_id="'+key_place_id+'"]').css('color','gray');
+                                    }
                                 }
             		  });
                 }
@@ -200,18 +229,18 @@ jQuery(document).ready(function($)
         
         var td_keywords = d.createElement('td'),
             inputText = d.createElement('input');
+            td_keywords.setAttribute('colspan', 3);
             inputText.type = 'text';
             inputText.setAttribute('key_keyword_id', count_cb);
             inputText.setAttribute('name', 'tch_keyword_text_'+count_cb);
+            //td_keywords.css('width','100%');
     
         
-        var td_place = d.createElement('td'),
+        /*var td_place = d.createElement('td'),
             inputNumber = d.createElement('input');
             inputNumber.type = 'number';
             inputNumber.setAttribute('key_place_id', count_cb);
-            inputNumber.setAttribute('name', 'tch_place_text_'+count_cb);
-        
-        
+            inputNumber.setAttribute('name', 'tch_place_text_'+count_cb);*/
         
         // добавление в конец таблицы новой строки
         tableBody.appendChild(tr);
@@ -222,8 +251,8 @@ jQuery(document).ready(function($)
         tr.appendChild(td_keywords);
         td_keywords.appendChild(inputText);
         //3 колонка
-        tr.appendChild(td_place);
-        td_place.appendChild(inputNumber);
+        /*tr.appendChild(td_place);
+        td_place.appendChild(inputNumber);*/
         
         //Удаление уведомления если есть not_found_keywords
         if(!$.isEmptyObject($('#not_found_keywords')))

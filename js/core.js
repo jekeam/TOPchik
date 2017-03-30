@@ -43,36 +43,49 @@ jQuery(document).ready(function($)
                                     //TODO ожидание
                                     $('[key_place_id="'+key_place_id+'"]').hide();
                                     $('[img_place_id="'+key_place_id+'"]').show();
+                                    $('#error_log').hide();
                                 },                        
                                 success: function (data) 
                                 {
                                     $('[img_place_id="'+key_place_id+'"]').hide();
                                     $('[key_place_id="'+key_place_id+'"]').show();
                                     var cur_old_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
-                                    $('[key_place_id="'+key_place_id+'"]').text(data).change();
-                                    var cur_new_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
-                                    if (cur_new_place > 0)
+                                    if (data.slice(0,6) == 'Ошибка')
                                     {
-                                        var difference = cur_old_place-cur_new_place;
-                                        if ( difference > 0)
-                                        {
-                                            $('[change_place_id="'+key_place_id+'"]').text('+'+difference);
-                                            $('[change_place_id="'+key_place_id+'"]').css('color','green');
-                                        } 
-                                        else if ( difference < 0)
-                                        {
-                                            $('[change_place_id="'+key_place_id+'"]').text(difference);
-                                            $('[change_place_id="'+key_place_id+'"]').css('color','red');
-                                        } else 
-                                        {
-                                            $('[change_place_id="'+key_place_id+'"]').text('0');
-                                            $('[change_place_id="'+key_place_id+'"]').css('color','gray');
-                                        }
+                                        $('#error_log').show();
+                                        $('#error_log').text(data).change();
+                                        $('#error_log').css('color','red');
+                                        
+                                        $('[change_place_id="'+key_place_id+'"]').text(cur_old_place);
+                                        $('[change_place_id="'+key_place_id+'"]').css('color','gray');
                                     }
                                     else
                                     {
-                                        $('[change_place_id="'+key_place_id+'"]').text('0');
-                                        $('[change_place_id="'+key_place_id+'"]').css('color','gray');
+                                        $('[key_place_id="'+key_place_id+'"]').text(data).change();
+                                        var cur_new_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
+                                        if (cur_new_place > 0)
+                                        {
+                                            var difference = cur_old_place-cur_new_place;
+                                            if ( difference > 0)
+                                            {
+                                                $('[change_place_id="'+key_place_id+'"]').text('+'+difference);
+                                                $('[change_place_id="'+key_place_id+'"]').css('color','green');
+                                            } 
+                                            else if ( difference < 0)
+                                            {
+                                                $('[change_place_id="'+key_place_id+'"]').text(difference);
+                                                $('[change_place_id="'+key_place_id+'"]').css('color','red');
+                                            } else 
+                                            {
+                                                $('[change_place_id="'+key_place_id+'"]').text('0');
+                                                $('[change_place_id="'+key_place_id+'"]').css('color','gray');
+                                            }
+                                        }
+                                        else
+                                        {
+                                            $('[change_place_id="'+key_place_id+'"]').text(cur_old_place);
+                                            $('[change_place_id="'+key_place_id+'"]').css('color','gray');
+                                        }
                                     }
                                 }
             		  });

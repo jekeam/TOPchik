@@ -5,50 +5,6 @@ ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
 require_once '../../../wp-load.php';
 
-//пишем логи XML сообщений
-$file = dirname( __FILE__ ) . '/log/xml.log';
-// Открываем файл для получения существующего содержимого
-$current = file_get_contents($file);
-
-$prowp_options = get_option( 'tch_options' );
-
-$user = $prowp_options['option_user'];
-$key = $prowp_options['option_key'];
-$my_domain = strtolower($prowp_options['server_name']);
-$keyword = $_POST['keyword'];
-
-$current .= "\n\n".date('H:i:s', time() - date('Z'));
-$current .= "\n".'$user:'.$user;
-$current .= "\n".'$key:'.$key;
-$current .= "\n".'$my_domain:'.$my_domain;
-$current .= "\n".'$keyword:'.$keyword;
-
-$html = file_get_contents('https://yandex.ru/search/xml?user='.$user
-                                .'&key='.$key
-                                .'&query='.urlencode($keyword)
-                                .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1');
-
-$doc = phpQuery::newDocument($html);
-
-$domains = pq($doc->find('domain'));
-
-if(strlen($domains)>0)
-{
-    $current .= "\n".'$domains:'.$domains;
-    file_put_contents($file, "\n".'$domains:'.$current);
-} 
-else 
-{
-    $current = pq($doc->find('error'));
-    file_put_contents($file, "\n".'$error:'.$current);
-}
-
-$my_position = get_my_place($domains);
-
-$current .= "\n".'Моя позиция:'.$my_position;
-
-//TODO Обработку ошибок
-
 //Получаем наше текущее место домена из xml
 function get_my_place($domains_xml)
 {
@@ -68,21 +24,61 @@ function get_my_place($domains_xml)
     return 0;
 }
 
-//Получаем список доменов - для дебага
-function get_list_domains($domains_xml)
+$debag = 'on';
+//пишем логи XML сообщений
+if ($debag = 'on') 
 {
-    $place = 0;
-    
-    foreach($domains_xml as $domain)
-    {
-        $cur_domain = strtolower(pq($domain)->text());
-        echo $place.' '.$cur_domain.'</br>';
-        ++$place;
-    }   
+    $file = dirname( __FILE__ ) . '/log/xml.log';
 }
-// Пишем содержимое обратно в файл
-file_put_contents($file, $current);
-echo $my_position;
+// Открываем файл для получения существующего содержимого
+$current = file_get_contents($file);
 
+$prowp_options = get_option( 'tch_options' );
+
+$user = $prowp_options['option_user'];
+$key = $prowp_options['option_key'];
+$my_domain = strtolower($prowp_options['server_name']);
+$keyword = $_POST['keyword'];
+
+$current .= date('H:i:s', time() - date('Z'))."\n";
+$current .= '$user:'.$user."\n";
+$current .= '$key:'.$key."\n";
+$current .= '$my_domain:'.$my_domain."\n";
+$current .= '$keyword:'.$keyword."\n";
+$my_position = 0;
+
+$html = file_get_contents('https://yandex.ru/search/xml?user='.$user
+                                .'&key=1'.$key
+                                .'&query='.urlencode($keyword)
+                                .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1');
+
+$doc = phpQuery::newDocument($html);
+
+//Проверяем есть ли ошибки
+$error = 'Ошибка: '.pq($doc->find('error'))->text()."\n";
+
+if(strlen($error)>0)
+{
+    $current .= $error."\n\n";
+    if ($debag = 'on') 
+    {
+        file_put_contents($file, $current);
+    }
+    echo $error;
+    return;
+} 
+//Если все ОК работаем дальше
+$domains = pq($doc->find('domain'));
+$current .= '$domains:'.$domains."\n";
+
+$my_position = get_my_place($domains);
+$current .= 'Моя позиция:'.$my_position."\n\n";
+
+// Пишем содержимое обратно в файл
+if ($debag = 'on') 
+{
+    file_put_contents($file, $current);
+}
+echo $my_position;
 
 phpQuery::unloadDocuments($html);

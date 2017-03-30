@@ -1,272 +1,37 @@
-[28-Mar-2017 10:49:55 UTC] PHP Notice:  Undefined variable: post_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:49:55 UTC] PHP Stack trace:
-[28-Mar-2017 10:49:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/edit.php:0
-[28-Mar-2017 10:49:55 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/edit.php:10
-[28-Mar-2017 10:49:55 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 10:49:55 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:49:55 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:49:55 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:50:03 UTC] PHP Notice:  Undefined variable: post_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:50:03 UTC] PHP Stack trace:
-[28-Mar-2017 10:50:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:50:03 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:50:03 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:50:03 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:50:03 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:50:45 UTC] PHP Notice:  Undefined variable: post_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:50:45 UTC] PHP Stack trace:
-[28-Mar-2017 10:50:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:50:45 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:50:45 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:50:45 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:50:45 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:10 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:10 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:53:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:53:10 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:10 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:10 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:10 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:10 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:53:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:53:10 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:10 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:10 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:11 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:11 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 10:53:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 10:53:11 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 10:53:11 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:11 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:11 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:11 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:11 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 10:53:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 10:53:11 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 10:53:11 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:11 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:11 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:12 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:12 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:53:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:53:12 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:12 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:12 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:12 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:12 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:53:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:53:12 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:12 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:12 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:16 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 10:53:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 10:53:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 10:53:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:16 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:16 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:53:16 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:53:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:53:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 10:53:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 10:53:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 10:53:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:53:16 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:53:16 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:54:16 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:54:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:54:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:54:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:54:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:54:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:54:16 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:54:16 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:54:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:54:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:54:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:54:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:54:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:54:16 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:55:16 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:55:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:55:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:55:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:55:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:55:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:55:16 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:55:16 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 10:55:16 UTC] PHP Stack trace:
-[28-Mar-2017 10:55:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:55:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:55:16 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:55:16 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:55:16 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:56:17 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:56:17 UTC] PHP Stack trace:
-[28-Mar-2017 10:56:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:56:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:56:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:56:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:56:17 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:56:17 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:56:17 UTC] PHP Stack trace:
-[28-Mar-2017 10:56:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:56:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:56:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:56:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:56:17 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:57:17 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:57:17 UTC] PHP Stack trace:
-[28-Mar-2017 10:57:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:57:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:57:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:57:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:57:17 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:57:17 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:57:17 UTC] PHP Stack trace:
-[28-Mar-2017 10:57:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:57:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:57:17 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:57:17 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:57:17 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:59:19 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:59:19 UTC] PHP Stack trace:
-[28-Mar-2017 10:59:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:59:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:59:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:59:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:59:19 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 10:59:19 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 10:59:19 UTC] PHP Stack trace:
-[28-Mar-2017 10:59:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 10:59:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 10:59:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 10:59:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 10:59:19 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:00:19 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 11:00:19 UTC] PHP Stack trace:
-[28-Mar-2017 11:00:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:00:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:00:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:00:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:00:19 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:00:19 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 18
-[28-Mar-2017 11:00:19 UTC] PHP Stack trace:
-[28-Mar-2017 11:00:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:00:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:00:19 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:00:19 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:00:19 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:00:36 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:00:36 UTC] PHP Stack trace:
-[28-Mar-2017 11:00:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:00:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:00:36 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:00:36 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:00:36 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:00:36 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:00:37 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:00:37 UTC] PHP Stack trace:
-[28-Mar-2017 11:00:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:00:37 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:00:37 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:00:37 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:00:37 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:00:37 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:00:37 UTC] PHP Stack trace:
-[28-Mar-2017 11:00:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:00:37 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:00:37 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:00:37 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:00:37 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:00:37 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:01:59 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:01:59 UTC] PHP Stack trace:
-[28-Mar-2017 11:01:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:01:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:01:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:01:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:01:59 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:01:59 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:01:59 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:01:59 UTC] PHP Stack trace:
-[28-Mar-2017 11:01:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:01:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:01:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:01:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:01:59 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:01:59 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:02:59 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:02:59 UTC] PHP Stack trace:
-[28-Mar-2017 11:02:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:02:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:02:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:02:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:02:59 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:02:59 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:02:59 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:02:59 UTC] PHP Stack trace:
-[28-Mar-2017 11:02:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:02:59 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:02:59 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:02:59 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:02:59 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:02:59 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:03:04 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:03:04 UTC] PHP Stack trace:
-[28-Mar-2017 11:03:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:03:04 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:03:04 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:03:04 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:03:04 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:03:04 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:03:04 UTC] PHP Stack trace:
-[28-Mar-2017 11:03:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:03:04 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:03:04 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:03:04 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:03:04 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:04:04 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:04:04 UTC] PHP Stack trace:
-[28-Mar-2017 11:04:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:04:04 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:04:04 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:04:04 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:04:04 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:04:04 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:04:04 UTC] PHP Stack trace:
-[28-Mar-2017 11:04:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:04:04 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:04:04 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:04:04 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:04:04 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:04:25 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:04:25 UTC] PHP Stack trace:
-[28-Mar-2017 11:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:04:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:04:25 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:04:25 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:04:25 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:04:25 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:04:25 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:04:25 UTC] PHP Stack trace:
-[28-Mar-2017 11:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[28-Mar-2017 11:04:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[28-Mar-2017 11:04:25 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:04:25 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:04:25 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:304
-[28-Mar-2017 11:04:26 UTC] PHP Fatal error:  Call to undefined function get_current_screen() in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 16
-[28-Mar-2017 11:04:26 UTC] PHP Stack trace:
-[28-Mar-2017 11:04:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[28-Mar-2017 11:04:26 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/post.php:12
-[28-Mar-2017 11:04:26 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/admin.php:31
-[28-Mar-2017 11:04:26 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
-[28-Mar-2017 11:04:26 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
-[28-Mar-2017 11:04:26 UTC] PHP   6. include_once() /home/ubuntu/workspace/wp-settings.php:304
+[30-Mar-2017 15:16:04 UTC] PHP Notice:  Undefined offset: 1 in /home/ubuntu/workspace/wp-admin/includes/dashboard.php on line 1227
+[30-Mar-2017 15:16:04 UTC] PHP Stack trace:
+[30-Mar-2017 15:16:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[30-Mar-2017 15:16:04 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin-ajax.php:91
+[30-Mar-2017 15:16:04 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[30-Mar-2017 15:16:04 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[30-Mar-2017 15:16:04 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[30-Mar-2017 15:16:04 UTC] PHP   6. wp_ajax_dashboard_widgets() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[30-Mar-2017 15:16:04 UTC] PHP   7. wp_dashboard_primary() /home/ubuntu/workspace/wp-admin/includes/ajax-actions.php:314
+[30-Mar-2017 15:16:04 UTC] PHP   8. wp_dashboard_cached_rss_widget() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:1169
+[30-Mar-2017 15:16:04 UTC] PHP   9. call_user_func_array:{/home/ubuntu/workspace/wp-admin/includes/dashboard.php:999}() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:999
+[30-Mar-2017 15:16:04 UTC] PHP  10. wp_dashboard_primary_output() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:999
+[30-Mar-2017 15:16:04 UTC] PHP  11. wp_dashboard_plugins_output() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:1185
+[30-Mar-2017 15:23:58 UTC] PHP Fatal error:  Call to a member function get_blog_prefix() on a non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php on line 51
+[30-Mar-2017 15:23:58 UTC] PHP Stack trace:
+[30-Mar-2017 15:23:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:0
+[30-Mar-2017 15:23:58 UTC] PHP   2. set_db_tch_serp() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:17
+[30-Mar-2017 15:31:16 UTC] PHP Fatal error:  Call to a member function get_blog_prefix() on a non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php on line 51
+[30-Mar-2017 15:31:16 UTC] PHP Stack trace:
+[30-Mar-2017 15:31:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:0
+[30-Mar-2017 15:31:16 UTC] PHP   2. set_db_tch_serp() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:17
+[30-Mar-2017 15:33:36 UTC] PHP Fatal error:  Call to a member function get_blog_prefix() on a non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php on line 51
+[30-Mar-2017 15:33:36 UTC] PHP Stack trace:
+[30-Mar-2017 15:33:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:0
+[30-Mar-2017 15:33:36 UTC] PHP   2. set_db_tch_serp() /home/ubuntu/workspace/wp-content/plugins/top-checker/tch-update.php:17
+[30-Mar-2017 15:53:26 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
+[30-Mar-2017 15:53:26 UTC] PHP Stack trace:
+[30-Mar-2017 15:53:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[30-Mar-2017 15:53:26 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[30-Mar-2017 15:53:26 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[30-Mar-2017 15:53:26 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
+[30-Mar-2017 15:53:26 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:449
+[30-Mar-2017 15:53:26 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[30-Mar-2017 15:53:26 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[30-Mar-2017 15:53:26 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[30-Mar-2017 15:53:26 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[30-Mar-2017 15:53:26 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377

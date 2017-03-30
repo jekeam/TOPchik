@@ -172,7 +172,7 @@ jQuery(document).ready(function($)
              });
      });
      
-     //Добавление новых КС
+     //Добавление нового КС
      $(document).on('click', '#tch_add_keyword', function()
      {
         var d         = document;
@@ -264,6 +264,7 @@ jQuery(document).ready(function($)
             inputText.type = 'text';
             inputText.setAttribute('key_keyword_id', count_cb);
             inputText.setAttribute('name', 'tch_keyword_text_'+count_cb);
+            inputText.setAttribute('style', 'width: 100%;');
             //td_keywords.css('width','100%');
     
         

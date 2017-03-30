@@ -10,19 +10,15 @@ Author URI: https://suineg.ru/
 
 //define('TOP_CHECKER_VERSION', '0.1');
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
 include_once( dirname( __FILE__ ) . '/tch-install.php');
 include_once( dirname( __FILE__ ) . '/tch-uninstall.php');
 include_once( dirname( __FILE__ ) . '/tch-db.php');
-
-function console_log( $data ){
-  echo '<script>';
-  echo 'console.log('. json_encode( $data ) .')';
-  echo '</script>';
-}
-    
     
 //Объявляем подменю для плагина
 add_action( 'admin_menu', 'tch_create_settings_submenu' );
@@ -42,8 +38,15 @@ register_activation_hook(__FILE__,'tch_install');
 //Подключаем js скрипт
 function tch_action_javascript() 
 {
-    if( get_current_screen()->parent_base != 'edit' ) return;
-	 wp_enqueue_script('tch-script', plugins_url('/js/core.js',__FILE__));
+    
+    if( get_current_screen()->id != 'post' ) 
+    {
+        return;
+    }
+    else
+    {
+        wp_enqueue_script('tch-script', plugins_url('/js/core.js',__FILE__));
+    }
 }
 add_action('admin_enqueue_scripts', 'tch_action_javascript', 999);
 
@@ -166,6 +169,7 @@ function tch_meta_box( $post )
     //Кнопка добавления нового КС
     echo '<div id="tch-add-button">';
         echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
+        echo '<input type="button" id="tch_add_keywords" class="page-title-action" value="Добавить несколько">';
     echo '</div>';
         
     if (!empty($arr_list))
@@ -202,7 +206,7 @@ function tch_meta_box( $post )
                             echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
                         echo '</td>';*/
                         echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'" style="width: 100%;">';
-                            echo esc_attr( $cur_keyword );
+                            echo '<a href="https://yandex.ru/search/?text='.esc_attr( $cur_keyword ).'" target="_blank">'.esc_attr( $cur_keyword ).'</a>';
                         echo '</td>';
                         /*echo '<td>';
                             echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" >';
@@ -253,6 +257,7 @@ function tch_meta_box( $post )
             echo '</select>';
             echo '<input type="submit" id="doaction" class="button" value="Применить">';
         echo '</div>';
+
     }
     else 
     {

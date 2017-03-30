@@ -26,13 +26,22 @@ $current .= "\n".'$keyword:'.$keyword;
 $html = file_get_contents('https://yandex.ru/search/xml?user='.$user
                                 .'&key='.$key
                                 .'&query='.urlencode($keyword)
-                                .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D50.docs-in-group%3D1');
+                                .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1');
 
 $doc = phpQuery::newDocument($html);
 
 $domains = pq($doc->find('domain'));
 
-$current .= "\n".$domains;
+if(strlen($domains)>0)
+{
+    $current .= "\n".'$domains:'.$domains;
+    file_put_contents($file, "\n".'$domains:'.$current);
+} 
+else 
+{
+    $current = pq($doc->find('error'));
+    file_put_contents($file, "\n".'$error:'.$current);
+}
 
 $my_position = get_my_place($domains);
 

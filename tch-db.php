@@ -27,20 +27,7 @@ function set_db_tch_keywords($id, $keyword, $post_id)
     global $wpdb;
     global $tch_tbl_keywords;
     
-    //дописываем префик вне цикла, под другому пока не понял как это сделать
-    if(!isset($wpdb))
-    {
-        require_once '../../../wp-load.php';
-        $wpdb = new wpdb('jekeam','','c9','localhost');
-    }
-    
-    if(!isset($wpdb->get_blog_prefix))
-    {
-        $tbl_prefix = 'wp_';
-    } else 
-    {
-        $tbl_prefix = $wpdb->get_blog_prefix();   
-    }
+    $tbl_prefix = $wpdb->get_blog_prefix();
     
     $table_name = $tbl_prefix . $tch_tbl_keywords;
     
@@ -61,20 +48,7 @@ function set_db_tch_serp($id, $place = 0, $time =  00000000)
     global $wpdb;
     global $tch_tbl_serp;
     
-    //дописываем префик вне цикла, под другому пока не понял как это сделать
-    if(!isset($wpdb))
-    {
-        require_once '../../../wp-load.php';
-        $wpdb = new wpdb('jekeam','','c9','localhost');
-    }
-    
-    if(!isset($wpdb->get_blog_prefix))
-    {
-        $tbl_prefix = 'wp_';
-    } else 
-    {
-        $tbl_prefix = $wpdb->get_blog_prefix();   
-    }
+    $tbl_prefix = $wpdb->get_blog_prefix();   
     
     $table_name = $tbl_prefix . $tch_tbl_serp;
  
@@ -184,20 +158,7 @@ function delete_tch_keyword ($key_id)
     global $tch_tbl_keywords;
     global $tch_tbl_serp;
     
-    //дописываем префик вне цикла, под другому пока не понял как это сделать
-    if(!isset($wpdb))
-    {
-        require_once '../../../wp-load.php';
-        $wpdb = new wpdb('jekeam','','c9','localhost');
-    }
-    
-    if(!isset($wpdb->get_blog_prefix))
-    {
-        $tbl_prefix = 'wp_';
-    } else 
-    {
-        $tbl_prefix = $wpdb->get_blog_prefix();   
-    }
+    $tbl_prefix = $wpdb->get_blog_prefix();   
     
     $table_keywords = $tbl_prefix . $tch_tbl_keywords;
     $table_position = $tbl_prefix . $tch_tbl_serp;

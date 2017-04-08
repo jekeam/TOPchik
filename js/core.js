@@ -62,7 +62,7 @@ jQuery(document).ready(function($)
                                     else
                                     {
                                         $('[key_place_id="'+key_place_id+'"]').text(data).change();
-                                        var cur_new_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
+                                        var cur_new_place =  $('[key_place_id="'+key_place_id+'"]').text();
                                         if (cur_new_place > 0)
                                         {
                                             var difference = cur_old_place-cur_new_place;

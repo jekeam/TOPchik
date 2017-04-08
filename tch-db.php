@@ -17,7 +17,7 @@ function get_next_key_id($post_id)
                                                 WHERE post_id = %d",
                                                 $post_id
                                             )
-                            ); 
+                            );
     return $next_key_id;
 }
 
@@ -45,6 +45,8 @@ function set_db_tch_keywords($id, $keyword, $post_id)
 //Запись данных в таблицу $wpdb->prefix . $tch_tbl_serp
 function set_db_tch_serp($id, $place = 0, $time =  00000000)
 {
+    //define('SHORTINIT', true);
+    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
     global $wpdb;
     global $tch_tbl_serp;
     

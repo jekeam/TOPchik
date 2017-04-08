@@ -48,17 +48,17 @@ $current .= '$keyword:'.$keyword."\n";
 $my_position = 0;
 
 $html = file_get_contents('https://yandex.ru/search/xml?user='.$user
-                                .'&key=1'.$key
+                                .'&key='.$key
                                 .'&query='.urlencode($keyword)
                                 .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1');
 
 $doc = phpQuery::newDocument($html);
-
+//$current .= $doc;
 //Проверяем есть ли ошибки
-$error = 'Ошибка: '.pq($doc->find('error'))->text()."\n";
-
-if(strlen($error)>0)
+$error_text = pq($doc->find('error'))->text();
+if(strlen($error_text)>0)
 {
+    $error = 'Ошибка '. $error_text ."\n";
     $current .= $error."\n\n";
     if ($debag = 'on') 
     {

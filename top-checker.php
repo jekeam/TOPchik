@@ -198,6 +198,7 @@ function tch_meta_box( $post )
                     $cur_place = $value->place;
                     $old_place = get_tch_place($id);
                     $cur_keyword = $value->keyword;
+                    
                     echo '<tr>';
                         echo '<td class="tch-td-str">';
                             echo '<input type="checkbox" key_id="'.$id.'" class="tch-cb" value="'.esc_attr( $cur_keyword ).'">';

@@ -85,3 +85,12 @@
     background-image:         linear-gradient(top, #FFA500, #f1f1f1);
 }
 
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}

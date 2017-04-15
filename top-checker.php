@@ -45,7 +45,11 @@ function tch_action_javascript()
     }
     else
     {
-        wp_enqueue_script('tch-script', plugins_url('/js/core.js',__FILE__));
+        include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
+        wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
+        wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));
+        wp_enqueue_script('tch-script-graphics', plugins_url('/js/graphics.js',__FILE__));
+        //wp_enqueue_script('tch-script-d3js', plugins_url('/src/canvasjs.min.js',__FILE__));
     }
 }
 add_action('admin_enqueue_scripts', 'tch_action_javascript', 999);
@@ -265,6 +269,7 @@ function tch_meta_box( $post )
         echo '<div id="not_found_keywords">Ключевые слова не заданы.</div>';
     }
     echo '<div id="error_log"></div>';
+    echo "<div id='chart_div'></div>";
 }
 
 // сохраняем данные метаполя

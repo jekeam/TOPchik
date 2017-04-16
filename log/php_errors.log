@@ -157,3 +157,153 @@
 [16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
 [16-Apr-2017 18:57:25 UTC] PHP Stack trace:
 [16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:05:41 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 19:05:41 UTC] PHP Stack trace:
+[16-Apr-2017 19:05:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:07:21 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:07:21 UTC] PHP Stack trace:
+[16-Apr-2017 19:07:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:09:55 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:09:55 UTC] PHP Stack trace:
+[16-Apr-2017 19:09:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:11:51 UTC] PHP Notice:  Undefined property: stdClass::$place in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 12
+[16-Apr-2017 19:11:51 UTC] PHP Stack trace:
+[16-Apr-2017 19:11:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:12:28 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:12:28 UTC] PHP Stack trace:
+[16-Apr-2017 19:12:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:15:06 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:15:06 UTC] PHP Stack trace:
+[16-Apr-2017 19:15:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 19:16:30 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 9
+[16-Apr-2017 19:16:30 UTC] PHP Stack trace:
+[16-Apr-2017 19:16:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0

@@ -121,36 +121,61 @@ function get_tch_place ($id, $date = '0000-00-00')
 }
 
 //Получить все ключевые слова поста
-function get_tch_list($post_id)
+function get_tch_list($post_id, $all = 0)
 {
     global $wpdb;
     global $tch_tbl_keywords;
     global $tch_tbl_serp;
     
+    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+    
     $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
     $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
     
-    $arr_key = $wpdb->get_results
-                            (
-                                $wpdb->prepare
-                                            ( 
-                                               "SELECT 
-                                                    t_key.key_id key_id, 
-                                                    t_key.keyword keyword, 
-                                                    t_pos.data data, 
-                                                    t_pos.place place
-                                                FROM $table_keywords t_key
-                                                     JOIN
-                                                     $table_position t_pos 
-                                                     ON (t_key.key_id = t_pos.key_id 
-                                                     AND t_key.post_id = %d
-                                                     AND t_pos.data = (SELECT MAX(i.DATA)
-                                                                       FROM $table_position i
-                                                                       WHERE i.key_id = t_pos.key_id))
-                                                ", 
-                                                $post_id
-                                            )
-                            ); 
+    if (0 == $all)
+    {
+        $arr_key = $wpdb->get_results
+                                (
+                                    $wpdb->prepare
+                                                ( 
+                                                   "SELECT 
+                                                        t_key.key_id key_id, 
+                                                        t_key.keyword keyword, 
+                                                        t_pos.data data, 
+                                                        t_pos.place place
+                                                    FROM $table_keywords t_key
+                                                         JOIN
+                                                         $table_position t_pos 
+                                                         ON (t_key.key_id = t_pos.key_id 
+                                                         AND t_key.post_id = %d
+                                                         AND t_pos.data = (SELECT MAX(i.DATA)
+                                                                           FROM $table_position i
+                                                                           WHERE i.key_id = t_pos.key_id))
+                                                    ", 
+                                                    $post_id
+                                                )
+                                );
+    } else {
+        $arr_key = $wpdb->get_results
+                                (
+                                    $wpdb->prepare
+                                                ( 
+                                                   "SELECT 
+                                                        t_key.keyword keyword, 
+                                                        t_pos.data data, 
+                                                        t_pos.place place
+                                                    FROM $table_keywords t_key
+                                                         JOIN
+                                                         $table_position t_pos 
+                                                         ON (t_key.key_id = t_pos.key_id 
+                                                         AND t_key.post_id = %d)
+                                                    ORDER BY t_pos.data
+                                                    ", 
+                                                    $post_id
+                                                )
+                                );
+    }
+    
     return $arr_key;
 }
 

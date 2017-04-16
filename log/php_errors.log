@@ -1,386 +1,159 @@
-[08-Apr-2017 12:50:42 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("fill", "#000 in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:42 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:42 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:42 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:42 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:42 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:42 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/tch-db.php", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-       in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:42 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:42 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:42 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:42 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:42 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:49 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("fill", "#000") in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:49 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:49 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:49 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:49 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:49 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:49 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .a in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:49 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:49 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:49 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:49 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:49 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:51 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("fill", "#000") in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:51 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:51 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:51 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:51 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:51 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:51 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .a in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:51 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:51 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:51 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:51 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:51 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:55 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("fill", "#000") in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:55 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:55 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:55 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:55 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:55 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:55 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/data.tsv", type, function(error, data) {
-  if (error) throw error;
-
-  var cities = data.columns.slice(1).map(function(id) {
-    return {
-      id: id,
-      values: data.map(function(d) {
-        return {date: d.date, temperature: d[id]};
-      })
-    };
-  });
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-
-  y.domain([
-    d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
-    d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-  ]);
-
-  z.domain(cities.map(function(c) { return c.id; }));
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .a in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 366
-[08-Apr-2017 12:50:55 UTC] PHP Stack trace:
-[08-Apr-2017 12:50:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 12:50:55 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 12:50:55 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:703
-[08-Apr-2017 12:50:55 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1048}() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 12:50:55 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1048
-[08-Apr-2017 16:40:34 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/is/d3.v4.min.js): failed to open stream: No such file or directory in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 51
-[08-Apr-2017 16:40:34 UTC] PHP Stack trace:
-[08-Apr-2017 16:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 16:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 16:40:34 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:473
-[08-Apr-2017 16:40:34 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:97
-[08-Apr-2017 16:40:34 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[08-Apr-2017 16:40:34 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[08-Apr-2017 16:40:34 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:34 UTC] PHP   8. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:34 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/is/d3.v4.min.js' for inclusion (include_path='.:/usr/share/php:/usr/share/pear:/home/ubuntu/workspace/wp-content/plugins/top-checker/src/phpQuery/:/home/ubuntu/workspace/wp-content/plugins/top-checker/src/phpQuery/plugins/') in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 51
-[08-Apr-2017 16:40:34 UTC] PHP Stack trace:
-[08-Apr-2017 16:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 16:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 16:40:34 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:473
-[08-Apr-2017 16:40:34 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:97
-[08-Apr-2017 16:40:34 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[08-Apr-2017 16:40:34 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[08-Apr-2017 16:40:34 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:34 UTC] PHP   8. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:38 UTC] PHP Warning:  include_once(/home/ubuntu/workspace/wp-content/plugins/top-checker/is/d3.v4.min.js): failed to open stream: No such file or directory in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 51
-[08-Apr-2017 16:40:38 UTC] PHP Stack trace:
-[08-Apr-2017 16:40:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 16:40:38 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 16:40:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:473
-[08-Apr-2017 16:40:38 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:97
-[08-Apr-2017 16:40:38 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[08-Apr-2017 16:40:38 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[08-Apr-2017 16:40:38 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:38 UTC] PHP   8. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:38 UTC] PHP Warning:  include_once(): Failed opening '/home/ubuntu/workspace/wp-content/plugins/top-checker/is/d3.v4.min.js' for inclusion (include_path='.:/usr/share/php:/usr/share/pear:/home/ubuntu/workspace/wp-content/plugins/top-checker/src/phpQuery/:/home/ubuntu/workspace/wp-content/plugins/top-checker/src/phpQuery/plugins/') in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 51
-[08-Apr-2017 16:40:38 UTC] PHP Stack trace:
-[08-Apr-2017 16:40:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
-[08-Apr-2017 16:40:38 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post.php:173
-[08-Apr-2017 16:40:38 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:473
-[08-Apr-2017 16:40:38 UTC] PHP   4. do_action() /home/ubuntu/workspace/wp-admin/admin-header.php:97
-[08-Apr-2017 16:40:38 UTC] PHP   5. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[08-Apr-2017 16:40:38 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[08-Apr-2017 16:40:38 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 16:40:38 UTC] PHP   8. tch_action_javascript() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 18:53:49 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
-[08-Apr-2017 18:53:49 UTC] PHP Stack trace:
-[08-Apr-2017 18:53:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[08-Apr-2017 18:53:49 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
-[08-Apr-2017 18:53:49 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[08-Apr-2017 18:53:49 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[08-Apr-2017 18:53:49 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:449
-[08-Apr-2017 18:53:49 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[08-Apr-2017 18:53:49 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[08-Apr-2017 18:53:49 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 18:53:49 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[08-Apr-2017 18:53:49 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
-[09-Apr-2017 08:22:57 UTC] PHP Notice: This XML document is invalid, likely due to invalid characters. XML error: Undeclared entity error at line 11, column 24 in /home/ubuntu/workspace/wp-includes/class-simplepie.php on line 1421
-[15-Apr-2017 17:26:04 UTC] PHP Notice:  Undefined offset: 1 in /home/ubuntu/workspace/wp-admin/includes/dashboard.php on line 1227
-[15-Apr-2017 17:26:04 UTC] PHP Stack trace:
-[15-Apr-2017 17:26:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
-[15-Apr-2017 17:26:04 UTC] PHP   2. do_action() /home/ubuntu/workspace/wp-admin/admin-ajax.php:91
-[15-Apr-2017 17:26:04 UTC] PHP   3. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[15-Apr-2017 17:26:04 UTC] PHP   4. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
-[15-Apr-2017 17:26:04 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[15-Apr-2017 17:26:04 UTC] PHP   6. wp_ajax_dashboard_widgets() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
-[15-Apr-2017 17:26:04 UTC] PHP   7. wp_dashboard_primary() /home/ubuntu/workspace/wp-admin/includes/ajax-actions.php:314
-[15-Apr-2017 17:26:04 UTC] PHP   8. wp_dashboard_cached_rss_widget() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:1169
-[15-Apr-2017 17:26:04 UTC] PHP   9. call_user_func_array:{/home/ubuntu/workspace/wp-admin/includes/dashboard.php:999}() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:999
-[15-Apr-2017 17:26:04 UTC] PHP  10. wp_dashboard_primary_output() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:999
-[15-Apr-2017 17:26:04 UTC] PHP  11. wp_dashboard_plugins_output() /home/ubuntu/workspace/wp-admin/includes/dashboard.php:1185
+[16-Apr-2017 17:00:08 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:00:08 UTC] PHP Stack trace:
+[16-Apr-2017 17:00:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:00:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:00:08 UTC] PHP Stack trace:
+[16-Apr-2017 17:00:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:00:37 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:00:37 UTC] PHP Stack trace:
+[16-Apr-2017 17:00:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:00:37 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:00:37 UTC] PHP Stack trace:
+[16-Apr-2017 17:00:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:02:15 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:02:15 UTC] PHP Stack trace:
+[16-Apr-2017 17:02:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:02:54 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:02:54 UTC] PHP Stack trace:
+[16-Apr-2017 17:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:02:54 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:02:54 UTC] PHP Stack trace:
+[16-Apr-2017 17:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:04:16 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:04:16 UTC] PHP Stack trace:
+[16-Apr-2017 17:04:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:04:16 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:04:16 UTC] PHP Stack trace:
+[16-Apr-2017 17:04:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:04:55 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:04:55 UTC] PHP Stack trace:
+[16-Apr-2017 17:04:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:04:55 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:04:55 UTC] PHP Stack trace:
+[16-Apr-2017 17:04:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:08:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 7
+[16-Apr-2017 17:08:44 UTC] PHP Stack trace:
+[16-Apr-2017 17:08:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:09:36 UTC] PHP Notice:  Undefined variable: post in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:09:36 UTC] PHP Stack trace:
+[16-Apr-2017 17:09:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:09:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 6
+[16-Apr-2017 17:09:36 UTC] PHP Stack trace:
+[16-Apr-2017 17:09:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:59:07 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
+[16-Apr-2017 17:59:07 UTC] PHP Stack trace:
+[16-Apr-2017 17:59:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[16-Apr-2017 17:59:07 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[16-Apr-2017 17:59:07 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[16-Apr-2017 17:59:07 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
+[16-Apr-2017 17:59:07 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:449
+[16-Apr-2017 17:59:07 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[16-Apr-2017 17:59:07 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:323
+[16-Apr-2017 17:59:07 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:298}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[16-Apr-2017 17:59:07 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:298
+[16-Apr-2017 17:59:07 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
+[16-Apr-2017 17:59:09 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/template-loader.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 5
+[16-Apr-2017 17:59:09 UTC] PHP Stack trace:
+[16-Apr-2017 17:59:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 17:59:09 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/template-loader.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 5
+[16-Apr-2017 17:59:09 UTC] PHP Stack trace:
+[16-Apr-2017 17:59:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0
+[16-Apr-2017 18:57:25 UTC] PHP Notice:  Undefined property: stdClass::$key_id in /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php on line 11
+[16-Apr-2017 18:57:25 UTC] PHP Stack trace:
+[16-Apr-2017 18:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/GetDataGraphics.php:0

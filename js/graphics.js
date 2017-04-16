@@ -11,9 +11,9 @@ google.charts.setOnLoadCallback(drawChart);
 // instantiates the pie chart, passes in the data and
 // draws it.
 function drawChart() {
-
+    var v_post_id = jQuery('#post_ID').val();
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/top-checker/GetDataGraphics.php",
+        url: "/wp-content/plugins/top-checker/GetDataGraphics.php?post_id="+v_post_id,
         dataType: "json",
         async: false
     }).responseText;

@@ -1,5 +1,5 @@
 <?php
-
+/*
 $data = '{
   "cols": [
         {"label":"Поисковые запросы","type":"string"},
@@ -15,6 +15,31 @@ $data = '{
       ]
 }';
 
-echo $data;
+echo $data;*/
 
-//echo json_encode($data);
+$arr_data = array('cols' => array(
+                                  0 => array(
+                                             'label'=>'Поисковые запросы',
+                                             'type' => 'string'
+                                             ),
+                                  1 => array(
+                                             'label'=>'Блог астматика',
+                                             'type' => 'number'
+                                             ),                                             
+                                  ),
+                  'rows' => array( 0 => array(
+                                             'c'=> array(
+                                                          0 => array('v'=>'01.01.2017'),
+                                                          1 => array('v' => '10')
+                                                        )),
+                                    1=> array(
+                                              'c'=> array(
+                                                          0 => array('v'=>'01.01.2017'),
+                                                          1 => array('v' => '10')
+                                                          )
+                                              )
+                                  )
+                                  
+                  );
+
+echo json_encode($arr_data);

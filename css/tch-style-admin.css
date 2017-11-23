@@ -94,3 +94,8 @@
   stroke: steelblue;
   stroke-width: 1.5px;
 }
+
+
+#tch_window {
+    overflow: scroll;
+}

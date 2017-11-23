@@ -25,7 +25,10 @@ jQuery(document).ready(function($)
          //Если выбрана проверка
          if ($('#tch-action').val() === 'serp')
          {
-	         $('.tch-cb:visible:input:checkbox:checked').each(function()
+             //Сколько всего отмечено
+             var cb_cnt = $('.tch-cb:visible:input:checkbox:checked').length;
+             
+	         $('.tch-cb:visible:input:checkbox:checked').each(function(indx, el)
 	         {
                 var keyword_val = $(this).val();
                 var key_place_id = $(this).attr( 'key_id');
@@ -87,12 +90,19 @@ jQuery(document).ready(function($)
                                             $('[change_place_id="'+key_place_id+'"]').css('color','gray');
                                         }
                                     }
+                                    
+                                    //есили это последний элемент, обновим график
+                                    if (cb_cnt == indx+1) 
+                                    {
+                                        drawChart() ;
+                                    }
                                 }
             		  });
                 }
                 //проверяем позиции
                 get_positin();
 	         });
+	         
          } 
          //Удаление КС
          else if ($('#tch-action').val() == 'trash')

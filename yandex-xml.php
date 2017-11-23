@@ -21,7 +21,7 @@ function get_my_place($domains_xml)
         }
         ++$place;
     }
-    return 0;
+    return 200;
 }
 
 $debag = 'on';

@@ -41,7 +41,8 @@ function tch_action_javascript()
     
     if( get_current_screen()->id != 'post' ) 
     {
-        return;
+        //return;
+        wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
     }
     else
     {
@@ -49,7 +50,6 @@ function tch_action_javascript()
         wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
         wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));
         wp_enqueue_script('tch-script-graphics', plugins_url('/js/graphics.js',__FILE__));
-        //wp_enqueue_script('tch-script-d3js', plugins_url('/src/canvasjs.min.js',__FILE__));
     }
 }
 add_action('admin_enqueue_scripts', 'tch_action_javascript', 999);
@@ -59,6 +59,7 @@ add_action( 'admin_enqueue_scripts', 'tch_stylesheet' );
 function tch_stylesheet()
 {
     wp_enqueue_style("style-tch", plugins_url('/css/tch-style-admin.css',__FILE__));
+    wp_enqueue_style("style-tch-progressBar", plugins_url('/css/progressBar.css',__FILE__));
 }
 
 //Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
@@ -76,7 +77,7 @@ $tch_tbl_serp = "tch_serp";
 //Задаем настройки для меню плагина
 function tch_create_settings_submenu() 
 {
-    add_options_page( 'История запросов', 'Поисковые запросы', 'manage_options', 'tch_settings_menu', 'tch_settings_page' );
+    add_options_page( 'Top-checker', 'Top-checker', 'manage_options', 'tch_settings_menu', 'tch_settings_page' );
     //Задаим функцию для настройки плагина
     add_action('admin_init', 'tch_register_settings' );
 }
@@ -91,58 +92,127 @@ function tch_register_settings()
 function tch_settings_page()
 {
 ?>
-    <div class="wrap">
-        <h1>TOP CHECKER</h1>
-        <h2>Яндекс.XML</h2>
-        <p>
-            Укажите ваши данные из 
-            <a href="https://xml.yandex.ru/settings/">Яндекс.XML</a>
-        </p>
-        <form method="post" action="options.php">
-            <?php settings_fields( 'tch-settings-group' ); ?>
-            <?php $prowp_options = get_option( 'tch_options' ); ?>
-            <table class="form-table">
-                <tr valign="top">
-                    <th scope="row">Логин в Яндекс.XML:</th>
-                    <td>
-                        <input type="text" name="tch_options[option_user]" 
-                         value="<?php echo esc_attr( $prowp_options['option_user'] ); ?>" />
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Ключ:</th>
-                    <td>
-                        <input class="regular-text" type="text" name="tch_options[option_key]" 
-                         value="<?php echo esc_attr( $prowp_options['option_key'] ); ?>"/>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Ваш ip-адрес сервера:</th>
-                    <td>
-                        <input class="regular-text" type="text" name="tch_options[server_addr]" 
-                         value="<?php echo esc_attr( $prowp_options['server_addr'] ); ?>" />
-                         
-                        <input class="regular-text" type="text" name="SERVER[SERVER_ADDR]" 
-                         value="<?php echo esc_attr( $_SERVER['SERVER_ADDR'] ); ?>" disabled />
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Адрес вашего сайта:</th>
-                    <td>
-                        <input class="regular-text" type="text" name="tch_options[server_name]" 
-                         value="<?php echo esc_attr( $prowp_options['server_name'] ); ?>"/>
-                         
-                        <input class="regular-text" type="text" name="SERVER[SERVER_NAME]" 
-                         value="<?php echo esc_attr( $_SERVER['SERVER_NAME'] ); ?>" disabled />
-                    </td>
-                </tr>
-            </table>
-            <p class="submit">
-                <input type="submit" class="button-primary" value="Сохранить" />
-            </p>
-        </form>
+<h1>Topсhecker — съем позиций прямо из WP</h1>
+<div>
+    <ul class="subsubsub">
+        <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
+                           class="<?php if (is_null($_GET['tch_page'])){echo 'current';} ?>">Статистика</a></li> |
+        <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
+                           class="<?php if ($_GET['tch_page']=='settings'){echo 'current';} ?>">Настройка</a></li>
+    </ul>
+<br>
+<br>
+</div>
+<div class="wrap" style="background: #fff; padding: 20px;">
+<?php 
+if (!isset($_GET['tch_page'])){
+?>
+<div class="tch-bubble">
+    
+    <div class="pie pie-1">
+        <div class="clip1">
+            <div class="slice1"></div>
+        </div>
+        <div class="clip2">
+            <div class="slice2"></div>
+        </div>
+        <div class="status"></div>
     </div>
+    
+    <div class="pie pie-2">
+        <div class="clip1">
+            <div class="slice1"></div>
+        </div>
+        <div class="clip2">
+            <div class="slice2"></div>
+        </div>
+        <div class="status"></div>
+    </div>
+    
+    <div class="pie pie-3">
+        <div class="clip1">
+            <div class="slice1"></div>
+        </div>
+        <div class="clip2">
+            <div class="slice2"></div>
+        </div>
+        <div class="status"></div>
+    </div>
+    
+    <div class="pie pie-4">
+        <div class="clip1">
+            <div class="slice1"></div>
+        </div>
+        <div class="clip2">
+            <div class="slice2"></div>
+        </div>
+        <div class="status"></div>
+    </div>
+    
+    <div class="pie pie-5">
+        <div class="clip1">
+            <div class="slice1"></div>
+        </div>
+        <div class="clip2">
+            <div class="slice2"></div>
+        </div>
+        <div class="status"></div>
+    </div>
+    
+</div>
 <?php
+} elseif ($_GET['tch_page']=='settings') {
+?>
+<h2>Яндекс.XML</h2>
+<p>
+    Укажите ваши данные из 
+    <a href="https://xml.yandex.ru/settings/">Яндекс.XML</a>
+</p>
+<form method="post" action="options.php">
+    <?php settings_fields( 'tch-settings-group' ); ?>
+    <?php $prowp_options = get_option( 'tch_options' ); ?>
+    <table class="form-table">
+        <tr valign="top">
+            <th scope="row">Логин в Яндекс.XML:</th>
+            <td>
+                <input type="text" name="tch_options[option_user]" 
+                 value="<?php echo esc_attr( $prowp_options['option_user'] ); ?>" />
+            </td>
+        </tr>
+        <tr valign="top">
+            <th scope="row">Ключ:</th>
+            <td>
+                <input class="regular-text" type="text" name="tch_options[option_key]" 
+                 value="<?php echo esc_attr( $prowp_options['option_key'] ); ?>"/>
+            </td>
+        </tr>
+        <tr valign="top">
+            <th scope="row">Ваш ip-адрес сервера:</th>
+            <td>
+                <input class="regular-text" type="text" name="tch_options[server_addr]" 
+                 value="<?php echo esc_attr( $prowp_options['server_addr'] ); ?>" />
+                 
+                <input class="regular-text" type="text" name="SERVER[SERVER_ADDR]" 
+                 value="<?php echo esc_attr( $_SERVER['SERVER_ADDR'] ); ?>" disabled />
+            </td>
+        </tr>
+        <tr valign="top">
+            <th scope="row">Адрес вашего сайта:</th>
+            <td>
+                <input class="regular-text" type="text" name="tch_options[server_name]" 
+                 value="<?php echo esc_attr( $prowp_options['server_name'] ); ?>"/>
+                 
+                <input class="regular-text" type="text" name="SERVER[SERVER_NAME]" 
+                 value="<?php echo esc_attr( $_SERVER['SERVER_NAME'] ); ?>" disabled />
+            </td>
+        </tr>
+    </table>
+    <p class="submit">
+        <input type="submit" class="button-primary" value="Сохранить" />
+    </p>
+</form>
+<?php
+}
 }
 
 //Функция очистки всех данных, передаваемых настройкам плагина, перед сохранением в базе данных.
@@ -165,111 +235,112 @@ function tch_meta_box( $post )
     
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
-    
-    //Див для скрытых параметров
-    echo '<div id="tch-inside">';
-    echo '</div>';
-    
-    //Кнопка добавления нового КС
-    echo '<div id="tch-add-button">';
-        echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
-        echo '<input type="button" id="tch_add_keywords" class="page-title-action" value="Добавить несколько">';
-    echo '</div>';
+    echo '<div id="tch_window">';
+        //Див для скрытых параметров
+        echo '<div id="tch-inside">';
+        echo '</div>';
         
-    if (!empty($arr_list))
-    {
-        echo '<table id="tch-table" class="tch-table bordered">';
-            //заголовки
-            echo '<thead id="tch-table-thead">';
-                echo '<tr>';
-                    echo '<td>';
-                        echo '<input type="checkbox" id="checkAll" class="tch-cb-all">';
-                    echo '</td>';
-                    echo '<th>';
-                        echo 'Ключевая фраза';
-                    echo '</th>';
-                    echo '<th colspan="2">';
-                        echo 'Позиция';
-                    echo '</th>';
-                    //TODO Дату и последние три апа
-                echo '</tr>';
-            echo '</thead>';
-            //тело
-            echo '<tbody id="tch-table-body">';
-                //Получаем данные из массива
-                foreach ($arr_list as $key => $value) {
-                    $id = $value->key_id;
-                    $cur_place = $value->place;
-                    $old_place = get_tch_place($id);
-                    $cur_keyword = $value->keyword;
-                    
+        if (!empty($arr_list))
+        {
+            echo '<table id="tch-table" class="tch-table bordered">';
+                //заголовки
+                echo '<thead id="tch-table-thead">';
                     echo '<tr>';
-                        echo '<td class="tch-td-str">';
-                            echo '<input type="checkbox" key_id="'.$id.'" class="tch-cb" value="'.esc_attr( $cur_keyword ).'">';
-                        echo '</td>';
-                        /*echo '<td>';
-                            echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
-                        echo '</td>';*/
-                        echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'" style="width: 100%;">';
-                            echo '<a href="https://yandex.ru/search/?text='.esc_attr( $cur_keyword ).'" target="_blank">'.esc_attr( $cur_keyword ).'</a>';
-                        echo '</td>';
-                        /*echo '<td>';
-                            echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" >';
-                        echo '</td>';*/
                         echo '<td>';
-                            echo '<div key_place_id="'.$id.'" class="tch-position" name="tch_place_text_'.$id.'" style="width: 100%;">';
-                                echo esc_attr( $cur_place );
-                            echo '</div>';
-                            echo '<div img_place_id="'.$id.'" style="display: none;">';
-                                echo '<img src="'. plugins_url('/img/load-1.gif',__FILE__). '" style="width: 100%;">';
-                            echo '</div>';
+                            echo '<input type="checkbox" id="checkAll" class="tch-cb-all">';
                         echo '</td>';
-                        echo '<td>';
-                            echo '<div change_place_id="'.$id.'">';
-                            if (!empty($old_place))
-                            {
-                                $position = $old_place-$cur_place;
-                                if ( $position > 0)
+                        echo '<th>';
+                            echo 'Ключевая фраза';
+                        echo '</th>';
+                        echo '<th colspan="2">';
+                            echo 'Позиция';
+                        echo '</th>';
+                        //TODO Дату и последние три апа
+                    echo '</tr>';
+                echo '</thead>';
+                //тело
+                echo '<tbody id="tch-table-body">';
+                    //Получаем данные из массива
+                    foreach ($arr_list as $key => $value) {
+                        $id = $value->key_id;
+                        $cur_place = $value->place;
+                        $old_place = get_tch_place($id);
+                        $cur_keyword = $value->keyword;
+                        
+                        echo '<tr>';
+                            echo '<td class="tch-td-str">';
+                                echo '<input type="checkbox" key_id="'.$id.'" class="tch-cb" value="'.esc_attr( $cur_keyword ).'">';
+                            echo '</td>';
+                            /*echo '<td>';
+                                echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
+                            echo '</td>';*/
+                            echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'" style="width: 100%;">';
+                                echo '<a href="https://yandex.ru/search/?text='.esc_attr( $cur_keyword ).'" target="_blank">'.esc_attr( $cur_keyword ).'</a>';
+                            echo '</td>';
+                            /*echo '<td>';
+                                echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" >';
+                            echo '</td>';*/
+                            echo '<td>';
+                                echo '<div key_place_id="'.$id.'" class="tch-position" name="tch_place_text_'.$id.'" style="width: 100%;">';
+                                    echo esc_attr( $cur_place );
+                                echo '</div>';
+                                echo '<div img_place_id="'.$id.'" style="display: none;">';
+                                    echo '<img src="'. plugins_url('/img/load-1.gif',__FILE__). '" style="width: 100%;">';
+                                echo '</div>';
+                            echo '</td>';
+                            echo '<td>';
+                                echo '<div change_place_id="'.$id.'">';
+                                if (!empty($old_place))
                                 {
-                                    echo '<font color="green">'.'+'.$position.'</font>';
+                                    $position = $old_place-$cur_place;
+                                    if ( $position > 0)
+                                    {
+                                        echo '<font color="green">'.'+'.$position.'</font>';
+                                    } 
+                                    elseif ( $position == 0)
+                                    {
+                                        echo '<font color="gray">0</font>';
+                                    } else 
+                                    {
+                                        echo '<font color="red">'.$position.'</font>';
+                                    }
+                                    
                                 } 
-                                elseif ( $position == 0)
+                                else
                                 {
                                     echo '<font color="gray">0</font>';
-                                } else 
-                                {
-                                    echo '<font color="red">'.$position.'</font>';
                                 }
-                                
-                            } 
-                            else
-                            {
-                                echo '<font color="gray">0</font>';
-                            }
-                            echo '</div>';
-                        echo '</td>';
-                    echo '</tr>';
-                }
-            echo '</tbody>';
+                                echo '</div>';
+                            echo '</td>';
+                        echo '</tr>';
+                    }
+                echo '</tbody>';
+                
+            echo '</table>';
             
-        echo '</table>';
-        
-        echo '<div id="tch-div-action">';
-            echo '<select id="tch-action">';
-                echo '<option value="-1">Сохранить</option>';
-        	    echo '<option value="serp">Проверить</option>';
-                echo '<option value="trash">Удалить</option>';
-            echo '</select>';
-            echo '<input type="submit" id="doaction" class="button" value="Применить">';
-        echo '</div>';
-
-    }
-    else 
-    {
-        echo '<div id="not_found_keywords">Ключевые слова не заданы.</div>';
-    }
-    echo '<div id="error_log"></div>';
-    echo "<div id='chart_div'></div>";
+            //Кнопка добавления нового КС
+            echo '<div id="tch-add-button">';
+                echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить фразу">';
+                //echo '<input type="button" id="tch_add_keywords" class="page-title-action" value="Добавить несколько">';
+            echo '</div>';
+            
+            echo '<div id="tch-div-action">';
+                echo '<select id="tch-action">';
+                    echo '<option value="-1">Сохранить</option>';
+            	    echo '<option value="serp">Проверить</option>';
+                    echo '<option value="trash">Удалить</option>';
+                echo '</select>';
+                echo '<input type="submit" id="doaction" class="button" value="Применить">';
+            echo '</div>';
+    
+        }
+        else 
+        {
+            echo '<div id="not_found_keywords">Ключевые слова не заданы.</div>';
+        }
+        echo '<div id="error_log"></div>';
+        echo "<div id='chart_div'></div>";
+    echo '</div>';
 }
 
 // сохраняем данные метаполя

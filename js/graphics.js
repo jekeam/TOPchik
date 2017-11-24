@@ -50,7 +50,7 @@ function drawChart() {
                 //'type': 'linear',
                 //'degree': 3,
                 //'pointsVisible': 'true',
-                'lineWidth': 5,
+                'lineWidth': 4,
                 'opacity': 0.9,
                 'title': 'Общий тренд'
             }

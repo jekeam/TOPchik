@@ -41,6 +41,7 @@ function tch_install ()
         dbDelta($sql2);
         //add_option("tch_keywords_db_ver", $tch_serp_db_ver);
    }
+   
    //Обновление таблиц
    $installed_ver  = get_option( "tch_keywords_db_ver" );
 

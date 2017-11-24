@@ -260,6 +260,8 @@ function delete_tch_keyword ($key_id)
     global $tch_tbl_keywords;
     global $tch_tbl_serp;
     
+    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+    
     $tbl_prefix = $wpdb->get_blog_prefix();   
     
     $table_keywords = $tbl_prefix . $tch_tbl_keywords;

@@ -70,7 +70,7 @@ $tch_serp_db_ver = "0.1";
 //суфиксы таблиц
 global $tch_tbl_keywords;
 global $tch_tbl_serp;
-    
+
 $tch_tbl_keywords = "tch_keywords";
 $tch_tbl_serp = "tch_serp";
 
@@ -96,9 +96,9 @@ function tch_settings_page()
 <div>
     <ul class="subsubsub">
         <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
-                           class="<?php if (is_null($_GET['tch_page'])){echo 'current';} ?>">Статистика</a></li> |
+                           class="<?php if (!isset($_GET['tch_page'])){echo 'current';} ?>">Статистика</a></li> |
         <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
-                           class="<?php if ($_GET['tch_page']=='settings'){echo 'current';} ?>">Настройка</a></li>
+                           class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='settings'){echo 'current';}} ?>">Настройка</a></li>
     </ul>
 <br>
 <br>
@@ -108,56 +108,88 @@ function tch_settings_page()
 if (!isset($_GET['tch_page'])){
 ?>
 <div class="tch-bubble">
-    
-    <div class="pie pie-1">
-        <div class="clip1">
-            <div class="slice1"></div>
+    <div title="1, 2 и 3-я позиции — коэффициент 1
+4-я позиция — 0,85
+5-я позиция — 0,6
+6 и 7-я позиция — 0,5
+8 и 9-я позиция — 0,3
+10-я позиция — 0,2">
+        <p class="ptitle">Видимость сайта</p>
+        <div class="pie pie-1">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="clip2">
-            <div class="slice2"></div>
-        </div>
-        <div class="status"></div>
     </div>
     
-    <div class="pie pie-2">
-        <div class="clip1">
-            <div class="slice1"></div>
+     <div>
+        <p class="ptitle">Запросов в топ 3</p>        
+        <div class="pie pie-2">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="clip2">
-            <div class="slice2"></div>
-        </div>
-        <div class="status"></div>
-    </div>
+    </div>        
     
-    <div class="pie pie-3">
-        <div class="clip1">
-            <div class="slice1"></div>
+    <div>
+        <p class="ptitle">Запросов в топ 10</p>
+        <div class="pie pie-3">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="clip2">
-            <div class="slice2"></div>
-        </div>
-        <div class="status"></div>
     </div>
-    
-    <div class="pie pie-4">
-        <div class="clip1">
-            <div class="slice1"></div>
+        
+    <div>
+        <p class="ptitle">Запросов в топ 30</p>
+        <div class="pie pie-4">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="clip2">
-            <div class="slice2"></div>
-        </div>
-        <div class="status"></div>
     </div>
-    
-    <div class="pie pie-5">
-        <div class="clip1">
-            <div class="slice1"></div>
+        
+    <div>
+        <p class="ptitle">Позиций улучшилось</p>        
+        <div class="pie pie-5">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="clip2">
-            <div class="slice2"></div>
+    </div>        
+        
+    <div>
+        <p class="ptitle">Позиций ухудшилось</p>        
+        <div class="pie pie-6">
+            <div class="clip1">
+                <div class="slice1"></div>
+            </div>
+            <div class="clip2">
+                <div class="slice2"></div>
+            </div>
+            <div class="status"></div>
         </div>
-        <div class="status"></div>
-    </div>
+    </div>        
     
 </div>
 <?php

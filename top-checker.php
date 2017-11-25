@@ -169,10 +169,10 @@ if (!isset($_GET['tch_page'])){
         <p class="ptitle">Позиций улучшилось</p>        
         <div class="pie pie-5">
             <div class="clip1">
-                <div class="slice1"></div>
+                <div class="slice1 green"></div>
             </div>
             <div class="clip2">
-                <div class="slice2"></div>
+                <div class="slice2 green"></div>
             </div>
             <div class="status"></div>
         </div>
@@ -182,10 +182,10 @@ if (!isset($_GET['tch_page'])){
         <p class="ptitle">Позиций ухудшилось</p>        
         <div class="pie pie-6">
             <div class="clip1">
-                <div class="slice1"></div>
+                <div class="slice1 red"></div>
             </div>
             <div class="clip2">
-                <div class="slice2"></div>
+                <div class="slice2 red"></div>
             </div>
             <div class="status"></div>
         </div>

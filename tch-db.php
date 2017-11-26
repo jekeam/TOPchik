@@ -189,7 +189,7 @@ function get_tch_keywords($post_id)
 
 
 //Получить даты ключевых слов поста
-function get_tch_dates($post_id)
+function get_tch_dates($post_id=null)
 {
     global $wpdb;
     global $tch_tbl_keywords;
@@ -200,7 +200,8 @@ function get_tch_dates($post_id)
     $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
     $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
     
-    $arr_key = $wpdb->get_results
+    if(!is_null($post_id)){
+         $arr_key = $wpdb->get_results
                             (
                                 $wpdb->prepare
                                             ( 
@@ -216,12 +217,21 @@ function get_tch_dates($post_id)
                                                 $post_id
                                             )
                             );
-    
+    }else{
+        $arr_key = $wpdb->get_results( 
+            "SELECT distinct
+             t_pos.data as dat
+             FROM $table_position t_pos 
+             ORDER BY t_pos.data"
+        );
+        
+    }
+        
     return $arr_key;
 }
 
 //Получить последнюю позицию кс по дате
-function get_tch_pos_by_date($key_id, $date)
+function get_tch_pos_by_date($date, $key_id=null)
 {
     global $wpdb;
     global $tch_tbl_keywords;
@@ -232,7 +242,8 @@ function get_tch_pos_by_date($key_id, $date)
     $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
     $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
     
-    $arr_key = $wpdb->get_results
+    if(!is_null($key_id)){
+         $arr_key = $wpdb->get_results
                             (
                                 $wpdb->prepare
                                             ( 
@@ -249,6 +260,19 @@ function get_tch_pos_by_date($key_id, $date)
                                                 $key_id, $date
                                             )
                             );
+    }else{
+        $arr_key = $wpdb->get_results(
+            $wpdb->prepare( 
+                "SELECT avg(t_pos.place) as pos
+                 FROM $table_keywords t_key
+                   JOIN $table_position t_pos ON t_key.key_id = t_pos.key_id 
+                 WHERE t_pos.data <= %s
+                 GROUP BY t_pos.data
+                 ORDER BY t_pos.data DESC
+                 LIMIT 1", $date
+            )
+        );
+    }
     
     return $arr_key;
 }

@@ -41,8 +41,9 @@ function tch_action_javascript()
     
     if( get_current_screen()->id != 'post' ) 
     {
-        //return;
+        wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
         wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
+        wp_enqueue_script('tch-script-graphics-avg', plugins_url('/js/graphics-avg.js',__FILE__));
     }
     else
     {
@@ -103,7 +104,7 @@ function tch_settings_page()
 <br>
 <br>
 </div>
-<div class="wrap" style="background: #fff; padding: 20px;">
+<div class="wrap" style="background: #fff; padding: 20px; width: 68%;">
 <?php 
 if (!isset($_GET['tch_page'])){
 ?>
@@ -190,8 +191,9 @@ if (!isset($_GET['tch_page'])){
             <div class="status"></div>
         </div>
     </div>        
-    
 </div>
+<!--Общий график позиций-->
+<div id"chart_avg_div"></div>
 <?php
 } elseif ($_GET['tch_page']=='settings') {
 ?>

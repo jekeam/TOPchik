@@ -59,7 +59,7 @@ function drawChart() {
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
+        chart.draw(data, options);
     //var chart = new google.charts.Line(document.getElementById('chart_div'));
         //chart.draw(data, google.charts.Line.convertOptions(options));
         //todo https://github.com/google/google-visualization-issues/issues/2143

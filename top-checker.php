@@ -38,16 +38,15 @@ register_activation_hook(__FILE__,'tch_install');
 //Подключаем js скрипт
 function tch_action_javascript() 
 {
-    
+    //include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
     if( get_current_screen()->id != 'post' ) 
     {
-        wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
         wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
+        wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
         wp_enqueue_script('tch-script-graphics-avg', plugins_url('/js/graphics-avg.js',__FILE__));
     }
     else
     {
-        include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
         wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
         wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));
         wp_enqueue_script('tch-script-graphics', plugins_url('/js/graphics.js',__FILE__));
@@ -193,7 +192,7 @@ if (!isset($_GET['tch_page'])){
     </div>        
 </div>
 <!--Общий график позиций-->
-<div id"chart_avg_div"></div>
+<div id="chart_avg_div"></div>
 <?php
 } elseif ($_GET['tch_page']=='settings') {
 ?>

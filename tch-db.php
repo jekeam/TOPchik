@@ -253,7 +253,7 @@ function get_tch_pos_by_date($date, $key_id=null)
                                                      $table_position t_pos 
                                                      ON t_key.key_id = t_pos.key_id 
                                                 WHERE t_key.key_id = %d
-                                                  AND t_pos.data <= %s
+                                                  AND t_pos.data = %s
                                                 ORDER BY t_pos.data DESC
                                                 LIMIT 1
                                                 ",
@@ -261,14 +261,12 @@ function get_tch_pos_by_date($date, $key_id=null)
                                             )
                             );
     }else{
-        $arr_key = $wpdb->get_results(
+        $arr_key = $wpdb->get_var(
             $wpdb->prepare( 
-                "SELECT avg(t_pos.place) as pos
-                 FROM $table_keywords t_key
-                   JOIN $table_position t_pos ON t_key.key_id = t_pos.key_id 
-                 WHERE t_pos.data <= %s
+                "SELECT round(avg(t_pos.place)) as pos
+                 FROM $table_position t_pos
+                 WHERE t_pos.data = %s
                  GROUP BY t_pos.data
-                 ORDER BY t_pos.data DESC
                  LIMIT 1", $date
             )
         );

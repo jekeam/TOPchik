@@ -1,3 +1,7 @@
+#chart_avg_div{
+    padding-top: 30px;
+}
+
 .bordered {
 	margin: 5px; /* Отступ сверху */
     border: solid #ccc 1px;

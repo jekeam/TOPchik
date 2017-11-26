@@ -22,12 +22,12 @@ if (!empty($arr_kw)){
         $cur_dat = $value->dat;
         $date = new DateTime($cur_dat);
 
-        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. $date->Format('m') .','. $date->Format('d')  .')"},';
+        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"},';
         
         foreach ($arr_kw as $key => $value) {
             $cur_key_id = $value->key_id;
             
-            $pos_arr = get_tch_pos_by_date($cur_key_id, $cur_dat);
+            $pos_arr = get_tch_pos_by_date($cur_dat, $cur_key_id);
             foreach ($pos_arr as $key => $value) {
             	$data .= '{"v":"'. $value->pos .'"},';
             }
@@ -35,14 +35,12 @@ if (!empty($arr_kw)){
         
         $data .= ']},';
     }
-    
-    
-$data .= ']}';
+    $data .= ']}';
 }else{
 //Общие позиции по сайту
     //Получаем данные из массива
-    $data = '{"cols": [{"label":"","type":"date"},
-                       {"label":"Среднии позиции по сайту","type":"number"}';
+    $data = '{"cols": [{"type":"date"},
+                       {"label":"Средняя позиция по сайту","type":"number"}';
 
     $data .= '],
     "rows": [';
@@ -53,23 +51,14 @@ $data .= ']}';
         $cur_dat = $value->dat;
         $date = new DateTime($cur_dat);
 
-        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. $date->Format('m') .','. $date->Format('d')  .')"},';
+        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"},';
         
-        foreach ($arr_kw as $key => $value) {
-            $cur_key_id = $value->key_id;
-            
-            $pos_arr = get_tch_pos_by_date($cur_dat);
-            foreach ($pos_arr as $key => $value) {
-            	$data .= '{"v":"'. $value->pos .'"},';
-            }
-        }
-        
+        $pos_arr = round(get_tch_pos_by_date($cur_dat));
+        $data .= '{"v":"'. $pos_arr .'"}';
         $data .= ']},';
+        
     }
-    
+    $data .= ']}';
 }
-
-
-
 
 echo $data;

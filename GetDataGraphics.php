@@ -2,9 +2,10 @@
 include_once( dirname( __FILE__ ) . '/tch-db.php');
 
 //Клюс слов
-$arr_kw = get_tch_keywords($_REQUEST['post_id']);
+
 //Позиции по посту
-if (!empty($arr_kw)){
+if (!empty($_REQUEST['post_id'])){
+    $arr_kw = get_tch_keywords($_REQUEST['post_id']);
     //Получаем данные из массива
     $data = '{"cols": [{"label":"","type":"date"},';
     
@@ -36,12 +37,17 @@ if (!empty($arr_kw)){
         $data .= ']},';
     }
     $data .= ']}';
-}else{
-//Общие позиции по сайту
-    //Получаем данные из массива
-    $data = '{"cols": [{"type":"date"},
-                       {"label":"Средняя позиция по сайту","type":"number"}';
-
+}elseif(!empty($_REQUEST['graphic'])){//graphic=dynamics (default)
+    //Общая динамика изменения параметров
+    $data = '{"cols": [{"label":"","type":"date"}
+                      ,{"label":"Динамика изменения ключевых показателей","type":"number"}
+                      ,{"label":"Видимость сайта","type":"number"}
+                      ,{"label":"Запросов в топ 3","type":"number"}
+                      ,{"label":"Запросов в топ 10","type":"number"}
+                      ,{"label":"Запросов в топ 30","type":"number"}
+                      ,{"label":"Позиций улучшилось","type":"number"}
+                      ,{"label":"Позиций ухудшилось","type":"number"}';
+    
     $data .= '],
     "rows": [';
         
@@ -50,7 +56,35 @@ if (!empty($arr_kw)){
     foreach ($arr_dates as $key => $value) {
         $cur_dat = $value->dat;
         $date = new DateTime($cur_dat);
+    
+        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"}';
 
+        ob_start(); 
+        include('tch-db-progress-bar.php'); 
+        $my_json = ob_get_clean();
+        
+        $result = json_decode($my_json);
+        
+        $data .= ',{"v":"'.$result['0']->{'top3'}.'"}';
+        $data .= ']},';
+        
+    }
+    $data .= ']}';
+    
+}else{
+    //Общие позиции по сайту
+    $data = '{"cols": [{"type":"date"},
+                       {"label":"Средняя позиция по сайту","type":"number"}';
+    
+    $data .= '],
+    "rows": [';
+        
+    //Даты
+    $arr_dates = get_tch_dates();
+    foreach ($arr_dates as $key => $value) {
+        $cur_dat = $value->dat;
+        $date = new DateTime($cur_dat);
+    
         $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"},';
         
         $pos_arr = round(get_tch_pos_by_date($cur_dat));

@@ -43,7 +43,8 @@ function tch_action_javascript()
     {
         wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
         wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
-        wp_enqueue_script('tch-script-graphics-avg', plugins_url('/js/graphics-avg.js',__FILE__));
+        wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
+        wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
     }
     else
     {
@@ -103,10 +104,11 @@ function tch_settings_page()
 <br>
 <br>
 </div>
-<div class="wrap" style="background: #fff; padding: 20px; width: 68%;">
+<div class="wrap" style="background: #fff; padding: 20px; weight:10%;">
 <?php 
 if (!isset($_GET['tch_page'])){
 ?>
+<text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" dx="0px">Ключевые показатели сайта</text>
 <div class="tch-bubble">
     <div title="1, 2 и 3-я позиции — коэффициент 1
 4-я позиция — 0,85
@@ -191,6 +193,8 @@ if (!isset($_GET['tch_page'])){
         </div>
     </div>        
 </div>
+<!--Динамика позиций-->
+<div id="chart_dynamic_div"></div>
 <!--Общий график позиций-->
 <div id="chart_avg_div"></div>
 <?php

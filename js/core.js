@@ -1,15 +1,20 @@
 "use strict";
 jQuery(document).ready(function($) 
 {    
-    function CheckAll()
+    function CheckAll(element)
     {
-        if ($("#checkAll").is(":checked"))
-        {
-             $(".tch-cb").prop('checked', true).change();
+        var tbl = element.closest('.tch-table');
+        
+        if (element.is(":checked")){
+             tbl.find('.tch-cb').each(function(){
+                 $(this).prop('checked', true).change();
+             });
         } 
         else
         {
-            $(".tch-cb").removeAttr('checked').change();
+            tbl.find('.tch-cb').each(function(){
+                 $(this).removeAttr('checked').change();
+             });
         }
     }
     
@@ -20,16 +25,22 @@ jQuery(document).ready(function($)
     }
     
     //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
-     $('#doaction').click(function () 
+     $(document).on('click','#doaction', function () 
      {
+         var tch_action =  $(this).parent();
+         var tch_window =  $(this).parent().parent();
+         if (tch_window.find('#checkAll').is(":checked")){
+            tch_window.find('#checkAll').removeAttr('checked').change();   
+         }
          //Если выбрана проверка
-         if ($('#tch-action').val() === 'serp')
+         if (tch_window.find('#tch-action').val() === 'serp')
          {
              //Сколько всего отмечено
-             var cb_cnt = $('.tch-cb:visible:input:checkbox:checked').length;
+             var cb_cnt = tch_window.find('.tch-cb:visible:input:checkbox:checked').length;
              
-	         $('.tch-cb:visible:input:checkbox:checked').each(function(indx, el)
+	         tch_window.find('.tch-cb:visible:input:checkbox:checked').each(function(indx, el)
 	         {
+	            $(this).removeAttr('checked').change();
                 var keyword_val = $(this).val();
                 var key_place_id = $(this).attr( 'key_id');
                 
@@ -94,7 +105,7 @@ jQuery(document).ready(function($)
                                     //есили это последний элемент, обновим график
                                     if (cb_cnt == indx+1) 
                                     {
-                                        drawChart() ;
+                                        location.reload();
                                     }
                                 }
             		  });
@@ -140,13 +151,13 @@ jQuery(document).ready(function($)
          }
      
      //снимаем флажки
-     CheckdRemove();
+     //CheckdRemove();
      //Сбрасываем экшин
      $('#tch-action').val('-1');
      });
-     
+     /*
      //Скрипт автоматически сохраняет изменения ключевых фраз и позций
-     $('.tch-position').change(function()
+     $(document).on('change','.tch-position', function()
      {
          var v_key_id = $(this).attr('key_place_id');
          var v_position = $(this).text();
@@ -168,7 +179,7 @@ jQuery(document).ready(function($)
      });
      
      //Скрипт автоматически сохраняет изменения ключевых фраз и позций
-     $('.tch-keyword').change(function()
+     $(document).on('change','.tch-keyword', function()
      {
          var v_post_id = $('#post_ID').val();
          var v_key_id = $(this).attr('key_keyword_id');
@@ -194,6 +205,7 @@ jQuery(document).ready(function($)
                     }
              });
      });
+     */
      
      //Добавление нового КС
      $(document).on('click', '#tch_add_keyword', function()
@@ -336,7 +348,7 @@ jQuery(document).ready(function($)
      });
      input_key_id.value = text_key_id.slice(0, -1);
      
-      //помещаем созданные элементы на страницу
+     //помещаем созданные элементы на страницу
      var divInside = d.getElementById('tch-inside');
      divInside.appendChild(input_key_id);
      
@@ -349,14 +361,14 @@ jQuery(document).ready(function($)
      //помещаем созданные элементы на страницу
      divInside.appendChild(input_del_key_id);
      
+     
      // Отметить|снять отметку со ВСЕХ
-     $('#checkAll').click(function()
-     {
-        CheckAll();
+     $(document).on('click','#checkAll', function(){
+        CheckAll($(this));
     });
     
     //Меняем для Удаления и применения на РЕфрещ страницы, а для сьема позиций все работает без перезагрузки
-    $('#tch-action').change(function() {
+    $(document).on('change','#tch-action', function() {
         if ($('#tch-action').val() == 'serp')
         {
             $('#doaction').removeAttr('type');

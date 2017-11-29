@@ -9,6 +9,20 @@ Author URI: https://suineg.ru/
 */
 
 //define('TOP_CHECKER_VERSION', '0.1');
+//Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
+//версии таблиц
+$tch_keywords_db_ver = "0.1";
+$tch_serp_db_ver = "0.1";
+
+//суфиксы таблиц
+global $tch_tbl_keywords;
+global $tch_tbl_serp;
+global $date_query;
+
+$tch_tbl_keywords = "tch_keywords";
+$tch_tbl_serp = "tch_serp";
+$date_query = date("Y-m-d");
+
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -41,6 +55,7 @@ function tch_action_javascript()
     //include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
     if( get_current_screen()->id != 'post' ) 
     {
+        wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
         wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
         wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
         wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
@@ -63,18 +78,6 @@ function tch_stylesheet()
     wp_enqueue_style("style-tch-progressBar", plugins_url('/css/progressBar.css',__FILE__));
 }
 
-//Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
-//версии таблиц
-$tch_keywords_db_ver = "0.1";
-$tch_serp_db_ver = "0.1";
-
-//суфиксы таблиц
-global $tch_tbl_keywords;
-global $tch_tbl_serp;
-
-$tch_tbl_keywords = "tch_keywords";
-$tch_tbl_serp = "tch_serp";
-
 //Задаем настройки для меню плагина
 function tch_create_settings_submenu() 
 {
@@ -95,18 +98,30 @@ function tch_settings_page()
 ?>
 <h1>Topсhecker — съем позиций прямо из WP</h1>
 <div>
-    <ul class="subsubsub">
-        <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
-                           class="<?php if (!isset($_GET['tch_page'])){echo 'current';} ?>">Статистика</a></li> |
-        <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
-                           class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='settings'){echo 'current';}} ?>">Настройка</a></li>
-    </ul>
+ <ul class="subsubsub">
+ <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
+  class="<?php if (!isset($_GET['tch_page'])){echo 'current';} ?>">Поисковые запросы</a></li> |
+ <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=statistics"
+  class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='statistics'){echo 'current';}} ?>">Статистика</a></li> |
+ <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
+  class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='settings'){echo 'current';}} ?>">Настройка</a></li>
+</ul>
 <br>
 <br>
 </div>
 <div class="wrap" style="background: #fff; padding: 20px; weight:10%;">
 <?php 
-if (!isset($_GET['tch_page'])){
+if (!isset($_GET['tch_page'])) {
+    $recent_posts_array = get_posts(); // получаем массив постов
+    foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
+    	echo '<a href="' . get_permalink( $recent_post_single ) . '">' . $recent_post_single->post_title . '</a><br>'; // выводим ссылку
+    	tch_meta_box($recent_post_single);
+    	echo '<br><br><br>';
+    endforeach; // конец цикла
+?>
+    
+<?php 
+}elseif ($_GET['tch_page']=='statistics') {
 ?>
 <text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" dx="0px">Ключевые показатели сайта</text>
 <div class="tch-bubble">
@@ -277,8 +292,7 @@ function tch_meta_box( $post )
         echo '<div id="tch-inside">';
         echo '</div>';
         
-        if (!empty($arr_list))
-        {
+        if (isset($arr_list)){
             echo '<table id="tch-table" class="tch-table bordered">';
                 //заголовки
                 echo '<thead id="tch-table-thead">';
@@ -308,15 +322,9 @@ function tch_meta_box( $post )
                             echo '<td class="tch-td-str">';
                                 echo '<input type="checkbox" key_id="'.$id.'" class="tch-cb" value="'.esc_attr( $cur_keyword ).'">';
                             echo '</td>';
-                            /*echo '<td>';
-                                echo '<input type="text" key_keyword_id="'.$id.'" class="tch-keyword" value="'.esc_attr( $value->keyword ).'" name="tch_keyword_text_'.$id.'">';
-                            echo '</td>';*/
                             echo '<td key_keyword_id="'.$id.'" class="tch-keyword" name="tch_keyword_text_'.$id.'" style="width: 100%;">';
                                 echo '<a href="https://yandex.ru/search/?text='.esc_attr( $cur_keyword ).'" target="_blank">'.esc_attr( $cur_keyword ).'</a>';
                             echo '</td>';
-                            /*echo '<td>';
-                                echo '<input type="number" key_place_id="'.$id.'" class="tch-position" value="'.esc_attr( $value->place ).'" >';
-                            echo '</td>';*/
                             echo '<td>';
                                 echo '<div key_place_id="'.$id.'" class="tch-position" name="tch_place_text_'.$id.'" style="width: 100%;">';
                                     echo esc_attr( $cur_place );

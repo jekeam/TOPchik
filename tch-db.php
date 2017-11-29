@@ -220,9 +220,9 @@ function get_tch_dates($post_id=null)
     }else{
         $arr_key = $wpdb->get_results( 
             "SELECT distinct
-             t_pos.data as dat
-             FROM $table_position t_pos 
-             ORDER BY t_pos.data"
+              t_pos.data as dat
+              FROM $table_position t_pos 
+              ORDER BY t_pos.data"
         );
         
     }

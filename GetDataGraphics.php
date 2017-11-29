@@ -1,7 +1,6 @@
 <?php
 include_once( dirname( __FILE__ ) . '/tch-db.php');
-
-//Клюс слов
+global $date_query;
 
 //Позиции по посту
 if (!empty($_REQUEST['post_id'])){
@@ -40,7 +39,6 @@ if (!empty($_REQUEST['post_id'])){
 }elseif(!empty($_REQUEST['graphic'])){//graphic=dynamics (default)
     //Общая динамика изменения параметров
     $data = '{"cols": [{"label":"","type":"date"}
-                      ,{"label":"Динамика изменения ключевых показателей","type":"number"}
                       ,{"label":"Видимость сайта","type":"number"}
                       ,{"label":"Запросов в топ 3","type":"number"}
                       ,{"label":"Запросов в топ 10","type":"number"}
@@ -56,6 +54,7 @@ if (!empty($_REQUEST['post_id'])){
     foreach ($arr_dates as $key => $value) {
         $cur_dat = $value->dat;
         $date = new DateTime($cur_dat);
+        $date_query = $date->Format('Y') .'-'.  $date->Format('m') .'-'. $date->Format('d') ;
     
         $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"}';
 
@@ -65,7 +64,12 @@ if (!empty($_REQUEST['post_id'])){
         
         $result = json_decode($my_json);
         
+        $data .= ',{"v":"'.$result['0']->{'visibility_serp'}.'"}';
         $data .= ',{"v":"'.$result['0']->{'top3'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'top10'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'top30'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'pos_improved'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'pos_deteriorated'}.'"}';
         $data .= ']},';
         
     }

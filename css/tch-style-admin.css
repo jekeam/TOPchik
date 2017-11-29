@@ -1,7 +1,9 @@
 #chart_avg_div{
     padding-top: 30px;
 }
-
+#tch_window {
+    overflow: auto;
+}
 .bordered {
 	margin: 5px; /* Отступ сверху */
     border: solid #ccc 1px;
@@ -97,9 +99,4 @@
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
-}
-
-
-#tch_window {
-    overflow: scroll;
 }

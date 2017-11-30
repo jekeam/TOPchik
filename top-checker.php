@@ -55,15 +55,15 @@ function tch_action_javascript()
     //include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
     if( get_current_screen()->id != 'post' ) 
     {
-        wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
-        wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
-        wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
-        wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
-        wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
+        //wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
+        //wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
+        //wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
+        //wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
+        //wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
     }
     else
     {
-        wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
+        //wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
         wp_enqueue_script('tch-script-d3js', plugins_url('/src/loader.js',__FILE__));
         wp_enqueue_script('tch-script-graphics', plugins_url('/js/graphics.js',__FILE__));
     }
@@ -99,12 +99,19 @@ function tch_settings_page()
 <h1>Topсhecker — съем позиций прямо из WP</h1>
 <div>
  <ul class="subsubsub">
- <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
-  class="<?php if (!isset($_GET['tch_page'])){echo 'current';} ?>">Поисковые запросы</a></li> |
- <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=statistics"
-  class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='statistics'){echo 'current';}} ?>">Статистика</a></li> |
- <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
-  class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='settings'){echo 'current';}} ?>">Настройка</a></li>
+     
+     <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu" 
+      class="<?php if (!isset($_GET['tch_page'])){echo 'current';} ?>">Поисковые запросы</a></li> |
+      
+     <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=statistics"
+      class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='statistics'){echo 'current';}} ?>">Статистика поисковой выдачи</a></li> |
+      
+     <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=sheduler" 
+      class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='sheduler'){echo 'current';}} ?>">Расписание проверок</a></li> |
+      
+     <li class="all"><a href="/wp-admin/options-general.php?page=tch_settings_menu&tch_page=settings" 
+      class="<?php if (isset($_GET['tch_page'])){ if  ($_GET['tch_page']=='settings'){echo 'current';}} ?>">Подключения(API)</a></li>
+      
 </ul>
 <br>
 <br>
@@ -122,6 +129,10 @@ if (!isset($_GET['tch_page'])) {
     
 <?php 
 }elseif ($_GET['tch_page']=='statistics') {
+    wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
+    wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
+    wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
+    wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
 ?>
 <text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" dx="0px">Ключевые показатели сайта</text>
 <div class="tch-bubble">
@@ -213,6 +224,65 @@ if (!isset($_GET['tch_page'])) {
 <!--Общий график позиций-->
 <div id="chart_avg_div"></div>
 <?php
+} elseif ($_GET['tch_page']=='sheduler') {
+?>
+<form method="post" action="options.php">
+    <p><b>Выберите расписание проверок</b></p>
+    <p><input name="sheduler_mode" type="radio" value="days_of_week">По дням недели, в
+        <input name="time_days_of_week" type="number" value="" min="0" max="24"> час(а,ов)</p>
+        <ul class="sheduler">
+            <li><input type="checkbox" name="days_of_week" id="1d"/>ПН</li>
+            <li><input type="checkbox" name="days_of_week" id="2d"/>ВТ</li>
+            <li><input type="checkbox" name="days_of_week" id="3d"/>СР</li>
+            <li><input type="checkbox" name="days_of_week" id="4d"/>ЧТ</li>
+            <li><input type="checkbox" name="days_of_week" id="5d"/>ПТ</li>
+            <li><input type="checkbox" name="days_of_week" id="6d"/>СБ</li>
+            <li><input type="checkbox" name="days_of_week" id="7d"/>ВС</li>
+        </ul>
+    <p>
+        <input name="sheduler_mode" type="radio" value="days_of_month">По дням месяца, в
+        <input name="time_days_of_month" type="number" value="" min="0" max="24"> час(а,ов)</p>
+    </p>
+        <ol class="sheduler" style="width:538px;">
+            &nbsp&nbsp<li>1 <input type="checkbox" name="days_of_week" id="1d"/></li>
+            &nbsp&nbsp<li>2 <input type="checkbox" name="days_of_week" id="2d"/></li>
+            &nbsp&nbsp<li>3 <input type="checkbox" name="days_of_week" id="3d"/></li>
+            &nbsp&nbsp<li>4 <input type="checkbox" name="days_of_week" id="4d"/></li>
+            &nbsp&nbsp<li>5 <input type="checkbox" name="days_of_week" id="5d"/></li>
+            &nbsp&nbsp<li>6 <input type="checkbox" name="days_of_week" id="6d"/></li>
+            &nbsp&nbsp<li>7 <input type="checkbox" name="days_of_week" id="7d"/></li>
+            &nbsp&nbsp<li>8 <input type="checkbox" name="days_of_week" id="8d"/></li>
+            &nbsp&nbsp<li>9 <input type="checkbox" name="days_of_week" id="9d"/></li>
+            <li>10 <input type="checkbox" name="days_of_week" id="10d"/></li>
+            <li>11 <input type="checkbox" name="days_of_week" id="11d"/></li>
+            <li>12 <input type="checkbox" name="days_of_week" id="12d"/></li>
+            <li>13 <input type="checkbox" name="days_of_week" id="13d"/></li>
+            <li>14 <input type="checkbox" name="days_of_week" id="14d"/></li>
+            <li>15 <input type="checkbox" name="days_of_week" id="15d"/></li>
+            <li>16 <input type="checkbox" name="days_of_week" id="16d"/></li>
+            <li>17 <input type="checkbox" name="days_of_week" id="17d"/></li>
+            <li>18 <input type="checkbox" name="days_of_week" id="18d"/></li>
+            <li>19 <input type="checkbox" name="days_of_week" id="19d"/></li>
+            <li>20 <input type="checkbox" name="days_of_week" id="20d"/></li>
+            <li>21 <input type="checkbox" name="days_of_week" id="21d"/></li>
+            <li>22 <input type="checkbox" name="days_of_week" id="22d"/></li>
+            <li>23 <input type="checkbox" name="days_of_week" id="23d"/></li>
+            <li>24 <input type="checkbox" name="days_of_week" id="24d"/></li>
+            <li>25 <input type="checkbox" name="days_of_week" id="25d"/></li>
+            <li>26 <input type="checkbox" name="days_of_week" id="26d"/></li>
+            <li>27 <input type="checkbox" name="days_of_week" id="27d"/></li>
+            <li>28 <input type="checkbox" name="days_of_week" id="28d"/></li>
+            <li>29 <input type="checkbox" name="days_of_week" id="29d"/></li>
+            <li>30 <input type="checkbox" name="days_of_week" id="30d"/></li>
+            <li>31 <input type="checkbox" name="days_of_week" id="31d"/></li>
+        </ol>
+    <p><input name="sheduler_mode" type="radio" value="once_a_month">Раз в месяц</p>
+    <p><input name="sheduler_mode" type="radio" value="after_update">После апдейтов Яндекса, через 
+        <input name="time_after_update" type="number" value="" min="2" max="24"> часа</p>
+    <p><input name="sheduler_mode" type="radio" value="on_demand">По требованию</p>
+    <p><input type="submit" class="button-primary" value="Сохранить" /></p>
+</from>    
+<?php
 } elseif ($_GET['tch_page']=='settings') {
 ?>
 <h2>Яндекс.XML</h2>
@@ -282,6 +352,7 @@ function tch_store_register_meta_box() {
 
 function tch_meta_box( $post )
 {
+    wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
     $post_id = $post->ID;
     $arr_list = get_tch_list($post_id);
     

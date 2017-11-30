@@ -1,12 +1,81 @@
-[29-Nov-2017 19:27:03 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
-[29-Nov-2017 19:27:03 UTC] PHP Stack trace:
-[29-Nov-2017 19:27:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/top-checker/yandex-xml.php:0
-[29-Nov-2017 19:27:03 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-content/plugins/top-checker/yandex-xml.php:6
-[29-Nov-2017 19:27:03 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
-[29-Nov-2017 19:27:03 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
-[29-Nov-2017 19:27:03 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:450
-[29-Nov-2017 19:27:03 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
-[29-Nov-2017 19:27:03 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
-[29-Nov-2017 19:27:03 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
-[29-Nov-2017 19:27:03 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
-[29-Nov-2017 19:27:03 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
+[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 295
+[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
+[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
+[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
+[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
+[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
+[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
+[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
+[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 298
+[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
+[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
+[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 298
+[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
+[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288

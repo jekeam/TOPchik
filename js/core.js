@@ -155,7 +155,7 @@ jQuery(document).ready(function($)
      //Сбрасываем экшин
      $('#tch-action').val('-1');
      });
-     /*
+     
      //Скрипт автоматически сохраняет изменения ключевых фраз и позций
      $(document).on('change','.tch-position', function()
      {
@@ -205,7 +205,7 @@ jQuery(document).ready(function($)
                     }
              });
      });
-     */
+     
      
      //Добавление нового КС
      $(document).on('click', '#tch_add_keyword', function()
@@ -337,7 +337,7 @@ jQuery(document).ready(function($)
      
      
      var d = document;
-   //Блок создания создания списка(смтроки) ид для инсерта/обновления КС
+   //Блок создания создания списка(строки) ид для инсерта/обновления КС
      var input_key_id = d.createElement('input');
      var text_key_id = '';
      input_key_id.type = 'hidden';

@@ -1,81 +1,1170 @@
-[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 295
-[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
-[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
-[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
-[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:14:35 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
-[30-Nov-2017 18:14:35 UTC] PHP Stack trace:
-[30-Nov-2017 18:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:14:35 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:14:35 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:14:35 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:14:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:14:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:14:35 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
-[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
-[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 298
-[30-Nov-2017 18:21:12 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 296
-[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 297
-[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 298
-[30-Nov-2017 18:21:27 UTC] PHP Stack trace:
-[30-Nov-2017 18:21:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
-[30-Nov-2017 18:21:27 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
-[30-Nov-2017 18:21:27 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
-[30-Nov-2017 18:21:27 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
-[30-Nov-2017 18:21:27 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
-[30-Nov-2017 18:21:27 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
-[30-Nov-2017 18:21:27 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+\[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-17')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-17')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-17')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-17')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-17')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-19')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-19')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-19')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-19')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-19')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-20')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-20')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-20')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-20')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-20')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-22')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-22')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-22')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-22')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-22')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-23')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-23')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-23')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-23')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-23')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-24')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-24')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-24')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-24')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-24')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-25')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-25')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-25')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-25')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-25')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-26')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-26')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-26')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-26')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-26')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-28')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-28')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-28')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-28')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-28')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-29')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-29')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-29')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-29')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-29')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-11-30')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-11-30')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-11-30')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-11-30')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-11-30')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-12-01')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-12-01')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-12-01')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-12-01')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-12-01')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 11
+                                                         AND t_pos.data = '2017-12-02')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 11
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 12
+                                                         AND t_pos.data = '2017-12-02')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 12
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 13
+                                                         AND t_pos.data = '2017-12-02')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 13
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 14
+                                                         AND t_pos.data = '2017-12-02')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 14
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
+                                                  ISNULL(
+                                                      (SELECT max(t_pos.place) as pos
+                                                       FROM wp_tch_keywords t_key 
+                                                       JOIN wp_tch_serp t_pos 
+                                                       ON t_key.key_id = t_pos.key_id 
+                                                       WHERE t_key.key_id = 16
+                                                         AND t_pos.data = '2017-12-02')
+                                                     ,(select max(y.place)
+                                                       from wp_tch_serp y
+                                                       where y.key_id = 16
+                                                         and y.data = (
+                                                              select max(x.data)
+                                                              from wp_tch_serp x
+                                                              where x.key_id = y.key_id
+                                                            )
+                                                          )) as pos
+                                                , выполненный get_tch_pos_by_date

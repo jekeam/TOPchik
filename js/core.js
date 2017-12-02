@@ -64,21 +64,17 @@ jQuery(document).ready(function($)
                                     $('[img_place_id="'+key_place_id+'"]').hide();
                                     $('[key_place_id="'+key_place_id+'"]').show();
                                     var cur_old_place =  Number($('[key_place_id="'+key_place_id+'"]').text());
-                                    if (data.slice(0,6) == 'Ошибка')
-                                    {
+                                    if (data.slice(0,6) == 'Ошибка'){
                                         $('#error_log').show();
                                         $('#error_log').text(data).change();
                                         $('#error_log').css('color','red');
                                         
-                                        $('[change_place_id="'+key_place_id+'"]').text(cur_old_place);
+                                        $('[change_place_id="'+key_place_id+'"]').text(cur_old_place).change();
                                         $('[change_place_id="'+key_place_id+'"]').css('color','gray');
-                                    }
-                                    else
-                                    {
+                                    }else{
                                         $('[key_place_id="'+key_place_id+'"]').text(data).change();
                                         var cur_new_place =  $('[key_place_id="'+key_place_id+'"]').text();
-                                        if (cur_new_place > 0)
-                                        {
+                                        if (cur_new_place > 0){
                                             var difference = cur_old_place-cur_new_place;
                                             if ( difference > 0)
                                             {
@@ -94,17 +90,13 @@ jQuery(document).ready(function($)
                                                 $('[change_place_id="'+key_place_id+'"]').text('0');
                                                 $('[change_place_id="'+key_place_id+'"]').css('color','gray');
                                             }
-                                        }
-                                        else
-                                        {
+                                        }else{
                                             $('[change_place_id="'+key_place_id+'"]').text(cur_old_place);
                                             $('[change_place_id="'+key_place_id+'"]').css('color','gray');
                                         }
                                     }
                                     
-                                    //есили это последний элемент, обновим график
-                                    if (cb_cnt == indx+1) 
-                                    {
+                                    if (cb_cnt == indx+1){
                                         location.reload();
                                     }
                                 }
@@ -112,6 +104,7 @@ jQuery(document).ready(function($)
                 }
                 //проверяем позиции
                 get_positin();
+                //есили это последний элемент, обновим график
 	         });
 	         
          } 

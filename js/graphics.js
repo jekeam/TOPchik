@@ -24,6 +24,7 @@ function drawChart() {
 
     // Set chart options
     var options = {
+        //'interpolateNulls':'true',
         'title': 'Анализ поисковых запросов',
         //'curveType': 'function',
         'width': 900,

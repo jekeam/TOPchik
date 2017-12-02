@@ -28,8 +28,12 @@ if (!empty($_REQUEST['post_id'])){
             $cur_key_id = $value->key_id;
             
             $pos_arr = get_tch_pos_by_date($cur_dat, $cur_key_id);
-            foreach ($pos_arr as $key => $value) {
-            	$data .= '{"v":"'. $value->pos .'"},';
+            if (!empty($pos_arr)){
+                foreach ($pos_arr as $key => $value) {
+                	$data .= '{"v":"'. $value->pos .'"},';
+                }
+            }else{
+                $data .= '{"v":"null"},';
             }
         }
         

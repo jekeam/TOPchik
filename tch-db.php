@@ -247,25 +247,16 @@ function get_tch_pos_by_date($date, $key_id=null)
                             (
                                 $wpdb->prepare
                                             ( 
-                                               "SELECT
-                                                  IfNull(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM $table_keywords t_key 
-                                                       JOIN $table_position t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = %d
-                                                         AND t_pos.data = %s)
-                                                     ,(select max(y.place)
-                                                       from $table_position y
-                                                       where y.key_id = %d
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from $table_position x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
+                                               "SELECT t_pos.place as pos
+                                                FROM $table_keywords t_key
+                                                     JOIN
+                                                     $table_position t_pos 
+                                                     ON t_key.key_id = t_pos.key_id 
+                                                WHERE t_key.key_id = %d
+                                                  AND t_pos.data = %s
+                                                LIMIT 1
                                                 ",
-                                                $key_id, $date, $key_id
+                                                $key_id, $date
                                             )
                             );
     }else{

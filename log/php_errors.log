@@ -1,1170 +1,746 @@
-\[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-17')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-17')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-17')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-17')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-17')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-19')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-19')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-19')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-19')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-19')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-20')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-20')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-20')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-20')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-20')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-22')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-22')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-22')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-22')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-22')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-23')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-23')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-23')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-23')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-23')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-24')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-24')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-24')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-24')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-24')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-25')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-25')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-25')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-25')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-25')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-26')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-26')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-26')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-26')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-26')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-28')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-28')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-28')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-28')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-28')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-29')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-29')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-29')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-29')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-29')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-11-30')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-11-30')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-11-30')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-11-30')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-11-30')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-12-01')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-12-01')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-12-01')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-12-01')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-12-01')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 11
-                                                         AND t_pos.data = '2017-12-02')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 11
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 12
-                                                         AND t_pos.data = '2017-12-02')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 12
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 13
-                                                         AND t_pos.data = '2017-12-02')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 13
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 14
-                                                         AND t_pos.data = '2017-12-02')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 14
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
-[02-Dec-2017 17:40:21 UTC] База данных WordPress возвратила ошибку Incorrect parameter count in the call to native function 'ISNULL' в ответ на запрос SELECT
-                                                  ISNULL(
-                                                      (SELECT max(t_pos.place) as pos
-                                                       FROM wp_tch_keywords t_key 
-                                                       JOIN wp_tch_serp t_pos 
-                                                       ON t_key.key_id = t_pos.key_id 
-                                                       WHERE t_key.key_id = 16
-                                                         AND t_pos.data = '2017-12-02')
-                                                     ,(select max(y.place)
-                                                       from wp_tch_serp y
-                                                       where y.key_id = 16
-                                                         and y.data = (
-                                                              select max(x.data)
-                                                              from wp_tch_serp x
-                                                              where x.key_id = y.key_id
-                                                            )
-                                                          )) as pos
-                                                , выполненный get_tch_pos_by_date
+[02-Dec-2017 18:52:11 UTC] PHP Warning:  Illegal string offset 'option_user' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Notice:  Uninitialized string offset: 0 in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Warning:  Illegal string offset 'option_key' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Notice:  Uninitialized string offset: 0 in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Warning:  Illegal string offset 'server_addr' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Notice:  Uninitialized string offset: 0 in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Warning:  Illegal string offset 'server_name' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP Notice:  Uninitialized string offset: 0 in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:52:11 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:52:11 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:52:11 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:52:11 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:52:11 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:52:11 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:11 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:52:49 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 18:52:49 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:52:49 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:52:49 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:52:49 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:52:49 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:52:49 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:52:49 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:52:49 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 18:52:49 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:52:49 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:52:49 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:52:49 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:52:49 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:52:49 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:52:49 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:52:49 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 18:52:49 UTC] PHP Stack trace:
+[02-Dec-2017 18:52:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:52:49 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:52:49 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:52:49 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:52:49 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:52:49 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:52:49 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:53:18 UTC] PHP Notice:  Undefined index: option_user in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:53:18 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:18 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:18 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:18 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:18 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:18 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP Notice:  Undefined index: option_key in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:53:18 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:18 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:18 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:18 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:18 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:18 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP Notice:  Undefined index: server_addr in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:53:18 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:18 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:18 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:18 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:18 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:18 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP Notice:  Undefined index: server_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:53:18 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:18 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:18 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:18 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:18 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:18 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:18 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP Warning:  Illegal string offset 'option_user' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:53:35 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:35 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:35 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:35 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP Warning:  Illegal string offset 'option_key' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:53:35 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:35 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:35 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:35 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP Warning:  Illegal string offset 'server_addr' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:53:35 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:35 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:35 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:35 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP Warning:  Illegal string offset 'server_name' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:53:35 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:35 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:35 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:35 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:35 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:35 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:35 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP Warning:  Illegal string offset 'option_user' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:53:57 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:57 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:57 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:57 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:57 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP Warning:  Illegal string offset 'option_key' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:53:57 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:57 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:57 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:57 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:57 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP Warning:  Illegal string offset 'server_addr' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:53:57 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:57 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:57 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:57 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:57 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP Warning:  Illegal string offset 'server_name' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:53:57 UTC] PHP Stack trace:
+[02-Dec-2017 18:53:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:53:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:53:57 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:53:57 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:53:57 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:53:57 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:53:57 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP Warning:  Illegal string offset 'option_user' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 304
+[02-Dec-2017 18:54:00 UTC] PHP Stack trace:
+[02-Dec-2017 18:54:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:54:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:54:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:54:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:54:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:54:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP Warning:  Illegal string offset 'option_key' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 311
+[02-Dec-2017 18:54:00 UTC] PHP Stack trace:
+[02-Dec-2017 18:54:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:54:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:54:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:54:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:54:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:54:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP Warning:  Illegal string offset 'server_addr' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 318
+[02-Dec-2017 18:54:00 UTC] PHP Stack trace:
+[02-Dec-2017 18:54:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:54:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:54:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:54:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:54:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:54:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP Warning:  Illegal string offset 'server_name' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 328
+[02-Dec-2017 18:54:00 UTC] PHP Stack trace:
+[02-Dec-2017 18:54:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 18:54:00 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 18:54:00 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 18:54:00 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 18:54:00 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 18:54:00 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:54:00 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 18:56:08 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 18:56:08 UTC] PHP Stack trace:
+[02-Dec-2017 18:56:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:56:08 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:56:08 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:56:08 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:56:08 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:56:08 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:56:08 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:56:08 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 18:56:08 UTC] PHP Stack trace:
+[02-Dec-2017 18:56:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:56:08 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:56:08 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:56:08 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:56:08 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:56:08 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:56:08 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:56:08 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 18:56:08 UTC] PHP Stack trace:
+[02-Dec-2017 18:56:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:56:08 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:56:08 UTC] PHP   3. add_option() /home/ubuntu/workspace/wp-includes/option.php:345
+[02-Dec-2017 18:56:08 UTC] PHP   4. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:454
+[02-Dec-2017 18:56:08 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:56:08 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:56:08 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:56:08 UTC] PHP   8. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:57:16 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 18:57:16 UTC] PHP Stack trace:
+[02-Dec-2017 18:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:57:16 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:57:16 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:57:16 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:57:16 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:57:16 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:57:16 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:57:16 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 18:57:16 UTC] PHP Stack trace:
+[02-Dec-2017 18:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 18:57:16 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 18:57:16 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 18:57:16 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 18:57:16 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 18:57:16 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 18:57:16 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:01:33 UTC] PHP Stack trace:
+[02-Dec-2017 19:01:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:01:33 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:01:33 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:01:33 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:01:33 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:01:33 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:01:33 UTC] PHP Stack trace:
+[02-Dec-2017 19:01:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:01:33 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:01:33 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:01:33 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:01:33 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:01:33 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:01:33 UTC] PHP Stack trace:
+[02-Dec-2017 19:01:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:01:33 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:01:33 UTC] PHP   3. add_option() /home/ubuntu/workspace/wp-includes/option.php:345
+[02-Dec-2017 19:01:33 UTC] PHP   4. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:454
+[02-Dec-2017 19:01:33 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:01:33 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:01:33 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:01:33 UTC] PHP   8. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:02:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:02:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:24 UTC] PHP   3. add_option() /home/ubuntu/workspace/wp-includes/option.php:345
+[02-Dec-2017 19:02:24 UTC] PHP   4. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:454
+[02-Dec-2017 19:02:24 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:24 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:24 UTC] PHP   8. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:02:28 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:28 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:28 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:28 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:28 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:28 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:02:28 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:28 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:28 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:28 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:28 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:28 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:28 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:28 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:28 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:28 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:28 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:28 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:28 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:02:48 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:48 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:48 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:48 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:48 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:48 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:02:48 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:48 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:48 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:48 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:48 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:48 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:48 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:48 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:48 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:48 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:48 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:48 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:48 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:02:54 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:54 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:54 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:54 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:54 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:54 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:02:54 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:54 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:54 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:54 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:54 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:54 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:54 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:54 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:54 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:02:54 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:54 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:54 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:02:54 UTC] PHP Stack trace:
+[02-Dec-2017 19:02:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:02:54 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:02:54 UTC] PHP   3. add_option() /home/ubuntu/workspace/wp-includes/option.php:345
+[02-Dec-2017 19:02:54 UTC] PHP   4. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:454
+[02-Dec-2017 19:02:54 UTC] PHP   5. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:02:54 UTC] PHP   6. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:02:54 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:02:54 UTC] PHP   8. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:03:12 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:03:12 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:03:12 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:12 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:12 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:12 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:12 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:12 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:12 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:03:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:03:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:03:24 UTC] PHP Stack trace:
+[02-Dec-2017 19:03:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:03:24 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:03:24 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:03:24 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:03:24 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:03:24 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:03:24 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:06:29 UTC] PHP Stack trace:
+[02-Dec-2017 19:06:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:06:29 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:06:29 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:06:29 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:06:29 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:06:29 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:06:29 UTC] PHP Stack trace:
+[02-Dec-2017 19:06:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:06:29 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:06:29 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:06:29 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:06:29 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:06:29 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:06:29 UTC] PHP Stack trace:
+[02-Dec-2017 19:06:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:06:29 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:06:29 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:06:29 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:06:29 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:06:29 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:06:29 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:09:15 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:15 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:15 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:15 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:15 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:15 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:09:15 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:15 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:15 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:15 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:15 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:15 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:09:15 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:15 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:15 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:15 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:15 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:15 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:15 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:09:32 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:32 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:32 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:32 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:32 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:32 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:09:32 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:32 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:32 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:32 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:32 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:32 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:09:32 UTC] PHP Stack trace:
+[02-Dec-2017 19:09:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:09:32 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:09:32 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:09:32 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:09:32 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:09:32 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:09:32 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 346
+[02-Dec-2017 19:14:02 UTC] PHP Stack trace:
+[02-Dec-2017 19:14:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:14:02 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:14:02 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:14:02 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:14:02 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:14:02 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 347
+[02-Dec-2017 19:14:02 UTC] PHP Stack trace:
+[02-Dec-2017 19:14:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:14:02 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:14:02 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:14:02 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:14:02 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:14:02 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 348
+[02-Dec-2017 19:14:02 UTC] PHP Stack trace:
+[02-Dec-2017 19:14:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:14:02 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:14:02 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:14:02 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:14:02 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:14:02 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:02 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:14:51 UTC] PHP Notice:  Use of undefined constant days_of_week - assumed 'days_of_week' in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 234
+[02-Dec-2017 19:14:51 UTC] PHP Stack trace:
+[02-Dec-2017 19:14:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 19:14:51 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 19:14:51 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 19:14:51 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 19:14:51 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 19:14:51 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:14:51 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:14:51 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-includes/general-template.php on line 4230
+[02-Dec-2017 19:14:51 UTC] PHP Stack trace:
+[02-Dec-2017 19:14:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 19:14:51 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 19:14:51 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 19:14:51 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 19:14:51 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 19:14:51 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:14:51 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:14:51 UTC] PHP   8. checked() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:234
+[02-Dec-2017 19:14:51 UTC] PHP   9. __checked_selected_helper() /home/ubuntu/workspace/wp-includes/general-template.php:4164
+[02-Dec-2017 19:15:02 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-includes/general-template.php on line 4230
+[02-Dec-2017 19:15:02 UTC] PHP Stack trace:
+[02-Dec-2017 19:15:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[02-Dec-2017 19:15:02 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[02-Dec-2017 19:15:02 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[02-Dec-2017 19:15:02 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[02-Dec-2017 19:15:02 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[02-Dec-2017 19:15:02 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:15:02 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Dec-2017 19:15:02 UTC] PHP   8. checked() /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php:234
+[02-Dec-2017 19:15:02 UTC] PHP   9. __checked_selected_helper() /home/ubuntu/workspace/wp-includes/general-template.php:4164
+[02-Dec-2017 19:20:06 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 356
+[02-Dec-2017 19:20:06 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:06 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:06 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:06 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:06 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:06 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:06 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:06 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 357
+[02-Dec-2017 19:20:06 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:06 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:06 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:06 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:06 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:06 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:06 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:06 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 358
+[02-Dec-2017 19:20:06 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:06 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:06 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:06 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:06 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:06 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:06 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 356
+[02-Dec-2017 19:20:13 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:13 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:13 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:13 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:13 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:13 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 357
+[02-Dec-2017 19:20:13 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:13 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:13 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:13 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:13 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:13 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 358
+[02-Dec-2017 19:20:13 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:13 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:13 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:13 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:13 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:13 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:13 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 356
+[02-Dec-2017 19:20:17 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:17 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:17 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:17 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:17 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:17 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 357
+[02-Dec-2017 19:20:17 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:17 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:17 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:17 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:17 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:17 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 358
+[02-Dec-2017 19:20:17 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:17 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:17 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:17 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:17 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:17 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:17 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP Notice:  Undefined index: option_name in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 356
+[02-Dec-2017 19:20:19 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:19 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:19 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:19 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:19 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:19 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP Notice:  Undefined index: option_email in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 357
+[02-Dec-2017 19:20:19 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:19 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:19 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:19 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:19 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:19 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP Notice:  Undefined index: option_url in /home/ubuntu/workspace/wp-content/plugins/top-checker/top-checker.php on line 358
+[02-Dec-2017 19:20:19 UTC] PHP Stack trace:
+[02-Dec-2017 19:20:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options.php:0
+[02-Dec-2017 19:20:19 UTC] PHP   2. update_option() /home/ubuntu/workspace/wp-admin/options.php:213
+[02-Dec-2017 19:20:19 UTC] PHP   3. sanitize_option() /home/ubuntu/workspace/wp-includes/option.php:297
+[02-Dec-2017 19:20:19 UTC] PHP   4. apply_filters() /home/ubuntu/workspace/wp-includes/formatting.php:4314
+[02-Dec-2017 19:20:19 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/plugin.php:203
+[02-Dec-2017 19:20:19 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[02-Dec-2017 19:20:19 UTC] PHP   7. tch_sanitize_options() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288

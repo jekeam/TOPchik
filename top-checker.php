@@ -89,7 +89,8 @@ function tch_create_settings_submenu()
 // регистрируем настройки
 function tch_register_settings() 
 {
-    register_setting( 'tch-settings-group', 'tch_options','tch_sanitize_options');
+    register_setting( 'tch-settings-api', 'tch_options_api','tch_sanitize_options');
+    register_setting( 'tch-settings-sheduler', 'tch_options_sheduler','tch_sanitize_options');
 }
 
 //создать страницу параметров
@@ -227,20 +228,25 @@ if (!isset($_GET['tch_page'])) {
 } elseif ($_GET['tch_page']=='sheduler') {
 ?>
 <form method="post" action="options.php">
+<?php settings_fields( 'tch-settings-sheduler' ); ?>
+<?php $prowp_options = get_option( 'tch_options_sheduler' ); ?>
     <p><b>Выберите расписание проверок</b></p>
-    <p><input name="sheduler_mode" type="radio" value="days_of_week">По дням недели, в
-        <input name="time_days_of_week" type="number" value="" min="0" max="24"> час(а,ов)</p>
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_week" 
+          <?php checked('days_of_week', $prowp_options['sheduler_mode'], true); ?>>По дням недели, в
+          
+        <input name="tch_options_sheduler[time_days_of_week]" type="number" value="" min="0" max="24"> час(а,ов)</p>
         <ul class="sheduler">
-            <li><input type="checkbox" name="days_of_week" id="1d"/>ПН</li>
-            <li><input type="checkbox" name="days_of_week" id="2d"/>ВТ</li>
-            <li><input type="checkbox" name="days_of_week" id="3d"/>СР</li>
-            <li><input type="checkbox" name="days_of_week" id="4d"/>ЧТ</li>
-            <li><input type="checkbox" name="days_of_week" id="5d"/>ПТ</li>
-            <li><input type="checkbox" name="days_of_week" id="6d"/>СБ</li>
-            <li><input type="checkbox" name="days_of_week" id="7d"/>ВС</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day1_of_week]" id="1d"/>ПН</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day2_of_week]" id="2d"/>ВТ</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day3_of_week]" id="3d"/>СР</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day4_of_week]" id="4d"/>ЧТ</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day5_of_week]" id="5d"/>ПТ</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day6_of_week]" id="6d"/>СБ</li>
+            <li><input type="checkbox" name="tch_options_sheduler[day7_of_week]" id="7d"/>ВС</li>
         </ul>
     <p>
-        <input name="sheduler_mode" type="radio" value="days_of_month">По дням месяца, в
+        <input name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_month"
+          <?php checked('days_of_month', $prowp_options['sheduler_mode'], true); ?>>По дням месяца, в
         <input name="time_days_of_month" type="number" value="" min="0" max="24"> час(а,ов)</p>
     </p>
         <ol class="sheduler" style="width:538px;">
@@ -276,10 +282,17 @@ if (!isset($_GET['tch_page'])) {
             <li>30 <input type="checkbox" name="days_of_week" id="30d"/></li>
             <li>31 <input type="checkbox" name="days_of_week" id="31d"/></li>
         </ol>
-    <p><input name="sheduler_mode" type="radio" value="once_a_month">Раз в месяц</p>
-    <p><input name="sheduler_mode" type="radio" value="after_update">После апдейтов Яндекса, через 
+        
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="once_a_month"
+        <?php checked('once_a_month', $prowp_options['sheduler_mode'], true); ?>>Раз в месяц</p>
+        
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="after_update"
+        <?php checked('after_update', $prowp_options['sheduler_mode'], true); ?>>После апдейтов Яндекса, через 
         <input name="time_after_update" type="number" value="" min="2" max="24"> часа</p>
-    <p><input name="sheduler_mode" type="radio" value="on_demand">По требованию</p>
+        
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
+        <?php checked('on_demand', $prowp_options['sheduler_mode'], true); ?>>По требованию</p>
+        
     <p><input type="submit" class="button-primary" value="Сохранить" /></p>
 </from>    
 <?php
@@ -291,27 +304,27 @@ if (!isset($_GET['tch_page'])) {
     <a href="https://xml.yandex.ru/settings/">Яндекс.XML</a>
 </p>
 <form method="post" action="options.php">
-    <?php settings_fields( 'tch-settings-group' ); ?>
-    <?php $prowp_options = get_option( 'tch_options' ); ?>
+    <?php settings_fields( 'tch-settings-api' ); ?>
+    <?php $prowp_options = get_option( 'tch_options_api' ); ?>
     <table class="form-table">
         <tr valign="top">
             <th scope="row">Логин в Яндекс.XML:</th>
             <td>
-                <input type="text" name="tch_options[option_user]" 
+                <input type="text" name="tch_options_api[option_user]"
                  value="<?php echo esc_attr( $prowp_options['option_user'] ); ?>" />
             </td>
         </tr>
         <tr valign="top">
             <th scope="row">Ключ:</th>
             <td>
-                <input class="regular-text" type="text" name="tch_options[option_key]" 
+                <input class="regular-text" type="text" name="tch_options_api[option_key]" 
                  value="<?php echo esc_attr( $prowp_options['option_key'] ); ?>"/>
             </td>
         </tr>
         <tr valign="top">
             <th scope="row">Ваш ip-адрес сервера:</th>
             <td>
-                <input class="regular-text" type="text" name="tch_options[server_addr]" 
+                <input class="regular-text" type="text" name="tch_options_api[server_addr]" 
                  value="<?php echo esc_attr( $prowp_options['server_addr'] ); ?>" />
                  
                 <input class="regular-text" type="text" name="SERVER[SERVER_ADDR]" 
@@ -321,7 +334,7 @@ if (!isset($_GET['tch_page'])) {
         <tr valign="top">
             <th scope="row">Адрес вашего сайта:</th>
             <td>
-                <input class="regular-text" type="text" name="tch_options[server_name]" 
+                <input class="regular-text" type="text" name="tch_options_api[server_name]" 
                  value="<?php echo esc_attr( $prowp_options['server_name'] ); ?>"/>
                  
                 <input class="regular-text" type="text" name="SERVER[SERVER_NAME]" 

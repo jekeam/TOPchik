@@ -40,8 +40,10 @@ function drawChart() {
         'vAxis': {
           'title': 'Позиция',
           'direction':'-1',
-          'maxValue':200,
-          'minValue':1
+          'maxValue':100,
+          'minValue':0,
+          'viewWindowMode': 'explicit',
+           'gridlines': {'count': '10',}
         },
         'trendlines': { 
             0: {

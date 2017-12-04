@@ -97,7 +97,7 @@ jQuery(document).ready(function($)
                                     }
                                     
                                     if (cb_cnt == indx+1){
-                                        location.reload();
+                                        setTimeout(location.reload(), 500);
                                     }
                                 }
             		  });

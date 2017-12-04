@@ -33,7 +33,7 @@ if ($debag = 'on')
 // Открываем файл для получения существующего содержимого
 $current = file_get_contents($file);
 
-$prowp_options = get_option( 'tch_options' );
+$prowp_options = get_option( 'tch_options_api' );
 
 $user = $prowp_options['option_user'];
 $key = $prowp_options['option_key'];

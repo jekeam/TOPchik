@@ -228,8 +228,12 @@ if (!isset($_GET['tch_page'])) {
 } elseif ($_GET['tch_page']=='sheduler') {
 ?>
 <form method="post" action="options.php">
-<?php settings_fields( 'tch-settings-sheduler' ); ?>
-<?php $prowp_options = get_option( 'tch_options_sheduler' ); ?>
+<?php 
+    wp_enqueue_script('tch-script-sheduler', plugins_url('/js/sheduler.js',__FILE__));
+    settings_fields( 'tch-settings-sheduler' ); 
+    $prowp_options = get_option( 'tch_options_sheduler' );
+    //Установка задания в крон
+?>
     <p><b>Выберите расписание проверок</b></p>
     
     <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_week" 
@@ -294,7 +298,7 @@ if (!isset($_GET['tch_page'])) {
             name="tch_options_sheduler[time_days_of_month]" 
             type="number" 
             value="<?php echo esc_attr( isset($prowp_options['time_days_of_month'])?$prowp_options['time_days_of_month']:'1' ); ?>"
-            min="0" 
+            min="1" 
             max="24"> час(а,ов)</p>
     </p>
         <ol class="sheduler" style="width:538px;">
@@ -431,11 +435,18 @@ if (!isset($_GET['tch_page'])) {
         
     <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
         <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >По требованию</p>
+        >По требованию 
+        <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" value="Назначить задание"/>':''); ?>
         
-    <p><input type="submit" class="button-primary" value="Сохранить" /></p>
+    <p><input type="submit" class="button-primary" value="Сохранить"/></p>
 </from>    
 <?php
+//Вывод Крон задач
+
+// получаем все задачи из базы данных
+$cron_zadachi = get_option( 'cron' );
+ 
+// можно использовать функции print_r() или var_dump() для вывода всех задач
 } elseif ($_GET['tch_page']=='settings') {
 ?>
 <h2>Яндекс.XML</h2>

@@ -97,7 +97,10 @@ jQuery(document).ready(function($)
                                     }
                                     
                                     if (cb_cnt == indx+1){
-                                        setTimeout(location.reload(), 500);
+                                        function refr(){
+                                            location.reload()
+                                        };
+                                        setTimeout(refr,1000);
                                     }
                                 }
             		  });

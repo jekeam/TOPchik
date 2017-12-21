@@ -119,6 +119,7 @@ function tch_settings_page()
 </div>
 <div class="wrap" style="background: #fff; padding: 20px; weight:10%;">
 <?php 
+
 if (!isset($_GET['tch_page'])) {
     $recent_posts_array = get_posts(); // получаем массив постов
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
@@ -126,9 +127,6 @@ if (!isset($_GET['tch_page'])) {
     	tch_meta_box($recent_post_single);
     	echo '<br><br><br>';
     endforeach; // конец цикла
-?>
-    
-<?php 
 }elseif ($_GET['tch_page']=='statistics') {
     wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
     wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков
@@ -230,17 +228,34 @@ if (!isset($_GET['tch_page'])) {
 <form method="post" action="options.php">
 <?php 
     wp_enqueue_script('tch-script-sheduler', plugins_url('/js/sheduler.js',__FILE__));
+    
+    if (is_admin()) {
+        wp_enqueue_script("jquery-ui-core", array('jquery'));
+        wp_enqueue_script("jquery-ui-progressbar", array('jquery','jquery-ui-progressbar'));
+        
+        global $wp_scripts;
+        $ui = $wp_scripts->query('jquery-ui-core');
+        $protocol = is_ssl() ? 'https' : 'http';
+        $url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
+        wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
+    }
+
+    
     settings_fields( 'tch-settings-sheduler' ); 
     $prowp_options = get_option( 'tch_options_sheduler' );
     //Установка задания в крон
+    echo '<div class="box" style="display:inline-block;">';
+    checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" value="Назначить задание"/>':''); 
 ?>
-    <p><b>Выберите расписание проверок</b></p>
-    
-    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_week" 
+    <div style="display:inline-block; width:200px;" id="progressbar"><div class="progress-label"></div></div>
+    </div>
+
+    <p><b>Выберите расписание проверок [в разработке]</b></p>
+    <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_week" 
           <?php checked('days_of_week', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
         >По дням недели, в
           
-        <input 
+        <input disabled
             name="tch_options_sheduler[time_days_of_week]"
             type="number" 
             value="<?php echo esc_attr( isset($prowp_options['time_days_of_week'])?$prowp_options['time_days_of_week']:'0' ); ?>" 
@@ -249,7 +264,7 @@ if (!isset($_GET['tch_page'])) {
             
         <ul class="sheduler">
             
-            <li><input type="checkbox" name="tch_options_sheduler[day1_of_week]" value="day1_of_week"
+            <li><input disabled type="checkbox" name="tch_options_sheduler[day1_of_week]" value="day1_of_week"
                 <?php checked('day1_of_week',
                                isset($prowp_options['day1_of_week'])
                                ?
@@ -257,44 +272,44 @@ if (!isset($_GET['tch_page'])) {
                 >ПН
             </li>
                 
-            <li><input type="checkbox" name="tch_options_sheduler[day2_of_week]" value="day2_of_week"
+            <li><input disabled type="checkbox" name="tch_options_sheduler[day2_of_week]" value="day2_of_week"
                 <?php checked('day2_of_week',isset($prowp_options['day2_of_week'])?$prowp_options['day2_of_week']:''); ?>
                 >ВТ
             </li>
             
-            <li><input type="checkbox" name="tch_options_sheduler[day3_of_week]" value="day3_of_week"
+            <li><input disabled type="checkbox" name="tch_options_sheduler[day3_of_week]" value="day3_of_week"
                 <?php checked('day3_of_week',isset($prowp_options['day3_of_week'])?$prowp_options['day3_of_week']:''); ?>
                 >СР
             </li>
             
-             <li><input type="checkbox" name="tch_options_sheduler[day4_of_week]" value="day4_of_week" 
+             <li><input disabled type="checkbox" name="tch_options_sheduler[day4_of_week]" value="day4_of_week" 
                 <?php checked('day4_of_week',isset($prowp_options['day4_of_week'])?$prowp_options['day4_of_week']:''); ?>
                 >ЧТ
             </li>
             
-             <li><input type="checkbox" name="tch_options_sheduler[day5_of_week]" value="day5_of_week" 
+             <li><input disabled type="checkbox" name="tch_options_sheduler[day5_of_week]" value="day5_of_week" 
                 <?php checked('day5_of_week',isset($prowp_options['day5_of_week'])?$prowp_options['day5_of_week']:''); ?>
                 >ПТ
             </li>
             
             
-             <li><input type="checkbox" name="tch_options_sheduler[day6_of_week]" value="day6_of_week" 
+             <li><input disabled type="checkbox" name="tch_options_sheduler[day6_of_week]" value="day6_of_week" 
                 <?php checked('day6_of_week',isset($prowp_options['day6_of_week'])?$prowp_options['day6_of_week']:''); ?>
                 >СБ
             </li>
             
-             <li><input type="checkbox" name="tch_options_sheduler[day7_of_week]" value="day7_of_week" 
+             <li><input disabled type="checkbox" name="tch_options_sheduler[day7_of_week]" value="day7_of_week" 
                 <?php checked('day7_of_week',isset($prowp_options['day7_of_week'])?$prowp_options['day7_of_week']:''); ?>
                 >ВС
             </li>
             
         </ul>
     <p>
-        <input name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_month"
+        <input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_month"
           <?php checked('days_of_month', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
           >По дням месяца, в
         
-        <input
+        <input disabled
             name="tch_options_sheduler[time_days_of_month]" 
             type="number" 
             value="<?php echo esc_attr( isset($prowp_options['time_days_of_month'])?$prowp_options['time_days_of_month']:'1' ); ?>"
@@ -302,143 +317,142 @@ if (!isset($_GET['tch_page'])) {
             max="24"> час(а,ов)</p>
     </p>
         <ol class="sheduler" style="width:538px;">
-            &nbsp&nbsp<li>1 <input type="checkbox" name="tch_options_sheduler[1d]" value="1d"
+            &nbsp&nbsp<li>1 <input disabled type="checkbox" name="tch_options_sheduler[1d]" value="1d"
                             <?php checked('1d',isset($prowp_options['1d'])?$prowp_options['1d']:''); ?>>
                       </li>
-            &nbsp&nbsp<li>2 <input type="checkbox" name="tch_options_sheduler[2d]" value="2d"
+            &nbsp&nbsp<li>2 <input disabled type="checkbox" name="tch_options_sheduler[2d]" value="2d"
                             <?php checked('2d',isset($prowp_options['2d'])?$prowp_options['2d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>3 <input type="checkbox" name="tch_options_sheduler[3d]" value="3d"
+            &nbsp&nbsp<li>3 <input disabled type="checkbox" name="tch_options_sheduler[3d]" value="3d"
                             <?php checked('3d',isset($prowp_options['3d'])?$prowp_options['3d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>4 <input type="checkbox" name="tch_options_sheduler[4d]" value="4d"
+            &nbsp&nbsp<li>4 <input disabled type="checkbox" name="tch_options_sheduler[4d]" value="4d"
                             <?php checked('4d',isset($prowp_options['4d'])?$prowp_options['4d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>5 <input type="checkbox" name="tch_options_sheduler[5d]" value="5d"
+            &nbsp&nbsp<li>5 <input disabled type="checkbox" name="tch_options_sheduler[5d]" value="5d"
                             <?php checked('5d',isset($prowp_options['5d'])?$prowp_options['5d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>6 <input type="checkbox" name="tch_options_sheduler[6d]" value="6d"
+            &nbsp&nbsp<li>6 <input disabled type="checkbox" name="tch_options_sheduler[6d]" value="6d"
                             <?php checked('6d',isset($prowp_options['6d'])?$prowp_options['6d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>7 <input type="checkbox" name="tch_options_sheduler[7d]" value="7d"
+            &nbsp&nbsp<li>7 <input disabled type="checkbox" name="tch_options_sheduler[7d]" value="7d"
                             <?php checked('7d',isset($prowp_options['7d'])?$prowp_options['7d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>8 <input type="checkbox" name="tch_options_sheduler[8d]" value="8d"
+            &nbsp&nbsp<li>8 <input disabled type="checkbox" name="tch_options_sheduler[8d]" value="8d"
                             <?php checked('8d',isset($prowp_options['8d'])?$prowp_options['8d']:''); ?>
                       </li>
-            &nbsp&nbsp<li>9 <input type="checkbox" name="tch_options_sheduler[9d]" value="9d"
+            &nbsp&nbsp<li>9 <input disabled type="checkbox" name="tch_options_sheduler[9d]" value="9d"
                             <?php checked('9d',isset($prowp_options['9d'])?$prowp_options['9d']:''); ?>
                       </li>
-            <li>10 <input type="checkbox" name="tch_options_sheduler[10d]" value="10d"
+            <li>10 <input disabled type="checkbox" name="tch_options_sheduler[10d]" value="10d"
                     <?php checked('10d',isset($prowp_options['10d'])?$prowp_options['10d']:''); ?>
             </li>
             
-            <li>11 <input type="checkbox" name="tch_options_sheduler[11d]" value="11d"
+            <li>11 <input disabled type="checkbox" name="tch_options_sheduler[11d]" value="11d"
                     <?php checked('11d',isset($prowp_options['11d'])?$prowp_options['11d']:''); ?>
             </li>
             
-            <li>12 <input type="checkbox" name="tch_options_sheduler[12d]" value="12d"
+            <li>12 <input disabled type="checkbox" name="tch_options_sheduler[12d]" value="12d"
                     <?php checked('12d',isset($prowp_options['12d'])?$prowp_options['12d']:''); ?>
             </li>
             
-            <li>13 <input type="checkbox" name="tch_options_sheduler[13d]" value="13d"
+            <li>13 <input disabled type="checkbox" name="tch_options_sheduler[13d]" value="13d"
                     <?php checked('13d',isset($prowp_options['13d'])?$prowp_options['13d']:''); ?>
             </li>
             
-            <li>14 <input type="checkbox" name="tch_options_sheduler[14d]" value="14d"
+            <li>14 <input disabled type="checkbox" name="tch_options_sheduler[14d]" value="14d"
                     <?php checked('14d',isset($prowp_options['14d'])?$prowp_options['14d']:''); ?>
             </li>
             
-            <li>15 <input type="checkbox" name="tch_options_sheduler[15d]" value="15d"
+            <li>15 <input disabled type="checkbox" name="tch_options_sheduler[15d]" value="15d"
                     <?php checked('15d',isset($prowp_options['15d'])?$prowp_options['15d']:''); ?>
             </li>
             
-            <li>16 <input type="checkbox" name="tch_options_sheduler[16d]" value="16d"
+            <li>16 <input disabled type="checkbox" name="tch_options_sheduler[16d]" value="16d"
                     <?php checked('16d',isset($prowp_options['16d'])?$prowp_options['16d']:''); ?>
             </li>
             
-            <li>17 <input type="checkbox" name="tch_options_sheduler[17d]" value="17d"
+            <li>17 <input disabled type="checkbox" name="tch_options_sheduler[17d]" value="17d"
                     <?php checked('17d',isset($prowp_options['17d'])?$prowp_options['17d']:''); ?>
             </li>
             
-            <li>18 <input type="checkbox" name="tch_options_sheduler[18d]" value="18d"
+            <li>18 <input disabled type="checkbox" name="tch_options_sheduler[18d]" value="18d"
                     <?php checked('18d',isset($prowp_options['18d'])?$prowp_options['18d']:''); ?>
             </li>
             
-            <li>19 <input type="checkbox" name="tch_options_sheduler[19d]" value="19d"
+            <li>19 <input disabled type="checkbox" name="tch_options_sheduler[19d]" value="19d"
                     <?php checked('19d',isset($prowp_options['19d'])?$prowp_options['19d']:''); ?>
             </li>
             
-            <li>20 <input type="checkbox" name="tch_options_sheduler[20d]" value="20d"
+            <li>20 <input disabled type="checkbox" name="tch_options_sheduler[20d]" value="20d"
                     <?php checked('20d',isset($prowp_options['20d'])?$prowp_options['20d']:''); ?>
             </li>
             
-            <li>21 <input type="checkbox" name="tch_options_sheduler[21d]" value="21d"
+            <li>21 <input disabled type="checkbox" name="tch_options_sheduler[21d]" value="21d"
                     <?php checked('21d',isset($prowp_options['21d'])?$prowp_options['21d']:''); ?>
             </li>
             
-            <li>22 <input type="checkbox" name="tch_options_sheduler[22d]" value="22d"
+            <li>22 <input disabled type="checkbox" name="tch_options_sheduler[22d]" value="22d"
                     <?php checked('22d',isset($prowp_options['22d'])?$prowp_options['22d']:''); ?>
             </li>
             
-            <li>23 <input type="checkbox" name="tch_options_sheduler[23d]" value="23d"
+            <li>23 <input disabled type="checkbox" name="tch_options_sheduler[23d]" value="23d"
                     <?php checked('23d',isset($prowp_options['23d'])?$prowp_options['23d']:''); ?>
             </li>
             
-            <li>24 <input type="checkbox" name="tch_options_sheduler[24d]" value="24d"
+            <li>24 <input disabled type="checkbox" name="tch_options_sheduler[24d]" value="24d"
                     <?php checked('24d',isset($prowp_options['24d'])?$prowp_options['24d']:''); ?>
             </li>
             
-            <li>25 <input type="checkbox" name="tch_options_sheduler[25d]" value="25d"
+            <li>25 <input disabled type="checkbox" name="tch_options_sheduler[25d]" value="25d"
                     <?php checked('25d',isset($prowp_options['25d'])?$prowp_options['25d']:''); ?>
             </li>
             
-            <li>26 <input type="checkbox" name="tch_options_sheduler[26d]" value="26d"
+            <li>26 <input disabled type="checkbox" name="tch_options_sheduler[26d]" value="26d"
                     <?php checked('26d',isset($prowp_options['26d'])?$prowp_options['26d']:''); ?>
             </li>
             
-            <li>27 <input type="checkbox" name="tch_options_sheduler[27d]" value="27d"
+            <li>27 <input disabled type="checkbox" name="tch_options_sheduler[27d]" value="27d"
                     <?php checked('27d',isset($prowp_options['27d'])?$prowp_options['27d']:''); ?>
             </li>
             
-            <li>28 <input type="checkbox" name="tch_options_sheduler[28d]" value="28d"
+            <li>28 <input disabled type="checkbox" name="tch_options_sheduler[28d]" value="28d"
                     <?php checked('28d',isset($prowp_options['28d'])?$prowp_options['28d']:''); ?>
             </li>
             
-            <li>29 <input type="checkbox" name="tch_options_sheduler[29d]" value="29d"
+            <li>29 <input disabled type="checkbox" name="tch_options_sheduler[29d]" value="29d"
                     <?php checked('29d',isset($prowp_options['29d'])?$prowp_options['29d']:''); ?>
             </li>
             
-            <li>30 <input type="checkbox" name="tch_options_sheduler[30d]" value="30d"
+            <li>30 <input disabled type="checkbox" name="tch_options_sheduler[30d]" value="30d"
                     <?php checked('30d',isset($prowp_options['30d'])?$prowp_options['30d']:''); ?>
             </li>
             
-            <li>31 <input type="checkbox" name="tch_options_sheduler[31d]" value="31d"
+            <li>31 <input disabled type="checkbox" name="tch_options_sheduler[31d]" value="31d"
                     <?php checked('31d',isset($prowp_options['31d'])?$prowp_options['31d']:''); ?>
             </li>
             
         </ol>
         
-    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="once_a_month"
+    <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="once_a_month"
         <?php checked('once_a_month', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
         >Раз в месяц</p>
         
-    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="after_update"
+    <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="after_update"
         <?php checked('after_update', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
         >После апдейтов Яндекса, через 
-        <input 
+        <input disabled
             name="time_after_update" 
             type="number" 
             value="<?php echo esc_attr( isset($prowp_options['time_after_update'])?$prowp_options['time_after_update']:'2' ); ?>"
             min="2" 
             max="24"> часа</p>
         
-    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
+    <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
         <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >По требованию 
-        <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" value="Назначить задание"/>':''); ?>
+        >По требованию
         
-    <p><input type="submit" class="button-primary" value="Сохранить"/></p>
+    <p><input disabled type="submit" class="button-primary" value="Сохранить"/></p>
 </from>    
 <?php
 //Вывод Крон задач

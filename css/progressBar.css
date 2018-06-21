@@ -1,0 +1,94 @@
+.tch-bubble{
+    display: flex;
+    text-align: center;
+}    
+
+.ptitle{
+    text-align: center;
+}
+
+.pb_small_text{
+    font-size: small;
+    padding-top: 9px;
+    padding-left: 3px;
+    text-align: center;
+}    
+
+.pie{
+    background-color:#DFE8ED;
+    width:100px;
+    height:100px;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    position:relative;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.clip1 {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:160px;
+    clip:rect(0px, 100px, 100px, 50px);
+}
+.slice1 {
+    position:absolute;
+    width:100px;
+    height:100px;
+    clip:rect(0px, 50px, 100px, 0px);
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    /*background-color:#30BAE7;*/
+    border-color:#30BAE7;
+    -moz-transform:rotate(0);
+    -webkit-transform:rotate(0);
+    -o-transform:rotate(0);
+    transform:rotate(0);
+}
+.clip2 {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:100px;
+    clip:rect(0, 50px, 100px, 0px);
+}
+.slice2 {
+    position:absolute;
+    width:100px;
+    height:100px;                                /*<- вот здесь была ошибка*/
+    clip:rect(0px, 100px, 100px, 50px);
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    border-radius:100%;
+    /*background-color:#30BAE7;*/
+    border-color:#30BAE7;
+    -moz-transform:rotate(0);
+    -webkit-transform:rotate(0);
+    -o-transform:rotate(0);
+    transform:rotate(0);
+}
+.status {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 74px;
+    height: 54px;
+    padding-top: 20px;
+    border-radius: 100%;
+    font-family: monospace, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #3C4761;
+    /*line-height: 10px;*/
+    background: #fff;
+}
+.red {
+    background-color:red;
+}
+.green {
+    background-color:green;
+}

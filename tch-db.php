@@ -1,5 +1,15 @@
 <?php
 
+//Получаем адрес субд
+function get_hostname_db(){
+    
+    global $wpdb;
+    
+    $db_hostname = $wpdb->get_var
+                            ("select @@GLOBAL.hostname");
+    return $db_hostname;
+}
+
 //Получения значения ид-кс для поста
 function get_next_key_id($post_id)
 {
@@ -20,6 +30,7 @@ function get_next_key_id($post_id)
                             );
     return $next_key_id;
 }
+
 
 //Запись данных в таблицу $wpdb->prefix . $tch_tbl_keywords 
 function set_db_tch_keywords($id, $keyword, $post_id) 

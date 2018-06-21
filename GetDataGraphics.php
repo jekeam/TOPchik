@@ -1,5 +1,6 @@
 <?php
 include_once( dirname( __FILE__ ) . '/tch-db.php');
+
 global $date_query;
 
 //Позиции по посту

@@ -14,7 +14,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var v_post_id = jQuery('#post_ID').val();
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/top-checker/GetDataGraphics.php?post_id="+v_post_id,
+        url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/GetDataGraphics.php?post_id="+v_post_id,
         dataType: "json",
         async: false
     }).responseText;
@@ -47,14 +47,13 @@ function drawChart() {
         },
         'trendlines': { 
             0: {
-                'color': 'black',/*
+                'color': 'green',
                 'lineWidth': 10,
-                'opacity': 0.2*/
+                'opacity': 0.2,
+                'type': 'exponential',
                 //'type': 'linear',
                 //'degree': 3,
                 //'pointsVisible': 'true',
-                'lineWidth': 4,
-                'opacity': 0.9,
                 'title': 'Общий тренд'
             }
         }
@@ -62,8 +61,18 @@ function drawChart() {
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+    chart.draw(data, options);
+        
     //var chart = new google.charts.Line(document.getElementById('chart_div'));
-        //chart.draw(data, google.charts.Line.convertOptions(options));
-        //todo https://github.com/google/google-visualization-issues/issues/2143
+    //chart.draw(data, google.charts.Line.convertOptions(options));
+    //to-do trendlines https://github.com/google/google-visualization-issues/issues/2143
+    
+    function errorHandler(errorMessage) {
+        //curisosity, check out the error in the console
+        console.log(errorMessage);
+    
+        //simply remove the error, the user never see it
+        google.visualization.errors.removeError(errorMessage.id);
+    }
+    google.visualization.events.addListener(chart, 'error', errorHandler);
 }

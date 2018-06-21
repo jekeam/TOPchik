@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: TOP-CHECKER
-Plugin URI: https://suineg.ru/top-checker.html
+Plugin Name: ТопЧик - анализ поисковых запросов
+Plugin URI: https://vk.com/jekeam
 Description: Проверка позиций ключевых слов в поисковой выдаче Яндекса и Google, удобная аналитика.
-Author: Alex Savinyh
-Version: 0.1
-Author URI: https://suineg.ru/
+Author: Александр Савиных
+Version: Alpha
+Author URI: https://vk.com/sun4eese
 */
 
 //define('TOP_CHECKER_VERSION', '0.1');
@@ -81,7 +81,7 @@ function tch_stylesheet()
 //Задаем настройки для меню плагина
 function tch_create_settings_submenu() 
 {
-    add_options_page( 'Top-checker', 'Top-checker', 'manage_options', 'tch_settings_menu', 'tch_settings_page' );
+    add_options_page( 'ТопЧик', 'ТопЧик', 'manage_options', 'tch_settings_menu', 'tch_settings_page' );
     //Задаим функцию для настройки плагина
     add_action('admin_init', 'tch_register_settings' );
 }
@@ -97,7 +97,7 @@ function tch_register_settings()
 function tch_settings_page()
 {
 ?>
-<h1>Topсhecker — съем позиций прямо из WP</h1>
+<h1>ТопЧик — съем позиций прямо из WP</h1>
 <div>
  <ul class="subsubsub">
      
@@ -493,7 +493,7 @@ $cron_zadachi = get_option( 'cron' );
                  value="<?php echo esc_attr( $prowp_options['server_addr'] ); ?>" />
                  
                 <input class="regular-text" type="text" name="SERVER[SERVER_ADDR]" 
-                 value="<?php echo esc_attr( $_SERVER['SERVER_ADDR'] ); ?>" disabled />
+                 value="<?php $ip_db = gethostbyname(get_hostname_db()); echo $ip_db; ?>" disabled />
             </td>
         </tr>
         <tr valign="top">
@@ -531,7 +531,7 @@ function tch_sanitize_options($input)
 }
 
 function tch_store_register_meta_box() {
-	add_meta_box( 'tch-product-meta', __('Поисковые запросы', 'tch-plugin'), 'tch_meta_box', 'post', 'normal', 'high'  );
+	add_meta_box( 'tch-product-meta', __('ТопЧик - анализ поисковых запросов', 'tch-plugin'), 'tch_meta_box', 'post', 'normal', 'high'  );
 }
 
 function tch_meta_box( $post )

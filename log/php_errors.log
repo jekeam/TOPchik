@@ -86,3 +86,405 @@
 [22-Jun-2018 11:07:09 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
 [22-Jun-2018 11:07:09 UTC] PHP Stack trace:
 [22-Jun-2018 11:07:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 16:07:58 UTC] PHP Warning:  require_once(../../../wp-load.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 6
+[22-Jun-2018 16:07:58 UTC] PHP Stack trace:
+[22-Jun-2018 16:07:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[22-Jun-2018 16:07:58 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[22-Jun-2018 16:07:58 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[22-Jun-2018 16:07:58 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[22-Jun-2018 16:07:58 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[22-Jun-2018 16:07:58 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 16:07:58 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 16:07:58 UTC] PHP   8. include_once() /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php:510
+[22-Jun-2018 16:07:58 UTC] PHP Fatal error:  require_once(): Failed opening required '../../../wp-load.php' (include_path='.:/usr/share/php:/usr/share/pear:/home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery/:/home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery/plugins/') in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 6
+[22-Jun-2018 16:07:58 UTC] PHP Stack trace:
+[22-Jun-2018 16:07:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[22-Jun-2018 16:07:58 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[22-Jun-2018 16:07:58 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[22-Jun-2018 16:07:58 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[22-Jun-2018 16:07:58 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[22-Jun-2018 16:07:58 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 16:07:58 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 16:07:58 UTC] PHP   8. include_once() /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php:510
+[22-Jun-2018 17:23:19 UTC] PHP Notice:  Undefined index: keyword in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 106
+[22-Jun-2018 17:23:19 UTC] PHP Stack trace:
+[22-Jun-2018 17:23:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:21 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 49
+[22-Jun-2018 17:36:21 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:21 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 53
+[22-Jun-2018 17:36:21 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:21 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 53
+[22-Jun-2018 17:36:21 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:21 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:53
+[22-Jun-2018 17:36:32 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 49
+[22-Jun-2018 17:36:32 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:32 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 53
+[22-Jun-2018 17:36:32 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:32 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 53
+[22-Jun-2018 17:36:32 UTC] PHP Stack trace:
+[22-Jun-2018 17:36:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:36:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:121
+[22-Jun-2018 17:36:32 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:53
+[22-Jun-2018 17:39:32 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
+[22-Jun-2018 17:39:32 UTC] PHP Stack trace:
+[22-Jun-2018 17:39:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[22-Jun-2018 17:39:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[22-Jun-2018 17:39:32 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[22-Jun-2018 17:39:32 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
+[22-Jun-2018 17:39:32 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:450
+[22-Jun-2018 17:39:32 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[22-Jun-2018 17:39:32 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[22-Jun-2018 17:39:32 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 17:39:32 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[22-Jun-2018 17:39:32 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
+[22-Jun-2018 17:43:36 UTC] PHP Notice:  Use of undefined constant hour - assumed 'hour' in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 124
+[22-Jun-2018 17:43:36 UTC] PHP Stack trace:
+[22-Jun-2018 17:43:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:43:36 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 17:43:36 UTC] PHP Stack trace:
+[22-Jun-2018 17:43:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:43:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 17:43:36 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 17:43:36 UTC] PHP Stack trace:
+[22-Jun-2018 17:43:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:43:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 17:43:36 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 17:43:36 UTC] PHP Stack trace:
+[22-Jun-2018 17:43:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 17:43:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 17:43:36 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:27:20 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:27:20 UTC] PHP Stack trace:
+[22-Jun-2018 19:27:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:27:20 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:27:20 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:27:20 UTC] PHP Stack trace:
+[22-Jun-2018 19:27:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:27:20 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:27:20 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:27:20 UTC] PHP Stack trace:
+[22-Jun-2018 19:27:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:27:20 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:27:20 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:28:42 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:28:42 UTC] PHP Stack trace:
+[22-Jun-2018 19:28:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:28:42 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:28:42 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:28:42 UTC] PHP Stack trace:
+[22-Jun-2018 19:28:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:28:42 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:28:42 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:28:42 UTC] PHP Stack trace:
+[22-Jun-2018 19:28:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:28:42 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:28:42 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:29:24 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:29:24 UTC] PHP Stack trace:
+[22-Jun-2018 19:29:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:29:24 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:29:24 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:29:24 UTC] PHP Stack trace:
+[22-Jun-2018 19:29:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:29:24 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:29:24 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:29:24 UTC] PHP Stack trace:
+[22-Jun-2018 19:29:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:29:24 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:29:24 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:30:07 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:30:07 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:07 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:07 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:30:07 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:07 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:07 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:30:07 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:07 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:07 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:30:21 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:30:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:21 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:30:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:21 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:30:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:30:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:30:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:30:21 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:31:11 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:31:11 UTC] PHP Stack trace:
+[22-Jun-2018 19:31:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:31:11 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:31:11 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:31:11 UTC] PHP Stack trace:
+[22-Jun-2018 19:31:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:31:11 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:31:11 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:31:11 UTC] PHP Stack trace:
+[22-Jun-2018 19:31:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:31:11 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:31:11 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:38:32 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:38:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:32 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:38:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:32 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:38:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:32 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:38:49 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:38:49 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:49 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:49 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:38:49 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:49 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:49 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:38:49 UTC] PHP Stack trace:
+[22-Jun-2018 19:38:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:38:49 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:38:49 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:39:02 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:39:02 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:02 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:02 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:39:02 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:02 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:02 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:39:02 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:02 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:02 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:39:34 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:39:34 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:34 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:34 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:39:34 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:34 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:34 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:39:34 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:34 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:125
+[22-Jun-2018 19:39:34 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:39:58 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:39:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:39:58 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:39:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:39:58 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:39:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:39:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:39:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:39:58 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:40:32 UTC] PHP Warning:  DOMXPath::query(): Invalid expression in /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php on line 1764
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP   3. phpQueryObject->find() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:50
+[22-Jun-2018 19:40:32 UTC] PHP   4. phpQueryObject->runQuery() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1929
+[22-Jun-2018 19:40:32 UTC] PHP   5. DOMXPath->query() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1764
+[22-Jun-2018 19:40:32 UTC] PHP Warning:  DOMXPath::query(): Invalid expression in /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php on line 1764
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP   3. phpQueryObject->find() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:50
+[22-Jun-2018 19:40:32 UTC] PHP   4. phpQueryObject->runQuery() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1929
+[22-Jun-2018 19:40:32 UTC] PHP   5. DOMXPath->query() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1764
+[22-Jun-2018 19:40:32 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php on line 1766
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP   3. phpQueryObject->find() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:50
+[22-Jun-2018 19:40:32 UTC] PHP   4. phpQueryObject->runQuery() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1929
+[22-Jun-2018 19:40:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php on line 1769
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP   3. phpQueryObject->find() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:50
+[22-Jun-2018 19:40:32 UTC] PHP   4. phpQueryObject->runQuery() /home/ubuntu/workspace/wp-content/plugins/TopChik/src/phpQuery-onefile.php:1929
+[22-Jun-2018 19:40:32 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:40:32 UTC] PHP Stack trace:
+[22-Jun-2018 19:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:40:32 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:40:32 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:42:55 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:42:55 UTC] PHP Stack trace:
+[22-Jun-2018 19:42:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:42:55 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:42:55 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:42:55 UTC] PHP Stack trace:
+[22-Jun-2018 19:42:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:42:55 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:42:55 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:42:55 UTC] PHP Stack trace:
+[22-Jun-2018 19:42:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:42:55 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:42:55 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:44:41 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:44:41 UTC] PHP Stack trace:
+[22-Jun-2018 19:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:44:41 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:44:41 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:44:41 UTC] PHP Stack trace:
+[22-Jun-2018 19:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:44:41 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:44:41 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:44:41 UTC] PHP Stack trace:
+[22-Jun-2018 19:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:44:41 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:44:41 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:54:31 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 51
+[22-Jun-2018 19:54:31 UTC] PHP Stack trace:
+[22-Jun-2018 19:54:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:54:31 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:54:31 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:54:31 UTC] PHP Stack trace:
+[22-Jun-2018 19:54:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:54:31 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:54:31 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 55
+[22-Jun-2018 19:54:31 UTC] PHP Stack trace:
+[22-Jun-2018 19:54:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:54:31 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:123
+[22-Jun-2018 19:54:31 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:55
+[22-Jun-2018 19:55:21 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 19:55:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:55:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:55:21 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:55:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:55:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:55:21 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:55:21 UTC] PHP Stack trace:
+[22-Jun-2018 19:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:55:21 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:55:21 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:58:36 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 19:58:36 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:36 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:58:36 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:36 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:58:36 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:36 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:36 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 19:58:58 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 19:58:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:58 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:58:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:58 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 19:58:58 UTC] PHP Stack trace:
+[22-Jun-2018 19:58:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 19:58:58 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 19:58:58 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 20:00:46 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 20:00:46 UTC] PHP Stack trace:
+[22-Jun-2018 20:00:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:00:46 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:00:46 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:00:46 UTC] PHP Stack trace:
+[22-Jun-2018 20:00:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:00:46 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:00:46 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:00:46 UTC] PHP Stack trace:
+[22-Jun-2018 20:00:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:00:46 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:00:46 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 20:04:25 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 20:04:25 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:25 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:25 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:04:25 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:25 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:25 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:04:25 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:25 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:25 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 20:04:51 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 20:04:51 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:51 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:51 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:04:51 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:51 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:51 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:04:51 UTC] PHP Stack trace:
+[22-Jun-2018 20:04:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:04:51 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:04:51 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 20:05:33 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 20:05:33 UTC] PHP Stack trace:
+[22-Jun-2018 20:05:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:05:33 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:05:33 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:05:33 UTC] PHP Stack trace:
+[22-Jun-2018 20:05:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:05:33 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:05:33 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:05:33 UTC] PHP Stack trace:
+[22-Jun-2018 20:05:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:05:33 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:05:33 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56
+[22-Jun-2018 20:08:13 UTC] PHP Notice:  Undefined variable: v_current in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 52
+[22-Jun-2018 20:08:13 UTC] PHP Stack trace:
+[22-Jun-2018 20:08:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:08:13 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:08:13 UTC] PHP Notice:  Undefined variable: v_file in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:08:13 UTC] PHP Stack trace:
+[22-Jun-2018 20:08:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:08:13 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:08:13 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php on line 56
+[22-Jun-2018 20:08:13 UTC] PHP Stack trace:
+[22-Jun-2018 20:08:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:0
+[22-Jun-2018 20:08:13 UTC] PHP   2. getMyLimit() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:124
+[22-Jun-2018 20:08:13 UTC] PHP   3. file_put_contents() /home/ubuntu/workspace/wp-content/plugins/TopChik/yandex-xml.php:56

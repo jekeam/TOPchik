@@ -506,6 +506,11 @@ $cron_zadachi = get_option( 'cron' );
                  value="<?php echo esc_attr( $_SERVER['SERVER_NAME'] ); ?>" disabled />
             </td>
         </tr>
+        
+        <!--p>Доступно лимитов на этот час: <input type="number" name="myLimit" value="0" disabled /></p>
+              
+        < ?php wp_enqueue_script('tch-script-get-my-limit', plugins_url('/js/get-my-limit.js',__FILE__)); ?-->
+        
     </table>
     <p class="submit">
         <input type="submit" class="button-primary" value="Сохранить" />

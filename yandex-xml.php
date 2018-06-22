@@ -24,6 +24,41 @@ function get_my_place($domains_xml){
 }
 
 
+//Запрос лимитов на этот час
+function getMyLimit($v_user, $v_key, $hour){
+    $url = 'https://yandex.ru/search/xml?action=limits-info&user='.$v_user.'&key='.$v_key;
+    //print_r($url);
+    $html = file_get_contents($url);
+    $doc = phpQuery::newDocument($html);
+    //print_r($doc);
+    echo $hour;
+    echo $doc;
+
+    
+    //Проверяем есть ли ошибки
+    $error_text = pq($doc->find('error'))->text();
+    
+    if(strlen($error_text)>0){
+        $error = 'Ошибка '. $error_text ."\n";
+        $v_current .= $error."\n\n";
+        if ($debag = 'on'){
+            file_put_contents($v_file, $v_current);
+        }
+        echo $error;
+        return;
+    } 
+    //Если все ОК работаем дальше
+    $limits = pq($doc->find($hour));
+    $v_current .= '$limits:'.$limits."\n";
+    
+    // Пишем содержимое обратно в файл
+    if ($debag = 'on') {
+        file_put_contents($v_file, $v_current);
+    }
+    phpQuery::unloadDocuments($html);
+}
+
+
 //Запрос позиции
 function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     
@@ -68,7 +103,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     
     phpQuery::unloadDocuments($html);
 }
-
+    
 //пишем логи XML сообщений
 if ($debag = 'on'){
     // Открываем файл для получения существующего содержимого
@@ -80,10 +115,11 @@ $prowp_options = get_option( 'tch_options_api' );
 $user = $prowp_options['option_user'];
 $key = $prowp_options['option_key'];
 $my_domain = strtolower($prowp_options['server_name']);
-$keyword = $_POST['keyword'];
+$keyword = isset($_POST['keyword']) ? $_POST['keyword'] : null;
+$hour = isset($_POST['hour']) ? $_POST['hour'] : null;
 
-if (isset($_POST['keyword'])){
+if (isset($keyword)){
     search($keyword, $user, $key, $my_domain, $file ,$current);
-}else{
-    
+}elseif (isset($hour)){
+    getMyLimit($user, $key, $hour);
 }

@@ -1,5 +1,6 @@
 "use strict";
 jQuery(document).ready(function($) {
+
     function CheckAll(element) {
         var tbl = element.closest('.tch-table');
 
@@ -86,9 +87,10 @@ jQuery(document).ready(function($) {
                                     $('[change_place_id="' + key_place_id + '"]').css('color', 'gray');
                                 }
                             }
-                            
+
                             if (go_to_refresh == cb_cnt) {
                                 console.log('go');
+
                                 function refr() {
                                     location.reload();
                                 };

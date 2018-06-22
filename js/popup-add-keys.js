@@ -18,7 +18,7 @@ function PopUpHide() {
 function PopUpaddKey() {
     PopUpHide();
     //Ресделим введенные фразы
-    arr_keys = document.getElementById('thc-add-keys').value.toLowerCase().split(/[\t\n]+/);
+    var arr_keys = document.getElementById('thc-add-keys').value.toLowerCase().split(/[\t\n]+/);
 
     for (var i = 0; i < arr_keys.length; i++) {
         if (arr_keys[i] != null) {

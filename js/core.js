@@ -67,6 +67,7 @@ jQuery(document).ready(function($) {
                             else {
                                 $('[key_place_id="' + key_place_id + '"]').text(data).change();
                                 var cur_new_place = $('[key_place_id="' + key_place_id + '"]').text();
+                                console.log('key_place_id'+key_place_id+' cur_old_place'+cur_old_place +' cur_new_place'+cur_new_place);
                                 if (cur_new_place > 0) {
                                     var difference = cur_old_place - cur_new_place;
                                     if (difference > 0) {
@@ -89,7 +90,6 @@ jQuery(document).ready(function($) {
                             }
 
                             if (go_to_refresh == cb_cnt) {
-                                console.log('go');
 
                                 function refr() {
                                     location.reload();
@@ -157,9 +157,11 @@ jQuery(document).ready(function($) {
             }),
             beforeSend: function() {
                 //ожидание
+                console.log('beforeSend key_id:' +v_key_id +' place:'+ v_position);
             },
             success: function(data) {
                 //результат
+                console.log('success key_id:' +v_key_id +' place:'+ v_position);
             }
         });
     });

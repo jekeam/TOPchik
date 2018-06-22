@@ -13,7 +13,7 @@ google.charts.setOnLoadCallback(drawChart);
 // draws it.
 function drawChart() {
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/GetDataGraphics.php",
+        url: "/wp-content/plugins/TopChik/GetDataGraphics.php",
         dataType: "json",
         async: false
     }).responseText;

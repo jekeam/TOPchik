@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) {
         pos_available = 0;
         
         $.ajax({  
-         url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/tch-db-progress-bar.php",  
+         url: "/wp-content/plugins/TopChik/tch-db-progress-bar.php",  
          cache: false,
          async: false,
          method: "POST",
@@ -65,14 +65,14 @@ jQuery(document).ready(function ($) {
          //beforeSend: function()  { $("#content").html("").hide(); },
          success:  function(data){
              //console.log(data);
-             top3 = data[0].top3;
-             top10 = data[0].top10;
-             top30 = data[0].top30;
-             visibility_serp = data[0].visibility_serp;
-             all = data[0].count_all;
-             pos_improved = data[0].pos_improved;
-             pos_deteriorated = data[0].pos_deteriorated;
-             pos_available = data[0].pos_available;
+             top3               = data[0].top3              =! null ? data[0].top3 : 0;
+             top10              = data[0].top10             =! null ? data[0].top10 : 0; 
+             top30              = data[0].top30             =! null ? data[0].top30 : 0;
+             visibility_serp    = data[0].visibility_serp   =! null ? data[0].visibility_serp : 0;
+             all                = data[0].count_all         =! null ? data[0].count_all : 0;
+             pos_improved       = data[0].pos_improved      =! null ? data[0].pos_improved : 0;
+             pos_deteriorated   = data[0].pos_deteriorated  =! null ? data[0].pos_deteriorated : 0;
+             pos_available      = data[0].pos_available     =! null ? data[0].pos_available : 0;
          }
        });  
         

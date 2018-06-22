@@ -14,7 +14,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var v_post_id = jQuery('#post_ID').val();
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/GetDataGraphics.php?post_id="+v_post_id,
+        url: "/wp-content/plugins/TopChik/GetDataGraphics.php?post_id="+v_post_id,
         dataType: "json",
         async: false
     }).responseText;
@@ -34,7 +34,7 @@ function drawChart() {
         },
          'hAxis': {
           'title': 'Дата',
-          'format': 'M.d',
+          //'format': 'M.d.YY',
           //'gridlines': {'count': 30}
         },
         'vAxis': {
@@ -61,7 +61,6 @@ function drawChart() {
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
         
     //var chart = new google.charts.Line(document.getElementById('chart_div'));
     //chart.draw(data, google.charts.Line.convertOptions(options));
@@ -75,4 +74,5 @@ function drawChart() {
         google.visualization.errors.removeError(errorMessage.id);
     }
     google.visualization.events.addListener(chart, 'error', errorHandler);
+    chart.draw(data, options);
 }

@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
       function get_positin (){
 	         $.ajax({
 	            type: "POST",
-                url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/yandex-xml.php",
+                url: "/wp-content/plugins/TopChik/yandex-xml.php",
                 beforeSend: function(){
                     $( function() {
                         var progressbar = $( "#progressbar" ),

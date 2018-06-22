@@ -13,7 +13,7 @@ google.charts.setOnLoadCallback(drawChart);
 // draws it.
 function drawChart() {
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/GetDataGraphics.php?graphic=dynamics",
+        url: "/wp-content/plugins/TopChik/GetDataGraphics.php?graphic=dynamics",
         dataType: "json",
         async: false
     }).responseText;
@@ -29,7 +29,13 @@ function drawChart() {
         };
 
     var chart = new google.charts.Line(document.getElementById('chart_dynamic_div'));
-    chart.draw(data, google.charts.Line.convertOptions(options));
+    function errorHandler(errorMessage) {
+        //curisosity, check out the error in the console
+        console.log(errorMessage);
     
+        //simply remove the error, the user never see it
+        google.visualization.errors.removeError(errorMessage.id);
+    }
     google.visualization.events.addListener(chart, 'error', errorHandler);
+    chart.draw(data, google.charts.Line.convertOptions(options));
 }

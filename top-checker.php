@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: ТопЧик - анализ поисковых запросов
+Plugin Name: TopChik
 Plugin URI: https://vk.com/jekeam
 Description: Проверка позиций ключевых слов в поисковой выдаче Яндекса и Google, удобная аналитика.
 Author: Александр Савиных
@@ -531,7 +531,7 @@ function tch_sanitize_options($input)
 }
 
 function tch_store_register_meta_box() {
-	add_meta_box( 'tch-product-meta', __('ТопЧик - анализ поисковых запросов', 'tch-plugin'), 'tch_meta_box', 'post', 'normal', 'high'  );
+	add_meta_box( 'tch-product-meta', __('TopChik', 'tch-plugin'), 'tch_meta_box', 'post', 'normal', 'high'  );
 }
 
 function tch_meta_box( $post )
@@ -618,9 +618,19 @@ function tch_meta_box( $post )
                 
             echo '</table>';
             
-            //Кнопка добавления нового КС
+            //Кнопка добавления новоtch_add_keywordго КС
             echo '<div id="tch-add-button">';
                 echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить фразу">';
+                echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько фраз</a>';
+                echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
+                        <div class="b-popup-content">
+                          <div><textarea style="width:90%; height:150px; margin:10px; margin-left:40px;" autocomplete="off" aria-hidden="true" id="thc-add-keys"
+                                placeholder="Разделите фразы пререносом строки"></textarea></div>
+                          <a href="javascript:addKey()" type="button" class="page-title-action" style="margin:10px; margin-left:40px;">Добавить</a>
+                        </div>
+                      </div>';
+            wp_enqueue_script('tch-script-popup-add-keys', plugins_url('/js/popup-add-keys.js',__FILE__));
+
                 //echo '<input type="button" id="tch_add_keywords" class="page-title-action" value="Добавить несколько">';
             echo '</div>';
             

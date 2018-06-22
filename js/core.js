@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
                 function get_positin() {
                     $.ajax({
                         type: "POST",
-                        url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/yandex-xml.php",
+                        url: "/wp-content/plugins/TopChik/yandex-xml.php",
                         data: ({
                             keyword: keyword_val
                         }),
@@ -143,7 +143,7 @@ jQuery(document).ready(function($) {
         var v_position = $(this).text();
         $.ajax({
             type: "POST",
-            url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/tch-update.php",
+            url: "/wp-content/plugins/TopChik/tch-update.php",
             data: ({
                 key_id: v_key_id,
                 place: v_position,
@@ -163,10 +163,12 @@ jQuery(document).ready(function($) {
         var v_post_id = $('#post_ID').val();
         var v_key_id = $(this).attr('key_keyword_id');
         var v_keyword = $(this).val();
+        
+        console.log('go save:'+v_post_id);
 
         $.ajax({
             type: "POST",
-            url: "/wp-content/plugins/ТопЧик - анализ поисковых запросов/tch-update.php",
+            url: "/wp-content/plugins/TopChik/tch-update.php",
             data: ({
                 post_id: v_post_id,
                 key_id: v_key_id,
@@ -179,6 +181,7 @@ jQuery(document).ready(function($) {
             success: function(data) {
                 //результат
                 $('[key_id = "' + v_key_id + '"').val(v_keyword);
+                console.log('save:'+v_post_id);
             }
         });
     });
@@ -190,7 +193,7 @@ jQuery(document).ready(function($) {
         var count_cb = 0;
         var post_id = $('#post_ID').val();
 
-        //Получаем уникальный ид- на основе максимального ид элемнтов КС
+        //Получаем уникальный ид - на основе максимального ид элемнтов КС
         if (!$.isEmptyObject($('.tch-cb'))) {
             var max_id = 0;
             $('.tch-cb').each(function() {

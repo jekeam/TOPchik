@@ -14,65 +14,66 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var v_post_id = jQuery('#post_ID').val();
     var jsonData = jQuery.ajax({
-        url: "/wp-content/plugins/TopChik/GetDataGraphics.php?post_id="+v_post_id,
+        url: "/wp-content/plugins/TopChik/GetDataGraphics.php?post_id=" + v_post_id,
         dataType: "json",
         async: false
     }).responseText;
     
-    // Create the data table.
-    var data = new google.visualization.DataTable(jsonData);
-
-    // Set chart options
-    var options = {
-        //'interpolateNulls':'true',
-        'title': 'Анализ поисковых запросов',
-        //'curveType': 'function',
-        'width': 900,
-        'height': 300,
-        'legend': {
-            'position': 'right'
-        },
-         'hAxis': {
-          'title': 'Дата',
-          //'format': 'M.d.YY',
-          //'gridlines': {'count': 30}
-        },
-        'vAxis': {
-          'title': 'Позиция',
-          'direction':'-1',
-          'maxValue':100,
-          'minValue':0,
-          'viewWindowMode': 'explicit',
-           'gridlines': {'count': '10',}
-        },
-        'trendlines': { 
-            0: {
-                'color': 'green',
-                'lineWidth': 10,
-                'opacity': 0.2,
-                'type': 'exponential',
-                //'type': 'linear',
-                //'degree': 3,
-                //'pointsVisible': 'true',
-                'title': 'Общий тренд'
+    if (jsonData) {
+        // Create the data table.
+        var data = new google.visualization.DataTable(jsonData);
+        // Set chart options
+        var options = {
+            //'interpolateNulls':'true',
+            'title': 'Анализ поисковых запросов',
+            //'curveType': 'function',
+            'width': 900,
+            'height': 300,
+            'legend': {
+                'position': 'right'
+            },
+            'hAxis': {
+                'title': 'Дата',
+                //'format': 'M.d.YY',
+                //'gridlines': {'count': 30}
+            },
+            'vAxis': {
+                'title': 'Позиция',
+                'direction': '-1',
+                'maxValue': 100,
+                'minValue': 0,
+                'viewWindowMode': 'explicit',
+                'gridlines': { 'count': '10', }
+            },
+            'trendlines': {
+                0: {
+                    'color': 'green',
+                    'lineWidth': 10,
+                    'opacity': 0.2,
+                    'type': 'exponential',
+                    //'type': 'linear',
+                    //'degree': 3,
+                    //'pointsVisible': 'true',
+                    'title': 'Общий тренд'
+                }
             }
-        }
-    };
+        };
 
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        
-    //var chart = new google.charts.Line(document.getElementById('chart_div'));
-    //chart.draw(data, google.charts.Line.convertOptions(options));
-    //to-do trendlines https://github.com/google/google-visualization-issues/issues/2143
-    
-    function errorHandler(errorMessage) {
-        //curisosity, check out the error in the console
-        console.log(errorMessage);
-    
-        //simply remove the error, the user never see it
-        google.visualization.errors.removeError(errorMessage.id);
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+        //var chart = new google.charts.Line(document.getElementById('chart_div'));
+        //chart.draw(data, google.charts.Line.convertOptions(options));
+        //to-do trendlines https://github.com/google/google-visualization-issues/issues/2143
+
+        function errorHandler(errorMessage) {
+            //curisosity, check out the error in the console
+            console.log(errorMessage);
+
+            //simply remove the error, the user never see it
+            google.visualization.errors.removeError(errorMessage.id);
+        }
+        google.visualization.events.addListener(chart, 'error', errorHandler);
+        chart.draw(data, options);
     }
-    google.visualization.events.addListener(chart, 'error', errorHandler);
-    chart.draw(data, options);
 }

@@ -6,41 +6,45 @@ global $date_query;
 //Позиции по посту
 if (!empty($_REQUEST['post_id'])){
     $arr_kw = get_tch_keywords($_REQUEST['post_id']);
-    //Получаем данные из массива
-    $data = '{"cols": [{"label":"","type":"date"},';
-    
-    foreach ($arr_kw as $key => $value) {
-        $cur_keyword = $value->keyword;
-        $data .= '{"label":"'. $cur_keyword . '","type":"number"},';
-    }
-
-    $data .= '],
-    "rows": [';
-        
-    //Даты
-    $arr_dates = get_tch_dates($_REQUEST['post_id']);    
-    foreach ($arr_dates as $key => $value) {
-        $cur_dat = $value->dat;
-        $date = new DateTime($cur_dat);
-
-        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"},';
-        
-        foreach ($arr_kw as $key => $value) {
-            $cur_key_id = $value->key_id;
+        if (!empty($arr_kw)){
+            //Получаем данные из массива
+            $data = '{"cols": [{"label":"","type":"date"},';
             
-            $pos_arr = get_tch_pos_by_date($cur_dat, $cur_key_id);
-            if (!empty($pos_arr)){
-                foreach ($pos_arr as $key => $value) {
-                	$data .= '{"v":"'. $value->pos .'"},';
-                }
-            }else{
-                $data .= '{"v":"null"},';
+            foreach ($arr_kw as $key => $value) {
+                $cur_keyword = $value->keyword;
+                $data .= '{"label":"'. $cur_keyword . '","type":"number"},';
             }
-        }
         
-        $data .= ']},';
+            $data .= '],
+            "rows": [';
+                
+            //Даты
+            $arr_dates = get_tch_dates($_REQUEST['post_id']);    
+            foreach ($arr_dates as $key => $value) {
+                $cur_dat = $value->dat;
+                $date = new DateTime($cur_dat);
+        
+                $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"},';
+                
+                foreach ($arr_kw as $key => $value) {
+                    $cur_key_id = $value->key_id;
+                    
+                    $pos_arr = get_tch_pos_by_date($cur_dat, $cur_key_id);
+                    if (!empty($pos_arr)){
+                        foreach ($pos_arr as $key => $value) {
+                        	$data .= '{"v":"'. $value->pos .'"},';
+                        }
+                    }else{
+                        $data .= '{"v":"null"},';
+                    }
+                }
+                
+                $data .= ']},';
+            }
+            $data .= ']}';
+            
+        echo $data;
     }
-    $data .= ']}';
 }elseif(!empty($_REQUEST['graphic'])){//graphic=dynamics (default)
     //Общая динамика изменения параметров
     $data = '{"cols": [{"label":"","type":"date"}
@@ -79,7 +83,8 @@ if (!empty($_REQUEST['post_id'])){
         
     }
     $data .= ']}';
-    
+
+    echo $data;
 }else{
     //Общие позиции по сайту
     $data = '{"cols": [{"type":"date"},
@@ -102,6 +107,6 @@ if (!empty($_REQUEST['post_id'])){
         
     }
     $data .= ']}';
+    
+    echo $data;
 }
-
-echo $data;

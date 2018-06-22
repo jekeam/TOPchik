@@ -1,0 +1,88 @@
+[22-Jun-2018 10:28:06 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 549
+[22-Jun-2018 10:28:06 UTC] PHP Stack trace:
+[22-Jun-2018 10:28:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post-new.php:0
+[22-Jun-2018 10:28:06 UTC] PHP   2. include() /home/ubuntu/workspace/wp-admin/post-new.php:76
+[22-Jun-2018 10:28:06 UTC] PHP   3. do_meta_boxes() /home/ubuntu/workspace/wp-admin/edit-form-advanced.php:714
+[22-Jun-2018 10:28:06 UTC] PHP   4. call_user_func:{/home/ubuntu/workspace/wp-admin/includes/template.php:1063}() /home/ubuntu/workspace/wp-admin/includes/template.php:1063
+[22-Jun-2018 10:28:06 UTC] PHP   5. tch_meta_box() /home/ubuntu/workspace/wp-admin/includes/template.php:1063
+[22-Jun-2018 10:38:59 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:38:59 UTC] PHP Stack trace:
+[22-Jun-2018 10:38:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:40:35 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:40:35 UTC] PHP Stack trace:
+[22-Jun-2018 10:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:41:11 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:41:11 UTC] PHP Stack trace:
+[22-Jun-2018 10:41:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:42:43 UTC] PHP Notice:  Use of undefined constant json_encode - assumed 'json_encode' in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 46
+[22-Jun-2018 10:42:43 UTC] PHP Stack trace:
+[22-Jun-2018 10:42:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:42:43 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:42:43 UTC] PHP Stack trace:
+[22-Jun-2018 10:42:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:43:14 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:43:14 UTC] PHP Stack trace:
+[22-Jun-2018 10:43:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:44:25 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:44:25 UTC] PHP Stack trace:
+[22-Jun-2018 10:44:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:44:55 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:44:55 UTC] PHP Stack trace:
+[22-Jun-2018 10:44:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:45:56 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:45:56 UTC] PHP Stack trace:
+[22-Jun-2018 10:45:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:48:16 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:48:16 UTC] PHP Stack trace:
+[22-Jun-2018 10:48:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:48:38 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:48:38 UTC] PHP Stack trace:
+[22-Jun-2018 10:48:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:48:47 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:48:47 UTC] PHP Stack trace:
+[22-Jun-2018 10:48:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:50:59 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:50:59 UTC] PHP Stack trace:
+[22-Jun-2018 10:50:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:51:29 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 10:51:29 UTC] PHP Stack trace:
+[22-Jun-2018 10:51:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:52:26 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 10:52:26 UTC] PHP Stack trace:
+[22-Jun-2018 10:52:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:53:48 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 10:53:48 UTC] PHP Stack trace:
+[22-Jun-2018 10:53:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 10:59:50 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 10:59:50 UTC] PHP Stack trace:
+[22-Jun-2018 10:59:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:00:09 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 11:00:09 UTC] PHP Stack trace:
+[22-Jun-2018 11:00:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:01:07 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 11:01:07 UTC] PHP Stack trace:
+[22-Jun-2018 11:01:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:01:37 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 11:01:37 UTC] PHP Stack trace:
+[22-Jun-2018 11:01:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:02:25 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 11:02:25 UTC] PHP Stack trace:
+[22-Jun-2018 11:02:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:03:31 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 109
+[22-Jun-2018 11:03:31 UTC] PHP Stack trace:
+[22-Jun-2018 11:03:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:04:30 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 11:04:30 UTC] PHP Stack trace:
+[22-Jun-2018 11:04:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:04:52 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 11:04:52 UTC] PHP Stack trace:
+[22-Jun-2018 11:04:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:05:20 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 11:05:20 UTC] PHP Stack trace:
+[22-Jun-2018 11:05:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:06:29 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 11:06:29 UTC] PHP Stack trace:
+[22-Jun-2018 11:06:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[22-Jun-2018 11:07:09 UTC] PHP Notice:  Undefined variable: data in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 111
+[22-Jun-2018 11:07:09 UTC] PHP Stack trace:
+[22-Jun-2018 11:07:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0

@@ -466,7 +466,7 @@ $cron_zadachi = get_option( 'cron' );
 <h2>Яндекс.XML</h2>
 <p>
     Укажите ваши данные из 
-    <a href="https://xml.yandex.ru/settings/">Яндекс.XML</a>
+    <a href="https://xml.yandex.ru/settings/" target="blank_">Яндекс.XML</a>
 </p>
 <form method="post" action="options.php">
     <?php settings_fields( 'tch-settings-api' ); ?>
@@ -546,8 +546,7 @@ function tch_meta_box( $post )
         //Див для скрытых параметров
         echo '<div id="tch-inside">';
         echo '</div>';
-        
-        if (isset($arr_list)){
+        if (!empty($arr_list)){
             echo '<table id="tch-table" class="tch-table bordered">';
                 //заголовки
                 echo '<thead id="tch-table-thead">';
@@ -618,36 +617,35 @@ function tch_meta_box( $post )
                 
             echo '</table>';
             
-            //Кнопка добавления новоtch_add_keywordго КС
-            echo '<div id="tch-add-button">';
-                echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить фразу">';
-                echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько фраз</a>';
-                echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
-                        <div class="b-popup-content">
-                          <div><textarea style="width:90%; height:150px; margin:10px; margin-left:40px;" autocomplete="off" aria-hidden="true" id="thc-add-keys"
-                                placeholder="Разделите фразы пререносом строки"></textarea></div>
-                          <a href="javascript:addKey()" type="button" class="page-title-action" style="margin:10px; margin-left:40px;">Добавить</a>
-                        </div>
-                      </div>';
-            wp_enqueue_script('tch-script-popup-add-keys', plugins_url('/js/popup-add-keys.js',__FILE__));
-
-                //echo '<input type="button" id="tch_add_keywords" class="page-title-action" value="Добавить несколько">';
-            echo '</div>';
-            
-            echo '<div id="tch-div-action">';
+            echo '<div id="tch-div-action" style="margin:10px;">';
                 echo '<select id="tch-action">';
                     echo '<option value="-1">Сохранить</option>';
             	    echo '<option value="serp">Проверить</option>';
                     echo '<option value="trash">Удалить</option>';
                 echo '</select>';
                 echo '<input type="submit" id="doaction" class="button" value="Применить">';
+                echo '<a type="button" id="serp_all" class="button" href="javascript:PopUpSerpAll()">Проверить все</a>';
             echo '</div>';
-    
+
         }
         else 
         {
-            echo '<div id="not_found_keywords">Ключевые слова не заданы.</div>';
+            echo '<div id="not_found_keywords" style="margin-left:15px;">Добавьте поисковые запросы</div>';
         }
+        //Кнопка добавления новоtch_add_keywordго КС
+        echo '<div id="tch-add-button" style="margin:10px;">';
+            echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
+            echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько</a>';
+            echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
+                    <div class="b-popup-content">
+                      <div><textarea style="width:90%; height:150px; margin:10px;margin-left:40px;margin-top:5px;" autocomplete="off" aria-hidden="true" id="thc-add-keys"
+                            placeholder="Разделите фразы пререносом строки"></textarea></div>
+                      <a href="javascript:PopUpaddKey()" type="button" class="page-title-action" style="margin:10px; margin-left:40px;">Добавить</a>
+                    </div>
+                  </div>';
+            wp_enqueue_script('tch-script-popup-add-keys', plugins_url('/js/popup-add-keys.js',__FILE__));
+        echo '</div>';
+
         echo '<div id="error_log"></div>';
         echo "<div id='chart_div'></div>";
     echo '</div>';

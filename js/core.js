@@ -31,6 +31,7 @@ jQuery(document).ready(function($) {
         if (tch_window.find('#tch-action').val() === 'serp') {
             //Сколько всего отмечено
             var cb_cnt = tch_window.find('.tch-cb:visible:input:checkbox:checked').length;
+            var go_to_refresh = 1;
 
             tch_window.find('.tch-cb:visible:input:checkbox:checked').each(function(indx, el) {
                 $(this).removeAttr('checked').change();
@@ -84,13 +85,15 @@ jQuery(document).ready(function($) {
                                     $('[change_place_id="' + key_place_id + '"]').text(cur_old_place);
                                     $('[change_place_id="' + key_place_id + '"]').css('color', 'gray');
                                 }
-                                if (cb_cnt == indx + 1) {
-                                    function refr() {
-                                        location.reload()
-                                    };
-                                    setTimeout(refr, 1000);
-                                }
                             }
+                            
+                            if (go_to_refresh == cb_cnt) {
+                                function refr() {
+                                    location.reload()
+                                };
+                                setTimeout(refr, 5000);
+                            }
+                            go_to_refresh++;
                         }
                     });
                 }
@@ -163,8 +166,6 @@ jQuery(document).ready(function($) {
         var v_post_id = $('#post_ID').val();
         var v_key_id = $(this).attr('key_keyword_id');
         var v_keyword = $(this).val();
-        
-        console.log('go save:'+v_post_id);
 
         $.ajax({
             type: "POST",
@@ -181,7 +182,6 @@ jQuery(document).ready(function($) {
             success: function(data) {
                 //результат
                 $('[key_id = "' + v_key_id + '"').val(v_keyword);
-                console.log('save:'+v_post_id);
             }
         });
     });

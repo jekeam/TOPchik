@@ -21,7 +21,6 @@ function PopUpaddKey() {
 
     for (var i = 0; i < arr_keys.length; i++) {
         if (arr_keys[i] != null) {
-            document.getElementById('tch_add_keyword').click;
             document.getElementById('tch_add_keyword').click();
             //Найдем максимальный ИД КС
             var max_id = $('[key_keyword_id]')[$('[key_keyword_id]').length - 1].getAttribute('key_keyword_id');
@@ -35,9 +34,11 @@ function PopUpaddKey() {
 
 //Кнопка "Проверить все КС"
 function PopUpSerpAll(){
-    document.getElementById('checkAll').click;
     document.getElementById('checkAll').click();
     document.getElementById('tch-action').getElementsByTagName('option')[1].selected = 'selected';
-    document.getElementById('doaction').click;
-    document.getElementById('doaction').click();
+    function in_serp(){
+        $('#doaction').attr('type', 'button');
+        document.getElementById('doaction').click();
+    }
+    setTimeout(in_serp, 1500);
 }

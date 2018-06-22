@@ -624,7 +624,7 @@ function tch_meta_box( $post )
                     echo '<option value="trash">Удалить</option>';
                 echo '</select>';
                 echo '<input type="submit" id="doaction" class="button" value="Применить">';
-                echo '<a type="button" id="serp_all" class="button" href="javascript:PopUpSerpAll()">Проверить все</a>';
+                echo '<a id="serp_all" class="button" href="javascript:PopUpSerpAll()">Проверить все</a>';
             echo '</div>';
 
         }

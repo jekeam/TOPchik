@@ -88,10 +88,11 @@ jQuery(document).ready(function($) {
                             }
                             
                             if (go_to_refresh == cb_cnt) {
+                                console.log('go');
                                 function refr() {
-                                    location.reload()
+                                    location.reload();
                                 };
-                                setTimeout(refr, 5000);
+                                setTimeout(refr, 1500);
                             }
                             go_to_refresh++;
                         }

@@ -1,4 +1,6 @@
 "use strict";
+var go_to_refresh = 1;
+
 jQuery(document).ready(function($) {
 
     function CheckAll(element) {
@@ -32,7 +34,6 @@ jQuery(document).ready(function($) {
         if (tch_window.find('#tch-action').val() === 'serp') {
             //Сколько всего отмечено
             var cb_cnt = tch_window.find('.tch-cb:visible:input:checkbox:checked').length;
-            var go_to_refresh = 1;
 
             tch_window.find('.tch-cb:visible:input:checkbox:checked').each(function(indx, el) {
                 $(this).removeAttr('checked').change();
@@ -67,7 +68,6 @@ jQuery(document).ready(function($) {
                             else {
                                 $('[key_place_id="' + key_place_id + '"]').text(data).change();
                                 var cur_new_place = $('[key_place_id="' + key_place_id + '"]').text();
-                                console.log('key_place_id'+key_place_id+' cur_old_place'+cur_old_place +' cur_new_place'+cur_new_place);
                                 if (cur_new_place > 0) {
                                     var difference = cur_old_place - cur_new_place;
                                     if (difference > 0) {
@@ -89,13 +89,7 @@ jQuery(document).ready(function($) {
                                 }
                             }
 
-                            if (go_to_refresh == cb_cnt) {
-
-                                function refr() {
-                                    location.reload();
-                                };
-                                setTimeout(refr, 1500);
-                            }
+                            //console.log('Обновлено: ' + go_to_refresh + '/' + cb_cnt);
                             go_to_refresh++;
                         }
                     });
@@ -143,6 +137,7 @@ jQuery(document).ready(function($) {
         $('#tch-action').val('-1');
     });
 
+    var go_to_refresh_save = 1;
     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
     $(document).on('change', '.tch-position', function() {
         var v_key_id = $(this).attr('key_place_id');
@@ -157,11 +152,18 @@ jQuery(document).ready(function($) {
             }),
             beforeSend: function() {
                 //ожидание
-                console.log('beforeSend key_id:' +v_key_id +' place:'+ v_position);
             },
             success: function(data) {
                 //результат
-                console.log('success key_id:' +v_key_id +' place:'+ v_position);
+                //console.log('Сохранено: ' + go_to_refresh_save + '/' + (go_to_refresh - 1));
+                go_to_refresh_save++;
+                //После последнего сохраненного обновим страницу
+                if (go_to_refresh_save == (go_to_refresh - 1)) {
+                    function refr() {
+                        location.reload();
+                    };
+                    setTimeout(refr, 1500);
+                }
             }
         });
     });

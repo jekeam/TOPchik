@@ -122,4 +122,24 @@ if (isset($keyword)){
     search($keyword, $user, $key, $my_domain, $file ,$current);
 }elseif (isset($hour)){
     getMyLimit($user, $key, $hour);
+}else{//массовая проверка
+    set_time_limit(0); 
+    ob_implicit_flush(true);
+    ob_end_flush();
+     
+    for($i = 0; $i < 10; $i++){
+        //Hard work!!
+        sleep(1);
+        $p = ($i+1)*10; //Progress
+        $response = array(  'message' => $p . '% выполено. время сервера: ' . date("h:i:s", time()) . '<br>', 
+                            'progress' => $p);
+        
+        echo json_encode($response);
+    }
+    
+    sleep(1);
+    $response = array(  'message' => 'Завершено', 
+                        'progress' => 100);
+        
+    echo json_encode($response);
 }

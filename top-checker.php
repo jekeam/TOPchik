@@ -244,10 +244,24 @@ if (!isset($_GET['tch_page'])) {
     settings_fields( 'tch-settings-sheduler' ); 
     $prowp_options = get_option( 'tch_options_sheduler' );
     //Установка задания в крон
-    echo '<div class="box" style="display:inline-block;">';
+    
+    echo "<h1>Назначьте задание для проверки позиции (пока работает только ручной съем)</h1>
+        <div class='float_left'>
+            <h3>Прогресс:</h3>
+            <div id='progress_wrapper'>
+                <div id='progressor'></div>
+            </div>
+        </div>
+        <div class='float_right'>
+            <h3>Логи</h3>
+            <div id='divProgress'></div>
+        </div>";
+    
+    
+    echo '<div class="box" style="display:flex;width: 100%;">';
     checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" value="Назначить задание"/>':''); 
 ?>
-    <div style="display:inline-block; width:200px;" id="progressbar"><div class="progress-label"></div></div>
+    <div style="display:inline-block;width: 100%;" id="progressbar"><div class="progress-label"></div></div>
     </div>
 
     <p><b>Выберите расписание проверок [в разработке]</b></p>

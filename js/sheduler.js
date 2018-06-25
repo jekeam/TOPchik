@@ -43,21 +43,22 @@ jQuery(document).ready(function($) {
             });*/
 
       if (!window.XMLHttpRequest) {
-        alert("Ваш браузер не поддерживает собственный объект XMLHttpRequest.");
+        alert("Проверка невозможна - ваш браузер не поддерживает собственный объект XMLHttpRequest...");
         return;
       }
       try {
         var xhr = new XMLHttpRequest();
         xhr.previous_text = '';
 
-        xhr.onerror = function() { alert("[XHR] Фатальная ошибка."); };
+        xhr.onerror = function() { alert("Фатальная ошибка!"); };
         xhr.onreadystatechange = function() {
           try {
             if (xhr.readyState == 4) {
-              alert('[XHR] Готово')
+              //alert('Готово')
             }
             else if (xhr.readyState > 2) {
               var new_response = xhr.responseText.substring(xhr.previous_text.length);
+              console.log(new_response);
               var result = JSON.parse(new_response);
 
               document.getElementById("divProgress").innerHTML += result.message + '';
@@ -67,14 +68,15 @@ jQuery(document).ready(function($) {
             }
           }
           catch (e) {
-            alert("[XHR STATECHANGE] Возникла ошибка: " + e);
+            console.log(e);
+            alert("Возникла ошибка: " + e);
           }
         };
         xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php", true);
         xhr.send();
       }
       catch (e) {
-        alert("[XHR REQUEST] Возникла ошибка: " + e);
+        alert("Возникла ошибка: " + e);
       }
 
     }

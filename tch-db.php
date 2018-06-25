@@ -10,6 +10,7 @@ function get_hostname_db(){
     return $db_hostname;
 }
 
+
 //Получения значения ид-кс для поста
 function get_next_key_id($post_id)
 {
@@ -32,7 +33,7 @@ function get_next_key_id($post_id)
 }
 
 
-//Запись данных в таблицу $wpdb->prefix . $tch_tbl_keywords 
+//Запись данных в таблицу $wpdb->prefix . $tch_tbl_keywords - ключевые слова
 function set_db_tch_keywords($id, $keyword, $post_id) 
 {
     global $wpdb;
@@ -53,7 +54,9 @@ function set_db_tch_keywords($id, $keyword, $post_id)
     	array ('%d', '%s', '%d')
     );
 }
-//Запись данных в таблицу $wpdb->prefix . $tch_tbl_serp
+
+
+//Запись данных в таблицу $wpdb->prefix . $tch_tbl_serp - позиция КС
 function set_db_tch_serp($id, $place = 0, $time =  00000000)
 {
     //define('SHORTINIT', true);
@@ -83,6 +86,7 @@ function set_db_tch_serp($id, $place = 0, $time =  00000000)
     );
 }
 
+
 //Получить ключевое слово поста определенной ячейки
 function get_tch_keyword($id)
 {
@@ -103,6 +107,7 @@ function get_tch_keyword($id)
                             ); 
     return $keyword;
 }
+
 
 //Получить последнюю позицию ключевогой фразы поста по ид-ячейки
 function get_tch_place ($id, $date = '0000-00-00')
@@ -130,6 +135,7 @@ function get_tch_place ($id, $date = '0000-00-00')
                             ); 
     return $place;
 }
+
 
 //Получить все ключевые слова поста
 function get_tch_list($post_id)
@@ -159,14 +165,14 @@ function get_tch_list($post_id)
                                                      AND t_key.post_id = %d
                                                      AND t_pos.data = (SELECT MAX(i.DATA)
                                                                        FROM $table_position i
-                                                                       WHERE i.key_id = t_pos.key_id))
-                                                ", 
+                                                                       WHERE i.key_id = t_pos.key_id))", 
                                                 $post_id
                                             )
                             );
     
     return $arr_key;
 }
+
 
 //Получить только  ключевые слова поста
 function get_tch_keywords($post_id)
@@ -194,6 +200,32 @@ function get_tch_keywords($post_id)
                                                 $post_id
                                             )
                             );
+    
+    return $arr_key;
+}
+
+
+//Получить вообще все КС - для массовой проверки
+function get_tch_all_keywords()
+{
+    global $wpdb;
+    global $tch_tbl_keywords;
+    global $tch_tbl_serp;
+    
+    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+    
+    $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
+    $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
+    
+    $arr_key = $wpdb->get_results
+        (
+        
+           "SELECT
+                t_key.keyword keyword,
+                t_key.key_id key_id
+            FROM $table_keywords t_key
+            "
+        );
     
     return $arr_key;
 }
@@ -285,7 +317,7 @@ function get_tch_pos_by_date($date, $key_id=null)
     return $arr_key;
 }
 
-
+//Удалить КС по ИД
 function delete_tch_keyword ($key_id)
 {
     global $wpdb;

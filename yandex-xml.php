@@ -103,7 +103,53 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     
     phpQuery::unloadDocuments($html);
 }
+
+
+//Не выводит а возвращает, копия search - только без echo (заменено на return)
+function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     
+    $v_current .= date('H:i:s', time() - date('Z'))."\n";
+    $v_current .= '$user:'.$v_user."\n";
+    $v_current .= '$key:'.$v_key."\n";
+    $v_current .= '$my_domain:'.$v_my_domain."\n";
+    $v_current .= '$keyword:'.$v_keyword."\n";
+    $my_position = 0;
+    
+    $html = file_get_contents('https://yandex.ru/search/xml?user='.$v_user
+                                    .'&key='.$v_key
+                                    .'&query='.urlencode($v_keyword)
+                                    .'lr=225&l10n=ru&sortby=rlv&filter=strict&maxpassages=1&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1');
+    
+    $doc = phpQuery::newDocument($html);
+    //$v_current .= $doc;
+    //Проверяем есть ли ошибки
+    $error_text = pq($doc->find('error'))->text();
+    
+    if(strlen($error_text)>0){
+        $error = 'Ошибка '. $error_text ."\n";
+        $v_current .= $error."\n\n";
+        if ($debag = 'on'){
+            file_put_contents($v_file, $v_current);
+        }
+        return $error;
+    } 
+    //Если все ОК работаем дальше
+    $domains = pq($doc->find('domain'));
+    $v_current .= '$domains:'.$domains."\n";
+    
+    $my_position = get_my_place($domains);
+    $v_current .= 'Моя позиция:'.$my_position."\n\n";
+    
+    // Пишем содержимое обратно в файл
+    if ($debag = 'on') {
+        file_put_contents($v_file, $v_current);
+    }
+    return $my_position;
+    
+    phpQuery::unloadDocuments($html);
+}
+
+
 //пишем логи XML сообщений
 if ($debag = 'on'){
     // Открываем файл для получения существующего содержимого
@@ -113,22 +159,32 @@ if ($debag = 'on'){
 $prowp_options = get_option( 'tch_options_api' );
 
 $user = $prowp_options['option_user'];
-$key = $prowp_options['option_key'];
+$p_key = $prowp_options['option_key'];
 $my_domain = strtolower($prowp_options['server_name']);
 $keyword = isset($_POST['keyword']) ? $_POST['keyword'] : null;
 $hour = isset($_POST['hour']) ? $_POST['hour'] : null;
 
 if (isset($keyword)){
-    search($keyword, $user, $key, $my_domain, $file ,$current);
+    search($keyword, $user, $p_key, $my_domain, $file ,$current);
 }elseif (isset($hour)){
-    getMyLimit($user, $key, $hour);
+    getMyLimit($user, $p_key, $hour);
 }else{//массовая проверка
     set_time_limit(0); 
     ob_implicit_flush(true);
     ob_end_flush();
      
     for($i = 0; $i < 10; $i++){
-        //Hard work!!
+        //get all keywords
+        $arr_kw = get_tch_all_keywords();
+        if (!empty($arr_kw)){
+            foreach ($arr_kw as $key => $value) {
+                $cur_keyword = $value->keyword;
+                //get new place in SERP
+                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current);
+                echo ('позиция:'.$new_place);
+                return;
+            }
+        }
         sleep(1);
         $p = ($i+1)*10; //Progress
         $response = array(  'message' => $p . '% выполено. время сервера: ' . date("h:i:s", time()) . '<br>', 

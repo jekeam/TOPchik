@@ -216,7 +216,7 @@ if (!isset($_GET['tch_page'])) {
             </div>
             <div class="status"></div>
         </div>
-    </div>        
+    </div>
 </div>
 <!--Динамика позиций-->
 <div id="chart_dynamic_div"></div>
@@ -246,11 +246,12 @@ if (!isset($_GET['tch_page'])) {
     //Установка задания в крон
     
     echo "<h1>Назначьте задание для проверки позиции (пока работает только ручной съем)</h1>
+        <input type='checkbox' id='is_new_keys'/> Проверить все КС заново при повторном запуске
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
             </div>";
-    checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Назначить задание"/>':'');
+    checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"/>':'');
     echo "</div>
         <div class='float_left'>
             <h3>Логи</h3>

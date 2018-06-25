@@ -106,7 +106,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
 
 
 //Не выводит а возвращает, копия search - только без echo (заменено на return)
-function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
+function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p){
     
     $v_current .= date('H:i:s', time() - date('Z'))."\n";
     $v_current .= '$user:'.$v_user."\n";
@@ -131,7 +131,13 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         if ($debag = 'on'){
             file_put_contents($v_file, $v_current);
         }
-        return $error;
+        $min = intval(date('i'));
+        $min = (60 - $min);
+        $response = array(  'message' => date("h:i:s", time()) .' '.$error.'<br> Ожидаем '.$min.' минут...', 
+                            'progress' => $p);
+        echo json_encode($response);
+        sleep($min*60);
+        search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
     } 
     //Если все ОК работаем дальше
     $domains = pq($doc->find('domain'));
@@ -163,35 +169,45 @@ $p_key = $prowp_options['option_key'];
 $my_domain = strtolower($prowp_options['server_name']);
 $keyword = isset($_POST['keyword']) ? $_POST['keyword'] : null;
 $hour = isset($_POST['hour']) ? $_POST['hour'] : null;
+$is_new_keys = isset($_GET['is_new_keys']) ? $_GET['is_new_keys'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
 
 if (isset($keyword)){
     search($keyword, $user, $p_key, $my_domain, $file ,$current);
 }elseif (isset($hour)){
     getMyLimit($user, $p_key, $hour);
 }else{//массовая проверка
+    $с = 1;//Переменная для прогресс бара - вычисляем номер цикла
+    $p = 0;//Переменная для прогресс бара - вычисляем процент
     set_time_limit(0); 
     ob_implicit_flush(true);
     ob_end_flush();
      
-    for($i = 0; $i < 10; $i++){
+    //for($i = 0; $i < 10; $i++){
         //get all keywords
-        $arr_kw = get_tch_all_keywords();
+        $arr_kw = get_tch_all_keywords($is_new_keys);
         if (!empty($arr_kw)){
+            //echo "asddas:" . count($arr_kw);
+            $i = count($arr_kw);//Всего КС
+            $step =  $i > 0 ? 100/$i : 0;//узнаем сколько будет 1 кс в процентах
             foreach ($arr_kw as $key => $value) {
                 $cur_keyword = $value->keyword;
+                $id_keyword = $value->key_id;
                 //get new place in SERP
-                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current);
-                echo ('позиция:'.$new_place);
-                return;
+                sleep(1);
+                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current, $p);
+                if ($new_place > 0) {
+                    set_db_tch_serp($id_keyword, $new_place);
+                }
+                
+                $p = $p + $step;//Прибавим процент
+                $p = round($p, 2);
+                $response = array(  'message' => date("h:i:s", time()) .' выполено '. $p . '% ('.$с.'/'.$i.')<br>', 
+                                    'progress' => $p);
+                echo json_encode($response);
+                $с++;
             }
         }
-        sleep(1);
-        $p = ($i+1)*10; //Progress
-        $response = array(  'message' => $p . '% выполено. время сервера: ' . date("h:i:s", time()) . '<br>', 
-                            'progress' => $p);
-        
-        echo json_encode($response);
-    }
+    //}
     
     sleep(1);
     $response = array(  'message' => 'Завершено', 

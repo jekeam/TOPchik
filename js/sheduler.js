@@ -2,45 +2,8 @@
 jQuery(document).ready(function($) {
 
   $('input#add_task_on_demand').click(function() {
+    
     function get_positin() {
-      /*
-            $.ajax({
-              type: "POST",
-              url: "/wp-content/plugins/TopChik/yandex-xml.php",
-              beforeSend: function() {
-                var progressbar = $("#progressbar"),
-                  progressLabel = $(".progress-label");
-
-                progressbar.progressbar({
-                  value: false,
-                  change: function() {
-                    progressLabel.text(progressbar.progressbar("value") + "%");
-                  },
-                  complete: function() {
-                    progressLabel.text("Позиции сняты!");
-                  }
-                });
-
-                $(function() {
-
-                  function progress() {
-                    var val = progressbar.progressbar("value") || 0;
-
-                    progressbar.progressbar("value", val + 2);
-
-                    if (val < 99) {
-                      setTimeout(progress, 80);
-                    }
-                  }
-
-                  setTimeout(progress, 2000);
-                });
-              },
-              success: function(data) {
-                console.log('data:' + data);
-                alert('Позиции успешно сняты');
-              }
-            });*/
 
       if (!window.XMLHttpRequest) {
         alert("Проверка невозможна - ваш браузер не поддерживает собственный объект XMLHttpRequest...");
@@ -50,11 +13,13 @@ jQuery(document).ready(function($) {
         var xhr = new XMLHttpRequest();
         xhr.previous_text = '';
 
-        xhr.onerror = function() { alert("Фатальная ошибка!"); };
+        xhr.onerror = function() { 
+          //alert("Фатальная ошибка!");
+          console.log("Фатальная ошибка!");
+        };
         xhr.onreadystatechange = function() {
           try {
             if (xhr.readyState == 4) {
-              //alert('Готово')
             }
             else if (xhr.readyState > 2) {
               var new_response = xhr.responseText.substring(xhr.previous_text.length);
@@ -68,15 +33,21 @@ jQuery(document).ready(function($) {
             }
           }
           catch (e) {
-            console.log(e);
-            alert("Возникла ошибка: " + e);
+            //alert("Возникла ошибка: " + e);
+            console.log("Возникла ошибка: " + e);
           }
         };
-        xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php", true);
+        var is_new_keys = document.getElementById('is_new_keys').checked;
+        if (is_new_keys) {
+          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=1", true);
+        }else{
+          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=0", true);
+        }
         xhr.send();
       }
       catch (e) {
-        alert("Возникла ошибка: " + e);
+        //alert("Возникла ошибка: " + e);
+        console.log("Возникла ошибка: " + e);
       }
 
     }

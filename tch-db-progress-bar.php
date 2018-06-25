@@ -13,9 +13,10 @@ global $date_query;
 
 $table_name_s = $wpdb->get_blog_prefix() . $tch_tbl_serp;
 $val = $wpdb->get_results($wpdb->prepare(
-                          "SELECT (SELECT count(*) FROM $table_name_s i WHERE i.place <= 3 and i.data <= %s) top3
-                                 ,(SELECT count(*) FROM $table_name_s i WHERE i.place <= 10 and i.data <= %s) top10
-                                 ,(SELECT count(*) FROM $table_name_s i WHERE i.place <= 30 and i.data <= %s) top30
+    //Все переписать, неверно считаются показатели!!
+                          "SELECT (SELECT count(distinct key_id) FROM $table_name_s i WHERE i.place <= 3 and i.data <= %s) top3
+                                 ,(SELECT count(distinct key_id) FROM $table_name_s i WHERE i.place <= 10 and i.data <= %s) top10
+                                 ,(SELECT count(distinct key_id) FROM $table_name_s i WHERE i.place <= 30 and i.data <= %s) top30
                                  ,ROUND((SELECT sum(case 
                                                 when i.place <= 3 then 1
                                                 when i.place = 4 then 0.85
@@ -26,7 +27,7 @@ $val = $wpdb->get_results($wpdb->prepare(
                                             end) FROM $table_name_s i
                                             WHERE i.data <= %s), 1) visibility_serp
                                             
-                                 ,(SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+                                 ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
                                    FROM $table_name_s a
                                    JOIN $table_name_s b on a.key_id = b.key_id
                                     and a.data = (select max(t1.data) from $table_name_s t1 where t1.data <= %s)/*берем послед срез*/
@@ -34,9 +35,9 @@ $val = $wpdb->get_results($wpdb->prepare(
                                                   where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                                                     and t2.data <= %s)/*берем предпосл срез*/
                                     and a.data <= %s
-                                    and b.data <= %s
-                                  ) pos_improved
-                                 ,(SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                                    and b.data <= %s), 0) 
+                                  as pos_improved
+                                 ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
                                    FROM $table_name_s a
                                    JOIN $table_name_s b on a.key_id = b.key_id
                                     and a.data = (select max(t1.data) from $table_name_s t1 where t1.data <= %s)/*берем послед срез*/
@@ -44,16 +45,16 @@ $val = $wpdb->get_results($wpdb->prepare(
                                                   where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                                                     and t2.data <= %s)/*берем предпосл срез*/
                                     and a.data <= %s
-                                    and b.data <= %s                                                  
-                                  ) pos_deteriorated
-                                 ,(SELECT sum(b.place-1)
+                                    and b.data <= %s), 0) 
+                                  as pos_deteriorated
+                                 ,COALESCE((SELECT sum(b.place-1)
                                    FROM $table_name_s b
                                    WHERE b.data = (select max(t2.data) from $table_name_s t2 
                                                    where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                                                      and t2.data <= %s)/*берем предпосл срез*/
-                                     and b.data <= %s
-                                  ) pos_available
-                                 ,(SELECT count(*) FROM $table_name_s i) count_all"
+                                     and b.data <= %s), 0) 
+                                  as pos_available
+                                 ,(SELECT count(distinct key_id) FROM $table_name_s i) count_all"
                           , $date_query, $date_query, $date_query, $date_query, $date_query, $date_query, $date_query
                           , $date_query, $date_query, $date_query, $date_query, $date_query, $date_query, $date_query
                           , $date_query, $date_query, $date_query

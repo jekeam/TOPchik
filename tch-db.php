@@ -206,7 +206,7 @@ function get_tch_keywords($post_id)
 
 
 //Получить вообще все КС - для массовой проверки
-function get_tch_all_keywords()
+function get_tch_all_keywords($new = 0)
 {
     global $wpdb;
     global $tch_tbl_keywords;
@@ -217,15 +217,31 @@ function get_tch_all_keywords()
     $table_keywords = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
     $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
     
-    $arr_key = $wpdb->get_results
-        (
-        
-           "SELECT
-                t_key.keyword keyword,
-                t_key.key_id key_id
-            FROM $table_keywords t_key
-            "
-        );
+    if ($new == 0){
+        echo '$new:0';
+        $arr_key = $wpdb->get_results
+            (//Проверим только новые (исключим уже проверенные за сегодня)
+               "SELECT 
+                    t_key.keyword keyword,
+                    t_key.key_id key_id
+                FROM $table_keywords t_key
+                WHERE t_key.key_id not in 
+                  (SELECT x.key_id 
+                   FROM $table_position x
+                   WHERE x.data = DATE_FORMAT(sysdate(), '%Y-%m-%d'
+                     and x.place < 200))
+                "
+            );
+    } else {
+        echo '$new:1';
+        $arr_key = $wpdb->get_results
+            (//Проверим все
+                "SELECT
+                    t_key.keyword keyword,
+                    t_key.key_id key_id
+                 FROM $table_keywords t_key"
+            );
+    }
     
     return $arr_key;
 }

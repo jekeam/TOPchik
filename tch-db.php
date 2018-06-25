@@ -218,7 +218,6 @@ function get_tch_all_keywords($new = 0)
     $table_position = $wpdb->get_blog_prefix() . $tch_tbl_serp;
     
     if ($new == 0){
-        echo '$new:0';
         $arr_key = $wpdb->get_results
             (//Проверим только новые (исключим уже проверенные за сегодня)
                "SELECT 
@@ -228,12 +227,9 @@ function get_tch_all_keywords($new = 0)
                 WHERE t_key.key_id not in 
                   (SELECT x.key_id 
                    FROM $table_position x
-                   WHERE x.data = DATE_FORMAT(sysdate(), '%Y-%m-%d'
-                     and x.place < 200))
-                "
+                   WHERE x.data = DATE_FORMAT(sysdate(), '%Y-%m-%d'))"
             );
     } else {
-        echo '$new:1';
         $arr_key = $wpdb->get_results
             (//Проверим все
                 "SELECT

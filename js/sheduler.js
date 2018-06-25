@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
 
   $('input#add_task_on_demand').click(function() {
     
+    document.getElementById('add_task_on_demand').disabled = 'disable';
+    
     function get_positin() {
 
       if (!window.XMLHttpRequest) {
@@ -23,13 +25,16 @@ jQuery(document).ready(function($) {
             }
             else if (xhr.readyState > 2) {
               var new_response = xhr.responseText.substring(xhr.previous_text.length);
-              console.log(new_response);
+              //console.log(new_response);
               var result = JSON.parse(new_response);
 
               document.getElementById("divProgress").innerHTML += result.message + '';
               document.getElementById('progressor').style.width = result.progress + "%";
 
               xhr.previous_text = xhr.responseText;
+              if (result.progress == '100'){
+                document.getElementById('add_task_on_demand').disabled = '';
+              }
             }
           }
           catch (e) {

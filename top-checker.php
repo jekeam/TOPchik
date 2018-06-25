@@ -133,7 +133,8 @@ if (!isset($_GET['tch_page'])) {
     wp_enqueue_script('tch-script-graphic-avg', plugins_url('/js/graphic-avg.js',__FILE__));
     wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
 ?>
-<text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" dx="0px">Ключевые показатели сайта</text>
+<text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" 
+      dx="0px">Ключевые показатели сайта (всего фраз: <span id="cnt_keys">0</span>)</text>
 <div class="tch-bubble">
     <div title="1, 2 и 3-я позиции — коэффициент 1
 4-я позиция — 0,85
@@ -246,12 +247,12 @@ if (!isset($_GET['tch_page'])) {
     //Установка задания в крон
     
     echo "<h1>Назначьте задание для проверки позиции (пока работает только ручной съем)</h1>
-        <input type='checkbox' id='is_new_keys'/> Проверить все КС заново при повторном запуске
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
             </div>";
     checked('on_demand', isset($prowp_options['sheduler_mode'])?print '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"/>':'');
+    echo "<div style='margin:5px;'><input type='checkbox' id='is_new_keys'/><span>Проверить все КС заново при повторном запуске</span></div>";
     echo "</div>
         <div class='float_left'>
             <h3>Логи</h3>

@@ -76,19 +76,13 @@ jQuery(document).ready(function ($) {
          }
        });  
         
-    progressBarUpdate(visibility_serp, 100, pie1, '');
-    progressBarUpdate(top3, all, pie2,
-        "<div class='pb_small_text' title='Всего кл. фраз:"+all+"'>"+Math.round(Number(top3/all*100))+"%</div>");
-    progressBarUpdate(top10, all, pie3,
-        "<div class='pb_small_text' title='Всего кл. фраз:"+all+"'>"+Math.round(Number(top10/all*100))+"%</div>");
-    progressBarUpdate(top30, all, pie4,
-        "<div class='pb_small_text' title='Всего запросов:"+all+"'>"+Math.round(Number(top30/all*100))+"%</div>");
-    progressBarUpdate(pos_improved, pos_available, pie5, 
-        "<div class='pb_small_text' title='Всего было доступно позиций:"+pos_available+"'>"
-        +Math.round(Number(pos_improved/pos_available*100))+"%</div>");
-    progressBarUpdate(pos_deteriorated, pos_available, pie6, 
-        "<div class='pb_small_text' title='Всего было доступно позиций:"+pos_available+"'>"
-        +Math.round(Number(pos_deteriorated/pos_available*100))+"%</div>");
+    document.getElementById('cnt_keys').innerHTML = all;
+    progressBarUpdate(visibility_serp, 100, pie1,'');
+    progressBarUpdate(top3, all, pie2,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top3/all*100))+"%</div>");
+    progressBarUpdate(top10, all, pie3,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top10/all*100))+"%</div>");
+    progressBarUpdate(top30, all, pie4,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top30/all*100))+"%</div>");
+    progressBarUpdate(pos_improved, pos_available, pie5, "<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(pos_improved/pos_available*100))+"%</div>");
+    progressBarUpdate(pos_deteriorated, pos_available, pie6, "<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(pos_deteriorated/pos_available*100))+"%</div>");
     
 });
 

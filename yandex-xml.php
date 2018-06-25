@@ -125,7 +125,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     //Проверяем есть ли ошибки
     $error_text = pq($doc->find('error'))->text();
     
-    if(strlen($error_text)>0){
+    if(strlen($error_text) > 0){
         $error = 'Ошибка '. $error_text ."\n";
         $v_current .= $error."\n\n";
         if ($debag = 'on'){
@@ -133,11 +133,12 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         }
         $min = intval(date('i'));
         $min = (60 - $min);
-        $response = array(  'message' => date("h:i:s", time()) .' '.$error.'<br> Ожидаем '.$min.' минут...', 
-                            'progress' => $p);
+        $response = array(  'message' => date("h:i:s", time()) .' '.$error.'<br> Повторите через '.$min.' мин.', 
+                            'progress' => '100');
         echo json_encode($response);
-        sleep($min*60);
-        search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
+        exit();
+        //sleep($min*60);
+        //search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
     } 
     //Если все ОК работаем дальше
     $domains = pq($doc->find('domain'));

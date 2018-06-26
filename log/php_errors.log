@@ -3566,3 +3566,15 @@
 [26-Jun-2018 13:32:49 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
 [26-Jun-2018 13:32:49 UTC] PHP Stack trace:
 [26-Jun-2018 13:32:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[26-Jun-2018 16:02:35 UTC] PHP Notice:  Undefined index: tch-plugin in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 7
+[26-Jun-2018 16:02:35 UTC] PHP Stack trace:
+[26-Jun-2018 16:02:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[26-Jun-2018 16:04:45 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 19
+[26-Jun-2018 16:04:45 UTC] PHP Stack trace:
+[26-Jun-2018 16:04:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[26-Jun-2018 16:04:45 UTC] PHP Notice:  Undefined index: list_del_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 40
+[26-Jun-2018 16:04:45 UTC] PHP Stack trace:
+[26-Jun-2018 16:04:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[26-Jun-2018 16:05:15 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 7
+[26-Jun-2018 16:05:15 UTC] PHP Stack trace:
+[26-Jun-2018 16:05:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0

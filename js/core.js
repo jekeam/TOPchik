@@ -25,6 +25,23 @@ jQuery(document).ready(function($) {
 
     //Скрипт который запускает проверку чз Яндекс-ХМЛ и возвращает позицию КС
     $(document).on('click', '#doaction', function() {
+        
+        //Проверим, если это общая страница у нее нет формы
+        var is_form = document.getElementsByTagName('form')[0] == null ? false : true;
+        
+        if (!is_form){
+            $.ajax({
+                        type: "POST",
+                        url: "/wp-content/plugins/TopChik/tch_store_save_meta_box.php",
+                        data: ({
+                            post_id: this.getAttribute("post-id")
+                        }),
+                        beforeSend: function() {},
+                        success: function(data) {console.log(data);}
+                    });
+            
+        }
+        
         var tch_action = $(this).parent();
         var tch_window = $(this).parent().parent();
         if (tch_window.find('#checkAll').is(":checked")) {
@@ -198,12 +215,14 @@ jQuery(document).ready(function($) {
     $(document).on('click', '#tch_add_keyword', function() {
         var d = document;
         var count_cb = 0;
-        var post_id = $('#post_ID').val();
-
+        var post_id = $('#tch_add_keyword').attr('data-post');
+        
+        var win = $(this).closest('#tch_window');
+        var cb = win.find('.tch-cb');
         //Получаем уникальный ид - на основе максимального ид элемнтов КС
-        if (!$.isEmptyObject($('.tch-cb'))) {
+        if (!$.isEmptyObject(cb)) {
             var max_id = 0;
-            $('.tch-cb').each(function() {
+            cb.each(function() {
                 count_cb = ++count_cb;
 
                 //Борем значение больше чем у элементов из базы или созданных динамически
@@ -346,13 +365,13 @@ jQuery(document).ready(function($) {
 
     //Меняем для Удаления и применения на РЕфрещ страницы, а для сьема позиций все работает без перезагрузки
     $(document).on('change', '#tch-action', function() {
-        if ($('#tch-action').val() == 'serp') {
-            $('#doaction').removeAttr('type');
-            $('#doaction').attr('type', 'button');
+        if ($(this).val() == 'serp') {
+            $(this).next("").removeAttr('type');
+            $(this).next("").attr('type', 'button');
         }
         else {
-            $('#doaction').removeAttr('type');
-            $('#doaction').attr('type', 'submit');
+            $(this).next("").removeAttr('type');
+            $(this).next("").attr('type', 'submit');
         }
     });
 });

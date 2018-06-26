@@ -122,6 +122,7 @@ function tch_settings_page()
 
 if (!isset($_GET['tch_page'])) {
     $recent_posts_array = get_posts(); // получаем массив постов
+    settings_fields( 'tch-settings-keywords' );
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
     	echo '<a href="' . get_permalink( $recent_post_single ) . '">' . $recent_post_single->post_title . '</a><br>'; // выводим ссылку
     	tch_meta_box($recent_post_single);
@@ -643,7 +644,7 @@ function tch_meta_box( $post )
             	    echo '<option value="serp">Проверить</option>';
                     echo '<option value="trash">Удалить</option>';
                 echo '</select>';
-                echo '<input type="submit" id="doaction" class="button" value="Применить">';
+                echo '<input type="submit" id="doaction" class="button" post-id="'.$post_id.'" value="Применить">';
                 echo '<a id="serp_all" class="button" href="javascript:PopUpSerpAll()">Проверить все</a>';
             echo '</div>';
 
@@ -654,7 +655,7 @@ function tch_meta_box( $post )
         }
         //Кнопка добавления новоtch_add_keywordго КС
         echo '<div id="tch-add-button" style="margin:10px;">';
-            echo '<input type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
+            echo '<input data-post="'.$post_id.'" type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
             echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько</a>';
             echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
                     <div class="b-popup-content">
@@ -674,44 +675,6 @@ function tch_meta_box( $post )
 // сохраняем данные метаполя
 function tch_store_save_meta_box( $post_id ) 
 {
-    // проверяем, относится ли запись к нашему типу и были ли отправлены метаданные
-    if ( isset( $_POST['tch-plugin'] ) && get_post_type( $post_id ) == 'post'  ) 
-    {
-        // если установлено автосохранение, пропускаем сохранение данных
-        if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-        return;
-        
-        // проверка из соображений безопасности
-        check_admin_referer( 'meta-box-save', 'tch-plugin' );
-        
-        // сохраняем данные метаполя в произвольных полях записи
-        $list_key_id = $_POST['list_key_id'];
-        $arr_key_id = explode(',',$list_key_id);
-        foreach ($arr_key_id as $id) 
-        {
-            if (!empty($_POST['tch_keyword_text_'.$id]))
-            {
-                //Запись КС
-                set_db_tch_keywords( $id, sanitize_text_field($_POST['tch_keyword_text_'.$id]), $post_id);
-                
-                //Запись позиции
-                if (!empty ($_POST['tch_place_text_'.$id]))
-                {
-                    set_db_tch_serp( $id, sanitize_text_field($_POST['tch_place_text_'.$id]));
-                }
-                else 
-                {
-                    set_db_tch_serp( $id, 0);
-                }
-            }
-        }
-        //Удаляем все что получили для удаления
-        $list_del_key_id = $_POST['list_del_key_id'];
-        $arr_del_key_id = explode(',',$list_del_key_id);
-        foreach ($arr_del_key_id as $id) 
-        {
-            delete_tch_keyword($id);
-        }
-    }
+    include 'tch_store_save_meta_box.php';
 }
 //TODO сделать статусы для КС - ВКЛ/ВЫКЛ

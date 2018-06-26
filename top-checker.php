@@ -122,10 +122,11 @@ function tch_settings_page()
 
 if (!isset($_GET['tch_page'])) {
     $recent_posts_array = get_posts(); // получаем массив постов
-    settings_fields( 'tch-settings-keywords' );
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
     	echo '<a href="' . get_permalink( $recent_post_single ) . '">' . $recent_post_single->post_title . '</a><br>'; // выводим ссылку
-    	tch_meta_box($recent_post_single);
+    	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
+    	    tch_meta_box($recent_post_single);
+    	echo '</form>';
     	echo '<br><br><br>';
     endforeach; // конец цикла
 }elseif ($_GET['tch_page']=='statistics') {
@@ -545,6 +546,7 @@ function tch_sanitize_options($input)
     if (isset($input['option_email'])) {
         $input['option_email'] = sanitize_email( $input['option_email'] );
     }
+    
     if (isset($input['option_url'])) {
         $input['option_unl'] = esc_url( $input['option_url'] );
     }
@@ -560,12 +562,12 @@ function tch_meta_box( $post )
     wp_enqueue_script('tch-script-core', plugins_url('/js/core.js',__FILE__));
     $post_id = $post->ID;
     $arr_list = get_tch_list($post_id);
-    
     // проверяем временное значение из соображений безопасности
     wp_nonce_field( 'meta-box-save', 'tch-plugin' );
-    echo '<div id="tch_window">';
+    echo '<div id="tch_window" class="tch_window">';
         //Див для скрытых параметров
-        echo '<div id="tch-inside">';
+        echo '<div id="tch-inside" class="tch-inside">';
+            echo '<input name ="post_id" value="'.$post_id.'" type="hidden" />';
         echo '</div>';
         if (!empty($arr_list)){
             echo '<table id="tch-table" class="tch-table bordered">';
@@ -585,7 +587,7 @@ function tch_meta_box( $post )
                     echo '</tr>';
                 echo '</thead>';
                 //тело
-                echo '<tbody id="tch-table-body">';
+                echo '<tbody id="tch-table-body" class="tch-table-body">';
                     //Получаем данные из массива
                     foreach ($arr_list as $key => $value) {
                         $id = $value->key_id;
@@ -655,7 +657,7 @@ function tch_meta_box( $post )
         }
         //Кнопка добавления новоtch_add_keywordго КС
         echo '<div id="tch-add-button" style="margin:10px;">';
-            echo '<input data-post="'.$post_id.'" type="button" id="tch_add_keyword" class="page-title-action" value="Добавить">';
+            echo '<input data-post="'.$post_id.'" type="button" id="tch_add_keyword" class="page-title-action tch_add_keyword" value="Добавить">';
             echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько</a>';
             echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
                     <div class="b-popup-content">

@@ -4,8 +4,6 @@ if (!isset($post_id)){
     $post_id = $_POST['post_id'];
     require_once '../../../wp-load.php';
 }
-echo $_POST['list_key_id'];
-exit();
 
 // проверяем, относится ли запись к нашему типу и были ли отправлены метаданные
 if ( get_post_type( $post_id ) == 'post'  ) 

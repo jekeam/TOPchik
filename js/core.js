@@ -2,7 +2,7 @@
 var go_to_refresh = 1;
 
 jQuery(document).ready(function($) {
-
+    
     function CheckAll(element) {
         var tbl = element.closest('.tch-table');
 
@@ -212,152 +212,167 @@ jQuery(document).ready(function($) {
 
 
     //Добавление нового КС
-    $(document).on('click', '#tch_add_keyword', function() {
-        var d = document;
-        var count_cb = 0;
-        var post_id = $('#tch_add_keyword').attr('data-post');
+    var bt_add = document.getElementsByClassName('tch_add_keyword');
+    for (var i = 0; i < bt_add.length; i++) {
         
-        var win = $(this).closest('#tch_window');
-        var cb = win.find('.tch-cb');
-        //Получаем уникальный ид - на основе максимального ид элемнтов КС
-        if (!$.isEmptyObject(cb)) {
-            var max_id = 0;
-            cb.each(function() {
-                count_cb = ++count_cb;
-
-                //Борем значение больше чем у элементов из базы или созданных динамически
-                if ($(this).attr('key_id') > max_id) {
-                    max_id = $(this).attr('key_id');
-                }
-                if (count_cb > max_id) {
-                    count_cb = count_cb;
-                }
-            });
-
-            //получаем следующее значени
-        }
-
-        if (max_id > count_cb) {
-            count_cb = parseInt(max_id) + parseInt(1);
-        }
-        else {
-            //Узнаем колчиесво строк, и получаем новый ид
-            if (count_cb > 0) {
-                count_cb = post_id + count_cb;
+        bt_add[i].addEventListener('click', function(e) {
+            
+            var d = document;
+            var count_cb = 0;
+            var post_id = e.target.dataset.post;
+            
+            var win = e.target.closest('.tch_window');
+            
+            var cb = win.querySelectorAll('.tch-cb');
+            //Получаем уникальный ид - на основе максимального ид элемнтов КС
+            
+            if (cb.length > 0) {
+                var max_id = 0;
+                $(cb).each(function() {
+                    count_cb = ++count_cb;
+    
+                    //Борем значение больше чем у элементов из базы или созданных динамически
+                    if ($(this).attr('key_id') > max_id) {
+                        max_id = $(this).attr('key_id');
+                    }
+                    if (count_cb > max_id) {
+                        count_cb = count_cb;
+                    }
+                });
+    
+                //получаем следующее значени
+            }
+    
+            if (max_id > count_cb) {
+                count_cb = parseInt(max_id) + parseInt(1);
             }
             else {
-                count_cb = post_id + 1;
+                //Узнаем колчиесво строк, и получаем новый ид
+                if (count_cb > 0) {
+                    count_cb = post_id + count_cb;
+                }
+                else {
+                    count_cb = post_id + 1;
+                }
             }
-        }
-
-        var tableBody;
-        // элемент-таблица КС
-        if ($.isEmptyObject(d.getElementById('tch-table-body'))) {
-            //tableBody = d.createElement('tbody');
-            $('<table id="tch-table" class="tch-table bordered">' +
-                '<thead id="tch-table-thead">' +
-                '<tr>' +
-                '<td>' +
-                '<input type="checkbox" id="checkAll" class="tch-cb-all">' +
-                '</td>' +
-                '<th>Ключевая фраза</th>' +
-                '<th colspan="2">Позиция</th>' +
-                '</tr>' +
-                '</thead>' +
-                //тело
-                '<tbody id="tch-table-body">' +
-                '</tbody>' +
-                '</table>' +
-                '<div id="tch-div-action">' +
-                '<select id="tch-action">' +
-                '<option value="-1">Сохранить</option>' +
-                '<option value="serp">Проверить</option>' +
-                '<option value="trash">Удалить</option>' +
-                '</select>' +
-                '<input type="submit" id="doaction" class="button" value="Применить">' +
-                '</div>').insertBefore($('#not_found_keywords'));
-            tableBody = d.getElementById('tch-table-body');
-        }
-        else {
-            tableBody = d.getElementById('tch-table-body');
-        }
-        // новые элементы
-        var tr = d.createElement('tr');
-
-        var td_cb = d.createElement('td');
-        var checkBox = d.createElement('input');
-        checkBox.type = 'checkbox';
-        checkBox.classList.add('tch-cb');
-        checkBox.setAttribute('key_id', count_cb);
-
-        var td_keywords = d.createElement('td'),
-            inputText = d.createElement('input');
-        td_keywords.setAttribute('colspan', 3);
-        inputText.type = 'text';
-        inputText.setAttribute('key_keyword_id', count_cb);
-        inputText.setAttribute('name', 'tch_keyword_text_' + count_cb);
-        inputText.setAttribute('style', 'width: 100%;');
-        //td_keywords.css('width','100%');
-
-
-        /*var td_place = d.createElement('td'),
-            inputNumber = d.createElement('input');
-            inputNumber.type = 'number';
-            inputNumber.setAttribute('key_place_id', count_cb);
-            inputNumber.setAttribute('name', 'tch_place_text_'+count_cb);*/
-
-        // добавление в конец таблицы новой строки
-        tableBody.appendChild(tr);
-        //1 колонка
-        tr.appendChild(td_cb);
-        td_cb.appendChild(checkBox);
-        //2 колонка
-        tr.appendChild(td_keywords);
-        td_keywords.appendChild(inputText);
-        //3 колонка
-        /*tr.appendChild(td_place);
-        td_place.appendChild(inputNumber);*/
-
-        //Удаление уведомления если есть not_found_keywords
-        if (!$.isEmptyObject($('#not_found_keywords'))) {
-            $('#not_found_keywords').remove();
-        }
-
-        var cur_list_key_id = $('#list_key_id').val();
-        $('#list_key_id').val(cur_list_key_id + ',' + count_cb);
-
-        //Сбрасывает на всяки
-        $('#tch-action').val('-1');
-        $('#tch-div-action').show();
-    });
-
-
-    var d = document;
-    //Блок создания создания списка(строки) ид для инсерта/обновления КС
-    var input_key_id = d.createElement('input');
-    var text_key_id = '';
-    input_key_id.type = 'hidden';
-    input_key_id.id = 'list_key_id';
-    input_key_id.name = 'list_key_id';
-    $('.tch-cb').each(function() {
-        text_key_id = text_key_id + (this).getAttribute('key_id') + ',';
-    });
-    input_key_id.value = text_key_id.slice(0, -1);
-
-    //помещаем созданные элементы на страницу
-    var divInside = d.getElementById('tch-inside');
-    divInside.appendChild(input_key_id);
-
-    //Блог для создания списка(строки)с ид КС для удаления
-    var input_del_key_id = d.createElement('input');
-    input_del_key_id.type = 'hidden';
-    input_del_key_id.id = 'list_del_key_id';
-    input_del_key_id.name = 'list_del_key_id';
-
-    //помещаем созданные элементы на страницу
-    divInside.appendChild(input_del_key_id);
+    
+            var tableBody;
+            // элемент-таблица КС
+            console.log($.isEmptyObject(win.querySelector('.tch-table-body')));
+            if ($.isEmptyObject(win.querySelector('.tch-table-body'))) {
+                //tableBody = d.createElement('tbody');
+                $('<table id="tch-table" class="tch-table bordered">' +
+                    '<thead id="tch-table-thead">' +
+                    '<tr>' +
+                    '<td>' +
+                    '<input type="checkbox" id="checkAll" class="tch-cb-all">' +
+                    '</td>' +
+                    '<th>Ключевая фраза</th>' +
+                    '<th colspan="2">Позиция</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    //тело
+                    '<tbody id="tch-table-body" class="tch-table-body">' +
+                    '</tbody>' +
+                    '</table>' +
+                    '<div id="tch-div-action">' +
+                    '<select id="tch-action">' +
+                    '<option value="-1">Сохранить</option>' +
+                    '<option value="serp">Проверить</option>' +
+                    '<option value="trash">Удалить</option>' +
+                    '</select>' +
+                    '<input type="submit" id="doaction" class="button" value="Применить">' +
+                    '</div>').insertBefore($('#not_found_keywords'));
+                tableBody = win.querySelector('.tch-table-body');
+            }
+            else {
+                tableBody = win.querySelector('.tch-table-body');
+            }
+            // новые элементы
+            var tr = d.createElement('tr');
+    
+            var td_cb = d.createElement('td');
+            var checkBox = d.createElement('input');
+            checkBox.type = 'checkbox';
+            checkBox.classList.add('tch-cb');
+            checkBox.setAttribute('key_id', count_cb);
+    
+            var td_keywords = d.createElement('td'),
+                inputText = d.createElement('input');
+            td_keywords.setAttribute('colspan', 3);
+            inputText.type = 'text';
+            inputText.setAttribute('key_keyword_id', count_cb);
+            inputText.setAttribute('name', 'tch_keyword_text_' + count_cb);
+            inputText.setAttribute('style', 'width: 100%;');
+            //td_keywords.css('width','100%');
+    
+    
+            /*var td_place = d.createElement('td'),
+                inputNumber = d.createElement('input');
+                inputNumber.type = 'number';
+                inputNumber.setAttribute('key_place_id', count_cb);
+                inputNumber.setAttribute('name', 'tch_place_text_'+count_cb);*/
+    
+            // добавление в конец таблицы новой строки
+            tableBody.appendChild(tr);
+            //1 колонка
+            tr.appendChild(td_cb);
+            td_cb.appendChild(checkBox);
+            //2 колонка
+            tr.appendChild(td_keywords);
+            td_keywords.appendChild(inputText);
+            //3 колонка
+            /*tr.appendChild(td_place);
+            td_place.appendChild(inputNumber);*/
+    
+            //Удаление уведомления если есть not_found_keywords
+            if (!$.isEmptyObject($('#not_found_keywords'))) {
+                $('#not_found_keywords').remove();
+            }
+    
+            var cur_list_key_id = $('#list_key_id').val();
+            $('#list_key_id').val(cur_list_key_id + ',' + count_cb);
+    
+            //Сбрасывает на всяки
+            $('#tch-action').val('-1');
+            $('#tch-div-action').show();
+        });
+        
+    }
 
 
+    var wins = document.getElementsByClassName('tch_window');
+    for (var i = 0; i < wins.length; i++) {
+        var d = document;
+        //Блок создания создания списка(строки) ид для инсерта/обновления КС
+        var input_key_id = d.createElement('input');
+        var text_key_id = '';
+        input_key_id.type = 'hidden';
+        input_key_id.id = 'list_key_id';
+        input_key_id.name = 'list_key_id';
+        
+        var cbs = $(wins[i]).find('.tch-cb').clone();
+        //console.log('cbs '+cbs.length);
+        cbs.each(function(){
+            text_key_id = text_key_id + $(this).attr('key_id') + ',';
+        })
+            
+        input_key_id.value = text_key_id.slice(0, -1);
+
+        //помещаем созданные элементы на страницу
+        var divInside = wins[i].querySelector('.tch-inside');
+        divInside.appendChild(input_key_id);
+    
+        //Блог для создания списка(строки)с ид КС для удаления
+        var input_del_key_id = d.createElement('input');
+        input_del_key_id.type = 'hidden';
+        input_del_key_id.id = 'list_del_key_id';
+        input_del_key_id.name = 'list_del_key_id';
+    
+        //помещаем созданные элементы на страницу
+        divInside.appendChild(input_del_key_id);
+    }
+    
     // Отметить|снять отметку со ВСЕХ
     $(document).on('click', '#checkAll', function() {
         CheckAll($(this));
@@ -374,4 +389,6 @@ jQuery(document).ready(function($) {
             $(this).next("").attr('type', 'submit');
         }
     });
-});
+
+    
+});    

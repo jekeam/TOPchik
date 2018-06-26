@@ -3578,3 +3578,15 @@
 [26-Jun-2018 16:05:15 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 7
 [26-Jun-2018 16:05:15 UTC] PHP Stack trace:
 [26-Jun-2018 16:05:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[26-Jun-2018 21:26:51 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
+[26-Jun-2018 21:26:51 UTC] PHP Stack trace:
+[26-Jun-2018 21:26:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/admin-ajax.php:0
+[26-Jun-2018 21:26:51 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/admin-ajax.php:22
+[26-Jun-2018 21:26:51 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
+[26-Jun-2018 21:26:51 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
+[26-Jun-2018 21:26:51 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-settings.php:450
+[26-Jun-2018 21:26:51 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[26-Jun-2018 21:26:51 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[26-Jun-2018 21:26:51 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[26-Jun-2018 21:26:51 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[26-Jun-2018 21:26:51 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377

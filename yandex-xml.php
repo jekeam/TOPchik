@@ -136,9 +136,9 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         $response = array(  'message' => date("h:i:s", time()) .' '.$error.'<br> Повторите через '.$min.' мин.', 
                             'progress' => '100');
         echo json_encode($response);
-        exit();
-        //sleep($min*60);
-        //search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
+        //exit();
+        sleep($min*60);
+        search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
     } 
     //Если все ОК работаем дальше
     $domains = pq($doc->find('domain'));

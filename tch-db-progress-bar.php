@@ -50,15 +50,21 @@ $val = $wpdb->get_results($wpdb->prepare(
             )
         ) as top30,
         
-         ROUND((SELECT sum(case 
-                        when i.place <= 3 then 1
-                        when i.place = 4 then 0.85
-                        when i.place = 5 then 0.6
-                        when i.place in (6,7)  then 0.5
-                        when i.place in (8,9) then 0.3
-                        when i.place = 10 then 0.2
-                    end) FROM $table_name_s i
-                    WHERE i.data <= %s), 1) visibility_serp
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from $table_name_s
+            where (key_id, data) in (
+              select key_id, max(data) date
+              from $table_name_s
+              group by key_id
+            )),1), 0) as visibility_serp
                     
          ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
            FROM $table_name_s a
@@ -88,8 +94,8 @@ $val = $wpdb->get_results($wpdb->prepare(
              and b.data <= %s), 0) 
           as pos_available
          ,(SELECT count(*) FROM $table_name_k i) count_all"
-    ,  $date_query, $date_query, $date_query, $date_query
-    , $date_query, $date_query, $date_query, $date_query, $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query, $date_query 
     , $date_query, $date_query, $date_query
     ));
 echo json_encode($val);

@@ -77,7 +77,7 @@ jQuery(document).ready(function ($) {
        });  
         
     document.getElementById('cnt_keys').innerHTML = all;
-    progressBarUpdate(visibility_serp, 100, pie1,'');
+    progressBarUpdate(visibility_serp, 100, pie1,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(visibility_serp/all*100))+"%</div>");
     progressBarUpdate(top3, all, pie2,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top3/all*100))+"%</div>");
     progressBarUpdate(top10, all, pie3,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top10/all*100))+"%</div>");
     progressBarUpdate(top30, all, pie4,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top30/all*100))+"%</div>");

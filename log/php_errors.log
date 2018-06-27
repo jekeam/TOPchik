@@ -3602,3 +3602,21 @@
 [27-Jun-2018 09:02:25 UTC] PHP Notice:  Undefined index: list_del_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 39
 [27-Jun-2018 09:02:25 UTC] PHP Stack trace:
 [27-Jun-2018 09:02:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[27-Jun-2018 11:49:08 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 125
+[27-Jun-2018 11:49:08 UTC] PHP Stack trace:
+[27-Jun-2018 11:49:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[27-Jun-2018 11:49:08 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[27-Jun-2018 11:49:08 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[27-Jun-2018 11:49:08 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[27-Jun-2018 11:49:08 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[27-Jun-2018 11:49:08 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 11:49:08 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 11:50:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 125
+[27-Jun-2018 11:50:43 UTC] PHP Stack trace:
+[27-Jun-2018 11:50:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[27-Jun-2018 11:50:43 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[27-Jun-2018 11:50:43 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[27-Jun-2018 11:50:43 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[27-Jun-2018 11:50:43 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[27-Jun-2018 11:50:43 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[27-Jun-2018 11:50:43 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286

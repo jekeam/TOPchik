@@ -121,7 +121,12 @@ function tch_settings_page()
 <?php 
 
 if (!isset($_GET['tch_page'])) {
-    $recent_posts_array = get_posts(); // получаем массив постов
+    
+    $get_post_prop = array(
+        'numberposts'       => -1,
+    );
+    
+    $recent_posts_array = get_posts($get_post_prop); // получаем массив постов
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
     	echo '<a href="' . get_permalink( $recent_post_single ) . '">' . $recent_post_single->post_title . '</a><br>'; // выводим ссылку
     	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';

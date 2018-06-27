@@ -37,13 +37,13 @@ jQuery(document).ready(function($) {
                             post_id: this.getAttribute("post-id")
                         }),
                         beforeSend: function() {},
-                        success: function(data) {console.log(data);}
+                        success: function(data) {}
                     });
-            
         }
         
         var tch_action = $(this).parent();
         var tch_window = $(this).parent().parent();
+        console.log(tch_window);
         if (tch_window.find('#checkAll').is(":checked")) {
             tch_window.find('#checkAll').removeAttr('checked').change();
         }
@@ -106,7 +106,6 @@ jQuery(document).ready(function($) {
                                 }
                             }
 
-                            //console.log('Обновлено: ' + go_to_refresh + '/' + cb_cnt);
                             go_to_refresh++;
                         }
                     });
@@ -172,7 +171,6 @@ jQuery(document).ready(function($) {
             },
             success: function(data) {
                 //результат
-                //console.log('Сохранено: ' + go_to_refresh_save + '/' + (go_to_refresh - 1));
                 go_to_refresh_save++;
                 //После последнего сохраненного обновим страницу
                 if (go_to_refresh_save == (go_to_refresh - 1)) {
@@ -209,7 +207,6 @@ jQuery(document).ready(function($) {
             }
         });
     });
-
 
     //Добавление нового КС
     var bt_add = document.getElementsByClassName('tch_add_keyword');
@@ -258,7 +255,6 @@ jQuery(document).ready(function($) {
     
             var tableBody;
             // элемент-таблица КС
-            console.log($.isEmptyObject(win.querySelector('.tch-table-body')));
             if ($.isEmptyObject(win.querySelector('.tch-table-body'))) {
                 //tableBody = d.createElement('tbody');
                 $('<table id="tch-table" class="tch-table bordered">' +
@@ -281,8 +277,9 @@ jQuery(document).ready(function($) {
                     '<option value="serp">Проверить</option>' +
                     '<option value="trash">Удалить</option>' +
                     '</select>' +
-                    '<input type="submit" id="doaction" class="button" value="Применить">' +
+                    '<input type="submit" id="doaction" class="button" value="Применить" post-id="'+post_id+'">' +
                     '</div>').insertBefore($('#not_found_keywords'));
+                    
                 tableBody = win.querySelector('.tch-table-body');
             }
             else {
@@ -340,7 +337,6 @@ jQuery(document).ready(function($) {
         
     }
 
-
     var wins = document.getElementsByClassName('tch_window');
     for (var i = 0; i < wins.length; i++) {
         var d = document;
@@ -352,7 +348,7 @@ jQuery(document).ready(function($) {
         input_key_id.name = 'list_key_id';
         
         var cbs = $(wins[i]).find('.tch-cb').clone();
-        //console.log('cbs '+cbs.length);
+        
         cbs.each(function(){
             text_key_id = text_key_id + $(this).attr('key_id') + ',';
         })

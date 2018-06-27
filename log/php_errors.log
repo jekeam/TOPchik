@@ -3590,3 +3590,15 @@
 [26-Jun-2018 21:26:51 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [26-Jun-2018 21:26:51 UTC] PHP   9. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [26-Jun-2018 21:26:51 UTC] PHP  10. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
+[27-Jun-2018 09:01:23 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 18
+[27-Jun-2018 09:01:23 UTC] PHP Stack trace:
+[27-Jun-2018 09:01:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[27-Jun-2018 09:01:23 UTC] PHP Notice:  Undefined index: list_del_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 39
+[27-Jun-2018 09:01:23 UTC] PHP Stack trace:
+[27-Jun-2018 09:01:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[27-Jun-2018 09:02:25 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 18
+[27-Jun-2018 09:02:25 UTC] PHP Stack trace:
+[27-Jun-2018 09:02:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0
+[27-Jun-2018 09:02:25 UTC] PHP Notice:  Undefined index: list_del_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 39
+[27-Jun-2018 09:02:25 UTC] PHP Stack trace:
+[27-Jun-2018 09:02:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php:0

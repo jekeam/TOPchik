@@ -1,8 +1,10 @@
 <?php
+$back = false;
 
 if (!isset($post_id)){
     $post_id = $_POST['post_id'];
     require_once '../../../wp-load.php';
+    $back = true;
 }
 
 // проверяем, относится ли запись к нашему типу и были ли отправлены метаданные
@@ -40,4 +42,9 @@ if ( get_post_type( $post_id ) == 'post'  )
     {
         delete_tch_keyword($id);
     }
+}
+
+if ($back){
+    header("Location: ".$_SERVER['HTTP_REFERER']);
+    exit();
 }

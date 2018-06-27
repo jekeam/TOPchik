@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
         
         var tch_action = $(this).parent();
         var tch_window = $(this).parent().parent();
-        console.log(tch_window);
+        
         if (tch_window.find('#checkAll').is(":checked")) {
             tch_window.find('#checkAll').removeAttr('checked').change();
         }
@@ -117,17 +117,17 @@ jQuery(document).ready(function($) {
 
         }
         //Удаление КС
-        else if ($('#tch-action').val() == 'trash') { //Ищем отмеченные жлементы
+        else if (tch_window.find('#tch-action').val() == 'trash') {
             var list_del_key_id;
 
-            if ($("#list_del_key_id").val().length > 0) {
-                list_del_key_id = $("#list_del_key_id").val() + ',';
+            if (tch_window.find("#list_del_key_id").val().length > 0) {
+                list_del_key_id = tch_window.find("#list_del_key_id").val() + ',';
             }
             else {
-                list_del_key_id = $("#list_del_key_id").val();
+                list_del_key_id = tch_window.find("#list_del_key_id").val();
             }
 
-            $('.tch-cb:input:checkbox:checked').each(function() {
+            tch_window.find('.tch-cb:input:checkbox:checked').each(function() {
                 $(this).parents('tr').hide();
                 $('[key_keyword_id="' + $(this).attr('key_id') + '"]').removeAttr('name');
                 $('[key_keyword_id="' + $(this).attr('key_id') + '"]').attr('name', 'del_key_keyword_id_' + $(this).attr('key_id'));
@@ -142,7 +142,7 @@ jQuery(document).ready(function($) {
                 list_del_key_id = list_del_key_id + $(this).attr('key_id') + ',';
             });
             list_del_key_id = list_del_key_id.slice(0, -1);
-            $("#list_del_key_id").val(list_del_key_id);
+            tch_window.find("#list_del_key_id").val(list_del_key_id);
             //Помечаем к удалению из БД удаленные КС
 
         }
@@ -150,7 +150,7 @@ jQuery(document).ready(function($) {
         //снимаем флажки
         //CheckdRemove();
         //Сбрасываем экшин
-        $('#tch-action').val('-1');
+        tch_window.find('#tch-action').val('-1');
     });
 
     var go_to_refresh_save = 1;

@@ -144,7 +144,6 @@ jQuery(document).ready(function($) {
             list_del_key_id = list_del_key_id.slice(0, -1);
             tch_window.find("#list_del_key_id").val(list_del_key_id);
             //Помечаем к удалению из БД удаленные КС
-
         }
 
         //снимаем флажки
@@ -182,7 +181,7 @@ jQuery(document).ready(function($) {
             }
         });
     });
-
+/*
     //Скрипт автоматически сохраняет изменения ключевых фраз и позций
     $(document).on('change', '.tch-keyword', function() {
         var v_post_id = $('#post_ID').val();
@@ -207,6 +206,9 @@ jQuery(document).ready(function($) {
             }
         });
     });
+*/
+
+
 
     //Добавление нового КС
     var bt_add = document.getElementsByClassName('tch_add_keyword');
@@ -271,13 +273,14 @@ jQuery(document).ready(function($) {
                     '<tbody id="tch-table-body" class="tch-table-body">' +
                     '</tbody>' +
                     '</table>' +
-                    '<div id="tch-div-action">' +
-                    '<select id="tch-action">' +
-                    '<option value="-1">Сохранить</option>' +
-                    '<option value="serp">Проверить</option>' +
-                    '<option value="trash">Удалить</option>' +
-                    '</select>' +
+                    '<div id="tch-div-action" style="margin:10px;">' +
+                        '<select id="tch-action">' +
+                        '<option value="-1">Сохранить</option>' +
+                        '<option value="serp">Проверить</option>' +
+                        '<option value="trash">Удалить</option>' +
+                        '</select>' +
                     '<input type="submit" id="doaction" class="button" value="Применить" post-id="'+post_id+'">' +
+                    '<a id="serp_all" class="button" href="javascript:PopUpSerpAll('+post_id+')">Проверить все</a>'+
                     '</div>').insertBefore($('#not_found_keywords'));
                     
                 tableBody = win.querySelector('.tch-table-body');
@@ -301,14 +304,6 @@ jQuery(document).ready(function($) {
             inputText.setAttribute('key_keyword_id', count_cb);
             inputText.setAttribute('name', 'tch_keyword_text_' + count_cb);
             inputText.setAttribute('style', 'width: 100%;');
-            //td_keywords.css('width','100%');
-    
-    
-            /*var td_place = d.createElement('td'),
-                inputNumber = d.createElement('input');
-                inputNumber.type = 'number';
-                inputNumber.setAttribute('key_place_id', count_cb);
-                inputNumber.setAttribute('name', 'tch_place_text_'+count_cb);*/
     
             // добавление в конец таблицы новой строки
             tableBody.appendChild(tr);
@@ -318,21 +313,19 @@ jQuery(document).ready(function($) {
             //2 колонка
             tr.appendChild(td_keywords);
             td_keywords.appendChild(inputText);
-            //3 колонка
-            /*tr.appendChild(td_place);
-            td_place.appendChild(inputNumber);*/
     
             //Удаление уведомления если есть not_found_keywords
             if (!$.isEmptyObject($('#not_found_keywords'))) {
                 $('#not_found_keywords').remove();
             }
     
-            var cur_list_key_id = $('#list_key_id').val();
-            $('#list_key_id').val(cur_list_key_id + ',' + count_cb);
+            var cur_list_key_id = $(win).find('#list_key_id').val();
+            console.log('cur_list_key_id:'+cur_list_key_id);
+            $(win).find('#list_key_id').val(cur_list_key_id + ',' + count_cb);
     
             //Сбрасывает на всяки
-            $('#tch-action').val('-1');
-            $('#tch-div-action').show();
+            $(win).find('#tch-action').val('-1');
+            $(win).find('#tch-div-action').show();
         });
         
     }
@@ -352,7 +345,6 @@ jQuery(document).ready(function($) {
         cbs.each(function(){
             text_key_id = text_key_id + $(this).attr('key_id') + ',';
         })
-            
         input_key_id.value = text_key_id.slice(0, -1);
 
         //помещаем созданные элементы на страницу

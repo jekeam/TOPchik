@@ -66,6 +66,8 @@ function PopUpaddKey(id) {
             
             //Добавим новый КС
             document.querySelector('input[key_keyword_id="' + max_id + '"]').setAttribute('value', arr_keys[i]);
+            document.getElementById('thc-add-keys-'+id).value = "";
+            PopUpHide(id);
         }
     }
 }
@@ -73,11 +75,12 @@ function PopUpaddKey(id) {
 
 //Кнопка "Проверить все КС"
 function PopUpSerpAll(id){
-    document.getElementById('checkAll').click();
-    document.getElementById('tch-action').getElementsByTagName('option')[1].selected = 'selected';
+    var win = jQuery(document.getElementById('tch_add_keyword_'+id)).closest('.tch_window');
+    jQuery(win).find('#checkAll').click();
+    jQuery(win).find('#tch-action option[value=serp]').attr('selected', 'selected');
     function in_serp(){
-        jQuery('#doaction').attr('type', 'button');
-        document.getElementById('doaction').click();
+        jQuery(win).find('#doaction').attr('type', 'button');
+        jQuery(win).find('#doaction').click();
     }
     setTimeout(in_serp, 1500);
 }

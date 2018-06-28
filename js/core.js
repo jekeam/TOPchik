@@ -259,17 +259,16 @@ jQuery(document).ready(function($) {
     
             var tableBody;
             // элемент-таблица КС
-            if ($.isEmptyObject(win.querySelector('.tch-table-body'))) {
-                //tableBody = d.createElement('tbody');
+            if (win.querySelector('.tch-table-body') == null) {
                 $('<table id="tch-table" class="tch-table bordered">' +
                     '<thead id="tch-table-thead">' +
-                    '<tr>' +
-                    '<td>' +
-                    '<input type="checkbox" id="checkAll" class="tch-cb-all">' +
-                    '</td>' +
-                    '<th>Ключевая фраза</th>' +
-                    '<th colspan="2">Позиция</th>' +
-                    '</tr>' +
+                        '<tr>' +
+                        '<td>' +
+                        '<input type="checkbox" id="checkAll" class="tch-cb-all">' +
+                        '</td>' +
+                        '<th>Ключевая фраза</th>' +
+                        '<th colspan="2">Позиция</th>' +
+                        '</tr>' +
                     '</thead>' +
                     //тело
                     '<tbody id="tch-table-body" class="tch-table-body">' +
@@ -283,7 +282,7 @@ jQuery(document).ready(function($) {
                         '</select>' +
                     '<input type="submit" id="doaction" class="button" value="Применить" post-id="'+post_id+'">' +
                     '<a id="serp_all" class="button" href="javascript:PopUpSerpAll('+post_id+')">Проверить все</a>'+
-                    '</div>').insertBefore($('#not_found_keywords'));
+                    '</div>').insertBefore(win.querySelector('#not_found_keywords'));
                     
                 tableBody = win.querySelector('.tch-table-body');
             }
@@ -317,12 +316,11 @@ jQuery(document).ready(function($) {
             td_keywords.appendChild(inputText);
     
             //Удаление уведомления если есть not_found_keywords
-            if (!$.isEmptyObject($('#not_found_keywords'))) {
-                $('#not_found_keywords').remove();
+            if (!$.isEmptyObject(win.querySelector('#not_found_keywords'))) {
+                win.querySelector('#not_found_keywords').remove();
             }
     
             var cur_list_key_id = $(win).find('#list_key_id').val();
-            console.log('cur_list_key_id:'+cur_list_key_id);
             $(win).find('#list_key_id').val(cur_list_key_id + ',' + count_cb);
     
             //Сбрасывает на всяки

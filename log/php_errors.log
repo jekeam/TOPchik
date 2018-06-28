@@ -3620,3 +3620,16 @@
 [27-Jun-2018 11:50:43 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
 [27-Jun-2018 11:50:43 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [27-Jun-2018 11:50:43 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 11:03:48 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php on line 377
+[28-Jun-2018 11:03:48 UTC] PHP Stack trace:
+[28-Jun-2018 11:03:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/index.php:0
+[28-Jun-2018 11:03:48 UTC] PHP   2. require() /home/ubuntu/workspace/index.php:17
+[28-Jun-2018 11:03:48 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-blog-header.php:13
+[28-Jun-2018 11:03:48 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-load.php:37
+[28-Jun-2018 11:03:48 UTC] PHP   5. require_once() /home/ubuntu/workspace/wp-config.php:96
+[28-Jun-2018 11:03:48 UTC] PHP   6. do_action() /home/ubuntu/workspace/wp-settings.php:450
+[28-Jun-2018 11:03:48 UTC] PHP   7. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 11:03:48 UTC] PHP   8. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 11:03:48 UTC] PHP   9. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 11:03:48 UTC] PHP  10. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 11:03:48 UTC] PHP  11. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377

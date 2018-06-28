@@ -122,17 +122,20 @@ function tch_settings_page()
 
 if (!isset($_GET['tch_page'])) {
     
+    wp_enqueue_script('tch-script-progressBar', plugins_url('/plugins/jquery.collapse.js',__FILE__));
+    
     $get_post_prop = array(
         'numberposts'       => -1,
     );
     
     $recent_posts_array = get_posts($get_post_prop); // получаем массив постов
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
-    	echo '<a href="' . get_permalink( $recent_post_single ) . '">' . $recent_post_single->post_title . '</a><br>'; // выводим ссылку
-    	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
-    	    tch_meta_box($recent_post_single);
-    	echo '</form>';
-    	echo '<br><br><br>';
+        echo '<div data-collapse>';
+        	echo '<h2><a href="' . get_edit_post_link( $recent_post_single ) . '" target="blank_">' . $recent_post_single->post_title . '</a></h2>';
+        	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
+        	    tch_meta_box($recent_post_single);
+        	echo '</form>';
+        echo '</div>';
     endforeach; // конец цикла
 }elseif ($_GET['tch_page']=='statistics') {
     wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));

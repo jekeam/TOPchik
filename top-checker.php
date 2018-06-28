@@ -123,6 +123,29 @@ function tch_settings_page()
 if (!isset($_GET['tch_page'])) {
     
     wp_enqueue_script('tch-script-progressBar', plugins_url('/plugins/jquery.collapse.js',__FILE__));
+    wp_enqueue_script('tch-script-search-page', plugins_url('/js/search-page.js',__FILE__));
+    
+    
+    //Убрал пока сделаю проще без базы через JS
+    /*
+    echo '<style>
+            .ui-autocomplete-loading {
+                background: white url("/wp-content/plugins/TopChik/img/ui-anim_basic_16x16.gif") right center no-repeat;
+            }
+        </style>';
+        
+    echo '<div class="ui-widget">
+            <label for="birds"><h2>Поиск:</h2></label>
+            <input id="birds" style="width: 500px;">
+          </div>';
+          
+    wp_enqueue_script('tch-script-auto-compl', plugins_url('/plugins/auto-compl.js',__FILE__));
+    wp_enqueue_script("jquery");
+    wp_enqueue_script('jquery-ui-autocomplete');
+    wp_enqueue_style('jquery-ui-styles' );
+    */          
+    
+    echo '<h2>Поиск:</h2><input type="text" style="width: 500px;" id="tc-search" onkeyup="searchPage(this.value)">';
     
     $get_post_prop = array(
         'numberposts'       => -1,
@@ -130,8 +153,11 @@ if (!isset($_GET['tch_page'])) {
     
     $recent_posts_array = get_posts($get_post_prop); // получаем массив постов
     foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
-        echo '<div data-collapse>';
-        	echo '<h2><a href="' . get_edit_post_link( $recent_post_single ) . '" target="blank_">' . $recent_post_single->post_title . '</a></h2>';
+        echo '<div data-collapse id="collapse-'.$recent_post_single->ID.'">';
+        	echo '<h2><a href="' . get_edit_post_link( $recent_post_single ) . '" 
+        	             target="blank_"
+        	             class="page-name"
+        	             data-id="'.$recent_post_single->ID.'">' . $recent_post_single->post_title . '</a></h2>';//url="'.urldecode(get_permalink($recent_post_single)).'"
         	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
         	    tch_meta_box($recent_post_single);
         	echo '</form>';

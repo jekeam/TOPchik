@@ -3633,3 +3633,180 @@
 [28-Jun-2018 11:03:48 UTC] PHP   9. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [28-Jun-2018 11:03:48 UTC] PHP  10. EDD_Session->maybe_start_session() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [28-Jun-2018 11:03:48 UTC] PHP  11. session_start() /home/ubuntu/workspace/wp-content/plugins/easy-digital-downloads/includes/class-edd-session.php:377
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP Notice:  Array to string conversion in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 135
+[28-Jun-2018 17:52:30 UTC] PHP Stack trace:
+[28-Jun-2018 17:52:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 17:52:30 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 17:52:30 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 17:52:30 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 17:52:30 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 17:52:30 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 17:52:30 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 19:09:21 UTC] PHP Notice:  Undefined index: list_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 18
+[28-Jun-2018 19:09:21 UTC] PHP Stack trace:
+[28-Jun-2018 19:09:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[28-Jun-2018 19:09:21 UTC] PHP   2. wp_trash_post() /home/ubuntu/workspace/wp-admin/post.php:222
+[28-Jun-2018 19:09:21 UTC] PHP   3. wp_update_post() /home/ubuntu/workspace/wp-includes/post.php:2725
+[28-Jun-2018 19:09:21 UTC] PHP   4. wp_insert_post() /home/ubuntu/workspace/wp-includes/post.php:3713
+[28-Jun-2018 19:09:21 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-includes/post.php:3640
+[28-Jun-2018 19:09:21 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 19:09:21 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 19:09:21 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[28-Jun-2018 19:09:21 UTC] PHP   9. tch_store_save_meta_box() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[28-Jun-2018 19:09:21 UTC] PHP  10. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php:713
+[28-Jun-2018 19:09:21 UTC] PHP Notice:  Undefined index: list_del_key_id in /home/ubuntu/workspace/wp-content/plugins/TopChik/tch_store_save_meta_box.php on line 39
+[28-Jun-2018 19:09:21 UTC] PHP Stack trace:
+[28-Jun-2018 19:09:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/post.php:0
+[28-Jun-2018 19:09:21 UTC] PHP   2. wp_trash_post() /home/ubuntu/workspace/wp-admin/post.php:222
+[28-Jun-2018 19:09:21 UTC] PHP   3. wp_update_post() /home/ubuntu/workspace/wp-includes/post.php:2725
+[28-Jun-2018 19:09:21 UTC] PHP   4. wp_insert_post() /home/ubuntu/workspace/wp-includes/post.php:3713
+[28-Jun-2018 19:09:21 UTC] PHP   5. do_action() /home/ubuntu/workspace/wp-includes/post.php:3640
+[28-Jun-2018 19:09:21 UTC] PHP   6. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 19:09:21 UTC] PHP   7. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 19:09:21 UTC] PHP   8. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:288}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[28-Jun-2018 19:09:21 UTC] PHP   9. tch_store_save_meta_box() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:288
+[28-Jun-2018 19:09:21 UTC] PHP  10. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php:713
+[28-Jun-2018 19:14:23 UTC] PHP Catchable fatal error:  Object of class WP_Post could not be converted to string in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 160
+[28-Jun-2018 19:14:23 UTC] PHP Stack trace:
+[28-Jun-2018 19:14:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 19:14:23 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 19:14:23 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 19:14:23 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 19:14:23 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 19:14:23 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 19:14:23 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 19:16:25 UTC] PHP Catchable fatal error:  Object of class WP_Post could not be converted to string in /home/ubuntu/workspace/wp-content/plugins/TopChik/top-checker.php on line 160
+[28-Jun-2018 19:16:25 UTC] PHP Stack trace:
+[28-Jun-2018 19:16:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-admin/options-general.php:0
+[28-Jun-2018 19:16:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/wp-admin/options-general.php:10
+[28-Jun-2018 19:16:25 UTC] PHP   3. do_action() /home/ubuntu/workspace/wp-admin/admin.php:224
+[28-Jun-2018 19:16:25 UTC] PHP   4. WP_Hook->do_action() /home/ubuntu/workspace/wp-includes/plugin.php:453
+[28-Jun-2018 19:16:25 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
+[28-Jun-2018 19:16:25 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[28-Jun-2018 19:16:25 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286

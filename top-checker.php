@@ -662,13 +662,13 @@ function tch_meta_box( $post )
         }
         //Кнопка добавления новоtch_add_keywordго КС
         echo '<div id="tch-add-button" style="margin:10px;">';
-            echo '<input data-post="'.$post_id.'" type="button" id="tch_add_keyword" class="page-title-action tch_add_keyword" value="Добавить">';
-            echo '<a type="button" id="tch_add_keywords" class="page-title-action" href="javascript:PopUpShow()">Добавить несколько</a>';
-            echo '<div class="b-popup" id="popup1" style="display:none; margin:10px;">
+            echo '<input data-post="'.$post_id.'" type="button" id="tch_add_keyword_'.$post_id.'" class="page-title-action tch_add_keyword" value="Добавить">';
+            echo '<a type="button" id="tch_add_keywords_'.$post_id.'" class="page-title-action" href="javascript:PopUpShow('.$post_id.')">Добавить несколько</a>';
+            echo '<div class="b-popup" id="popup_'.$post_id.'" class="popup" style="display:none; margin:10px;">
                     <div class="b-popup-content">
-                      <div><textarea style="width:90%; height:150px; margin:10px;margin-left:40px;margin-top:5px;" autocomplete="off" aria-hidden="true" id="thc-add-keys"
+                      <div><textarea style="width:90%; height:150px; margin:10px;margin-left:40px;margin-top:5px;" autocomplete="off" aria-hidden="true" id="thc-add-keys-'.$post_id.'"
                             placeholder="Разделите фразы пререносом строки"></textarea></div>
-                      <a href="javascript:PopUpaddKey()" type="button" class="page-title-action" style="margin:10px; margin-left:40px;">Добавить</a>
+                      <a href="javascript:PopUpaddKey('.$post_id.')" type="button" class="page-title-action" style="margin:10px; margin-left:40px;">Добавить</a>
                     </div>
                   </div>';
             wp_enqueue_script('tch-script-popup-add-keys', plugins_url('/js/popup-add-keys.js',__FILE__));

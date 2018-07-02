@@ -133,11 +133,11 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         }
         $min = intval(date('i'));
         $min = (60 - $min);
-        $response = array(  'message' => date("h:i:s", time()) .' '.$error.'<br> Повторите через '.$min.' мин.', 
-                            'progress' => '100');
+        $response = array(  'message' => date("h:i:s", time()) .': "'.$error.'"<br> Повторный запрос через '.$min.' мин.', 
+                            'progress' => $p);
         echo json_encode($response);
         //exit();
-        sleep($min*60);
+        sleep(($min+5)*60);
         search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
     } 
     //Если все ОК работаем дальше
@@ -183,8 +183,6 @@ if (isset($keyword)){
     ob_implicit_flush(true);
     ob_end_flush();
      
-    //for($i = 0; $i < 10; $i++){
-        //get all keywords
         $arr_kw = get_tch_all_keywords($is_new_keys);
         if (!empty($arr_kw)){
             //echo "asddas:" . count($arr_kw);
@@ -208,7 +206,6 @@ if (isset($keyword)){
                 $с++;
             }
         }
-    //}
     
     sleep(1);
     $response = array(  'message' => 'Завершено', 

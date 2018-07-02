@@ -20,7 +20,8 @@ $val = $wpdb->get_results($wpdb->prepare(
         (
             select count(distinct key_id) cnt
             from $table_name_s
-            where place <= 3 
+            where place <= 3
+             and place != 0
              and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
@@ -32,6 +33,7 @@ $val = $wpdb->get_results($wpdb->prepare(
             select count(distinct key_id) cnt
             from $table_name_s
             where place <= 10
+            and place != 0
             and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
@@ -43,6 +45,7 @@ $val = $wpdb->get_results($wpdb->prepare(
             select count(distinct key_id) cnt
             from $table_name_s
             where place <= 30
+            and place != 0
             and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
@@ -60,7 +63,8 @@ $val = $wpdb->get_results($wpdb->prepare(
                         when place = 10 then 0.2
                     end)
             from $table_name_s
-            where (key_id, data) in (
+            where place != 0
+            and (key_id, data) in (
               select key_id, max(data) date
               from $table_name_s
               group by key_id
@@ -74,8 +78,11 @@ $val = $wpdb->get_results($wpdb->prepare(
                           where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                             and t2.data <= %s)/*берем предпосл срез*/
             and a.data <= %s
-            and b.data <= %s), 0) 
+            and b.data <= %s
+            and a.place != 0
+            and b.place != 0), 0)
           as pos_improved
+          
          ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
            FROM $table_name_s a
            JOIN $table_name_s b on a.key_id = b.key_id
@@ -84,18 +91,30 @@ $val = $wpdb->get_results($wpdb->prepare(
                           where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                             and t2.data <= %s)/*берем предпосл срез*/
             and a.data <= %s
-            and b.data <= %s), 0) 
+            and b.data <= %s
+            and a.place != 0
+            and b.place != 0), 0) 
           as pos_deteriorated
-         ,COALESCE((SELECT sum(b.place-1)
+          
+         ,COALESCE((SELECT sum(b.place)
            FROM $table_name_s b
            WHERE b.data = (select max(t2.data) from $table_name_s t2 
                            where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
                              and t2.data <= %s)/*берем предпосл срез*/
-             and b.data <= %s), 0) 
-          as pos_available
-         ,(SELECT count(*) FROM $table_name_k i) count_all"
+             and b.data <= %s
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from $table_name_s
+            where data = %s
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM $table_name_k i) count_all"
     , $date_query, $date_query, $date_query, $date_query, $date_query
     , $date_query, $date_query, $date_query, $date_query, $date_query 
-    , $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query
     ));
 echo json_encode($val);

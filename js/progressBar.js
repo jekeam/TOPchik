@@ -53,7 +53,9 @@ jQuery(document).ready(function ($) {
         visibility_serp = 0,
         pos_improved = 0,
         pos_deteriorated = 0,
-        pos_available = 0;
+        pos_available = 0,
+        cnt_cur_pos = 0;
+        
         
         $.ajax({  
          url: "/wp-content/plugins/TopChik/tch-db-progress-bar.php",  
@@ -73,10 +75,12 @@ jQuery(document).ready(function ($) {
              pos_improved       = data[0].pos_improved;
              pos_deteriorated   = data[0].pos_deteriorated;
              pos_available      = data[0].pos_available;
+             cnt_cur_pos        = data[0].cnt_cur_pos;
          }
        });  
         
     document.getElementById('cnt_keys').innerHTML = all;
+    document.getElementById('cnt_cur_pos').innerHTML = cnt_cur_pos;
     progressBarUpdate(visibility_serp, 100, pie1,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(visibility_serp/all*100))+"%</div>");
     progressBarUpdate(top3, all, pie2,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top3/all*100))+"%</div>");
     progressBarUpdate(top10, all, pie3,"<div class='pb_small_text' title='Всего фраз: "+all+"'>"+Math.round(Number(top10/all*100))+"%</div>");

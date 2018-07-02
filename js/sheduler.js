@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
             }
             else if (xhr.readyState > 2) {
               var new_response = xhr.responseText.substring(xhr.previous_text.length);
-              //console.log(new_response);
+              console.log(new_response);
               var result = JSON.parse(new_response);
 
               document.getElementById("divProgress").innerHTML += result.message + '';
@@ -44,9 +44,9 @@ jQuery(document).ready(function($) {
         };
         var is_new_keys = document.getElementById('is_new_keys').checked;
         if (is_new_keys) {
-          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=1", true);
+          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=1/", true);
         }else{
-          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=0", true);
+          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=0/", true);
         }
         xhr.send();
       }

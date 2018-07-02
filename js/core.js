@@ -68,16 +68,16 @@ jQuery(document).ready(function($) {
                             //TODO ожидание
                             $('[key_place_id="' + key_place_id + '"]').hide();
                             $('[img_place_id="' + key_place_id + '"]').show();
-                            $('#error_log').hide();
+                            tch_window.find('#error_log').hide();
                         },
                         success: function(data) {
                             $('[img_place_id="' + key_place_id + '"]').hide();
                             $('[key_place_id="' + key_place_id + '"]').show();
                             var cur_old_place = Number($('[key_place_id="' + key_place_id + '"]').text());
                             if (data.slice(0, 6) == 'Ошибка') {
-                                $('#error_log').show();
-                                $('#error_log').text(data).change();
-                                $('#error_log').css('color', 'red');
+                                tch_window.find('#error_log').show();
+                                tch_window.find('#error_log').text(data).change();
+                                tch_window.find('#error_log').css('color', 'red');
 
                                 $('[change_place_id="' + key_place_id + '"]').text(cur_old_place).change();
                                 $('[change_place_id="' + key_place_id + '"]').css('color', 'gray');

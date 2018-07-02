@@ -3810,3 +3810,621 @@
 [28-Jun-2018 19:16:25 UTC] PHP   5. WP_Hook->apply_filters() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:310
 [28-Jun-2018 19:16:25 UTC] PHP   6. call_user_func_array:{/home/ubuntu/workspace/wp-includes/class-wp-hook.php:286}() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
 [28-Jun-2018 19:16:25 UTC] PHP   7. tch_settings_page() /home/ubuntu/workspace/wp-includes/class-wp-hook.php:286
+[02-Jul-2018 19:37:39 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:39 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:0
+[02-Jul-2018 19:37:39 UTC] PHP   2. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:39 UTC] PHP   3. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:39 UTC] PHP   4. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:42 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:42 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:42 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:42 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:42 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:42 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:42 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:42 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:43 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:43 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:43 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:43 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:43 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:44 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:44 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:44 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:44 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:44 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:44 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:44 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:44 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:45 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:45 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:45 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:45 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:45 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:46 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:46 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:46 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:37:46 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:37:46 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:37:46 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:37:46 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:37:46 UTC] PHP Stack trace:
+[02-Jul-2018 19:37:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:06 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:06 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:0
+[02-Jul-2018 19:40:06 UTC] PHP   2. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:06 UTC] PHP   3. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:06 UTC] PHP   4. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:40:08 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:40:08 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:40:08 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 82
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:40:08 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 83
+[02-Jul-2018 19:40:08 UTC] PHP Stack trace:
+[02-Jul-2018 19:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:34 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:34 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:0
+[02-Jul-2018 19:41:34 UTC] PHP   2. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:34 UTC] PHP   3. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:34 UTC] PHP   4. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Запрос не содержит корректное число заполнителей (14) для количества переданных аргументов (15). Дополнительную информацию можно найти на странице <a href="https://codex.wordpress.org/Debugging_in_WordPress">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 4.8.3.) in /home/ubuntu/workspace/wp-includes/functions.php on line 4148
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP   2. include() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:71
+[02-Jul-2018 19:41:36 UTC] PHP   3. wpdb->prepare() /home/ubuntu/workspace/wp-content/plugins/TopChik/tch-db-progress-bar.php:119
+[02-Jul-2018 19:41:36 UTC] PHP   4. _doing_it_wrong() /home/ubuntu/workspace/wp-includes/wp-db.php:1298
+[02-Jul-2018 19:41:36 UTC] PHP   5. trigger_error() /home/ubuntu/workspace/wp-includes/functions.php:4148
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 76
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 77
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 78
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 79
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 80
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0
+[02-Jul-2018 19:41:36 UTC] PHP Notice:  Trying to get property of non-object in /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php on line 81
+[02-Jul-2018 19:41:36 UTC] PHP Stack trace:
+[02-Jul-2018 19:41:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/plugins/TopChik/GetDataGraphics.php:0

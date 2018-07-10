@@ -7,6 +7,7 @@ require_once '../../../wp-load.php';
 $debag = 'on';
 $file = dirname( __FILE__ ) . '/log/xml.log';
 
+
 //Получаем наше текущее место домена из xml
 function get_my_place($domains_xml){
     $place = 1;
@@ -155,6 +156,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     
     phpQuery::unloadDocuments($html);
 }
+
 
 
 //пишем логи XML сообщений

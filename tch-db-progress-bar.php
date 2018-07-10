@@ -115,6 +115,6 @@ $val = $wpdb->get_results($wpdb->prepare(
          (SELECT count(*) FROM $table_name_k i) count_all"
     , $date_query, $date_query, $date_query, $date_query, $date_query
     , $date_query, $date_query, $date_query, $date_query, $date_query 
-    , $date_query, $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query, $date_query
     ));
 echo json_encode($val);

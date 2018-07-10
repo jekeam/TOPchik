@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
   $('input#add_task_on_demand').click(function() {
     
-    document.getElementById('add_task_on_demand').disabled = 'disable';
+    //document.getElementById('add_task_on_demand').disabled = 'disable';
     
     function get_positin() {
 
@@ -44,9 +44,9 @@ jQuery(document).ready(function($) {
         };
         var is_new_keys = document.getElementById('is_new_keys').checked;
         if (is_new_keys) {
-          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=1/", true);
+          xhr.open("GET", "/wp-content/plugins/TopChik/tch-cron.php?is_new_keys=1", true);
         }else{
-          xhr.open("GET", "/wp-content/plugins/TopChik/yandex-xml.php?is_new_keys=0/", true);
+          xhr.open("GET", "/wp-content/plugins/TopChik/tch-cron.php?is_new_keys=0", true);
         }
         xhr.send();
       }

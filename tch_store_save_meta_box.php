@@ -15,32 +15,36 @@ if ( get_post_type( $post_id ) == 'post'  )
     return;
     
     // сохраняем данные метаполя в произвольных полях записи
-    $list_key_id = $_POST['list_key_id'];
-    $arr_key_id = explode(',',$list_key_id);
-    foreach ($arr_key_id as $id) 
-    {
-        if (!empty($_POST['tch_keyword_text_'.$id]))
+    if (isset($_POST['list_key_id'])){
+        $list_key_id = $_POST['list_key_id'];
+        $arr_key_id = explode(',',$list_key_id);
+        foreach ($arr_key_id as $id) 
         {
-            //Запись КС
-            set_db_tch_keywords( $id, sanitize_text_field($_POST['tch_keyword_text_'.$id]), $post_id);
-            
-            //Запись позиции
-            if (!empty ($_POST['tch_place_text_'.$id]))
+            if (!empty($_POST['tch_keyword_text_'.$id]))
             {
-                set_db_tch_serp( $id, sanitize_text_field($_POST['tch_place_text_'.$id]));
-            }
-            else 
-            {
-                set_db_tch_serp( $id, 0);
+                //Запись КС
+                set_db_tch_keywords( $id, sanitize_text_field($_POST['tch_keyword_text_'.$id]), $post_id);
+                
+                //Запись позиции
+                if (!empty ($_POST['tch_place_text_'.$id]))
+                {
+                    set_db_tch_serp( $id, sanitize_text_field($_POST['tch_place_text_'.$id]));
+                }
+                else 
+                {
+                    set_db_tch_serp( $id, 0);
+                }
             }
         }
     }
-    //Удаляем все что получили для удаления
-    $list_del_key_id = $_POST['list_del_key_id'];
-    $arr_del_key_id = explode(',',$list_del_key_id);
-    foreach ($arr_del_key_id as $id) 
-    {
-        delete_tch_keyword($id);
+    if (isset($_POST['list_del_key_id'])){
+        //Удаляем все что получили для удаления
+        $list_del_key_id = $_POST['list_del_key_id'];
+        $arr_del_key_id = explode(',',$list_del_key_id);
+        foreach ($arr_del_key_id as $id) 
+        {
+            delete_tch_keyword($id);
+        }
     }
 }
 

@@ -227,7 +227,7 @@ function get_tch_all_keywords($new = 0)
                 WHERE t_key.key_id not in 
                   (SELECT x.key_id 
                    FROM $table_position x
-                   WHERE x.data = DATE_FORMAT(sysdate(), '%Y-%m-%d'))"
+                   WHERE x.place != 0 and x.data = DATE_FORMAT(sysdate(), '%Y-%m-%d'))"
             );
     } else {
         $arr_key = $wpdb->get_results

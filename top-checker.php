@@ -23,6 +23,24 @@ $tch_tbl_keywords = "tch_keywords";
 $tch_tbl_serp = "tch_serp";
 $date_query = date("Y-m-d");
 
+function getCurrentPath(){ 
+    $curPageURL = "";
+
+    if ($_SERVER["HTTPS"] != "on")
+        $curPageURL .= "http://";
+    else
+        $curPageURL .= "https://" ;
+
+    if ($_SERVER["SERVER_PORT"] == "80")
+        $curPageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+    else
+        $curPageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+
+    $count = strlen(basename($curPageURL));
+    $path = substr($curPageURL,0, -$count);
+    return $path;
+}
+
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -720,11 +738,11 @@ add_action( 'tch_add_shed_hook', 'add_sheduler_cron_once');
  
 function add_sheduler_cron_once($is_new_keys) {
     include_once( dirname( __FILE__ ) . '/tch-db.php');
-    
-    file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'start sheduler cron $is_new_keys='.$is_new_keys);
-    
-    //hard-work
-	$file = file_get_contents('/yandex-xml.php?is_new_keys='.$is_new_keys);
+        
+    //hard-work    
+    $_GET['is_new_keys'] = $is_new_keys;
+    include dirname( __FILE__ ) . '/yandex-xml.php';
+    //mail('suinegne@gmail.com', 'i am Crom', '$is_new_keys='.$is_new_keys);
 	
     file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'end sheduler cron $is_new_keys='.$is_new_keys);
 }

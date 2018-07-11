@@ -3,7 +3,7 @@ ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
 include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
-require_once '../../../wp-load.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/wp-load.php';
 $debag = 'on';
 $file = dirname( __FILE__ ) . '/log/xml.log';
 

@@ -9,9 +9,8 @@ $file = dirname( __FILE__ ) . '/log/xml.log';
 
 
 //Получаем наше текущее место домена из xml
-function get_my_place($domains_xml){
-    $place = 1;
-    global $my_domain;
+function get_my_place($domains_xml, $my_domain){
+    $place = 1;    
     
     foreach($domains_xml as $domain){
         $cur_domain = strtolower(pq($domain)->text());
@@ -26,7 +25,7 @@ function get_my_place($domains_xml){
 
 
 //Запрос лимитов на этот час
-function getMyLimit($v_user, $v_key, $hour){
+function getMyLimit($v_user, $v_key, $hour, $v_current){
     $url = 'https://yandex.ru/search/xml?action=limits-info&user='.$v_user.'&key='.$v_key;
     //print_r($url);
     $html = file_get_contents($url);
@@ -93,7 +92,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     $domains = pq($doc->find('domain'));
     $v_current .= '$domains:'.$domains."\n";
     
-    $my_position = get_my_place($domains);
+    $my_position = get_my_place($domains, $v_my_domain);
     $v_current .= 'Моя позиция:'.$my_position."\n\n";
     
     // Пишем содержимое обратно в файл
@@ -145,7 +144,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     $domains = pq($doc->find('domain'));
     $v_current .= '$domains:'.$domains."\n";
     
-    $my_position = get_my_place($domains);
+    $my_position = get_my_place($domains, $v_my_domain);
     $v_current .= 'Моя позиция:'.$my_position."\n\n";
     
     // Пишем содержимое обратно в файл
@@ -182,8 +181,8 @@ if (isset($keyword)){
     $с = 1;//Переменная для прогресс бара - вычисляем номер цикла
     $p = 0;//Переменная для прогресс бара - вычисляем процент
     set_time_limit(0); 
-    ob_implicit_flush(true);
-    ob_end_flush();
+    //ob_implicit_flush(true);
+    //ob_end_flush();
      
         $arr_kw = get_tch_all_keywords($is_new_keys);
         if (!empty($arr_kw)){

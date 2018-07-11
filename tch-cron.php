@@ -17,8 +17,7 @@ try{
     
     //Устанавливаем задание для крон
     function add_cron($is_new_keys){
-        wp_schedule_single_event( time() + 1, 'tch_add_shed_hook',  array($is_new_keys));
-        file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'add sheduler');
+        wp_schedule_single_event( time() + 1, 'tch_add_shed_hook',  array($is_new_keys));        
     }
     add_cron($is_new_keys);        
 }

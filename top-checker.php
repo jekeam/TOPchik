@@ -741,8 +741,5 @@ function add_sheduler_cron_once($is_new_keys) {
         
     //hard-work    
     $_GET['is_new_keys'] = $is_new_keys;
-    include dirname( __FILE__ ) . '/yandex-xml.php';
-    //mail('suinegne@gmail.com', 'i am Crom', '$is_new_keys='.$is_new_keys);
-	
-    file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'end sheduler cron $is_new_keys='.$is_new_keys);
+    include dirname( __FILE__ ) . '/yandex-xml.php';    
 }

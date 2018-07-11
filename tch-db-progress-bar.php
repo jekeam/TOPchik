@@ -1,5 +1,4 @@
 <?php
-//Получить последнюю позицию ключевогой фразы поста по ид-ячейки
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 

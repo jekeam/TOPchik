@@ -714,3 +714,17 @@ function tch_store_save_meta_box( $post_id )
     include 'tch_store_save_meta_box.php';
 }
 //TODO сделать статусы для КС - ВКЛ/ВЫКЛ
+
+//Зацепка для запуска еденичной проверки позиций
+add_action( 'tch_add_shed_hook', 'add_sheduler_cron_once');
+ 
+function add_sheduler_cron_once($is_new_keys) {
+    include_once( dirname( __FILE__ ) . '/tch-db.php');
+    
+    file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'start sheduler cron $is_new_keys='.$is_new_keys);
+    
+    //hard-work
+	$file = file_get_contents('/yandex-xml.php?is_new_keys='.$is_new_keys);
+	
+    file_put_contents(dirname( __FILE__ ) . '/log/xml.log', 'end sheduler cron $is_new_keys='.$is_new_keys);
+}

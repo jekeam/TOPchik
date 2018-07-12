@@ -1,2 +1,165 @@
 [12-Jul-2018 18:51:50 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-install.php on line 79
 [12-Jul-2018 18:52:27 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-install.php on line 79
+[12-Jul-2018 19:08:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:11:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:11:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:12:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:12:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:14:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:26
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 26
+[12-Jul-2018 19:15:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:26
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 26
+[12-Jul-2018 19:15:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:25
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 25
+[12-Jul-2018 19:16:11 UTC] PHP Warning:  require(./wp-blog-header.php): failed to open stream: No such file or directory in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 10
+[12-Jul-2018 19:16:11 UTC] PHP Fatal error:  require(): Failed opening required './wp-blog-header.php' (include_path='.;e:/ospanel/modules/php/PHP-7.2-x64;e:/ospanel/modules/php/PHP-7.2-x64/PEAR/pear') in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 10
+[12-Jul-2018 19:16:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:27
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:17:00 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 6
+[12-Jul-2018 19:17:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:28
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 28
+[12-Jul-2018 19:17:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:28
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 28
+[12-Jul-2018 19:17:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_blog_prefix() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:26
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 26
+[12-Jul-2018 19:18:08 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 26
+[12-Jul-2018 19:18:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-admin\includes\misc.php on line 1124
+[12-Jul-2018 19:18:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 919
+[12-Jul-2018 19:18:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 920
+[12-Jul-2018 19:18:52 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:19:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-admin\includes\misc.php on line 1124
+[12-Jul-2018 19:19:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 919
+[12-Jul-2018 19:19:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 920
+[12-Jul-2018 19:19:01 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:19:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-admin\includes\misc.php on line 1124
+[12-Jul-2018 19:19:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 919
+[12-Jul-2018 19:19:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 920
+[12-Jul-2018 19:19:04 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:19:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-admin\includes\misc.php on line 1124
+[12-Jul-2018 19:19:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 919
+[12-Jul-2018 19:19:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 920
+[12-Jul-2018 19:19:21 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:19:31 UTC] PHP Warning:  Use of undefined constant wpdb - assumed 'wpdb' (this will throw an Error in a future version of PHP) in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 27
+[12-Jul-2018 19:20:19 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 9
+[12-Jul-2018 19:20:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-admin\includes\misc.php on line 1124
+[12-Jul-2018 19:20:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 919
+[12-Jul-2018 19:20:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:9) in E:\OSPanel\domains\wp\wp-includes\option.php on line 920
+[12-Jul-2018 19:21:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php:21
+Stack trace:
+#0 E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php(307): get_status_cron()
+#1 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(286): tch_settings_page('')
+#2 E:\OSPanel\domains\wp\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 E:\OSPanel\domains\wp\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 E:\OSPanel\domains\wp\wp-admin\admin.php(224): do_action('settings_page_t...')
+#5 E:\OSPanel\domains\wp\wp-admin\options-general.php(10): require_once('E:\\OSPanel\\doma...')
+#6 {main}
+  thrown in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-cron-db.php on line 21
+[12-Jul-2018 19:21:30 UTC] База данных WordPress возвратила ошибку You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 в ответ на запрос SELECT status
+        FROM , выполненный require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), do_action('settings_page_tch_settings_menu'), WP_Hook->do_action, WP_Hook->apply_filters, tch_settings_page, get_status_cron
+[12-Jul-2018 19:21:43 UTC] База данных WordPress возвратила ошибку You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 в ответ на запрос SELECT status
+        FROM , выполненный require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), do_action('settings_page_tch_settings_menu'), WP_Hook->do_action, WP_Hook->apply_filters, tch_settings_page, get_status_cron
+[12-Jul-2018 19:22:09 UTC] База данных WordPress возвратила ошибку You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 в ответ на запрос SELECT status
+        FROM , выполненный require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), do_action('settings_page_tch_settings_menu'), WP_Hook->do_action, WP_Hook->apply_filters, tch_settings_page, get_status_cron
+[12-Jul-2018 19:22:18 UTC] База данных WordPress возвратила ошибку You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 в ответ на запрос SELECT status
+        FROM , выполненный require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), do_action('settings_page_tch_settings_menu'), WP_Hook->do_action, WP_Hook->apply_filters, tch_settings_page, get_status_cron

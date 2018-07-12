@@ -53,6 +53,7 @@ ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 include_once( dirname( __FILE__ ) . '/tch-install.php');
 include_once( dirname( __FILE__ ) . '/tch-uninstall.php');
 include_once( dirname( __FILE__ ) . '/tch-db.php');
+//include_once( dirname( __FILE__ ) . '/tch-cron.php');//создадим задание крон, которое будет смотреть в таблю каждую минуту и если запускать проверку если надо 
 include_once( dirname( __FILE__ ) . '/tch-cron-db.php');
     
 //Объявляем подменю для плагина
@@ -303,7 +304,7 @@ if (!isset($_GET['tch_page'])) {
     $prowp_options = get_option( 'tch_options_sheduler' );
     //Установка задания в крон
     
-    echo "<h1>Назначьте задание для проверки позиции (пока работает только ручной съем)</h1>
+    echo "<h1>Назначьте задание для проверки позиции (текущий статус: ".get_status_cron().")</h1>
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>

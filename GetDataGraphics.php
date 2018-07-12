@@ -68,7 +68,7 @@ if (!empty($_REQUEST['post_id'])){
         $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"}';
 
         ob_start(); 
-        include('tch-db-progress-bar.php'); 
+        include_once('tch-db-progress-bar.php'); 
         $my_json = ob_get_clean();
         
         $result = json_decode($my_json);

@@ -17,10 +17,12 @@ $tch_serp_db_ver = "0.1";
 //суфиксы таблиц
 global $tch_tbl_keywords;
 global $tch_tbl_serp;
+global $tch_cron;
 global $date_query;
 
 $tch_tbl_keywords = "tch_keywords";
 $tch_tbl_serp = "tch_serp";
+$tch_cron = "tch_cron";
 $date_query = date("Y-m-d");
 
 function getCurrentPath(){ 
@@ -51,6 +53,7 @@ ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 include_once( dirname( __FILE__ ) . '/tch-install.php');
 include_once( dirname( __FILE__ ) . '/tch-uninstall.php');
 include_once( dirname( __FILE__ ) . '/tch-db.php');
+include_once( dirname( __FILE__ ) . '/tch-cron-db.php');
     
 //Объявляем подменю для плагина
 add_action( 'admin_menu', 'tch_create_settings_submenu' );

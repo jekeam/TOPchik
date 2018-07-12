@@ -131,14 +131,8 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         if ($debag = 'on'){
             file_put_contents($v_file, $v_current);
         }
-        $min = intval(date('i'));
-        $min = ((60+5) - $min);
-        $response = array(  'message' => date("h:i:s", time()) .': "'.$error.'"<br> Повторный запрос через '.$min.' мин.', 
-                            'progress' => $p);
-        echo json_encode($response);
-        //exit();
-        sleep(($min+5)*60);
-        search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p);
+        //делаем запись ошибки в БД        
+        exit();        
     } 
     //Если все ОК работаем дальше
     $domains = pq($doc->find('domain'));

@@ -8,9 +8,11 @@ function tch_install ()
    
    global $tch_tbl_keywords;
    global $tch_tbl_serp;
+   global $tch_cron;
 
    $table_name1 = $wpdb->prefix . $tch_tbl_keywords;
    $table_name2 = $wpdb->prefix . $tch_tbl_serp;
+   $table_name3 = $wpdb->prefix . $tch_cron;
    
    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
    
@@ -38,9 +40,24 @@ function tch_install ()
             UNIQUE KEY (key_id, data)
         );";
         
-        dbDelta($sql2);
-        //add_option("tch_keywords_db_ver", $tch_serp_db_ver);
+        dbDelta($sql2);        
    }
+
+      
+   if($wpdb->get_var("show tables like '$table_name3'") != $table_name3)
+   {
+        $sql3 = "CREATE TABLE " . $table_name3 . " 
+        (
+            date_create DATE DEFAULT '00-00-0000' NOT NULL,
+            data_start DATE DEFAULT '00-00-0000' NOT NULL,
+            status varchar(25) NOT NULL,
+            done bigint(3),
+            msg varchar(225)
+        );";
+        
+        dbDelta($sql3);  
+    }      
+   
    
    //Обновление таблиц
    $installed_ver  = get_option( "tch_keywords_db_ver" );

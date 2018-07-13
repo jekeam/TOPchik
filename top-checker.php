@@ -17,7 +17,7 @@ $tch_serp_db_ver = "0.1";
 //суфиксы таблиц
 global $tch_tbl_keywords;
 global $tch_tbl_serp;
-global $tch_cron;
+global $tch_tbl_cron;
 global $date_query;
 
 $tch_tbl_keywords = "tch_keywords";
@@ -304,12 +304,14 @@ if (!isset($_GET['tch_page'])) {
     $prowp_options = get_option( 'tch_options_sheduler' );
     //Установка задания в крон
     
-    echo "<h1>Назначьте задание для проверки позиции (текущий статус: ".get_status_cron().")</h1>
+    $stat = get_status_cron();
+    
+    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$stat.")</h1>
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
             </div>";
-    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"/>';
+    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($stat == "выключено")?"":"disabled") .'/>';
     echo "<div style='margin:5px;'><input type='checkbox' id='is_new_keys'/><span>Проверить все КС заново при повторном запуске</span></div>";
     echo "</div>
         <div class='float_left'>

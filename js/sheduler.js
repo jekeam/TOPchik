@@ -1,6 +1,26 @@
 "use strict";
 jQuery(document).ready(function($) {
-
+  
+  function getStatusCron(){
+    $.ajax({
+        type: "POST",
+        url: "/wp-content/plugins/TopChik/tch-cron-db.php",
+        data: ({
+            send_status_cron: '1'
+        }),
+        beforeSend: function() {},
+        success: function(data) {
+            if (data == 'выключено'){
+              document.getElementById('add_task_on_demand').disabled = '';
+            }else{
+              document.getElementById('add_task_on_demand').disabled = 'true';
+            }
+        }
+    });
+  }
+  getStatusCron();
+  
+  
   $('input#add_task_on_demand').click(function() {
     
     //document.getElementById('add_task_on_demand').disabled = 'disable';
@@ -24,12 +44,12 @@ jQuery(document).ready(function($) {
             if (xhr.readyState == 4) {
             }
             else if (xhr.readyState > 2) {
-              var new_response = xhr.responseText.substring(xhr.previous_text.length);
-              console.log(new_response);
-              var result = JSON.parse(new_response);
+              //var new_response = xhr.responseText.substring(xhr.previous_text.length);
+              //console.log(new_response);
+              //var result = JSON.parse(new_response);
 
-              document.getElementById("divProgress").innerHTML += result.message + '';
-              document.getElementById('progressor').style.width = result.progress + "%";
+              //document.getElementById("divProgress").innerHTML += result.message + '';
+              //document.getElementById('progressor').style.width = result.progress + "%";
 
               xhr.previous_text = xhr.responseText;
               if (result.progress == '100'){

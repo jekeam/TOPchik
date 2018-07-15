@@ -134,6 +134,14 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         //делаем запись ошибки в БД
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
         update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'ошибка', '', $p, $error);
+        
+        //send email                
+        $to = get_option( 'admin_email' );
+        $headers = array('From:'.$to);
+        $subject = 'Ошибка при работе плагина:ТопЧик';
+        $message = 'Текст ошибки: '.$error.'<br>Если у вас возникли сложности, просьба сообщить о проблеме разработчику:suineg@inbox.ru';
+        wp_mail($to, $subject, $message, $headers);          
+
         exit();        
     } 
     //Если все ОК работаем дальше

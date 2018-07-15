@@ -327,10 +327,31 @@ if (!isset($_GET['tch_page'])) {
     <div style="display:inline-block;width: 100%;" id="progressbar"><div class="progress-label"></div></div>
     </div>
 
-    <p><b>Выберите расписание проверок [в разработке]</b></p>
+    <p><b>Выберите расписание проверок</b></p>    
+
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="every_day"
+        <?php checked('every_day', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
+        >Каждый день в
+        <input 
+            name="time_every_day" 
+            type="number" 
+            value="<?php echo esc_attr( isset($prowp_options['time_every_day'])?$prowp_options['time_every_day']:'0' ); ?>"
+            min="0" 
+            max="24"> ч. (мск)</p>            
+        
+    <p><input name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
+        <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:'checked'); ?>
+        >По требованию
+        
+    <p><input type="submit" class="button-primary" value="Сохранить"/></p>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_week" 
           <?php checked('days_of_week', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >По дням недели, в
+        > [В рарзработке] По дням недели, в
           
         <input disabled
             name="tch_options_sheduler[time_days_of_week]"
@@ -384,7 +405,7 @@ if (!isset($_GET['tch_page'])) {
     <p>
         <input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="days_of_month"
           <?php checked('days_of_month', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-          >По дням месяца, в
+          >[В рарзработке] По дням месяца, в
         
         <input disabled
             name="tch_options_sheduler[time_days_of_month]" 
@@ -509,27 +530,20 @@ if (!isset($_GET['tch_page'])) {
                     <?php checked('31d',isset($prowp_options['31d'])?$prowp_options['31d']:''); ?>
             </li>
             
-        </ol>
-        
+        </ol>        
     <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="once_a_month"
         <?php checked('once_a_month', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >Раз в месяц</p>
+        >[В рарзработке] Раз в месяц</p>
         
     <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="after_update"
         <?php checked('after_update', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >После апдейтов Яндекса, через 
+    >[В рарзработке] После апдейтов Яндекса, через 
         <input disabled
             name="time_after_update" 
             type="number" 
             value="<?php echo esc_attr( isset($prowp_options['time_after_update'])?$prowp_options['time_after_update']:'2' ); ?>"
             min="2" 
             max="24"> часа</p>
-        
-    <p><input disabled name="tch_options_sheduler[sheduler_mode]" type="radio" value="on_demand"
-        <?php checked('on_demand', isset($prowp_options['sheduler_mode'])?$prowp_options['sheduler_mode']:''); ?>
-        >По требованию
-        
-    <p><input disabled type="submit" class="button-primary" value="Сохранить"/></p>
 </from>    
 <?php
 //Вывод Крон задач
@@ -752,8 +766,8 @@ function tch_shed_interval( $raspisanie ) {
 	// $raspisanie - это массив, состоящий из всех зарегистрированных интервалов
 	// наша задача - добавить в него свой собственный интервал, к примеру пусть будет 3 минуты
 	$raspisanie['minutes'] = array(
-		'interval' => 15, // в одной минуте 60 секунд, в трёх минутах - 180
-		'display' => 'Каждые 15 сек.' // отображаемое имя
+		'interval' => 60, // в одной минуте 60 секунд, в трёх минутах - 180
+		'display' => 'Каждую минуту' // отображаемое имя
 	);
 	return $raspisanie;
 }
@@ -763,17 +777,21 @@ function tch_shed_interval( $raspisanie ) {
 if( !wp_next_scheduled('check_new_shed_hook') ){
     wp_schedule_event( time()+60,'minutes', 'check_new_shed_hook');
 }
+
 // вот он хук и мы вешаем на него произвольную функцию, цифра 3 - количество передаваемых параметров
 add_action( 'check_new_shed_hook', 'check_new_shed_func');
 // конечно можно повесить и несколько функций на один хук!
 function check_new_shed_func() {
+
+    //Проверяем статус
     $get_status_row = get_status_cron();
 
     $date_start = $get_status_row["date_start"];
     $status = $get_status_row["status"];
 
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
-    $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));      
+    $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));
+    $is_new_keys = $get_status_row['is_new_keys'];
    
     if(
         $date_start != '1970-01-01 00:00:00' 
@@ -783,8 +801,20 @@ function check_new_shed_func() {
         ($today>$row_date)
         && $status == 'в ожидании'
     ){        
-        if(!wp_next_scheduled('tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]))){
-            wp_schedule_single_event( time(), 'tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]));
+        if(!wp_next_scheduled('tch_add_shed_hook', array($is_new_keys, $get_status_row["key_id"]))){
+            wp_schedule_single_event( time(), 'tch_add_shed_hook', array($is_new_keys, $get_status_row["key_id"]));
+        }
+    }else{
+        //Добавим задание на проверку если пришло время
+        $prowp_options = get_option('tch_options_sheduler');
+
+        if ($prowp_options['sheduler_mode'] == 'every_day'){
+            $hour = $prowp_options['time_every_day'];
+            if (strlen($hour) == 1){
+                $hour = '0'.$hour;
+            }
+            $date_start = date("Y-m-d H:i:s", mktime($hour, 00, 0, date("m")  , date("d")+1, date("Y")));
+            insert_sheduler_cron($today->format("Y-m-d H:i:s"), $date_start, 'в ожидании', $is_new_keys, '', 'Проверка начнется в указанное время');        
         }
     }
 }    

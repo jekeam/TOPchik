@@ -13,12 +13,12 @@ jQuery(document).ready(function($) {
                 var result = JSON.parse(data);
 
                 var text_desc = 'Задание №' + result.key_id + '<br>' +
+                    'Статус: ' + result.status + '<br>' +
+                    '% выполнения: ' + result.done + '<br>' +
+                    'Описание: ' + result.msg + '<br><br>' +
                     'Создано: ' + result.date_create + '<br>' +
                     'Старт: ' + result.date_start + '<br>' +
-                    'Окончание: ' + result.date_end + '<br>' +
-                    'Статус: ' + result.state + '<br>' +
-                    '% выполнения: ' + result.done + '<br>' +
-                    'Описание: ' + result.msg;
+                    'Окончание: ' + result.date_end + '<br>';
 
                 var desc = document.getElementById("divProgress").innerHTML;
                 if (desc != text_desc) {

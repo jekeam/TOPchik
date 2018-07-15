@@ -18,6 +18,7 @@ function get_status_cron(){
             key_id,
             date_create,
             date_start,
+            date_end,
             status,
             is_new_keys,
             done,

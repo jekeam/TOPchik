@@ -785,7 +785,7 @@ function check_new_shed_func() {
         $date_start != '0000-00-00 00:00:00' 
         &&
         ($today>$row_date)
-        && $status == 'задание назначено'
+        && $status == 'в ожидании'
     ){        
         if(!wp_next_scheduled('tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]))){
             wp_schedule_single_event( time(), 'tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]));

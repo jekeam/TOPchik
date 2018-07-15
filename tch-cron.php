@@ -21,7 +21,7 @@ try{
     function add_cron($is_new_keys, $key_id){
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
         $today_str = $today->format('Y-m-d H:i:s');
-        insert_sheduler_cron($today_str, $today_str, 'задание назначено', $is_new_keys, '0', 'Проверка начнется в указанное время');
+        insert_sheduler_cron($today_str, $today_str, 'в ожидании', $is_new_keys, '0', 'Проверка начнется в указанное время');
     }
     add_cron($is_new_keys, $key_id);
 }

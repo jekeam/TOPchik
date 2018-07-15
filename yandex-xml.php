@@ -204,10 +204,10 @@ if (isset($keyword)){
                 update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$с.' из '.$i);
                 $с++;
             }
-        }
-    
-    sleep(1);
+        }else{
+            $с = 0;
+        }    
     //делаем запись состояния в БД
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
-    update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, 'успешно');
+    update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, ($с > 0) ? 'проверено '.$с.' ключей' : 'ключей для проверки не найдено');
 }

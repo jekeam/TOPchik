@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
                 };
                 xhr.onreadystatechange = function() {
                     try {
-                        if (xhr.readyState == 4) {} else if (xhr.readyState > 2) {
+                        /*if (xhr.readyState == 4) {} else if (xhr.readyState > 2) {
                             var new_response = xhr.responseText.substring(xhr.previous_text.length);
                             console.log(new_response);
                             var result = JSON.parse(new_response);
@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
                             if (result.progress == '100') {
                                 document.getElementById('add_task_on_demand').disabled = '';
                             }
-                        }
+                        }*/
                     } catch (e) {
                         //alert("Возникла ошибка: " + e);
                         console.log("Возникла ошибка: " + e);

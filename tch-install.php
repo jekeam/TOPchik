@@ -48,7 +48,7 @@ function tch_install ()
    {
         $sql3 = "CREATE TABLE " . $table_name3 . " 
         (            
-            key_id bigint(20) NOT NULL,
+            key_id bigint(20) NOT NULL AUTO_INCREMENT,
             date_create DATETIME DEFAULT '0000-00-00 00:00:00',
             date_start DATETIME DEFAULT '0000-00-00 00:00:00',
             date_end DATETIME DEFAULT '0000-00-00 00:00:00',

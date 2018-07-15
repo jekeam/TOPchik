@@ -1,2 +1,56 @@
-[15-Jul-2018 13:22:27 UTC] База данных WordPress возвратила ошибку Duplicate entry '0' for key 'key_id' в ответ на запрос INSERT INTO `wp_tch_cron` (`date_create`, `date_start`, `status`, `is_new_keys`, `done`, `msg`) VALUES ('2018-07-15 16:22:27', '2018-07-15 16:22:27', 'задание назначено', '0', '0', 'Проверка начнется в указанное время'), выполненный add_cron, insert_sheduler_cron
-[15-Jul-2018 13:28:04 UTC] База данных WordPress возвратила ошибку Duplicate entry '0' for key 'key_id' в ответ на запрос INSERT INTO `wp_tch_cron` (`date_create`, `date_start`, `status`, `is_new_keys`, `done`, `msg`) VALUES ('2018-07-15 16:28:04', '2018-07-15 16:28:04', 'задание назначено', '1', '0', 'Проверка начнется в указанное время'), выполненный add_cron, insert_sheduler_cron
+[15-Jul-2018 13:29:58 UTC] База данных WordPress возвратила ошибку Duplicate entry '0' for key 'key_id' в ответ на запрос INSERT INTO `wp_tch_cron` (`date_create`, `date_start`, `status`, `is_new_keys`, `done`, `msg`) VALUES ('2018-07-15 16:29:58', '2018-07-15 16:29:58', 'задание назначено', '0', '0', 'Проверка начнется в указанное время'), выполненный add_cron, insert_sheduler_cron
+[15-Jul-2018 13:32:35 UTC] WordPress database error Table 'mysql.wp_tch_cron' doesn't exist for query  SELECT 
+            key_id,
+            date_create,
+            date_start,
+            status,
+            is_new_keys,
+            done,
+            msg
+          FROM wp_tch_cron           
+          ORDER BY key_id DESC
+          LIMIT 1 made by require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), require_once('E:\OSPanel\domains\wp\wp-load.php'), require_once('E:\OSPanel\domains\wp\wp-config.php'), require_once('E:\OSPanel\domains\wp\wp-settings.php'), include_once('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php'), check_new_shed_func, get_status_cron
+[15-Jul-2018 13:32:35 UTC] WordPress database error Table 'mysql.wp_tch_cron' doesn't exist for query  SELECT 
+            key_id,
+            date_create,
+            date_start,
+            status,
+            is_new_keys,
+            done,
+            msg
+          FROM wp_tch_cron           
+          ORDER BY key_id DESC
+          LIMIT 1 made by require_once('E:\OSPanel\domains\wp\wp-load.php'), require_once('E:\OSPanel\domains\wp\wp-config.php'), require_once('E:\OSPanel\domains\wp\wp-settings.php'), include_once('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php'), check_new_shed_func, get_status_cron
+[15-Jul-2018 13:32:35 UTC] База данных WordPress возвратила ошибку Table 'mysql.wp_tch_cron' doesn't exist в ответ на запрос  SELECT 
+            key_id,
+            date_create,
+            date_start,
+            status,
+            is_new_keys,
+            done,
+            msg
+          FROM wp_tch_cron           
+          ORDER BY key_id DESC
+          LIMIT 1, выполненный do_action_ref_array, WP_Hook->do_action, WP_Hook->apply_filters, check_new_shed_func, get_status_cron
+[15-Jul-2018 13:32:38 UTC] WordPress database error Table 'mysql.wp_tch_cron' doesn't exist for query  SELECT 
+            key_id,
+            date_create,
+            date_start,
+            status,
+            is_new_keys,
+            done,
+            msg
+          FROM wp_tch_cron           
+          ORDER BY key_id DESC
+          LIMIT 1 made by require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), require_once('E:\OSPanel\domains\wp\wp-load.php'), require_once('E:\OSPanel\domains\wp\wp-config.php'), require_once('E:\OSPanel\domains\wp\wp-settings.php'), include_once('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php'), check_new_shed_func, get_status_cron
+[15-Jul-2018 13:32:41 UTC] База данных WordPress возвратила ошибку Table 'mysql.wp_tch_cron' doesn't exist в ответ на запрос  SELECT 
+            key_id,
+            date_create,
+            date_start,
+            status,
+            is_new_keys,
+            done,
+            msg
+          FROM wp_tch_cron           
+          ORDER BY key_id DESC
+          LIMIT 1, выполненный activate_plugin, include_once('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php'), check_new_shed_func, get_status_cron

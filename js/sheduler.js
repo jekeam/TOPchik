@@ -10,8 +10,25 @@ jQuery(document).ready(function($) {
             }),
             beforeSend: function() {},
             success: function(data) {
-                console.log(data);
-                if (data == 'выключено' || data == 'завершено') {
+                var result = JSON.parse(data);
+
+                var text_desc = 'Задание №' + result.key_id + '<br>' +
+                    'Создано: ' + result.date_create + '<br>' +
+                    'Старт: ' + result.date_start + '<br>' +
+                    'Окончание: ' + result.date_end + '<br>' +
+                    'Статус: ' + result.state + '<br>' +
+                    '% выполнения: ' + result.done + '<br>' +
+                    'Описание: ' + result.msg;
+
+                var desc = document.getElementById("divProgress").innerHTML;
+                if (desc != text_desc) {
+                    document.getElementById("divProgress").innerHTML = text_desc;
+                }
+
+                document.getElementById('progressor').style.width = result.done + "%";
+
+
+                if (result.status == 'выключено' || result.status == 'завершено') {
                     document.getElementById('add_task_on_demand').disabled = '';
                 } else {
                     document.getElementById('add_task_on_demand').disabled = 'true';
@@ -19,7 +36,7 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    getStatusCron();
+    setInterval(getStatusCron, 1000);
 
 
     $('input#add_task_on_demand').click(function() {

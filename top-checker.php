@@ -775,10 +775,6 @@ function check_new_shed_func() {
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));      
    
-    /*print_r('today='.$today->format('Y-m-d H:i:s'));
-    print_r('<br>date_start='.$row_date->format('Y-m-d H:i:s'));    
-    print_r('<br>if='.(strval($row_date->diff($today)->format('%d'))*24*60).' '.$row_date->diff($today)->format('%i'));*/    
-
     if(
         $date_start != '1970-01-01 00:00:00' 
         &&

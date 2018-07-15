@@ -37,8 +37,8 @@ function get_status_cron(){
     $row['done']         = isset($row['done'])        ? $row['done']        : '';
     $row['msg']          = isset($row['msg'])         ? $row['msg']         : 'Заданий не назначено';
 
-    if (isset($_POST['send_status_cron'])) {
-        echo $row['status'];
+    if (isset($_POST['send_status_cron'])) {        
+        echo json_encode($row);    
         exit();
     }
     return $row;

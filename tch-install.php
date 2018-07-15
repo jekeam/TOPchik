@@ -47,13 +47,15 @@ function tch_install ()
    if($wpdb->get_var("show tables like '$table_name3'") != $table_name3)
    {
         $sql3 = "CREATE TABLE " . $table_name3 . " 
-        (
-            date_create DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
-            data_start DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
-            status varchar(25) NOT NULL,
-            is_new_keys bigint(1) DEFAULT 0 NOT NULL,
+        (            
+            key_id bigint(20) NOT NULL,
+            date_create DATETIME DEFAULT '0000-00-00 00:00:00',
+            data_start DATETIME DEFAULT '0000-00-00 00:00:00',
+            status varchar(25),
+            is_new_keys bigint(1) DEFAULT 0,
             done bigint(3),
-            msg varchar(225)
+            msg varchar(225),
+            UNIQUE KEY (key_id)
         );";
         
         dbDelta($sql3);  

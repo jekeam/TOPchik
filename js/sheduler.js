@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
             }),
             beforeSend: function() {},
             success: function(data) {
+                console.log(data);
                 if (data == 'выключено') {
                     document.getElementById('add_task_on_demand').disabled = '';
                 } else {
@@ -23,7 +24,7 @@ jQuery(document).ready(function($) {
 
     $('input#add_task_on_demand').click(function() {
 
-        //document.getElementById('add_task_on_demand').disabled = 'disable';
+        document.getElementById('add_task_on_demand').disabled = 'disable';
 
         function get_positin() {
 
@@ -42,12 +43,12 @@ jQuery(document).ready(function($) {
                 xhr.onreadystatechange = function() {
                     try {
                         if (xhr.readyState == 4) {} else if (xhr.readyState > 2) {
-                            //var new_response = xhr.responseText.substring(xhr.previous_text.length);
-                            //console.log(new_response);
-                            //var result = JSON.parse(new_response);
+                            var new_response = xhr.responseText.substring(xhr.previous_text.length);
+                            console.log(new_response);
+                            var result = JSON.parse(new_response);
 
-                            //document.getElementById("divProgress").innerHTML += result.message + '';
-                            //document.getElementById('progressor').style.width = result.progress + "%";
+                            document.getElementById("divProgress").innerHTML += result.message + '';
+                            document.getElementById('progressor').style.width = result.progress + "%";
 
                             xhr.previous_text = xhr.responseText;
                             if (result.progress == '100') {

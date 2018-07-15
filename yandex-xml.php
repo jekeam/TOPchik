@@ -106,7 +106,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
 
 
 //Не выводит а возвращает, копия search - только без echo (заменено на return)
-function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p){
+function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p, $key_id){
     
     $v_current .= date('H:i:s', time() - date('Z'))."\n";
     $v_current .= '$user:'.$v_user."\n";
@@ -131,7 +131,9 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         if ($debag = 'on'){
             file_put_contents($v_file, $v_current);
         }
-        //делаем запись ошибки в БД        
+        //делаем запись ошибки в БД
+        $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
+        mod_sheduler_cron('', $today->format('Y-m-d H:i:s'), 'возникли ошибки', '', $done = $p, $msg = $error);
         exit();        
     } 
     //Если все ОК работаем дальше
@@ -160,12 +162,14 @@ if ($debag = 'on'){
 
 $prowp_options = get_option( 'tch_options_api' );
 
-$user = $prowp_options['option_user'];
-$p_key = $prowp_options['option_key'];
-$my_domain = strtolower($prowp_options['server_name']);
-$keyword = isset($_POST['keyword']) ? $_POST['keyword'] : null;
-$hour = isset($_POST['hour']) ? $_POST['hour'] : null;
-$is_new_keys = isset($_GET['is_new_keys']) ? $_GET['is_new_keys'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
+$user       = $prowp_options['option_user'];
+$p_key      = $prowp_options['option_key'];
+$my_domain  = strtolower($prowp_options['server_name']);
+$keyword    = isset($_POST['keyword'])    ? $_POST['keyword'] : null;
+$hour       = isset($_POST['hour'])       ? $_POST['hour'] : null;
+
+$is_new_keys= isset($_GET['is_new_keys']) ? $_GET['is_new_keys'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
+$key_id     = isset($_GET['key_id'])      ? $_GET['key_id'] : 0;
 
 if (isset($keyword)){
     search($keyword, $user, $p_key, $my_domain, $file ,$current);
@@ -188,23 +192,22 @@ if (isset($keyword)){
                 $id_keyword = $value->key_id;
                 //get new place in SERP
                 sleep(1);
-                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current, $p);
+                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current, $p, $key_id);
                 if ($new_place > 0) {
                     set_db_tch_serp($id_keyword, $new_place);
                 }
                 
                 $p = $p + $step;//Прибавим процент
                 $p = round($p, 2);
-                $response = array(  'message' => date("h:i:s", time()) .' выполено '. $p . '% ('.$с.'/'.$i.')<br>', 
-                                    'progress' => $p);
-                echo json_encode($response);
+                //делаем запись состояния в БД
+                $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
+                mod_sheduler_cron($key_id, $today->format('Y-m-d H:i:s'), 'выполняется', '', $done = $p, $msg = $p.', снято позиций '.$c.' из '.$i);
                 $с++;
             }
         }
     
     sleep(1);
-    $response = array(  'message' => 'Завершено', 
-                        'progress' => 100);
-        
-    echo json_encode($response);
+    //делаем запись состояния в БД
+    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
+    mod_sheduler_cron($key_id, '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, 'снято позиций '.$c.' из '.$i);
 }

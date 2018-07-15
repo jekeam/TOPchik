@@ -770,35 +770,38 @@ function check_new_shed_func() {
     $get_status_row = get_status_cron();
 
     $date_start = $get_status_row["data_start"];
+    $status = $get_status_row["status"];
 
-    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
+    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));      
    
     /*print_r('today='.$today->format('Y-m-d H:i:s'));
     print_r('<br>date_start='.$row_date->format('Y-m-d H:i:s'));    
-    print_r('<br>if='.(strval($row_date->diff($today)->format('%d'))*24*60).' '.$row_date->diff($today)->format('%i'));*/
+    print_r('<br>if='.(strval($row_date->diff($today)->format('%d'))*24*60).' '.$row_date->diff($today)->format('%i'));*/    
 
-    //print_r('='.($today>$row_date));
-
-    if($date_start!='1970-01-01 00:00:00' 
-    && $date_start!='0000-00-00 00:00:00' 
-    && ($today>$row_date)){
+    if(
+        $date_start != '1970-01-01 00:00:00' 
+        &&
+        $date_start != '0000-00-00 00:00:00' 
+        &&
+        ($today>$row_date)
+        && $status == 'задание назначено'
+    ){
         $is_new_keys = $get_status_row['is_new_keys'];
-        if(!wp_next_scheduled('tch_add_shed_hook',  array($is_new_keys))){
-            wp_schedule_single_event( time(), 'tch_add_shed_hook',  array($is_new_keys));
+        if(!wp_next_scheduled('tch_add_shed_hook',  array($is_new_keys, $get_status_row["key_id"]))){
+            wp_schedule_single_event( time(), 'tch_add_shed_hook',   array($is_new_keys, $get_status_row["key_id"]));
         }
     }
 }    
-
 check_new_shed_func();
 
 //Зацепка для запуска еденичной проверки позиций
-add_action( 'tch_add_shed_hook', 'add_sheduler_cron_once');
+add_action( 'tch_add_shed_hook', 'add_sheduler_cron_once', 10, 2);
  
-function add_sheduler_cron_once($is_new_keys) {
+function add_sheduler_cron_once($is_new_keys, $key_id) {
     include_once( dirname( __FILE__ ) . '/tch-db.php');
-        
     //hard-work    
     $_GET['is_new_keys'] = $is_new_keys;
+    $_GET['key_id']      = $key_id;
     include dirname( __FILE__ ) . '/yandex-xml.php';    
 }

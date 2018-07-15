@@ -774,11 +774,15 @@ function check_new_shed_func() {
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));      
    
-    print_r('today='.$today->format('Y-m-d H:i:s');
-    print_r('date_start='.$date_start->format('Y-m-d H:i:s');
-    print_r('if='.$row_date->diff($today)->format('%a'));
-    
-    if($date_start!='0000-00-00 00:00:00' && $row_date->diff($today)->format('%a') > 1){        
+    /*print_r('today='.$today->format('Y-m-d H:i:s'));
+    print_r('<br>date_start='.$row_date->format('Y-m-d H:i:s'));    
+    print_r('<br>if='.(strval($row_date->diff($today)->format('%d'))*24*60).' '.$row_date->diff($today)->format('%i'));*/
+
+    //print_r('='.($today>$row_date));
+
+    if($date_start!='1970-01-01 00:00:00' 
+    && $date_start!='0000-00-00 00:00:00' 
+    && ($today>$row_date)){
         $is_new_keys = $get_status_row['is_new_keys'];
         if(!wp_next_scheduled('tch_add_shed_hook',  array($is_new_keys))){
             wp_schedule_single_event( time(), 'tch_add_shed_hook',  array($is_new_keys));

@@ -50,9 +50,21 @@ function drawChart2() {
     var data = new google.visualization.DataTable(jsonData);
     // Set chart options
     var options = {
-        'title': 'Динамика изменения ключевых показателей',
+        'title': 'Позиций улучшилось/ухудшилось',
         'height': 350,
         'legend': { 'position': 'left' },
+        'trendlines': {
+            0: {
+                'color': 'green',
+                'lineWidth': 10,
+                'opacity': 0.2,
+                'type': 'exponential',
+                //'type': 'linear',
+                //'degree': 3,
+                //'pointsVisible': 'true',
+                'title': 'Общий тренд'
+            }
+        }
     };
     var chart = new google.charts.Line(document.getElementById('chart_position_div'));
 

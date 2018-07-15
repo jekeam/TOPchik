@@ -17,15 +17,15 @@ function drawChart() {
         dataType: "json",
         async: false
     }).responseText;
-    
+
     // Create the data table.
     var data = new google.visualization.DataTable(jsonData);
 
     // Set chart options
     var options = {
-        'title': 'Средняя позоциия ключевых всех фраз',
-        'legend': {'position':'none'},
-        };
+        'title': 'Средняя позициия всех ключевых фраз',
+        'legend': { 'position': 'none' },
+    };
 
     var chart = new google.charts.Line(document.getElementById('chart_avg_div'));
     chart.draw(data, google.charts.Line.convertOptions(options));

@@ -5,3 +5,13 @@
 [13-Jul-2018 10:38:10 UTC] PHP   3. require_once() /home/ubuntu/workspace/wp-load.php:37
 [13-Jul-2018 10:38:10 UTC] PHP   4. require_once() /home/ubuntu/workspace/wp-config.php:96
 [13-Jul-2018 10:38:10 UTC] PHP   5. include_once() /home/ubuntu/workspace/wp-settings.php:305
+[15-Jul-2018 02:45:38 UTC] База данных WordPress возвратила ошибку Server shutdown in progress в ответ на запрос INSERT IGNORE INTO `wp_options` ( `option_name`, `option_value`, `autoload` ) VALUES ('auto_updater.lock', '1531622738', 'no') /* LOCK */, выполненный do_action_ref_array, WP_Hook->do_action, WP_Hook->apply_filters, wp_version_check, do_action('wp_maybe_auto_update'), WP_Hook->do_action, WP_Hook->apply_filters, wp_maybe_auto_update, WP_Automatic_Updater->run, WP_Upgrader::create_lock
+[15-Jul-2018 02:45:38 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in E:\OSPanel\domains\wp\wp-includes\wp-db.php on line 1924
+[15-Jul-2018 02:45:38 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in E:\OSPanel\domains\wp\wp-includes\wp-db.php on line 1924
+[15-Jul-2018 02:45:38 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'acm_server_settings' LIMIT 1 made by require('E:\OSPanel\domains\wp\wp-load.php'), require_once('E:\OSPanel\domains\wp\wp-config.php'), require_once('E:\OSPanel\domains\wp\wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, underDEV\AdvancedCronManager\Server\Processor->block_cron_executions, underDEV\AdvancedCronManager\Server\Settings->get_settings, get_option
+[15-Jul-2018 02:45:38 UTC] PHP Warning:  mysqli_query(): MySQL server has gone away in E:\OSPanel\domains\wp\wp-includes\wp-db.php on line 1924
+[15-Jul-2018 02:45:38 UTC] PHP Warning:  mysqli_query(): Error reading result set's header in E:\OSPanel\domains\wp\wp-includes\wp-db.php on line 1924
+[15-Jul-2018 02:46:41 UTC] База данных WordPress возвратила ошибку Table 'mysql.wp_' doesn't exist в ответ на запрос SELECT status
+        FROM wp_, выполненный require_once('E:\OSPanel\domains\wp\wp-admin\admin.php'), do_action('settings_page_tch_settings_menu'), WP_Hook->do_action, WP_Hook->apply_filters, tch_settings_page, get_status_cron
+[15-Jul-2018 02:46:42 UTC] База данных WordPress возвратила ошибку Table 'mysql.wp_' doesn't exist в ответ на запрос SELECT status
+        FROM wp_, выполненный get_status_cron

@@ -279,6 +279,8 @@ if (!isset($_GET['tch_page'])) {
 </div>
 <!--Динамика позиций-->
 <div id="chart_dynamic_div"></div>
+<!--Позиций улучшилось/ухудшилось-->
+<div id="chart_position_div"></div>
 <!--Общий график позиций-->
 <div id="chart_avg_div"></div>
 <?php

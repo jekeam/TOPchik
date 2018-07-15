@@ -45,15 +45,13 @@ if (!empty($_REQUEST['post_id'])){
             
         echo $data;
     }
-}elseif(!empty($_REQUEST['graphic'])){//graphic=dynamics (default)
+}elseif(!empty($_REQUEST['graphic']) && $_REQUEST['graphic']=='dynamics'){
     //Общая динамика изменения параметров
     $data = '{"cols": [{"label":"","type":"date"}
                       ,{"label":"Видимость сайта","type":"number"}
                       ,{"label":"Запросов в топ 3","type":"number"}
                       ,{"label":"Запросов в топ 10","type":"number"}
-                      ,{"label":"Запросов в топ 30","type":"number"}
-                      ,{"label":"Позиций улучшилось","type":"number"}
-                      ,{"label":"Позиций ухудшилось","type":"number"}';
+                      ,{"label":"Запросов в топ 30","type":"number"}';
     
     $data .= '],
     "rows": [';
@@ -77,6 +75,38 @@ if (!empty($_REQUEST['post_id'])){
         $data .= ',{"v":"'.$result['0']->{'top3'}.'"}';
         $data .= ',{"v":"'.$result['0']->{'top10'}.'"}';
         $data .= ',{"v":"'.$result['0']->{'top30'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'pos_improved'}.'"}';
+        $data .= ',{"v":"'.$result['0']->{'pos_deteriorated'}.'"}';
+        $data .= ']},';
+        
+    }
+    $data .= ']}';
+
+    echo $data;
+}elseif(!empty($_REQUEST['graphic']) && $_REQUEST['graphic']=='dynamics_position'){
+    //Общая динамика изменения параметров
+    $data = '{"cols": [{"label":"","type":"date"}                      
+                      ,{"label":"Позиций улучшилось","type":"number"}
+                      ,{"label":"Позиций ухудшилось","type":"number"}';
+    
+    $data .= '],
+    "rows": [';
+        
+    //Даты
+    $arr_dates = get_tch_dates();
+    foreach ($arr_dates as $key => $value) {
+        $cur_dat = $value->dat;
+        $date = new DateTime($cur_dat);
+        $date_query = $date->Format('Y') .'-'.  $date->Format('m') .'-'. $date->Format('d') ;
+    
+        $data .= '{"c":[{"v":"Date('. $date->Format('Y') .','. ((int) date_format($date, 'm') - 1) .','. $date->Format('d')  .')"}';
+
+        ob_start(); 
+        include_once('tch-db-progress-bar.php'); 
+        $my_json = ob_get_clean();
+        
+        $result = json_decode($my_json);
+                
         $data .= ',{"v":"'.$result['0']->{'pos_improved'}.'"}';
         $data .= ',{"v":"'.$result['0']->{'pos_deteriorated'}.'"}';
         $data .= ']},';

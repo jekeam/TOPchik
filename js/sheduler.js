@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
             beforeSend: function() {},
             success: function(data) {
                 console.log(data);
-                if (data == 'выключено') {
+                if (data == 'выключено' || data == 'завершено') {
                     document.getElementById('add_task_on_demand').disabled = '';
                 } else {
                     document.getElementById('add_task_on_demand').disabled = 'true';

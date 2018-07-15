@@ -769,7 +769,7 @@ add_action( 'check_new_shed_hook', 'check_new_shed_func');
 function check_new_shed_func() {
     $get_status_row = get_status_cron();
 
-    $date_start = $get_status_row["data_start"];
+    $date_start = $get_status_row["date_start"];
     $status = $get_status_row["status"];
 
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
@@ -786,10 +786,9 @@ function check_new_shed_func() {
         &&
         ($today>$row_date)
         && $status == 'задание назначено'
-    ){
-        $is_new_keys = $get_status_row['is_new_keys'];
-        if(!wp_next_scheduled('tch_add_shed_hook',  array($is_new_keys, $get_status_row["key_id"]))){
-            wp_schedule_single_event( time(), 'tch_add_shed_hook',   array($is_new_keys, $get_status_row["key_id"]));
+    ){        
+        if(!wp_next_scheduled('tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]))){
+            wp_schedule_single_event( time(), 'tch_add_shed_hook', array($get_status_row['is_new_keys'], $get_status_row["key_id"]));
         }
     }
 }    

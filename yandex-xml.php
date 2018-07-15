@@ -133,7 +133,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         }
         //делаем запись ошибки в БД
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
-        mod_sheduler_cron('', $today->format('Y-m-d H:i:s'), 'возникли ошибки', '', $done = $p, $msg = $error);
+        update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'ошибка', '', $p, $error);
         exit();        
     } 
     //Если все ОК работаем дальше
@@ -200,14 +200,14 @@ if (isset($keyword)){
                 $p = $p + $step;//Прибавим процент
                 $p = round($p, 2);
                 //делаем запись состояния в БД
-                $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
-                mod_sheduler_cron($key_id, $today->format('Y-m-d H:i:s'), 'выполняется', '', $done = $p, $msg = $p.', снято позиций '.$c.' из '.$i);
+                $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));                
+                update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$с.' из '.$i);
                 $с++;
             }
         }
     
     sleep(1);
     //делаем запись состояния в БД
-    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
-    mod_sheduler_cron($key_id, '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, 'снято позиций '.$c.' из '.$i);
+    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
+    update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, 'успешно');
 }

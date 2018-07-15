@@ -50,7 +50,8 @@ function tch_install ()
         (            
             key_id bigint(20) NOT NULL,
             date_create DATETIME DEFAULT '0000-00-00 00:00:00',
-            data_start DATETIME DEFAULT '0000-00-00 00:00:00',
+            date_start DATETIME DEFAULT '0000-00-00 00:00:00',
+            date_end DATETIME DEFAULT '0000-00-00 00:00:00',
             status varchar(25),
             is_new_keys bigint(1) DEFAULT 0,
             done bigint(3),

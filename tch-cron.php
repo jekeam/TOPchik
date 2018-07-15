@@ -15,13 +15,13 @@ try{
     require_once '../../../wp-load.php';
     
     $is_new_keys = isset($_GET['is_new_keys']) ? $_GET['is_new_keys'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
-    $key_id = isset($_GET['key_id']) ? $_GET['key_id'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
+    $key_id = isset($_GET['key_id']) ? $_GET['key_id'] : '';//по умолчанию исключаем те по которым сегодня проверяли
     
     //Устанавливаем задание для крон
     function add_cron($is_new_keys, $key_id){
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
         $today_str = $today->format('Y-m-d H:i:s');
-        mod_sheduler_cron($key_id, $today_str, $today_str, 'задание назначено', $is_new_keys, $done = '0', $msg = 'Проверка начнется в указанное время');
+        insert_sheduler_cron($today_str, $today_str, 'задание назначено', $is_new_keys, '0', 'Проверка начнется в указанное время');
     }
     add_cron($is_new_keys, $key_id);
 }

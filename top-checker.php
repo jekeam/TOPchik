@@ -22,7 +22,7 @@ global $date_query;
 
 $tch_tbl_keywords = "tch_keywords";
 $tch_tbl_serp = "tch_serp";
-$tch_cron = "tch_cron";
+$tch_tbl_cron = "tch_cron";
 $date_query = date("Y-m-d");
 
 function getCurrentPath(){ 
@@ -306,9 +306,9 @@ if (!isset($_GET['tch_page'])) {
     $prowp_options = get_option( 'tch_options_sheduler' );
     //Установка задания в крон
     
-    $stat = get_status_cron();
+    $get_status_row = get_status_cron();
     
-    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$stat.")</h1>
+    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$get_status_row['status'].")</h1>
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
@@ -740,6 +740,53 @@ function tch_store_save_meta_box( $post_id )
     include 'tch_store_save_meta_box.php';
 }
 //TODO сделать статусы для КС - ВКЛ/ВЫКЛ
+
+
+
+//Добавляем задание в крон, которое будет мониторить состояние заданий, и запускать проверку, раз в 15 сек.
+
+//заведем свой интервал
+add_filter( 'cron_schedules', 'tch_shed_interval'); 
+ 
+function tch_shed_interval( $raspisanie ) {
+	// $raspisanie - это массив, состоящий из всех зарегистрированных интервалов
+	// наша задача - добавить в него свой собственный интервал, к примеру пусть будет 3 минуты
+	$raspisanie['minutes'] = array(
+		'interval' => 15, // в одной минуте 60 секунд, в трёх минутах - 180
+		'display' => 'Каждые 15 сек.' // отображаемое имя
+	);
+	return $raspisanie;
+}
+
+
+//если ещё не запланировано - планируем
+if( !wp_next_scheduled('check_new_shed_hook') ){
+    wp_schedule_event( time()+60,'minutes', 'check_new_shed_hook');
+}
+// вот он хук и мы вешаем на него произвольную функцию, цифра 3 - количество передаваемых параметров
+add_action( 'check_new_shed_hook', 'check_new_shed_func');
+// конечно можно повесить и несколько функций на один хук!
+function check_new_shed_func() {
+    $get_status_row = get_status_cron();
+
+    $date_start = $get_status_row["data_start"];
+
+    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
+    $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));      
+   
+    print_r('today='.$today->format('Y-m-d H:i:s');
+    print_r('date_start='.$date_start->format('Y-m-d H:i:s');
+    print_r('if='.$row_date->diff($today)->format('%a'));
+    
+    if($date_start!='0000-00-00 00:00:00' && $row_date->diff($today)->format('%a') > 1){        
+        $is_new_keys = $get_status_row['is_new_keys'];
+        if(!wp_next_scheduled('tch_add_shed_hook',  array($is_new_keys))){
+            wp_schedule_single_event( time(), 'tch_add_shed_hook',  array($is_new_keys));
+        }
+    }
+}    
+
+check_new_shed_func();
 
 //Зацепка для запуска еденичной проверки позиций
 add_action( 'tch_add_shed_hook', 'add_sheduler_cron_once');

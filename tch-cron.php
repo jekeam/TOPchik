@@ -2,7 +2,6 @@
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
-//set_time_limit(0); 
 ob_implicit_flush(true);
 ob_end_flush();
 
@@ -17,7 +16,7 @@ try{
     
     //Устанавливаем задание для крон
     function add_cron($is_new_keys){
-        wp_schedule_single_event( time() + 1, 'tch_add_shed_hook',  array($is_new_keys));        
+        
     }
     add_cron($is_new_keys);        
 }

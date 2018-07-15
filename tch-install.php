@@ -8,11 +8,11 @@ function tch_install ()
    
    global $tch_tbl_keywords;
    global $tch_tbl_serp;
-   global $tch_cron;
+   global $tch_tbl_cron;
 
    $table_name1 = $wpdb->prefix . $tch_tbl_keywords;
    $table_name2 = $wpdb->prefix . $tch_tbl_serp;
-   $table_name3 = $wpdb->prefix . $tch_cron;
+   $table_name3 = $wpdb->prefix . $tch_tbl_cron;   
    
    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
    
@@ -48,9 +48,10 @@ function tch_install ()
    {
         $sql3 = "CREATE TABLE " . $table_name3 . " 
         (
-            date_create DATE DEFAULT '00-00-0000' NOT NULL,
-            data_start DATE DEFAULT '00-00-0000' NOT NULL,
+            date_create DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
+            data_start DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL,
             status varchar(25) NOT NULL,
+            is_new_keys bigint(1) DEFAULT 0 NOT NULL,
             done bigint(3),
             msg varchar(225)
         );";

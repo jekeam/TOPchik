@@ -13,19 +13,28 @@ $table_name_c = $wpdb->get_blog_prefix() . $tch_tbl_cron;
 function get_status_cron(){ 
     global $wpdb;
     global $table_name_c;
-    $status = $wpdb->get_var(
-        "SELECT status
-        FROM $table_name_c"        
-    ); 
-    $res = isset($status)? $status : 'выключено';
+    $row = $wpdb->get_row(
+        "SELECT *
+         FROM $table_name_c"
+        ,ARRAY_A
+    );
+    
+
+    $row['date_create']  = isset($row['date_create']) ? $row['date_create'] : '0000-00-00 00:00:00';
+    $row['data_start']   = isset($row['data_start'])  ? $row['data_start']  : '0000-00-00 00:00:00';    
+    $row['status']       = isset($row['status'])      ? $row['status']      : 'выключено';
+    $row['is_new_keys']  = isset($row['is_new_keys']) ? $row['is_new_keys'] : '0';
+    $row['done']         = isset($row['done'])        ? $row['done']        : '';
+    $row['msg']          = isset($row['msg'])         ? $row['msg']         : 'Заданий не назначено';
+
     if (isset($_POST['send_status_cron'])) {
-        echo $res;
+        echo $row['status'];
         exit();
     }
-    return $res;
+    return $row;
 }
 
-
+//Это для вызова из JS
 if(isset($_POST['send_status_cron'])){
     get_status_cron();
 }

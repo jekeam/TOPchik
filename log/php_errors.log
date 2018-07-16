@@ -1,15 +1,82 @@
-[16-Jul-2018 16:25:06 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:07 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:08 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:09 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:10 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:11 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:12 UTC] PHP Parse error:  syntax error, unexpected ')' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 814
-[16-Jul-2018 16:25:27 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:28 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:29 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:30 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:31 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:32 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:33 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
-[16-Jul-2018 16:25:34 UTC] PHP Parse error:  syntax error, unexpected end of file in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\top-checker.php on line 842
+<pre>2018-07-12</pre>[16-Jul-2018 17:13:19 UTC] PHP Parse error:  syntax error, unexpected ',' in E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php on line 128
+<pre>2018-07-12</pre><pre>Array
+(
+    [0] => stdClass Object
+        (
+            [top3] => 104
+            [top10] => 239
+            [top30] => 417
+            [visibility_serp] => 169.4
+            [pos_improved] => 0
+            [pos_deteriorated] => 0
+            [pos_available] => 0
+            [cnt_cur_pos] => 557
+            [count_all] => 557
+        )
+
+)
+</pre><pre>2018-07-13</pre><pre>Array
+(
+    [0] => stdClass Object
+        (
+            [top3] => 95
+            [top10] => 237
+            [top30] => 413
+            [visibility_serp] => 165.2
+            [pos_improved] => 1639
+            [pos_deteriorated] => 2611
+            [pos_available] => 15302
+            [cnt_cur_pos] => 557
+            [count_all] => 557
+        )
+
+)
+</pre><pre>2018-07-14</pre><pre>Array
+(
+    [0] => stdClass Object
+        (
+            [top3] => 101
+            [top10] => 229
+            [top30] => 409
+            [visibility_serp] => 163.6
+            [pos_improved] => 1567
+            [pos_deteriorated] => 1613
+            [pos_available] => 16274
+            [cnt_cur_pos] => 557
+            [count_all] => 557
+        )
+
+)
+</pre><pre>2018-07-15</pre><pre>Array
+(
+    [0] => stdClass Object
+        (
+            [top3] => 97
+            [top10] => 226
+            [top30] => 411
+            [visibility_serp] => 161.9
+            [pos_improved] => 1895
+            [pos_deteriorated] => 1040
+            [pos_available] => 16320
+            [cnt_cur_pos] => 557
+            [count_all] => 557
+        )
+
+)
+</pre><pre>2018-07-16</pre><pre>Array
+(
+    [0] => stdClass Object
+        (
+            [top3] => 98
+            [top10] => 228
+            [top30] => 415
+            [visibility_serp] => 162.7
+            [pos_improved] => 729
+            [pos_deteriorated] => 615
+            [pos_available] => 15465
+            [cnt_cur_pos] => 557
+            [count_all] => 557
+        )
+
+)
+</pre>

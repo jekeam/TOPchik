@@ -21,9 +21,11 @@ $val = $wpdb->get_results($wpdb->prepare(
             from $table_name_s
             where place <= 3
              and place != 0
+             and data <= %s
              and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
+                where data <= %s
                 group by key_id
             )
         ) as top3,
@@ -33,9 +35,11 @@ $val = $wpdb->get_results($wpdb->prepare(
             from $table_name_s
             where place <= 10
             and place != 0
+            and data <= %s
             and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
+                where data <= %s
                 group by key_id
             )
         ) as top10,
@@ -45,9 +49,11 @@ $val = $wpdb->get_results($wpdb->prepare(
             from $table_name_s
             where place <= 30
             and place != 0
+            and data <= %s
             and (key_id, data) in (
                 select key_id, max(data) date
                 from $table_name_s
+                where data <= %s
                 group by key_id
             )
         ) as top30,
@@ -63,11 +69,14 @@ $val = $wpdb->get_results($wpdb->prepare(
                     end)
             from $table_name_s
             where place != 0
-            and (key_id, data) in (
-              select key_id, max(data) date
-              from $table_name_s
-              group by key_id
-            )),1), 0) as visibility_serp
+              and data <= %s
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from $table_name_s
+                where data <= %s
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
                     
          ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
            FROM $table_name_s a
@@ -115,5 +124,7 @@ $val = $wpdb->get_results($wpdb->prepare(
     , $date_query, $date_query, $date_query, $date_query, $date_query
     , $date_query, $date_query, $date_query, $date_query, $date_query 
     , $date_query, $date_query, $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query, $date_query
+    , $date_query, $date_query, $date_query, $date_query
     ));
 echo json_encode($val);

@@ -10,6 +10,10 @@ Author URI: https://vk.com/sun4eese
 
 //define('TOP_CHECKER_VERSION', '0.1');
 //Создадим таблицу для ключевых слов и таблицу для свбора статистика по КС
+
+//Запись в логи для дебага: 
+//file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $arr_dates, true ) . '</pre>', FILE_APPEND);
+
 //версии таблиц
 $tch_keywords_db_ver = "0.1";
 $tch_serp_db_ver = "0.1";

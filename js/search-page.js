@@ -1,23 +1,31 @@
-function searchPage(val){	
+function searchPage(val) {
     val = val.toLowerCase();
-    
-    if (val.length > 0){
+
+    if (val.length > 0) {
         var els = document.getElementsByClassName('page-name');
-        for (var x=0; x<els.length; x++){
+        for (var x = 0; x < els.length; x++) {
             subVal = els[x].innerHTML.toLowerCase();
             pageId = els[x].dataset.id;
             isMatch = subVal.indexOf(val);
-            if (isMatch>=0){
-                document.getElementById('collapse-'+pageId).style.display = 'block';
-            }else{
-                document.getElementById('collapse-'+pageId).style.display = 'none';
+            if (isMatch >= 0) {
+                document.getElementById('collapse-' + pageId).style.display = 'block';
+            } else {
+                document.getElementById('collapse-' + pageId).style.display = 'none';
             }
-        }        
-    }else{
+        }
+    } else {
         var els = document.getElementsByClassName('page-name');
-        for (var x=0; x<els.length; x++){            
+        for (var x = 0; x < els.length; x++) {
             pageId = els[x].dataset.id;
-            document.getElementById('collapse-'+pageId).style.display = 'block';
+            document.getElementById('collapse-' + pageId).style.display = 'block';
         }
     }
 }
+
+jQuery("#coll-open").click(function() {
+    jQuery('.page-name').trigger("open");
+}); // Open all sections
+
+jQuery("#coll-close").click(function() {
+    jQuery('.page-name').trigger("close");
+}); // Close all sections

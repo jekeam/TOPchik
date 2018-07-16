@@ -172,6 +172,8 @@ if (!isset($_GET['tch_page'])) {
     */          
     
     echo '<h2>Поиск:</h2><input type="text" style="width: 500px;" id="tc-search" onkeyup="searchPage(this.value)">';
+
+    echo '<br><a href="#" id="coll-open">Показать</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="coll-close">Скрыть</a>';
     
     $get_post_prop = array(
         'numberposts'       => -1,

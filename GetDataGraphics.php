@@ -66,8 +66,7 @@ if (!empty($_REQUEST['post_id'])){
         include('tch-db-progress-bar.php'); 
         $my_json = ob_get_clean();
         
-        $result = json_decode($my_json);
-        file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $result, true ) . '</pre>', FILE_APPEND);        
+        $result = json_decode($my_json);                
         
         $data .= ',{"v":"'.$result['0']->{'visibility_serp'}.'"}';
         $data .= ',{"v":"'.$result['0']->{'top3'}.'"}';

@@ -18,7 +18,7 @@ function drawChart() {
         dataType: "json",
         async: false
     }).responseText;
-    
+
     if (jsonData) {
         // Create the data table.
         var data = new google.visualization.DataTable(jsonData);

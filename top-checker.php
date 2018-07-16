@@ -173,7 +173,7 @@ if (!isset($_GET['tch_page'])) {
     
     echo '<h2>Поиск:</h2><input type="text" style="width: 500px;" id="tc-search" onkeyup="searchPage(this.value)">';
 
-    echo '<br><a href="#" id="coll-open">Показать</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="coll-close">Скрыть</a>';
+    echo '<br><a href="#" id="coll-open">Развернуть всё</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="coll-close">Свернуть всё</a>';
     
     $get_post_prop = array(
         'numberposts'       => -1,
@@ -283,12 +283,20 @@ if (!isset($_GET['tch_page'])) {
         </div>
     </div>
 </div>
+<br>
+<br>
 <!--Динамика позиций-->
 <div id="chart_dynamic_div"></div>
+<br>
+<br>
 <!--Позиций улучшилось/ухудшилось-->
 <div id="chart_position_div"></div>
+<br>
+<br>
 <!--Общий график позиций-->
 <div id="chart_avg_div"></div>
+<br>
+<br>
 <?php
 } elseif ($_GET['tch_page']=='sheduler') {
 ?>

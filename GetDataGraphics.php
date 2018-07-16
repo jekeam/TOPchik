@@ -55,7 +55,7 @@ if (!empty($_REQUEST['post_id'])){
     //Даты
     $arr_dates = get_tch_dates();    
     foreach ($arr_dates as $key => $value) {
-        file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $value->dat, true ) . '</pre>', FILE_APPEND);
+
         $cur_dat = $value->dat;
         $date = new DateTime($cur_dat);
         $date_query = $date->Format('Y') .'-'.  $date->Format('m') .'-'. $date->Format('d') ;

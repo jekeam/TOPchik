@@ -257,21 +257,21 @@ function get_tch_dates($post_id=null)
     
     if(!is_null($post_id)){
          $arr_key = $wpdb->get_results
-                            (
-                                $wpdb->prepare
-                                            ( 
-                                               "SELECT distinct
-                                                    t_pos.data as dat
-                                                FROM $table_keywords t_key
-                                                     JOIN
-                                                     $table_position t_pos 
-                                                     ON t_key.key_id = t_pos.key_id 
-                                                WHERE t_key.post_id = %d
-                                                ORDER BY t_pos.data
-                                                ", 
-                                                $post_id
-                                            )
-                            );
+            (
+                $wpdb->prepare
+                    ( 
+                        "SELECT distinct
+                            t_pos.data as dat
+                        FROM $table_keywords t_key
+                                JOIN
+                                $table_position t_pos 
+                                ON t_key.key_id = t_pos.key_id 
+                        WHERE t_key.post_id = %d
+                        ORDER BY t_pos.data
+                        ", 
+                        $post_id
+                    )
+            );
     }else{
         $arr_key = $wpdb->get_results( 
             "SELECT distinct

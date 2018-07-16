@@ -198,7 +198,9 @@ if (!isset($_GET['tch_page'])) {
     wp_enqueue_script('tch-script-graphic-dynamics', plugins_url('/js/graphic-dynamics.js',__FILE__));
 ?>
 <text x="0" y="15.1875" style="cursor: default; user-select: none; -webkit-font-smoothing: antialiased; font-family: Roboto; font-size: 16px;" fill="#757575" 
-      dx="0px">Ключевые показатели сайта (всего фраз: <span id="cnt_keys">0</span>, проверено за сегодня: <span id="cnt_cur_pos">0</span>)</text>
+      dx="0px">Ключевые показатели сайта:</text>
+<p>Всего фраз: <span id="cnt_keys">0</span>, проверено сегодня: <span id="cnt_cur_pos">0</span> </p>
+<p>Последняя дата обновления: <?php echo end(get_tch_dates())->dat; ?></p>
 <div class="tch-bubble">
     <div title="1, 2 и 3-я позиции — коэффициент 1
 4-я позиция — 0,85

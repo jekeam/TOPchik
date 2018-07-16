@@ -1,0 +1,1177 @@
+[16-Jul-2018 18:10:26 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-16'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-16'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                             and t2.data <= '2018-07-16')/*берем предпосл срез*/
+             and b.data <= '2018-07-16'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-16'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-12'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-12'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-12'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-12'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-12')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                            and t2.data <= '2018-07-12')/*берем предпосл срез*/
+            and a.data <= '2018-07-12'
+            and b.data <= '2018-07-12'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-12')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                            and t2.data <= '2018-07-12')/*берем предпосл срез*/
+            and a.data <= '2018-07-12'
+            and b.data <= '2018-07-12'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                             and t2.data <= '2018-07-12')/*берем предпосл срез*/
+             and b.data <= '2018-07-12'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-12'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-13'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-13'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-13'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-13'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-13')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                            and t2.data <= '2018-07-13')/*берем предпосл срез*/
+            and a.data <= '2018-07-13'
+            and b.data <= '2018-07-13'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-13')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                            and t2.data <= '2018-07-13')/*берем предпосл срез*/
+            and a.data <= '2018-07-13'
+            and b.data <= '2018-07-13'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                             and t2.data <= '2018-07-13')/*берем предпосл срез*/
+             and b.data <= '2018-07-13'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-13'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-14'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-14'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-14'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-14'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-14')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                            and t2.data <= '2018-07-14')/*берем предпосл срез*/
+            and a.data <= '2018-07-14'
+            and b.data <= '2018-07-14'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-14')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                            and t2.data <= '2018-07-14')/*берем предпосл срез*/
+            and a.data <= '2018-07-14'
+            and b.data <= '2018-07-14'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                             and t2.data <= '2018-07-14')/*берем предпосл срез*/
+             and b.data <= '2018-07-14'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-14'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-15'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-15'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-15'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-15'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-15')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                            and t2.data <= '2018-07-15')/*берем предпосл срез*/
+            and a.data <= '2018-07-15'
+            and b.data <= '2018-07-15'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-15')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                            and t2.data <= '2018-07-15')/*берем предпосл срез*/
+            and a.data <= '2018-07-15'
+            and b.data <= '2018-07-15'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                             and t2.data <= '2018-07-15')/*берем предпосл срез*/
+             and b.data <= '2018-07-15'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-15'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-16'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-16'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                             and t2.data <= '2018-07-16')/*берем предпосл срез*/
+             and b.data <= '2018-07-16'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-16'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-12'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-12'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-12'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-12'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-12'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-12')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                            and t2.data <= '2018-07-12')/*берем предпосл срез*/
+            and a.data <= '2018-07-12'
+            and b.data <= '2018-07-12'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-12')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                            and t2.data <= '2018-07-12')/*берем предпосл срез*/
+            and a.data <= '2018-07-12'
+            and b.data <= '2018-07-12'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-12')
+                             and t2.data <= '2018-07-12')/*берем предпосл срез*/
+             and b.data <= '2018-07-12'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-12'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-13'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-13'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-13'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-13'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-13'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-13')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                            and t2.data <= '2018-07-13')/*берем предпосл срез*/
+            and a.data <= '2018-07-13'
+            and b.data <= '2018-07-13'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-13')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                            and t2.data <= '2018-07-13')/*берем предпосл срез*/
+            and a.data <= '2018-07-13'
+            and b.data <= '2018-07-13'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-13')
+                             and t2.data <= '2018-07-13')/*берем предпосл срез*/
+             and b.data <= '2018-07-13'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-13'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-14'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-14'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-14'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-14'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-14'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-14')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                            and t2.data <= '2018-07-14')/*берем предпосл срез*/
+            and a.data <= '2018-07-14'
+            and b.data <= '2018-07-14'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-14')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                            and t2.data <= '2018-07-14')/*берем предпосл срез*/
+            and a.data <= '2018-07-14'
+            and b.data <= '2018-07-14'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-14')
+                             and t2.data <= '2018-07-14')/*берем предпосл срез*/
+             and b.data <= '2018-07-14'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-14'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-15'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-15'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-15'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-15'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-15'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-15')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                            and t2.data <= '2018-07-15')/*берем предпосл срез*/
+            and a.data <= '2018-07-15'
+            and b.data <= '2018-07-15'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-15')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                            and t2.data <= '2018-07-15')/*берем предпосл срез*/
+            and a.data <= '2018-07-15'
+            and b.data <= '2018-07-15'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-15')
+                             and t2.data <= '2018-07-15')/*берем предпосл срез*/
+             and b.data <= '2018-07-15'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-15'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')
+[16-Jul-2018 18:10:27 UTC] База данных WordPress возвратила ошибку Unknown column 'place' in 'where clause' в ответ на запрос SELECT 
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 3
+             and place != 0
+             and data <= '2018-07-16'
+             and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top3,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 10
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top10,
+        
+        (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where place <= 30
+            and place != 0
+            and data <= '2018-07-16'
+            and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                group by key_id
+            )
+        ) as top30,
+        
+        COALESCE(ROUND(
+            (select sum(case 
+                        when place <= 3 then 1
+                        when place = 4 then 0.85
+                        when place = 5 then 0.6
+                        when place in (6,7)  then 0.5
+                        when place in (8,9) then 0.3
+                        when place = 10 then 0.2
+                    end)
+            from wp_tch_serp
+            where place != 0
+              and data <= '2018-07-16'
+              and (key_id, data) in (
+                select key_id, max(data) date
+                from wp_tch_serp
+                where data <= '2018-07-16'
+                 group by key_id
+                )
+            ),1), 0) as visibility_serp
+                    
+         ,COALESCE((SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0)
+          as pos_improved
+          
+         ,COALESCE((SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+           FROM wp_tch_serp a
+           JOIN wp_tch_serp b on a.key_id = b.key_id
+            and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-16')/*берем послед срез*/
+            and b.data = (select max(t2.data) from wp_tch_serp t2 
+                          where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                            and t2.data <= '2018-07-16')/*берем предпосл срез*/
+            and a.data <= '2018-07-16'
+            and b.data <= '2018-07-16'
+            and a.place != 0
+            and b.place != 0), 0) 
+          as pos_deteriorated
+          
+         ,COALESCE((SELECT sum(b.place)
+           FROM wp_tch_serp b
+           WHERE b.data = (select max(t2.data) from wp_tch_serp t2 
+                           where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-16')
+                             and t2.data <= '2018-07-16')/*берем предпосл срез*/
+             and b.data <= '2018-07-16'
+             and b.place != 0), 0) 
+          as pos_available,
+          
+          (
+            select count(distinct key_id) cnt
+            from wp_tch_serp
+            where data = '2018-07-16'
+              and place != 0
+          ) as cnt_cur_pos,
+          
+          
+         (SELECT count(*) FROM wp_tch_keywords WHERE place != 0) count_all, выполненный include('E:\OSPanel\domains\wp\wp-content\plugins\TopChik\tch-db-progress-bar.php')

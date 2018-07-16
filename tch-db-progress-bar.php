@@ -117,6 +117,7 @@ $val = $wpdb->get_results($wpdb->prepare(
             select count(distinct key_id) cnt
             from $table_name_s
             where data = %s
+              and place != 0
           ) as cnt_cur_pos,
           
           

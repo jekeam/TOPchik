@@ -792,7 +792,8 @@ function check_new_shed_func() {
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));
     $is_new_keys = $get_status_row['is_new_keys'];
-   
+    $key_id = $get_status_row["key_id"];
+
     if(
         $date_start != '1970-01-01 00:00:00' 
         &&
@@ -800,22 +801,34 @@ function check_new_shed_func() {
         &&
         ($today>$row_date)
         && $status == 'в ожидании'
-    ){        
-        if(!wp_next_scheduled('tch_add_shed_hook', array($is_new_keys, $get_status_row["key_id"]))){
-            wp_schedule_single_event( time(), 'tch_add_shed_hook', array($is_new_keys, $get_status_row["key_id"]));
+    ){
+        if(!wp_next_scheduled('tch_add_shed_hook', array($is_new_keys, $key_id))){
+            wp_schedule_single_event( time(), 'tch_add_shed_hook', array($is_new_keys, $key_id));
         }
     }else{
         //Добавим задание на проверку если пришло время
         $prowp_options = get_option('tch_options_sheduler');
 
+        //если заданий в ожидании нет, дабавим проверку
         if ($prowp_options['sheduler_mode'] == 'every_day'){
-            $hour = $prowp_options['time_every_day'];
-            if (strlen($hour) == 1){
-                $hour = '0'.$hour;
+            if ($status=='выключено'){
+                //Если стоит настройка каждый день, то назачим задание в нужный час.            
+                $hour = $prowp_options['time_every_day'];
+                if (strlen($hour) == 1){
+                    $hour = '0'.$hour;
+                }
+                $date_start = date("Y-m-d H:i:s", mktime($hour, 00, 0, date("m")  , date("d")+1, date("Y")));
+                insert_sheduler_cron($today->format("Y-m-d H:i:s"), $date_start, 'в ожидании', $is_new_keys, '', 'Проверка начнется в указанное время');    
             }
-            $date_start = date("Y-m-d H:i:s", mktime($hour, 00, 0, date("m")  , date("d")+1, date("Y")));
-            insert_sheduler_cron($today->format("Y-m-d H:i:s"), $date_start, 'в ожидании', $is_new_keys, '', 'Проверка начнется в указанное время');        
+        }else{
+            //Если установлена проверка по требованию, то удалим задание, если оно есть
+            if ($prowp_options['sheduler_mode'] == 'on_demand'){
+                if ($status=='в ожидании'){
+                    delete_sheduler_cron($key_id);
+                }
+            }
         }
+
     }
 }    
 check_new_shed_func();

@@ -8,26 +8,58 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/wp-load.php';
 
 
 
-function get_status_cron(){ 
+function get_status_cron($status=''){ 
     global $wpdb;    
     global $tch_tbl_cron;
     $table_name_c = $wpdb->get_blog_prefix() . $tch_tbl_cron;
 
-    $row = $wpdb->get_row(
-        " SELECT 
-            key_id,
-            date_create,
-            date_start,
-            date_end,
-            status,
-            is_new_keys,
-            done,
-            msg
-          FROM $table_name_c           
-          ORDER BY key_id DESC
-          LIMIT 1"
-        ,ARRAY_A
-    );    
+    if (empty($status)){
+        $row = $wpdb->get_row(
+            " SELECT 
+                key_id,
+                date_create,
+                date_start,
+                date_end,
+                status,
+                is_new_keys,
+                done,
+                msg
+            FROM $table_name_c           
+            ORDER BY key_id DESC
+            LIMIT 1"
+            ,ARRAY_A
+        );
+    }else{
+        $row = $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT 
+                    x.key_id,
+                    x.date_create,
+                    x.date_start,
+                    x.date_end,
+                    x.status,
+                    x.is_new_keys,
+                    x.done,
+                    x.msg
+                 FROM
+                    (SELECT 
+                        key_id,
+                        date_create,
+                        date_start,
+                        date_end,
+                        status,
+                        is_new_keys,
+                        done,
+                        msg
+                    FROM $table_name_c                
+                    ORDER BY key_id DESC
+                    LIMIT 1) x
+                WHERE x.status = %s",
+                $status
+            )
+            ,ARRAY_A
+        );
+    }
     
     $row['key_id']       = isset($row['key_id'])      ? $row['key_id'] : '0';
     $row['date_create']  = isset($row['date_create']) ? $row['date_create'] : '1970-01-01 00:00:00';
@@ -112,6 +144,17 @@ function update_sheduler_cron($key_id, $date_create, $date_start, $date_end, $st
     );
 
 }  
+
+function delete_sheduler_cron($key_id){
+    global $wpdb;    
+    global $tch_tbl_cron;
+    $table_name_c = $wpdb->get_blog_prefix() . $tch_tbl_cron;
+    
+    $wpdb->delete(
+        $table_name_c,
+        array( 'key_id' => $key_id )
+    );    
+}
 
 //Это для вызова из JS
 if(isset($_POST['send_status_cron'])){

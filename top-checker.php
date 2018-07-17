@@ -329,7 +329,7 @@ if (!isset($_GET['tch_page'])) {
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
             </div>";
-    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($stat == "выключено")?"":"disabled") .'/>';
+    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($get_status_row['status'] == "выключено")?"":"disabled") .'/>';
     echo "<div style='margin:5px;'><input type='checkbox' id='is_new_keys'/><span>Проверить все КС заново при повторном запуске</span></div>";
     echo "</div>
         <div class='float_left'>

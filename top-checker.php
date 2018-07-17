@@ -821,7 +821,10 @@ function check_new_shed_func() {
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));
     $is_new_keys = $get_status_row['is_new_keys'];
-    $key_id = $get_status_row["key_id"];
+    $key_id = $get_status_row["key_id"];    
+    $prowp_options = get_option('tch_options_sheduler');
+    
+    //file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $status, true ) . '</pre>', FILE_APPEND);
 
     if(
         $date_start != '1970-01-01 00:00:00' 
@@ -835,12 +838,11 @@ function check_new_shed_func() {
             wp_schedule_single_event( time(), 'tch_add_shed_hook', array($is_new_keys, $key_id));
         }
     }else{
-        //Добавим задание на проверку если пришло время
-        $prowp_options = get_option('tch_options_sheduler');
+        //Добавим задание на проверку если пришло время        
 
         //если заданий в ожидании нет, дабавим проверку
         if ($prowp_options['sheduler_mode'] == 'every_day'){
-            if ($status=='выключено'){
+            if ($status == 'выключено' || status == 'завершено'){
                 //Если стоит настройка каждый день, то назачим задание в нужный час.            
                 $hour = $prowp_options['time_every_day'];
                 if (strlen($hour) == 1){
@@ -852,7 +854,7 @@ function check_new_shed_func() {
         }else{
             //Если установлена проверка по требованию, то удалим задание, если оно есть
             if ($prowp_options['sheduler_mode'] == 'on_demand'){
-                if ($status=='в ожидании'){
+                if ($status == 'в ожидании'){
                     delete_sheduler_cron($key_id);
                 }
             }

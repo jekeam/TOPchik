@@ -139,7 +139,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         //Новая проверка в следствии ошибки
         $min = intval(date('i'));
         $min = ((60+5) - $min);
-        $date_start = $today->modify("+".$min." minutes");  
+        $date_start = $today->modify("+".$min." minutes");          
         insert_sheduler_cron(
             $today->format("Y-m-d H:i:s"), 
             $date_start->format("Y-m-d H:i:s"), 
@@ -147,7 +147,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
             $is_new_keys, 
             '', 
             'Была ошибка при проверке:'. $error_text.'<br>Проверка начнется повторно в указанное время.'
-        );
+        );        
 
         exit();        
     } 

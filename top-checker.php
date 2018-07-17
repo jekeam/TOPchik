@@ -201,6 +201,18 @@ if (!isset($_GET['tch_page'])) {
       dx="0px">Ключевые показатели сайта:</text>
 <p>Всего фраз: <span id="cnt_keys">0</span>, проверено сегодня: <span id="cnt_cur_pos">0</span> </p>
 <p>Последняя дата обновления: <?php echo end(get_tch_dates())->dat; ?></p>
+
+<?php 
+  /*
+  $_POST['get_limits'] = 'true';
+  ob_start(); 
+  include (dirname( __FILE__ ) . '/yandex-xml.php');
+  $my_limits = ob_get_clean();
+  file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $limits, true ) . '</pre>', FILE_APPEND);*/
+?>
+<!--p>Доступно лимитов: <?php  ?></p-->
+
+
 <div class="tch-bubble">
     <div title="1, 2 и 3-я позиции — коэффициент 1
 4-я позиция — 0,85
@@ -323,13 +335,14 @@ if (!isset($_GET['tch_page'])) {
     //Установка задания в крон
     
     $get_status_row = get_status_cron();
+    $status = $get_status_row['status'];
     
-    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$get_status_row['status'].")</h1>
+    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$status.")</h1>
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
             </div>";
-    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($get_status_row['status'] == "выключено")?"":"disabled") .'/>';
+    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($status == "выключено" || $status == "ошибка" || $status == "завершено")?"":"disabled") .'/>';
     echo "<div style='margin:5px;'><input type='checkbox' id='is_new_keys'/><span>Проверить все КС заново при повторном запуске</span></div>";
     echo "</div>
         <div class='float_left'>
@@ -834,7 +847,7 @@ function check_new_shed_func() {
                     $hour = '0'.$hour;
                 }
                 $date_start = date("Y-m-d H:i:s", mktime($hour, 00, 0, date("m")  , date("d")+1, date("Y")));
-                insert_sheduler_cron($today->format("Y-m-d H:i:s"), $date_start, 'в ожидании', $is_new_keys, '', 'Проверка начнется в указанное время');    
+                insert_sheduler_cron($today->format("Y-m-d H:i:s"), $date_start, 'в ожидании', $is_new_keys, '', 'Проверка начнется в указанное время');
             }
         }else{
             //Если установлена проверка по требованию, то удалим задание, если оно есть
@@ -857,5 +870,5 @@ function add_sheduler_cron_once($is_new_keys, $key_id) {
     //hard-work    
     $_GET['is_new_keys'] = $is_new_keys;
     $_GET['key_id']      = $key_id;
-    include dirname( __FILE__ ) . '/yandex-xml.php';    
+    include (dirname( __FILE__ ) . '/yandex-xml.php');
 }

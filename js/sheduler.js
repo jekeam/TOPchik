@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
                 document.getElementById('progressor').style.width = result.done + "%";
 
 
-                if (result.status == 'выключено' || result.status == 'завершено') {
+                if (result.status == 'выключено' || result.status == 'завершено' || result.status == 'ошибка') {
                     document.getElementById('add_task_on_demand').disabled = '';
                 } else {
                     document.getElementById('add_task_on_demand').disabled = 'true';

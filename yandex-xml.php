@@ -25,35 +25,30 @@ function get_my_place($domains_xml, $my_domain){
 
 
 //Запрос лимитов на этот час
-function getMyLimit($v_user, $v_key, $hour, $v_current){
-    $url = 'https://yandex.ru/search/xml?action=limits-info&user='.$v_user.'&key='.$v_key;
-    //print_r($url);
+function getMyLimit($v_user, $v_key, $v_file, $v_current){
+    $url = 'https://yandex.ru/search/xml?action=limits-info&user='.$v_user.'&key='.$v_key;        
     $html = file_get_contents($url);
-    $doc = phpQuery::newDocument($html);
-    //print_r($doc);
-    echo $hour;
-    echo $doc;
-
+    $doc = phpQuery::newDocument($html);        
+    $v_current .= '$doc:'.$doc."\n";
     
     //Проверяем есть ли ошибки
-    $error_text = pq($doc->find('error'))->text();
-    
+    $error_text = pq($doc->find('error'))->text();    
     if(strlen($error_text)>0){
         $error = 'Ошибка '. $error_text ."\n";
         $v_current .= $error."\n\n";
         if ($debag = 'on'){
-            file_put_contents($v_file, $v_current);
+            file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         echo $error;
         return;
     } 
+
     //Если все ОК работаем дальше
-    $limits = pq($doc->find($hour));
-    $v_current .= '$limits:'.$limits."\n";
-    
+    //$limits = pq($doc->find($hour));
+        
     // Пишем содержимое обратно в файл
     if ($debag = 'on') {
-        file_put_contents($v_file, $v_current);
+        file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     phpQuery::unloadDocuments($html);
 }
@@ -83,7 +78,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
         $error = 'Ошибка '. $error_text ."\n";
         $v_current .= $error."\n\n";
         if ($debag = 'on'){
-            file_put_contents($v_file, $v_current);
+            file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         echo $error;
         return;
@@ -97,7 +92,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     
     // Пишем содержимое обратно в файл
     if ($debag = 'on') {
-        file_put_contents($v_file, $v_current);
+        file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     echo $my_position;
     
@@ -106,7 +101,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
 
 
 //Не выводит а возвращает, копия search - только без echo (заменено на return)
-function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p, $key_id){
+function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p, $key_id, $is_new_keys){
     
     $v_current .= date('H:i:s', time() - date('Z'))."\n";
     $v_current .= '$user:'.$v_user."\n";
@@ -126,10 +121,10 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     $error_text = pq($doc->find('error'))->text();
     
     if(strlen($error_text) > 0){
-        $error = 'Ошибка '. $error_text ."\n";
+        $error = 'Ошибка: '. $error_text ."\n";
         $v_current .= $error."\n\n";
         if ($debag = 'on'){
-            file_put_contents($v_file, $v_current);
+            file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         //делаем запись ошибки в БД
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
@@ -141,6 +136,18 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         $subject = 'Ошибка при работе плагина:ТопЧик';
         $message = 'Текст ошибки: '.$error.'<br>Если у вас возникли сложности, просьба сообщить о проблеме разработчику:suineg@inbox.ru';
         wp_mail($to, $subject, $message, $headers);          
+        //Новая проверка в следствии ошибки
+        $min = intval(date('i'));
+        $min = ((60+5) - $min);
+        $date_start = $today->modify("+".$min." minutes");  
+        insert_sheduler_cron(
+            $today->format("Y-m-d H:i:s"), 
+            $date_start->format("Y-m-d H:i:s"), 
+            'в ожидании', 
+            $is_new_keys, 
+            '', 
+            'Была ошибка при проверке:'. $error_text.'<br>Проверка начнется повторно в указанное время.'
+        );
 
         exit();        
     } 
@@ -153,7 +160,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     
     // Пишем содержимое обратно в файл
     if ($debag = 'on') {
-        file_put_contents($v_file, $v_current);
+        file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     return $my_position;
     
@@ -174,15 +181,14 @@ $user       = $prowp_options['option_user'];
 $p_key      = $prowp_options['option_key'];
 $my_domain  = strtolower($prowp_options['server_name']);
 $keyword    = isset($_POST['keyword'])    ? $_POST['keyword'] : null;
-$hour       = isset($_POST['hour'])       ? $_POST['hour'] : null;
-
+$get_limits = isset($_POST['get_limits']) ? $_POST['get_limits'] : null;
 $is_new_keys= isset($_GET['is_new_keys']) ? $_GET['is_new_keys'] : 0;//по умолчанию исключаем те по которым сегодня проверяли
 $key_id     = isset($_GET['key_id'])      ? $_GET['key_id'] : 0;
 
 if (isset($keyword)){
     search($keyword, $user, $p_key, $my_domain, $file ,$current);
-}elseif (isset($hour)){
-    getMyLimit($user, $p_key, $hour);
+}elseif (isset($get_limits)){
+    getMyLimit($user, $p_key,  $file ,$current);
 }else{//массовая проверка
     $с = 1;//Переменная для прогресс бара - вычисляем номер цикла
     $p = 0;//Переменная для прогресс бара - вычисляем процент
@@ -198,9 +204,8 @@ if (isset($keyword)){
             foreach ($arr_kw as $key => $value) {
                 $cur_keyword = $value->keyword;
                 $id_keyword = $value->key_id;
-                //get new place in SERP
-                sleep(1);
-                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current, $p, $key_id);
+                //get new place in SERP                
+                $new_place = search_all($cur_keyword, $user, $p_key, $my_domain, $file ,$current, $p, $key_id, $is_new_keys);                
                 if ($new_place > 0) {
                     set_db_tch_serp($id_keyword, $new_place);
                 }
@@ -211,6 +216,7 @@ if (isset($keyword)){
                 $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));                
                 update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$с.' из '.$i);
                 $с++;
+                sleep(20);//to-do https://tech.yandex.ru/xml/doc/dg/concepts/rps-limits-docpage/#rps-limits
             }
         }else{
             $с = 0;

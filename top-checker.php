@@ -842,7 +842,7 @@ function check_new_shed_func() {
 
         //если заданий в ожидании нет, дабавим проверку
         if ($prowp_options['sheduler_mode'] == 'every_day'){
-            if ($status == 'выключено' || status == 'завершено'){
+            if ($status == 'выключено' || $status == 'завершено'){
                 //Если стоит настройка каждый день, то назачим задание в нужный час.            
                 $hour = $prowp_options['time_every_day'];
                 if (strlen($hour) == 1){

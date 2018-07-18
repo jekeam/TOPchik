@@ -4,7 +4,7 @@ ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
 include_once( dirname( __FILE__ ) . '/src/phpQuery-onefile.php');
 require_once $_SERVER['DOCUMENT_ROOT'].'/wp-load.php';
-$debag = 'on';
+$debag = 'off';
 $file = dirname( __FILE__ ) . '/log/xml.log';
 
 
@@ -128,7 +128,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
         }
         //делаем запись ошибки в БД
         $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
-        update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'ошибка', '', $p, $error);
+        update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'ошибка', $is_new_keys, $p, $error);
         
         //send email                
         $to = get_option( 'admin_email' );
@@ -145,7 +145,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
             $date_start->format("Y-m-d H:i:s"), 
             'в ожидании', 
             $is_new_keys, 
-            '', 
+            $p, 
             'Была ошибка при проверке:'. $error_text.'<br>Проверка начнется повторно в указанное время.'
         );        
 

@@ -25,8 +25,12 @@ jQuery(document).ready(function($) {
                     document.getElementById("divProgress").innerHTML = text_desc;
                 }
 
-                document.getElementById('progressor').style.width = result.done + "%";
+                var stat = document.getElementById('cron_status_h1').innerHTML;
+                if (stat != result.status) {
+                    document.getElementById('cron_status_h1').innerHTML = result.status;
+                }
 
+                document.getElementById('progressor').style.width = result.done + "%";
 
                 if (result.status == 'выключено' || result.status == 'завершено' || result.status == 'ошибка') {
                     document.getElementById('add_task_on_demand').disabled = '';
@@ -36,7 +40,7 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    setInterval(getStatusCron, 1000);
+    setInterval(getStatusCron, 6000);
 
 
     $('input#add_task_on_demand').click(function() {

@@ -337,7 +337,7 @@ if (!isset($_GET['tch_page'])) {
     $get_status_row = get_status_cron();
     $status = $get_status_row['status'];
     
-    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: ".$status.")</h1>
+    echo "<h1>Назначьте задание для проверки позиции (текущий статус проверки: <span id='cron_status_h1'>".$status."</span>)</h1>
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>

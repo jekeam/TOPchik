@@ -1,5 +1,36 @@
 <?php
 
+//Запись данных в таблицу $wpdb->prefix . $tch_tbl_serp - позиция КС
+function set_db_tch_serp($id, $place = 0, $time =  00000000)
+{
+    //define('SHORTINIT', true);
+    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+    global $wpdb;
+    global $tch_tbl_serp;
+    
+    $tbl_prefix = $wpdb->get_blog_prefix();   
+    
+    $table_name = $tbl_prefix . $tch_tbl_serp;
+ 
+    //$id = ;
+    if ($time == 00000000)
+    {
+        $time = current_time('Ymd');
+    }
+             
+    $wpdb->replace
+    (
+        $table_name, 
+        array (
+                'key_id' => $id,
+                'data' => $time,
+                'place' => $place
+               ), 
+        array ('%d', '%s', '%d')
+    );
+}
+
+
 //Получаем адрес субд
 function get_hostname_db(){
     
@@ -8,6 +39,77 @@ function get_hostname_db(){
     $db_hostname = $wpdb->get_var
                             ("select @@GLOBAL.hostname");
     return $db_hostname;
+}
+
+function get_stat_by_post($post_id, $date_query = '' ){
+    if ($date_query == ''){
+        $date_query = date('Y-m-d');
+    }    
+
+    global $wpdb;
+    global $tch_tbl_keywords;
+    global $tch_tbl_serp;
+    
+    $table_name_k = $wpdb->get_blog_prefix() . $tch_tbl_keywords;
+    $table_name_s = $wpdb->get_blog_prefix() . $tch_tbl_serp;
+    
+    $get_post = $wpdb->get_row(
+        $wpdb->prepare
+            ( 
+                "SELECT
+                    COALESCE(
+                        (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                        FROM $table_name_s a
+                        JOIN $table_name_s b on a.key_id = b.key_id
+                            and a.data = (select max(t1.data) from $table_name_s t1 where t1.data <= %s)/*берем послед срез*/
+                            and b.data = (select max(t2.data) from $table_name_s t2 
+                                        where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
+                                            and t2.data <= %s)/*берем предпосл срез*/
+                            and a.data <= %s
+                            and b.data <= %s
+                            and a.place != 0
+                            and b.place != 0                            
+                        JOIN $table_name_k c on c.key_id = a.key_id and c.key_id = b.key_id
+                        WHERE c.post_id = %d
+                        )
+                    , 0) as pos_deteriorated
+                    ,COALESCE(
+                        (SELECT sum(case when a.place < b.place then b.place-a.place else 0 end)
+                        FROM $table_name_s a
+                        JOIN $table_name_s b on a.key_id = b.key_id
+                            and a.data = (select max(t1.data) from $table_name_s t1 where t1.data <= %s)/*берем послед срез*/
+                            and b.data = (select max(t2.data) from $table_name_s t2 
+                                        where t2.data != (select max(t3.data) from $table_name_s t3 where t3.data <= %s)
+                                            and t2.data <= %s)/*берем предпосл срез*/
+                            and a.data <= %s
+                            and b.data <= %s
+                            and a.place != 0
+                            and b.place != 0
+                        JOIN $table_name_k c on c.key_id = a.key_id and c.key_id = b.key_id
+                        WHERE c.post_id = %d
+                        )
+                    , 0) as pos_improved
+                ",
+                $date_query,
+                $date_query,
+                $date_query,
+                $date_query,
+                $date_query,
+                $post_id,
+
+                $date_query,
+                $date_query,
+                $date_query,
+                $date_query,
+                $date_query,
+                $post_id
+            )
+        );
+
+        //file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r(''), true ) . '</pre>', FILE_APPEND);
+
+    return $get_post;
+
 }
 
 
@@ -52,37 +154,6 @@ function set_db_tch_keywords($id, $keyword, $post_id)
     	        'post_id' => $post_id
     	       ), 
     	array ('%d', '%s', '%d')
-    );
-}
-
-
-//Запись данных в таблицу $wpdb->prefix . $tch_tbl_serp - позиция КС
-function set_db_tch_serp($id, $place = 0, $time =  00000000)
-{
-    //define('SHORTINIT', true);
-    require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
-    global $wpdb;
-    global $tch_tbl_serp;
-    
-    $tbl_prefix = $wpdb->get_blog_prefix();   
-    
-    $table_name = $tbl_prefix . $tch_tbl_serp;
- 
-    //$id = ;
-    if ($time == 00000000)
-    {
-        $time = current_time('Ymd');
-    }
-             
-    $wpdb->replace
-    (
-        $table_name, 
-        array (
-                'key_id' => $id,
-                'data' => $time,
-                'place' => $place
-               ), 
-        array ('%d', '%s', '%d')
     );
 }
 

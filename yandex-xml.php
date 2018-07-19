@@ -175,7 +175,7 @@ if ($debag == 'on'){
     $current = file_get_contents($file);
 }
 
-$prowp_options = get_option( 'tch_options_api' );
+$prowp_options = get_option('tch_options_api');
 
 $user       = $prowp_options['option_user'];
 $p_key      = $prowp_options['option_key'];
@@ -198,7 +198,7 @@ if (isset($keyword)){
      
         $arr_kw = get_tch_all_keywords($is_new_keys);
         if (!empty($arr_kw)){
-            //echo "asddas:" . count($arr_kw);
+                        
             $i = count($arr_kw);//Всего КС
             $step =  $i > 0 ? 100/$i : 0;//узнаем сколько будет 1 кс в процентах
             foreach ($arr_kw as $key => $value) {

@@ -1,0 +1,1004 @@
+<pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 1052
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 1033
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 1018
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 1006
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 993
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 990
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 954
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 976
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 965
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 946
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 935
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 930
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 919
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 914
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 906
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 892
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 882
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 804
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 867
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 858
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 839
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 831
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 819
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 809
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 795
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 748
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 581
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 564
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 559
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 484
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 550
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 512
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 498
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 487
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 475
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 469
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 463
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 453
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 443
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 440
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 434
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 430
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 425
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 421
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 418
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 409
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 389
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 386
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 393
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 370
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 360
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 346
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 327
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 316
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 299
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 285
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 266
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 251
+                        )
+                , 0) as pos_deteriorated
+            </pre><pre>2018-07-19 SELECT
+                COALESCE(
+                    (SELECT sum(case when a.place > b.place then a.place-b.place else 0 end)
+                    FROM wp_tch_serp a
+                    JOIN wp_tch_serp b on a.key_id = b.key_id
+                        and a.data = (select max(t1.data) from wp_tch_serp t1 where t1.data <= '2018-07-19')/*берем послед срез*/
+                        and b.data = (select max(t2.data) from wp_tch_serp t2 
+                                    where t2.data != (select max(t3.data) from wp_tch_serp t3 where t3.data <= '2018-07-19')
+                                        and t2.data <= '2018-07-19')/*берем предпосл срез*/
+                        and a.data <= '2018-07-19'
+                        and b.data <= '2018-07-19'
+                        and a.place != 0
+                        and b.place != 0                            
+                    JOIN wp_tch_keywords c on c.key_id = a.key_id and c.key_id = b.key_id
+                    WHERE c.post_id = 224
+                        )
+                , 0) as pos_deteriorated
+            </pre>

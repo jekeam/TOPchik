@@ -125,7 +125,7 @@ function tch_settings_page()
 ?>
 <h1>ТопЧик — съем позиций прямо из WP</h1>
 <a href="https://xml.yandex.ru/settings/" target="blank_">Настройки - Яндекс.XML</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://xml.yandex.ru/limits/?order=limit_desc&host=" target="blank_">Лимиты - Яндекс.XML</a>
+<a href="https://xml.yandex.ru/limits/" target="blank_">Лимиты - Яндекс.XML</a>
 <div>
  <ul class="subsubsub">
      
@@ -153,26 +153,6 @@ if (!isset($_GET['tch_page'])) {
     wp_enqueue_script('tch-script-progressBar', plugins_url('/plugins/jquery.collapse.js',__FILE__));
     wp_enqueue_script('tch-script-search-page', plugins_url('/js/search-page.js',__FILE__));
     
-    
-    //Убрал пока сделаю проще без базы через JS
-    /*
-    echo '<style>
-            .ui-autocomplete-loading {
-                background: white url("/wp-content/plugins/TopChik/img/ui-anim_basic_16x16.gif") right center no-repeat;
-            }
-        </style>';
-        
-    echo '<div class="ui-widget">
-            <label for="birds"><h2>Поиск:</h2></label>
-            <input id="birds" style="width: 500px;">
-          </div>';
-          
-    wp_enqueue_script('tch-script-auto-compl', plugins_url('/plugins/auto-compl.js',__FILE__));
-    wp_enqueue_script("jquery");
-    wp_enqueue_script('jquery-ui-autocomplete');
-    wp_enqueue_style('jquery-ui-styles' );
-    */          
-    
     echo '<h2>Поиск:</h2><input type="text" style="width: 500px;" id="tc-search" onkeyup="searchPage(this.value)">';
 
     echo '<br><a href="#" id="coll-open">Развернуть всё</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="coll-close">Свернуть всё</a>';
@@ -181,18 +161,34 @@ if (!isset($_GET['tch_page'])) {
         'numberposts' => -1,
     );
     
-    $recent_posts_array = get_posts($get_post_prop); // получаем массив постов
-    foreach( $recent_posts_array as $recent_post_single ) : // для каждого поста из массива
-        echo '<div data-collapse id="collapse-'.$recent_post_single->ID.'">';
-        	echo '<h2><a href="' . get_edit_post_link( $recent_post_single ) . '" 
-        	             target="blank_"
-        	             class="page-name"
-        	             data-id="'.$recent_post_single->ID.'">' . $recent_post_single->post_title . '</a></h2>';//url="'.urldecode(get_permalink($recent_post_single)).'"
-        	echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
-        	    tch_meta_box($recent_post_single);
-        	echo '</form>';
-        echo '</div>';
+    $recent_posts_array = get_posts($get_post_prop); // получаем массив постов     
+
+    echo '<table>';
+    foreach($recent_posts_array as $recent_post_single) : // для каждого поста из массива    
+
+        //олучим показатели по каждому посту
+        ob_start(); 
+        include('tch-db-progress-bar.php'); 
+        $my_json = ob_get_clean();    
+        $result = json_decode($my_json);
+
+        echo '<tr>';
+            echo '<td>';
+                echo '<div data-collapse id="collapse-'.$recent_post_single->ID.'">';
+                    echo '<h2><a href="' . get_edit_post_link( $recent_post_single ) . '" 
+                                target="blank_"
+                                class="page-name"
+                                data-id="'.$recent_post_single->ID.'">' . $recent_post_single->post_title . '</a></h2>';//url="'.urldecode(get_permalink($recent_post_single)).'"
+                        echo '<form method="post" action="/wp-content/plugins/TopChik/tch_store_save_meta_box.php">';
+                        tch_meta_box($recent_post_single);
+                    echo '</form>';
+                echo '</div>';
+            echo '</td>';
+            echo '<td>'.$result['0']->{'pos_improved'}.'</td>';
+            echo '<td>'.$result['0']->{'pos_deteriorated'}.'</td>';
+        echo '</tr>';
     endforeach; // конец цикла
+    echo '</table>';
 }elseif ($_GET['tch_page']=='statistics') {
     wp_enqueue_script('tch-script-progressBar', plugins_url('/js/progressBar.js',__FILE__));
     wp_enqueue_script('tch-script-d3js-avg', plugins_url('/src/loader.js',__FILE__));//для гугл графиков

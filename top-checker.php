@@ -168,6 +168,7 @@ if (!isset($_GET['tch_page'])) {
 
         //олучим показатели по каждому посту
         ob_start(); 
+        $_GET['post_id'] = $recent_post_single->ID;
         include('tch-db-progress-bar.php'); 
         $my_json = ob_get_clean();    
         $result = json_decode($my_json);

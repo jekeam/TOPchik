@@ -124,6 +124,8 @@ function tch_settings_page()
 {
 ?>
 <h1>ТопЧик — съем позиций прямо из WP</h1>
+<a href="https://xml.yandex.ru/settings/" target="blank_">Настройки - Яндекс.XML</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://xml.yandex.ru/limits/?order=limit_desc&host=" target="blank_">Лимиты - Яндекс.XML</a>
 <div>
  <ul class="subsubsub">
      
@@ -176,7 +178,7 @@ if (!isset($_GET['tch_page'])) {
     echo '<br><a href="#" id="coll-open">Развернуть всё</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="coll-close">Свернуть всё</a>';
     
     $get_post_prop = array(
-        'numberposts'       => -1,
+        'numberposts' => -1,
     );
     
     $recent_posts_array = get_posts($get_post_prop); // получаем массив постов
@@ -341,8 +343,9 @@ if (!isset($_GET['tch_page'])) {
         <div class='float_left'>
             <div id='progress_wrapper'>
                 <div id='progressor'></div>
-            </div>";
-    echo '<input type="button" class="button" id="add_task_on_demand" style="margin-top: 5px;" value="Снять позиции"'. (($status == "выключено" || $status == "ошибка" || $status == "завершено")?"":"disabled") .'/>';
+            </div>";            
+    echo '<input type="button" class="button" id="add_task_on_demand" style="margin: 5px;" value="Снять позиции"'. (($status == "выключено" || $status == "ошибка" || $status == "завершено")?"":"disabled") .'/>';
+    echo '<input type="button" class="button" id="stop_task_on_demand" style="margin: 5px;" value="Выключить"'. (($status != "выключено" && $status != "ошибка" && $status != "завершено")?"":"disabled") .'/>';    
     echo "<div style='margin:5px;'><input type='checkbox' id='is_new_keys'/><span>Проверить все КС заново при повторном запуске</span></div>";
     echo "</div>
         <div class='float_left'>
@@ -821,7 +824,7 @@ function check_new_shed_func() {
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
     $row_date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_start, new DateTimeZone('Europe/Moscow'));
     $is_new_keys = $get_status_row['is_new_keys'];
-    $key_id = $get_status_row["key_id"];    
+    $key_id = $get_status_row["key_id"];
     $prowp_options = get_option('tch_options_sheduler');
     
     //file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $status, true ) . '</pre>', FILE_APPEND);

@@ -143,6 +143,40 @@ function update_sheduler_cron($key_id, $date_create, $date_start, $date_end, $st
         array ('%d')
     );
 
+    if (isset($_POST['update_sheduler_cron'])) {
+        $row = $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT 
+                    x.key_id,
+                    x.date_create,
+                    x.date_start,
+                    x.date_end,
+                    x.status,
+                    x.is_new_keys,
+                    x.done,
+                    x.msg
+                 FROM
+                    (SELECT 
+                        key_id,
+                        date_create,
+                        date_start,
+                        date_end,
+                        status,
+                        is_new_keys,
+                        done,
+                        msg
+                    FROM $table_name_c                
+                    ORDER BY key_id DESC
+                    LIMIT 1) x
+                WHERE x.status = %s",
+                $status
+            )
+            ,ARRAY_A
+        );
+        echo json_encode($row);    
+        exit();
+    }
+
 }  
 
 function delete_sheduler_cron($key_id){
@@ -159,4 +193,19 @@ function delete_sheduler_cron($key_id){
 //Это для вызова из JS
 if(isset($_POST['send_status_cron'])){
     get_status_cron();
+}
+if(isset($_POST['update_sheduler_cron'])){
+    $get_status_row = get_status_cron();    
+    //делаем запись состояния в БД
+    $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
+    update_sheduler_cron(
+        $get_status_row['key_id'], 
+        $get_status_row['date_create'], 
+        $get_status_row['date_start'], 
+        $today->format('Y-m-d H:i:s'), 
+        'завершено', 
+        $get_status_row['is_new_keys'], 
+        $get_status_row['done'],
+        'остановлено вручную'
+    );
 }

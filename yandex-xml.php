@@ -36,7 +36,7 @@ function getMyLimit($v_user, $v_key, $v_file, $v_current){
     if(strlen($error_text)>0){
         $error = 'Ошибка '. $error_text ."\n";
         $v_current .= $error."\n\n";
-        if ($debag = 'on'){
+        if ($debag == 'on'){
             file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         echo $error;
@@ -47,7 +47,7 @@ function getMyLimit($v_user, $v_key, $v_file, $v_current){
     //$limits = pq($doc->find($hour));
         
     // Пишем содержимое обратно в файл
-    if ($debag = 'on') {
+    if ($debag == 'on') {
         file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     phpQuery::unloadDocuments($html);
@@ -77,7 +77,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     if(strlen($error_text)>0){
         $error = 'Ошибка '. $error_text ."\n";
         $v_current .= $error."\n\n";
-        if ($debag = 'on'){
+        if ($debag == 'on'){
             file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         echo $error;
@@ -91,7 +91,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
     $v_current .= 'Моя позиция:'.$my_position."\n\n";
     
     // Пишем содержимое обратно в файл
-    if ($debag = 'on') {
+    if ($debag == 'on') {
         file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     echo $my_position;
@@ -123,7 +123,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     if(strlen($error_text) > 0){
         $error = 'Ошибка: '. $error_text ."\n";
         $v_current .= $error."\n\n";
-        if ($debag = 'on'){
+        if ($debag == 'on'){
             file_put_contents($v_file, $v_current, FILE_APPEND);
         }
         //делаем запись ошибки в БД
@@ -159,7 +159,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
     $v_current .= 'Моя позиция:'.$my_position."\n\n";
     
     // Пишем содержимое обратно в файл
-    if ($debag = 'on') {
+    if ($debag == 'on') {
         file_put_contents($v_file, $v_current, FILE_APPEND);
     }
     return $my_position;
@@ -170,7 +170,7 @@ function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_curre
 
 
 //пишем логи XML сообщений
-if ($debag = 'on'){
+if ($debag == 'on'){
     // Открываем файл для получения существующего содержимого
     $current = file_get_contents($file);
 }

@@ -164,6 +164,13 @@ if (!isset($_GET['tch_page'])) {
     $recent_posts_array = get_posts($get_post_prop); // получаем массив постов     
 
     echo '<table>';
+    echo '<thead>';
+        echo '<tr>';
+            echo '<th>Запросы</th>';
+            echo '<th>Позиций улучилось</th>';
+            echo '<th>Позиций ухудшилось</th>';
+        echo '</tr>';
+    echo '</thead>';
     foreach($recent_posts_array as $recent_post_single) : // для каждого поста из массива    
 
         //олучим показатели по каждому посту

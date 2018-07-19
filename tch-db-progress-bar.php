@@ -142,6 +142,5 @@ $sql_text = $wpdb->prepare(
     , $date_query, $date_query, $date_query, $date_query
     );
 
-file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $sql_text, true ) . '</pre>', FILE_APPEND);
 $val = $wpdb->get_results($sql_text);
 echo json_encode($val);

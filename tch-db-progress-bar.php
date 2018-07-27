@@ -1,7 +1,4 @@
 <?php
-ini_set('log_errors', 'On');
-ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
-
 include_once( dirname( __FILE__ ) . '/tch-db.php');
 
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
@@ -141,6 +138,8 @@ $sql_text = $wpdb->prepare(
     , $post_id, $post_id
     , $date_query, $date_query, $date_query, $date_query
     );
+
+file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $sql_text, true ) . '</pre>', FILE_APPEND);
 
 $val = $wpdb->get_results($sql_text);
 echo json_encode($val);

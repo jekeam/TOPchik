@@ -1,7 +1,4 @@
 <?php
-ini_set('log_errors', 'On');
-ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
-
 include_once( dirname( __FILE__ ) . '/tch-db.php');
 
 $key_id      = $_POST['key_id'];

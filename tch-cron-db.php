@@ -1,6 +1,4 @@
 <?php
-ini_set('log_errors', 'On');
-ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 require_once $_SERVER['DOCUMENT_ROOT'].'/wp-load.php';
 
 //$table_name_s = $wpdb->get_blog_prefix() . $tch_tbl_serp;

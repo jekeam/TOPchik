@@ -13,6 +13,7 @@ Author URI: https://vk.com/sun4eese
 
 //Запись в логи для дебага: 
 //file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( $arr_dates, true ) . '</pre>', FILE_APPEND);
+ini_set('display_errors', 'On');
 
 //версии таблиц
 $tch_keywords_db_ver = "0.1";
@@ -51,6 +52,8 @@ function getCurrentPath(){
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+error_reporting(E_ERROR); //seemore: http://php.net/manual/ru/errorfunc.constants.php
+ini_set('display_errors', 'On');
 ini_set('log_errors', 'On');
 ini_set('error_log', dirname( __FILE__ ) . '/log/php_errors.log');
 
@@ -124,8 +127,8 @@ function tch_settings_page()
 {
 ?>
 <h1>ТопЧик — съем позиций прямо из WP</h1>
-<a href="https://xml.yandex.ru/settings/" target="blank_">Настройки - Яндекс.XML</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://xml.yandex.ru/limits/" target="blank_">Лимиты - Яндекс.XML</a>
+<a href="https://xml.yandex.ru/settings/" target="blank_">Настройки - Я.XML</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://xml.yandex.ru/limits/" target="blank_">Лимиты - Я.XML</a>
 <div>
  <ul class="subsubsub">
      
@@ -174,11 +177,13 @@ if (!isset($_GET['tch_page'])) {
     foreach($recent_posts_array as $recent_post_single) : // для каждого поста из массива    
 
         //олучим показатели по каждому посту
+        file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( '---BEGIN---', true ) . '</pre>', FILE_APPEND);
         ob_start(); 
         $_GET['post_id'] = $recent_post_single->ID;
-        include('tch-db-progress-bar.php'); 
+        include_once('tch-db-progress-bar.php'); 
         $my_json = ob_get_clean();    
         $result = json_decode($my_json);
+        file_put_contents(dirname( __FILE__ ) . '/log/php_errors.log', '<pre>' . print_r( '---END---', true ) . '</pre>', FILE_APPEND);
 
         echo '<tr>';
             echo '<td>';

@@ -23,11 +23,14 @@ function tch_install ()
             key_id bigint(20) NOT NULL,
             keyword varchar(255) NOT NULL,
             post_id bigint(20) NOT NULL,
-            UNIQUE KEY (key_id)
+            PRIMARY KEY (key_id)
         );";
         
         dbDelta($sql1);
         //add_option("tch_keywords_db_ver", $tch_keywords_db_ver);
+        
+        $sql1 = "ALTER TABLE " . $table_name1 . " ADD INDEX (post_id) ;";
+        dbDelta($sql1);
    }
    
    if($wpdb->get_var("show tables like '$table_name2'") != $table_name2)
@@ -37,10 +40,15 @@ function tch_install ()
             key_id bigint(20) NOT NULL,
             data DATE DEFAULT '00-00-0000' NOT NULL,
             place bigint(20) NOT NULL,
-            UNIQUE KEY (key_id, data)
+            PRIMARY KEY (key_id, data)
         );";
+        dbDelta($sql2);
         
-        dbDelta($sql2);        
+        $sql2 = "ALTER TABLE " . $table_name2 . " ADD INDEX (data) ;";
+        dbDelta($sql2);
+        
+        $sql2 = "ALTER TABLE " . $table_name2 . " ADD INDEX (place) ;";
+        dbDelta($sql2);
    }
 
       
@@ -56,7 +64,7 @@ function tch_install ()
             is_new_keys bigint(1) DEFAULT 0,
             done bigint(3),
             msg varchar(225),
-            UNIQUE KEY (key_id)
+            PRIMARY KEY (key_id)
         );";
         
         dbDelta($sql3);  

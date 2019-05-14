@@ -1,3 +1,4 @@
+<img src="https://repository-images.githubusercontent.com/85397194/d6300800-763f-11e9-93ea-34963c3f094d"></img>
 Plugin Name: TopChick<br>
 Plugin URI:  https://vk.com/jekeam<br>
 Description: ТопЧик - Бесплатный плагин для WordPress, <br>

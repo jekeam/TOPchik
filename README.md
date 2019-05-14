@@ -6,6 +6,7 @@ Description: ТопЧик - Бесплатный плагин для WordPress, 
 Version:     1.0.0<br>
 Author:      Savinykh Aleksand (Савиных Александр Сергеевич)<br>
 Author URI:  https://vk.com/sun4eese<br>
+<br>
 License:     GPL2<br>
 TopChick is free software: you can redistribute it and/or modify<br>
 it under the terms of the GNU General Public License as published by<br>

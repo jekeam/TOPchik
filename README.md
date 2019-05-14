@@ -1,7 +1,7 @@
 <img src="https://repository-images.githubusercontent.com/85397194/d6300800-763f-11e9-93ea-34963c3f094d"></img>
 Plugin Name: TOPchik<br>
 Plugin URI:  https://vk.com/jekeam<br>
-Description: ТопЧик - Бесплатный плагин для WordPress, который позволяет проверить позиции сайта по запросам в поисковике яндекс в режиме онлайн.
+Description: ТопЧик - Бесплатный плагин для WordPress, который позволяет проверить позиции сайта по запросам в поисковике яндекс в режиме онлайн.<br>
 Version:     1.0.0<br>
 Author:      Savinykh Aleksandr S.<br>
 Author URI:  https://vk.com/sun4eese<br>

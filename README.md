@@ -20,4 +20,4 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the<br>
 GNU General Public License for more details.<br>
  <br>
 You should have received a copy of the GNU General Public License<br>
-along with TopChick. If not, see https://vk.com/jekeam.<br>
+along with TOPchik. If not, see https://vk.com/jekeam.<br>

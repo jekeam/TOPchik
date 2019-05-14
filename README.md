@@ -5,7 +5,7 @@ Description: ТопЧик - Бесплатный плагин для WordPress, 
              который позволяет проверить позиции сайта <br>
 	     по запросам в поисковике яндекс в режиме онлайн.	     <br>
 Version:     1.0.0<br>
-Author:      Savinykh Aleksand (Савиных Александр Сергеевич)<br>
+Author:      Savinykh Aleksandr S.<br>
 Author URI:  https://vk.com/sun4eese<br>
 <br>
 License:     GPL2<br>

@@ -23,11 +23,11 @@ function get_my_place($domains_xml, $my_domain){
 
 //Запрос лимитов на этот час
 function getMyLimit($v_user, $v_key, $v_file, $v_current){
+    global  $debag;
     $url = 'https://yandex.ru/search/xml?action=limits-info&user='.$v_user.'&key='.$v_key;        
     $html = file_get_contents($url);
     $doc = phpQuery::newDocument($html);        
     $v_current .= '$doc:'.$doc."\n";
-    $debag ='off';
 
     //Проверяем есть ли ошибки
     $error_text = pq($doc->find('error'))->text();    
@@ -100,7 +100,7 @@ function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
 
 //Не выводит а возвращает, копия search - только без echo (заменено на return)
 function search_all($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current, $p, $key_id, $is_new_keys){
-    
+    global  $debag;
     $v_current .= date('H:i:s', time() - date('Z'))."\n";
     $v_current .= '$user:'.$v_user."\n";
     $v_current .= '$key:'.$v_key."\n";

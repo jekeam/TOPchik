@@ -54,7 +54,7 @@ function getMyLimit($v_user, $v_key, $v_file, $v_current){
 
 //Запрос позиции
 function search($v_keyword, $v_user, $v_key, $v_my_domain, $v_file, $v_current){
-    
+    global  $debag;
     $v_current .= date('H:i:s', time() - date('Z'))."\n";
     $v_current .= '$user:'.$v_user."\n";
     $v_current .= '$key:'.$v_key."\n";
@@ -211,7 +211,8 @@ if (isset($keyword)){
                 $p = $p + $step;//Прибавим процент
                 $p = round($p, 2);
                 //делаем запись состояния в БД
-                $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));                
+                $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
+
                 update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$с.' из '.$i);
                 $с++;
                 sleep(20);//to-do https://tech.yandex.ru/xml/doc/dg/concepts/rps-limits-docpage/#rps-limits

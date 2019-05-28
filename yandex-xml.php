@@ -188,7 +188,7 @@ if (isset($keyword)){
 }elseif (isset($get_limits)){
     getMyLimit($user, $p_key,  $file ,$current);
 }else{//массовая проверка
-    $с = 1;//Переменная для прогресс бара - вычисляем номер цикла
+    $c = 1;//Переменная для прогресс бара - вычисляем номер цикла
     $p = 0;//Переменная для прогресс бара - вычисляем процент
     set_time_limit(0); 
     //ob_implicit_flush(true);
@@ -213,14 +213,14 @@ if (isset($keyword)){
                 //делаем запись состояния в БД
                 $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));
 
-                update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$с.' из '.$i);
-                $с++;
+                update_sheduler_cron($key_id, '', (($c==1) ? $today->format('Y-m-d H:i:s') : ''),'', 'выполняется', '', $p, 'снято позиций '.$c.' из '.$i);
+                $c++;
                 sleep(20);//to-do https://tech.yandex.ru/xml/doc/dg/concepts/rps-limits-docpage/#rps-limits
             }
         }else{
-            $с = 0;
+            $c = 0;
         }    
     //делаем запись состояния в БД
     $today = new DateTime("now", new DateTimeZone('Europe/Moscow'));    
-    update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, ($с > 0) ? 'проверено '.$с.' ключей' : 'ключей для проверки не найдено');
+    update_sheduler_cron($key_id, '', '', $today->format('Y-m-d H:i:s'), 'завершено', '', $p, ($c > 0) ? 'проверено '.$c.' ключей' : 'ключей для проверки не найдено');
 }

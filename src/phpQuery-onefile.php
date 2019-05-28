@@ -5339,14 +5339,14 @@ abstract class phpQuery {
 	 * @param $source DOMNode|phpQueryObject|string
 	 * @return string
 	 */
-	public static function getDOMDocument($source) {
-		if ($source instanceof DOMDOCUMENT)
-			return $source;
-		$source = self::getDocumentID($source);
-		return $source
-			? self::$documents[$id]['document']
-			: null;
-	}
+    public static function getDOMDocument($source) {
+        if ($source instanceof DOMDOCUMENT)
+            return $source;
+        $source = self::getDocumentID($source);
+        return $source
+            ? self::$documents[$id]['document']
+            : null;
+    }
 
 	// UTILITIES
 	// http://docs.jquery.com/Utilities

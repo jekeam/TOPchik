@@ -27,7 +27,8 @@ function getMyLimit($v_user, $v_key, $v_file, $v_current){
     $html = file_get_contents($url);
     $doc = phpQuery::newDocument($html);        
     $v_current .= '$doc:'.$doc."\n";
-    
+    $debag ='off';
+
     //Проверяем есть ли ошибки
     $error_text = pq($doc->find('error'))->text();    
     if(strlen($error_text)>0){

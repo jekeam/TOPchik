@@ -475,7 +475,7 @@ class DOMDocumentWrapper {
 		return $contentType[1];
 	}
 	protected function charsetFromXML($markup) {
-		$matches;
+		$matches='';
 		// find declaration
 		preg_match('@<'.'?xml[^>]+encoding\\s*=\\s*(["|\'])(.*?)\\1@i',
 			$markup, $matches
@@ -514,7 +514,7 @@ class DOMDocumentWrapper {
 			.($xhtml ? '/' : '')
 			.'>';
 		if (strpos($html, '<head') === false) {
-			if (strpos($hltml, '<html') === false) {
+			if (strpos($html, '<html') === false) {
 				return $meta.$html;
 			} else {
 				return preg_replace(
@@ -5339,14 +5339,14 @@ abstract class phpQuery {
 	 * @param $source DOMNode|phpQueryObject|string
 	 * @return string
 	 */
-	public static function getDOMDocument($source) {
-		if ($source instanceof DOMDOCUMENT)
-			return $source;
-		$source = self::getDocumentID($source);
-		return $source
-			? self::$documents[$id]['document']
-			: null;
-	}
+    public static function getDOMDocument($source) {
+        if ($source instanceof DOMDOCUMENT)
+            return $source;
+        $source = self::getDocumentID($source);
+        return $source
+            ? self::$documents[$id]['document']
+            : null;
+    }
 
 	// UTILITIES
 	// http://docs.jquery.com/Utilities
@@ -5356,7 +5356,7 @@ abstract class phpQuery {
 	 * @return unknown_type
 	 * @link http://docs.jquery.com/Utilities/jQuery.makeArray
 	 */
-	public static function makeArray($obj) {
+	public static function makeArray($object) {
 		$array = array();
 		if (is_object($object) && $object instanceof DOMNODELIST) {
 			foreach($object as $value)

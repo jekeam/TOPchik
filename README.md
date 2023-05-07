@@ -11,12 +11,3 @@ Author:      Savinykh Aleksandr S.<br>
 Author URI:  https://vk.com/sun4eese<br>
 <br>
 License: Take it and do what you want =)
-<br>
- <br>
-TOPchik is distributed in the hope that it will be useful,<br>
-but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the<br>
-GNU General Public License for more details.<br>
- <br>
-You should have received a copy of the GNU General Public License<br>
-along with TOPchik. If not, see https://vk.com/jekeam.<br>

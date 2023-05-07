@@ -10,11 +10,8 @@ Version:     1.0.0<br>
 Author:      Savinykh Aleksandr S.<br>
 Author URI:  https://vk.com/sun4eese<br>
 <br>
-License:     GPL2<br>
-TOPchik is free software: you can redistribute it and/or modify<br>
-it under the terms of the GNU General Public License as published by<br>
-the Free Software Foundation, either version 2 of the License, or<br>
-any later version.<br>
+License: Take it and do what you want =)
+<br>
  <br>
 TOPchik is distributed in the hope that it will be useful,<br>
 but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
